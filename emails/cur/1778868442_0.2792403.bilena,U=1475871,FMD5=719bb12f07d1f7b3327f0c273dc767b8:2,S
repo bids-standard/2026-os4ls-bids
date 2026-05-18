@@ -1,0 +1,296 @@
+Received: from mail-ot1-f54.google.com ([209.85.210.54])
+	by smtp.onerussian.com with esmtps (TLS1.3:ECDHE_RSA_AES_128_GCM_SHA256:128)
+	(Exim 4.92)
+	(envelope-from <yarikoptic+caf_=site-gmail=oneukrainian.com@gmail.com>)
+	id 1wNwO3-0005Xo-6W
+	for yoh@oneukrainian.com; Fri, 15 May 2026 13:31:48 -0400
+Received: by mail-ot1-f54.google.com with SMTP id 46e09a7af769-7de7c57b52cso36576a34.3
+        for <site-gmail@oneukrainian.com>; Fri, 15 May 2026 10:31:47 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1778866306; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=U1nPI00aIr64vum+WdAsQvWYN0a0XcO5lAloflilMF04IpbDHOUh0P2A2QiDkqv8TF
+         whR6UgDfSbRLNvcnkj/rCTnoJR2fOVGZIf2pZkg8wpBe75AxmrsZ2d4vQtQYDgP8Uxa9
+         pFOdQI44kii+p/HGn34A4sqpsbWcsTA6JqNSJqDmem2AX/DnGGdXPhExYAAA5k7vgz70
+         MztoYli1Bqsn3DwvZUfS7NlwjJQ9+Mo62zSz2L/WqbqGVxbHfEFA4m2FOCt3RY878YAV
+         eA+wkQbcl6qcsctkatkjHdTUt84xSuLxJ3LSteZF0EpG6zqlgyekbreXpwSUAtH4lATW
+         oq6g==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:dkim-signature:delivered-to;
+        bh=1kjnNPtI1LgwQhoomZ3YKyiamPmOm0LuxC0qADY54X4=;
+        fh=aXuBAXIuS90Wxef/CUACJaaVcV5Tv/U7g8RvAbCD3fs=;
+        b=CrXjzIQeozkYJZf7833XGpPWKeUkuj76vccZigPjjlhRfWbQgxYAzRLuNyV5jFZG2f
+         mEYeArMKvrK/uv3QYRXo3pY7SjKt/tnsV07PWi3DL69ygPClqfzsLrEyhJ6USgyGE+Ln
+         AZvWKhetEQWoRCy/o96uMwnRsepwTRoQhpR51Q9Ya6Bod+gAXpu4RHB0XnNJ4ChCZ8M8
+         BuPAnEVRi0pPFEz5dUQtX5+Go7Si3f8DsLig88MMwRT9TrqBDul02Y5uyxitxxbfjwMF
+         3Clz7yj0NZrXPg6KMPmrEEl17hwyemGJhaaX4BbAS87H3sB+MjO5UrInacEN2KiPXZJg
+         ZxdQ==;
+        darn=oneukrainian.com
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=K36FOlYA;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of jbpoline@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jbpoline@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1778866306; x=1779471106;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:x-gm-gg:dkim-signature:delivered-to:x-forwarded-for
+         :x-forwarded-to:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=1kjnNPtI1LgwQhoomZ3YKyiamPmOm0LuxC0qADY54X4=;
+        b=DH/cqxUlKnZkCX7FEZLsnePbGK9zgJuwOU3qte+q39t7pqPH8MkQBmLgYL/Y00vTKS
+         dcaVI2AgRxZzj+DxUTy416IVp/aMe8Br7JSKN4ZEz0bJBHVY4mTEdJGtdULmkbNfrHfD
+         GIR01XEEWeISuCLaZG1jYLS/TJVd5y/tW/qAgfD4fD655nJooEPHLj8jwnO2JmvNvFwJ
+         OOD8SLOwVlCLYKuCdMZl74G1YtduiMPzru998JwhotBTwVTRowkdFsjlqttCJdKCIWgA
+         oH4XnEgPpD/RAvWBx53Nv36kW8r+ROEdHMx0DVsN19wIO7l3p/F/bCH2/zjb8y1ETPJf
+         VCHA==
+X-Forwarded-Encrypted: i=3; AFNElJ8sNZwP3jttYfKZkSKwj1rgzedtnw4MI4CPFBgUoL5LHfIGYD6V2LPVbqPLZihk909aA7I5lhxZO8LL@oneukrainian.com
+X-Gm-Message-State: AOJu0Yz4ggIMBEqmzHaNMZGVpOyRUs8yte9tWhifM6gdQVR2OHmdACkL
+	YdDzNxlRmVZaMTKMPgcS9UKn2ulD9ek1fvxrvh0WKjawk9QvAw8RYVRa97ZGhktaEP5GtbvN19e
+	0AdBrNkNIR7hD8OR+OV90o1JS+UbV3c/ZPNvTgKbroFFozPjSxPKmoJzgKoqTlw==
+X-Received: by 2002:a05:6830:81ed:b0:7dc:d0e3:5bc1 with SMTP id 46e09a7af769-7e4f2b903b3mr3131412a34.13.1778866306365;
+        Fri, 15 May 2026 10:31:46 -0700 (PDT)
+X-Forwarded-To: site-gmail@oneukrainian.com
+X-Forwarded-For: yarikoptic@gmail.com site-gmail@oneukrainian.com
+Delivered-To: yarikoptic@gmail.com
+Received: by 2002:a05:6830:25cb:b0:7dc:d3a6:e6e9 with SMTP id d11csp215350otu;
+        Fri, 15 May 2026 10:31:44 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AFNElJ/EXgZEwgnMzxFJwAK0IAJTBFqBLpq0CSdUdeJJGx1YbyH8upCKhRTuIKVEPc4q4zi2rEJjXiPCeXwM@gmail.com
+X-Received: by 2002:a05:6870:718c:b0:42f:f1e8:7703 with SMTP id 586e51a60fabf-43a2e074706mr3370710fac.34.1778866304645;
+        Fri, 15 May 2026 10:31:44 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1778866304; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=B+FhtU5sdq8PCbXDYlU6l1BhdGcznzfSEJ12DLgkK4BW+9H/D+AQIX0DpDFJJtMBWD
+         vDu0AnmQnWmYYp55E/6o381fSqcaS0/+PF9+VGLM3KS9cbMQA9nLyV+gkeH+76iEUI2N
+         zurSl+/wlfl0LnMRPlyE3Epysv9XEPd9Cgln+1KiLA04BYnRSrEfp4CTQ7oUx4n8mce5
+         CVvXfN6GoIBF91WDhX8uVANbwStY97a3fTo2t3271/pKIKqJ4E6zWWXaHnApzZ5XZNbc
+         +GBL75Xv4v4N09WFuv5PmbHqxVAvqcNTVE+FKXsWnWstlDOaPSPxH02efJHel2fr/6H3
+         +EDQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=1kjnNPtI1LgwQhoomZ3YKyiamPmOm0LuxC0qADY54X4=;
+        fh=deMMBjcEaIy+a6n59lHdwekq9PY41oYCHDZktrzr79Y=;
+        b=A1r7SQtls0uh4vdqT5zHrAlYcHp9tJXsvxQqfULEYZIvn1j0clfOekYWxK5j9Q6JlA
+         C6lq99Dj2XevSO4Zlv6yaGEZMrMO8+6u28FmD4GJxzB5HDV1r9vMAe+cqGWK5mVpif9o
+         zK1xkpD1Rz3X3iHpvg33ukYwhLpJI//jzl40tKgmd48pBmbgZkabl3BiiCZ1/RYHJoDw
+         grS7oUJqO3VdZOhTbn7QVYeZHLlpmcsbblCzHrXVGYYpgbbkd4qTTnWhTBenv7wnY+6x
+         47EH6SGbolHO/gYZ5oHwu5p2igpeGlQ3YIdRhtbd0mSLcoPtFTjQhwg89V/oVTSyCPBG
+         4jMQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=K36FOlYA;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of jbpoline@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jbpoline@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 586e51a60fabf-43a5e8b22acsor106118fac.8.2026.05.15.10.31.44
+        for <yarikoptic@gmail.com>
+        (Google Transport Security);
+        Fri, 15 May 2026 10:31:44 -0700 (PDT)
+Received-SPF: pass (google.com: domain of jbpoline@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@gmail.com header.s=20251104 header.b=K36FOlYA;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of jbpoline@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=jbpoline@gmail.com;
+       dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1778866304; cv=none;
+        d=google.com; s=arc-20240605;
+        b=f8pmfIA0TzcVNCbvQoCN11PMI9SqD3q/nBDjzymE4g1bBfweOx0ZwkaYoodX/g/fJz
+         GKQZjR99I7C7Q9KrqhASxlUZalFTh7IFjlfEOMVjVbW6AkDFRub/qnA8iIiqQg6b/ghv
+         Ck93E8dMcnBdnB2NKlE1kUnwoGtKC1ZSwb08DzjrH+6z37DugCLzZleo4GdTRtrrX2Vi
+         vkj9aiRrifaIOVa5Btc9zsRouRohn3QIelq/WCmV/7rXTM3M9p7byHozN9XODi0IWKwd
+         GqFIc2eooY/8haW9C9Y3AzZYk6FxrWc8FOE+Hxta1orl8v5zbrUrUeh1SZh69/rFo9qH
+         1vOQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=1kjnNPtI1LgwQhoomZ3YKyiamPmOm0LuxC0qADY54X4=;
+        fh=deMMBjcEaIy+a6n59lHdwekq9PY41oYCHDZktrzr79Y=;
+        b=EgiKcHrbsvTJ1m0I2XGcHTH47Lh5tlmpSfczQM59vwn8ptYkYtgHzbTgM9YRrHRGJf
+         jCx/JaT3XSgMqzzYTtV4lIO0XAuhWpszaL07+nj6qdmW+5gQXOkUCmPBZpZJgT4HIAmi
+         yB8cCgLYnGUt02xYPvR+7X6PBNIxmCd8X2Eecbmv/Nw4QmplJ1ko9SZs6vv+7RvRGJeg
+         K73mILazmoZ3uwFYD45BiYgbSOxsObDCx7OCOdlUHlmE59SBvBkNVTYX8AICVSXuuCQu
+         Bey9W/aCM5BWvYkcoRggUmqSeWng/ZY/YG1xKOsl18KKX/bv4rN/HRptpyPZcsflvbzi
+         pZlA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1778866304; x=1779471104; dara=google.com;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=1kjnNPtI1LgwQhoomZ3YKyiamPmOm0LuxC0qADY54X4=;
+        b=K36FOlYAJzWe4xuttNhaWw3BZiAh5Ul890TkLuSCQkZfGXa0+WpJ3Y+fK6s5hrsdIk
+         ZmBEEGvnpFu3XDMYcoHNsnhAbnAdmf4fT8ncymYMX1mLeKOjAvwjTSs13J4LWCCoGUNu
+         2IPtTq+Yu5AUWc1g9OwlHz9bgShwLbvh+y3CLw8lmCjzsZQ38YdPELKB9hlOYD3apbHZ
+         U1XRhDfXhoMToEGDd0EDpJkQebvVOCYysKu+wFXEq6oo7j48tnCHrTWf9xh3q1jly86V
+         gUq9m6RQLOVx1FgflOAYFVCLQlH2c0EoQAQSvmgoQ5KQJNP1kHEhqXWmnd67pKkQAOra
+         chRA==
+X-Forwarded-Encrypted: i=1; AFNElJ/m4CZasJ3xcBNfiMR4VsYsf6ksvnuzaJfm6NWzh44iYSn2bBhjBNnnzcLK9y2/cVG10+nrHoE14hPY@gmail.com
+X-Gm-Gg: Acq92OGAHoMcJFO2cjW2CaGjoWkDaBOP7qa8PSH13Cmg5Lq7Tt5pdFuxSZ4aJ3fAKrX
+	7UVSCKaz/xYL3dhLlHrlwUpAnemx/AzQmUy+GLprCskwddqh/ocIj+FpksKYMIqHycGxkDc4UkC
+	+45PE8ocwycFDURvTGYM5uCmOJfSpsCETxBAj6lH0+GZhtDbU0O0UiXAK/e28GQsyaIzkCzjTFy
+	ATDAn+MX9LV//acGyZaZuukgWmyfAd4umcOP5uaLLfL0Y5mEP7liyYY4txPkvLv8hW5FU4aBy61
+	tEnBV7UHih6KoMPBcPE=
+X-Received: by 2002:a05:6870:2885:b0:439:b1e8:8a57 with SMTP id
+ 586e51a60fabf-43a2dfe2b14mr3613166fac.28.1778866303960; Fri, 15 May 2026
+ 10:31:43 -0700 (PDT)
+MIME-Version: 1.0
+References: <CALMaa80bEcnPBr74-4nMaejr3LL22DE-zuKcw6eTWUg_dcLQ1g@mail.gmail.com>
+ <CAON1jmUDutav70C4E7TvPxaO-dUd=HgvkgM6R3MtwTJhjSMO_A@mail.gmail.com>
+In-Reply-To: <CAON1jmUDutav70C4E7TvPxaO-dUd=HgvkgM6R3MtwTJhjSMO_A@mail.gmail.com>
+Reply-To: jbpoline@gmail.com
+From: JB Poline <jbpoline@gmail.com>
+Date: Fri, 15 May 2026 13:31:32 -0400
+X-Gm-Features: AVHnY4LLp_Fw0cs0bppvjJqhmDlC-2wNsWS93MJfQWDG5auuf9xkPzbGlHnozJY
+Message-ID: <CALMaa80N=+eTo3B8KxHSihJPK35ij6EaE5jrpJ-9348ecoXN3A@mail.gmail.com>
+To: Franco Pestilli <pestilli@utexas.edu>
+Cc: bids steering <bids.steering@gmail.com>, Chris Markiewicz <effigies@gmail.com>, 
+	Yaroslav Halchenko <yarikoptic@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000268c8e0651de96d4"
+X-SA-Exim-Connect-IP: 209.85.210.54
+X-SA-Exim-Rcpt-To: yoh@oneukrainian.com
+X-SA-Exim-Mail-From: yarikoptic+caf_=site-gmail=oneukrainian.com@gmail.com
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on smtp.onerussian.com
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.7 required=5.0 tests=AWL,BAYES_00,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU,DKIM_VALID_EF,FORGED_GMAIL_RCVD,FREEMAIL_FROM,
+	HTML_MESSAGE,RCVD_IN_DNSWL_NONE,RCVD_IN_MSPIKE_H3,RCVD_IN_MSPIKE_WL,
+	SPF_PASS shortcircuit=no autolearn=no autolearn_force=no version=3.4.2
+X-Spam-Report: * -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at http://www.dnswl.org/,
+	*       no trust
+	*      [209.85.210.54 listed in list.dnswl.org]
+	*  0.0 RCVD_IN_MSPIKE_H3 RBL: Good reputation (+3)
+	*      [209.85.210.54 listed in wl.mailspike.net]
+	*  1.0 FORGED_GMAIL_RCVD 'From' gmail.com does not match 'Received'
+	*      headers
+	*  0.0 FREEMAIL_FROM Sender email is commonly abused enduser mail
+	*      provider (jbpoline[at]gmail.com)
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	* -1.9 BAYES_00 BODY: Bayes spam probability is 0 to 1%
+	*      [score: 0.0000]
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	* -0.1 DKIM_VALID_EF Message has a valid DKIM or DK signature from
+	*      envelope-from domain
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	*  0.0 RCVD_IN_MSPIKE_WL Mailspike good senders
+	* -0.6 AWL AWL: Adjusted score from AWL reputation of From: address
+Subject: Re: OS4S call
+X-SA-Exim-Version: 4.2.1 (built Wed, 08 May 2019 21:11:16 +0000)
+X-SA-Exim-Scanned: Yes (on smtp.onerussian.com)
+
+--000000000000268c8e0651de96d4
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Franco
+BIDS, as described in the email, but we will circulate some first ideas asa=
+p
+Cheers
+JB
+
+On Fri, May 15, 2026, 12:10 Franco Pestilli <pestilli@utexas.edu> wrote:
+
+> Is this a bids grant?
+>
+> Or a lab grant?
+>
+> Franco Pestilli
+> Professor
+> The University of Texas
+>
+> On Fri, May 15, 2026, 4:32=E2=80=AFPM JB Poline <jbpoline@gmail.com> wrot=
+e:
+>
+>> Hi Everyone,
+>>
+>> Following steering conversations on funding the BIDS project(s), we had =
+a
+>> quick chat with Yarik. We plan to submit an LOI for TIER2 to this call
+>> <https://os4science.org/funding_opportunity/os4ls/> for the BIDS
+>> community. One idea is to develop the BIDS community towards
+>> standardization of "bids-study", enabling agentic AI to do a whole
+>> neuroimaging study and "biomarker discovery ready". I am sure other idea=
+s
+>> will emerge :)
+>>
+>> The call is going to be super competitive, we expect many to apply.
+>>
+>> Let us know what you think, and I would like to dedicate a steering
+>> meeting to this before OHBM if possible.
+>>
+>> Cheers
+>> JB
+>>
+>>
+>> This message is from an external sender. Learn more about why this
+>> matters. <https://ut.service-now.com/sp?id=3Dkb_article&number=3DKB00114=
+01>
+>
+>
+
+--000000000000268c8e0651de96d4
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div>Hi Franco</div><div dir=3D"auto">BIDS, as described =
+in the email, but we will circulate some first ideas asap</div><div dir=3D"=
+auto">Cheers</div><div dir=3D"auto">JB<br><br><div class=3D"gmail_quote gma=
+il_quote_container" dir=3D"auto"><div dir=3D"ltr" class=3D"gmail_attr">On F=
+ri, May 15, 2026, 12:10 Franco Pestilli &lt;<a href=3D"mailto:pestilli@utex=
+as.edu">pestilli@utexas.edu</a>&gt; wrote:<br></div><blockquote class=3D"gm=
+ail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,=
+204,204);padding-left:1ex"><div dir=3D"auto"><div>Is this a bids grant?</di=
+v><div dir=3D"auto"><br></div><div dir=3D"auto">Or a lab grant?</div><div><=
+br></div><div data-smartmail=3D"gmail_signature">Franco Pestilli <br>Profes=
+sor<br>The University of Texas </div></div><br><div class=3D"gmail_quote"><=
+div dir=3D"ltr" class=3D"gmail_attr">On Fri, May 15, 2026, 4:32=E2=80=AFPM =
+JB Poline &lt;<a href=3D"mailto:jbpoline@gmail.com" target=3D"_blank" rel=
+=3D"noreferrer">jbpoline@gmail.com</a>&gt; wrote:<br></div><blockquote clas=
+s=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid r=
+gb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div dir=3D"ltr"><div cl=
+ass=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:small=
+">Hi Everyone,</div><div class=3D"gmail_default" style=3D"font-family:arial=
+,sans-serif;font-size:small"><br></div><div class=3D"gmail_default" style=
+=3D"font-family:arial,sans-serif;font-size:small">Following steering conver=
+sations on funding the=C2=A0BIDS project(s), we had a quick chat with Yarik=
+. We plan to submit an LOI for TIER2 to <a href=3D"https://os4science.org/f=
+unding_opportunity/os4ls/" rel=3D"noreferrer noreferrer" target=3D"_blank">=
+this call</a> for the BIDS community. One idea is to develop the BIDS commu=
+nity towards standardization of &quot;bids-study&quot;, enabling agentic AI=
+ to do a whole neuroimaging study and &quot;biomarker discovery ready&quot;=
+. I am sure other ideas will emerge=C2=A0:)</div><div class=3D"gmail_defaul=
+t" style=3D"font-family:arial,sans-serif;font-size:small"><br></div><div cl=
+ass=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:small=
+">The call is going to be super competitive, we expect many to apply.=C2=A0=
+</div><div class=3D"gmail_default" style=3D"font-family:arial,sans-serif;fo=
+nt-size:small"><br></div><div class=3D"gmail_default" style=3D"font-family:=
+arial,sans-serif;font-size:small">Let us know what you think, and I would l=
+ike to dedicate a steering meeting to this before OHBM if possible.</div><d=
+iv class=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:=
+small"><br></div><div class=3D"gmail_default" style=3D"font-family:arial,sa=
+ns-serif;font-size:small">Cheers</div><div class=3D"gmail_default" style=3D=
+"font-family:arial,sans-serif;font-size:small">JB</div><div class=3D"gmail_=
+default" style=3D"font-family:arial,sans-serif;font-size:small"><br></div><=
+/div>
+</div>
+
+<br><table style=3D"background-color:rgb(253,250,231);border-style:solid;bo=
+rder-color:rgb(252,209,70);border-width:0px 0px 0px 1ex;color:black;font-fa=
+mily:Arial,&quot;Helvetica Neue&quot;,Helvetica;font-size:10pt;padding:1ex =
+1ex 1ex 2ex"><tbody><tr><td>
+This message is from an external sender. <a href=3D"https://ut.service-now.=
+com/sp?id=3Dkb_article&amp;number=3DKB0011401" rel=3D"noreferrer noreferrer=
+" target=3D"_blank">Learn more about why this matters.</a>
+</td></tr></tbody></table></blockquote></div>
+</blockquote></div></div></div>
+
+--000000000000268c8e0651de96d4--
+

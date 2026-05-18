@@ -1,0 +1,146 @@
+Date: Mon, 18 May 2026 10:03:20 -0400
+From: Yaroslav Halchenko <yoh@dartmouth.edu>
+To: Franco Pestilli <pestilli@utexas.edu>
+Cc: jbpoline@gmail.com, "Hermes Miller, Dora, Ph.D." <Hermes.Dora@mayo.edu>,
+	bids steering <bids.steering@gmail.com>,
+	Chris Markiewicz <effigies@gmail.com>,
+	Kimberly Ray <kimray@utexas.edu>
+Subject: my planned OS4S LOI bullet-points  Was: [EXTERNAL] Re: OS4S call
+Message-ID: <agscKEH3Tceh4Ei2@bilena>
+References: <CALMaa80bEcnPBr74-4nMaejr3LL22DE-zuKcw6eTWUg_dcLQ1g@mail.gmail.com>
+ <CAON1jmUDutav70C4E7TvPxaO-dUd=HgvkgM6R3MtwTJhjSMO_A@mail.gmail.com>
+ <CALMaa80N=+eTo3B8KxHSihJPK35ij6EaE5jrpJ-9348ecoXN3A@mail.gmail.com>
+ <CAON1jmWJ0F_A2k6M97Pq5J8R+TfWiT8E4gu+1p50e_VH_PiEuw@mail.gmail.com>
+ <SAWPR01MB994507E822F02AC99E8DB22F1D88052@SAWPR01MB994507.prod.exchangelabs.com>
+ <agiRMXb8mod1L3-v@bilena>
+ <CALMaa82z0ADWuus_4pOyK_tjSU3nQpoAhPuytrL0bW8iWb7uoA@mail.gmail.com>
+ <CAON1jmXgDb3=Zk7-L69J=PpzDPjCnyWPNLHM8HW_JM83VtyXeg@mail.gmail.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+In-Reply-To: <CAON1jmXgDb3=Zk7-L69J=PpzDPjCnyWPNLHM8HW_JM83VtyXeg@mail.gmail.com>
+X-URL: http://www.oneukrainian.com
+X-Image-Url: http://www.oneukrainian.com/img/yoh.png
+X-PGP-Key: http://www.oneukrainian.com/gpg-yoh.asc
+X-fingerprint: C5B9 05F0 E8D9 FD96 68FF  366F A2DE 2350 62DA 33FA
+
+
+On Mon, 18 May 2026, Franco Pestilli wrote:
+>    Thanks for clarifying. This is how I interpreted the call:
+>      * CURATING DATA FOR AI: Representing, managing, curating, and
+>        structuring scientific data for use in model training
+>      * BUILDING DATA ENDPOINTS FOR AI AGENTS: Developing benchmarks,
+>        standards, endpoints, or protocols that enable the use of
+>        open-source tools within agentic workflows
+>      * CODE REFACTORING AND PERFORMANCE IMPROVEMENT FOR AI: Scalability
+>        and performance improvements, including support for hardware
+>        acceleration
+>      * INTEROPERABILITY TOOLS FOR AI: Interoperability frameworks that
+>        make tools composable within AI-driven pipelines
+
+>    The all-caps wording above reflects my interpretation of the priorities
+>    emphasized in the call.
+>    My reading is that the RFA is primarily targeting mechanisms that make
+>    scientific data, standards, and software ecosystems AI-ready. In other
+
+This 1 sentence summary is aligning with my take on the call overall.
+
+Here is my extended plan/sketch of the items for the LOI:
+
+In my opinion, BIDS is uniquely positioned that it strives to make data
+accessible to both humans (HI) and machines (AI or not), hence I think
+its ecosystem is a great match for the call.  And whatever improvements
+we had already made recently (schema, validation, bids-examples) benefit
+all Is already tremendously!  Even though AI can deduce various
+aspects "automatically" AI particularly benefits from clear(er)
+structure (data or operationalization) to work with.  
+
+Therefore I am planing to propose a LOI for BIDS which would
+expand on that and already ongoing plans for  
+
+- making standard more consistent and better structured (further
+  BIDS-study & BIDS 2.0) thus making it easier to not only process
+  by HI and AI, but also easier to adopt to other disciplines.
+
+  That would simplify introducing BIDS to, or into BIDS, support for
+  other modalities such as various *omics (we might even aim for
+  this); as the call actually seems to roll around bio* sciences
+  more than neuro*
+
+  - e.g. we are slowing arriving at consensus in
+    BEP 036: Phenotypic Data Guidelines
+    which would also be example of staying withing "BIDS formalization"
+
+  - potentially establish BIDS forming 'Data Structure Standard'
+    https://github.com/bids-standard/bids-2-devel/issues/66
+
+  - ongoing work of Yahya on BEP044: Stimuli and BEP047: audio/video
+    recordings to behavioral experiments already finding surprised
+    to discover BIDS new potential users  in other fields.
+
+
+- improving tooling for validation (bids-validator, python
+  bids-validator) to ensure valid data (produced by HI, or existing
+  converters, and simply critical for AI-driven pipelines). There,
+  better integration with validation against other standards (as e.g.
+  bids-validator already does for HED and then in dandi-cli we take all
+  of those + nwb inspector + zarr + some extra and standardize
+  validation records, see https://github.com/con/validation/issues/1 for
+  more refs)
+
+- improving observability of the state of the BIDS dataset and study
+  overall.  This is CRITICAL for any AI-driven work since humans need to
+  be in the loop to introspect what AI had done etc.  Here we have
+  chance to work out formalization model within BIDS which different
+  "Views" (brainlife, nipoppy, "my"
+  https://github.com/OpenNeuroStudies/OpenNeuroStudies etc) could use
+  for their custom, potentially wider than BIDS-only, dashboards could
+  use
+
+- improving tooling for query & manipulation (pybids, bids-utils),
+  exposing them through typical in that stage of AI development (MCP or
+  just skills) ways.
+
+  Re bids-utils -- ATM there is NO central library, no upgrade
+  mechanisms etc.  Will be critical for HI and AI alike.
+  
+  - here also, better integration with tools from those other
+    'standards' to enrich BIDS datasets for AI use, e.g. AI-driven HED
+    annotators, SLEAP estimations for motion etc
+
+- further extending and improving adoption of bids-apps 2.0 and
+  boutique descriptor interfaces (Niwrap, Styx) which is critical for
+  the net step:
+
+- improving standardization and tooling for carrying out typical
+  analytics (bids-models, fitlins) so that also AI-driven frameworks
+  (like KOSMOS, etc) and simpler SKILLs could encompass necessary
+  analytics in a well formed structured form.
+
+  - here would also fall square into AI-driven BIDS nipreps pipelines
+    Oscar I believe had been working on
+
+- with all of the existing and afore-mentioned enhanced goodness improve
+  existing AI assistance framework OSA Yahya has developed with BIDS
+  support in it, which would then enable HI and AI to operate with
+  better focused on BIDS awareness.
+
+- funds for yearly meetup/hackathons so we could all get together and
+  process BIDS for HI and AI alike.
+
+So, overall there will be no per se much if any development of neither
+AI agentic systems, nor specific datasets; but concentration on
+improving BIDS ecosystem (standard, software, AI harnesses) to support
+HI and AI, while working toward extending support to other bio* relevant
+domains.  So I think this would at large fit also into the large
+scopes you identified Franco.
+
+I am open for other ideas/aspects to bring in here!
+
+Cheers,
+-- 
+Yaroslav O. Halchenko
+Center for Open Neuroscience     http://centerforopenneuroscience.org
+Dartmouth College, 419 Moore Hall, Hinman Box 6207, Hanover, NH 03755
+WWW:   http://www.linkedin.com/in/yarik        
+

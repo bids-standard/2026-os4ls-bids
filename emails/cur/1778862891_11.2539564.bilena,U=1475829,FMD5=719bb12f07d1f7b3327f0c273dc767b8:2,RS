@@ -1,0 +1,267 @@
+Received: from mail-ot1-f41.google.com ([209.85.210.41])
+	by smtp.onerussian.com with esmtps (TLS1.3:ECDHE_RSA_AES_128_GCM_SHA256:128)
+	(Exim 4.92)
+	(envelope-from <yarikoptic+caf_=site-gmail=oneukrainian.com@gmail.com>)
+	id 1wNv74-0004X5-Uk
+	for yoh@oneukrainian.com; Fri, 15 May 2026 12:10:12 -0400
+Received: by mail-ot1-f41.google.com with SMTP id 46e09a7af769-7de7dc85b74so7968845a34.2
+        for <site-gmail@oneukrainian.com>; Fri, 15 May 2026 09:10:10 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1778861410; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=GZpkcv26g7Ucza+4LoMXwnxVg0q+kWhUzkRPxgycWlU2FtozzsQR9gymIjqpCpTQxo
+         cVlWz4x8UCH9jWC9Z0C6ruMQVTh+IOjfLCksKn1Yk4fH0pKrWZ/endmla6TDZ2jt6jxH
+         xKMD9C+tdNuvLG2YDmpfz7j35vRMfUf559yZWUH+T+M8dxfxN25guBDo2kBAmizkfUQE
+         pWi9orjr5PSSqWzaurYfbKjnEetFGDNQnPcg1ZnSV04/VxJzn4mqDzAWzh7qLQ9uRJH5
+         zUCsu3G/2NgpytLgXYZ0lHUR9rt9t9gat7Zj5tIrA3ztIx2bAWrvntQLOzIB/0Xb+mhL
+         +ppw==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature:delivered-to;
+        bh=kg2W2tf4Xn0PZTHZYcjXmvUydDGI+geC4DjOeCSH/vE=;
+        fh=BGeNkqOMwkADXOHxFG8CXsTicbUTnXOjs8TUMt51DPA=;
+        b=Xzj71Spkn7GqLnTHxLV3hLeSqr72Quqkx6r1iZBh1dy98iJ/6T6z+DUVfX5sLc0sx7
+         7FQA9ee3u/2bf0DvSzXTbCEvZfw8mlU77eMcSxV92/LApOtN2GJK1tNH4DId6udlwJOz
+         2IV/3oOFzwa1UAeueKRjkeRP6c20n+ZONcuOqgKjhXrB8ilbG+p4f1SZ6zYi4qsYzmIp
+         aMsW3lXZsvVlD+mrkwAWyViBYjykL7bUCCS4nCf5fc8hPSIkBpnEH8eyRMYjWwu5WnHL
+         Mak15J4hNNW5czmk0PyRL63iYNb2BUPmg0/GuEZfyfXvLowhr8Tf96LT3K7rsSZuGsUA
+         BCJg==;
+        darn=oneukrainian.com
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@utexas.edu header.s=google header.b=FVCAyzgd;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=pestilli@utexas.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utexas.edu;
+       dara=pass header.i=@gmail.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1778861410; x=1779466210;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:dkim-signature:delivered-to:x-forwarded-for
+         :x-forwarded-to:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=kg2W2tf4Xn0PZTHZYcjXmvUydDGI+geC4DjOeCSH/vE=;
+        b=n3xd4xSzjG8h2RwkJOjVJqRpPPTE/3s3TWmcj0S1lZi61NxqctURveWanriIa+eZX1
+         d+V4YAStM1SYK4FA3qKSEHTNZ+nEHeykezcrvjXu7t5eNkHIqs5sTssZ/b07ffoitfM6
+         aO3f7bfCB3fPbc3Ge7kKb2yXsdlnwlw6TMy1HBXS3EgS+AHx9iPPBwNQ2GJ4tj7dnSg5
+         4GlNWRAklN1dQr6FOn5mcH7FXsDmcL/g5xUgwhlhn4rPuqeTrtkny4IfCLaobYR7ndVl
+         BxhhZuxpUZ8mXTyMSbJOqzLo+D5VPBX8ArqWYQKATqPNy/4q2MiVDk0g5R62ZPVODMFs
+         zUaQ==
+X-Forwarded-Encrypted: i=3; AFNElJ9sV/kY2XdzB9rzEpHhV8EORZ8ostoEO3OUTcS0iBp4/PghQhHQCDSIRm7dtgG31lTpNSSpvE/ycmVv@oneukrainian.com
+X-Gm-Message-State: AOJu0Yxy1DJQE5a8ItEPm9+vSsXMIcZwj3yRMEQpsBAxonmFGM+yXLmf
+	w6wnqDixIY0ucIPhDsiak8Ho5OKPyiJTN2Gloptw9FzgM0RKBJmD2NqlRhbu5adoVVewB1ht5No
+	vounOykX+bHkz4CMqlwLjXUxKSIJWy1KbrN6MGVrlzow25inzKOstpTusfnGFNg==
+X-Received: by 2002:a05:6830:2b25:b0:7d7:f13a:761c with SMTP id 46e09a7af769-7e4fa059df2mr3283637a34.23.1778861409996;
+        Fri, 15 May 2026 09:10:09 -0700 (PDT)
+X-Forwarded-To: site-gmail@oneukrainian.com
+X-Forwarded-For: yarikoptic@gmail.com site-gmail@oneukrainian.com
+Delivered-To: yarikoptic@gmail.com
+Received: by 2002:a05:6830:25cb:b0:7dc:d3a6:e6e9 with SMTP id d11csp182429otu;
+        Fri, 15 May 2026 09:10:08 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AFNElJ9SoC10Ppl1Ysg/93SCVfMJPOGiUMTVykb6id0dZdbPA1JoyrwekhQ2gaZCmc5cBdouf0YSgTq74RVf@gmail.com
+X-Received: by 2002:a05:690e:4807:b0:650:95e:2fc with SMTP id 956f58d0204a3-65e227fb935mr3627752d50.40.1778861408096;
+        Fri, 15 May 2026 09:10:08 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1778861408; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=EjDfIAE4uS8zVDqEesfRff20o205blRniRV71IgzfqCwpW7bSrw0j7H9LPeEW/k9fU
+         l5qCGJr43q0Ci+geUjST1AU4irv98DhfB9BIet52NiiLRYOU1u2RjMu3Tn/WL6faLK2L
+         jcKgGrPVp2QaLrmKwaPZK40DHVyQozhzxsAl01vflXeTvQWHu6dubN5UXE8N84MjT58Y
+         8xdjSrO8rufLfGGBfGDbQ8GxUolCw0LaCYexqnKAQJjkoj3ZRwmr8pV9uzSIUGaYNweX
+         DWiSD1CYerZmqyPC3O1LpoX8GBdfIperOOBnAlaNQ99qk/zIc3PFdm2BXXWYmTyi7KvZ
+         7gEA==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=kg2W2tf4Xn0PZTHZYcjXmvUydDGI+geC4DjOeCSH/vE=;
+        fh=LCP23nr4C/r3r1iCDk86lNfo1Cl4+zeaGkXTZ+f35lc=;
+        b=jacjxhqnBj1lFZtI/Gjc/EAsYBGK2plh1rzYm6hUb7X0MLtnaB89aBdtczNL4FpafH
+         sydoI3Fug7Tel6URXGw8zauli4iNxi1YAm6MhrUgGJCVDYwjG/Ci09eHQOrnA+ocNMSL
+         WA/oIM75JJXnkdTAg04oMQh3MupAsQhvNGaa+aGxP+oi+qw1D6nHb1Py28VIpwtzgOVR
+         QuqYfRYFOk9n9bessrU4iePQqXnzYbaz8344EH4LzpEEzQwKfhxZEgaVUToR/1U/GxcA
+         JwiFR+ETxyreCzrIIBW8WK0f1FysfysJWCjYE0OO6f3jjZJesO21GXRoxzQM0O6s84KR
+         1vrQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@utexas.edu header.s=google header.b=FVCAyzgd;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=pestilli@utexas.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utexas.edu;
+       dara=pass header.i=@gmail.com
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 956f58d0204a3-65e0d8a33c5sor3293956d50.5.2026.05.15.09.10.07
+        for <yarikoptic@gmail.com>
+        (Google Transport Security);
+        Fri, 15 May 2026 09:10:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@utexas.edu header.s=google header.b=FVCAyzgd;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=pestilli@utexas.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utexas.edu;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1778861407; cv=none;
+        d=google.com; s=arc-20240605;
+        b=NFFV1wU/oPHSNlPuGGzl0vj/FxvwpVt0M3MTdBA0XHmuyffSc2a2jC3+vr9f31O9+A
+         g/WJgbkW57rwYhWR70T7ArOl/Knxgcqw0a4QOD/fEW246SULf2czQSPRAUFTcW8hT57y
+         DKTsj3pn63m5QxgZu6dXmBUHfc/2h+k5W/f8b6YpzlK4S3W7MH1Z7QjKyHs9rJAMLpiS
+         NOF1a2gEKirUMCeK5vQf7mFTkYEznmX0zkvXn6kySFzI0ROZV4eyw3QzHCj5KPoqW/qt
+         E0p+GcSIlI6o5/qS04dejHRw7awyKj1xWSURnsefzbqqXZEmOcmdXAqHNmh6q90/qvv4
+         KYSg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=kg2W2tf4Xn0PZTHZYcjXmvUydDGI+geC4DjOeCSH/vE=;
+        fh=LCP23nr4C/r3r1iCDk86lNfo1Cl4+zeaGkXTZ+f35lc=;
+        b=g2C5F0GJykloYGwvaw1cdl+9pB0DlhZHX8TXuH5JdHCrHr4PIV58hb7OcUyi4lB5zG
+         2v8e9UigtAmdOFvNU65oFXhdm2toFpg/67cBSo9LoC2wBqhqXGvdCxXP0p23+PDvFTXA
+         Clx9QY3xGCydJqISw1L3y9kfqAPDkDEm3VVCAPuil4RIYYHXwNgKJma3lhUSFa443hR5
+         iCnlXS5f+M1P7VJS5T0YDszRtI2n5eHlAVznp85Lyt4OfwFoT2qZWZHQgjgNXKgA4gHG
+         SShB6KJRisZr8zRrCyeBx2dEChGY1c82qwx4fxFJbrldvaFGLcojE0fByUEsI230hQf3
+         JAiw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=utexas.edu; s=google; t=1778861407; x=1779466207; dara=google.com;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=kg2W2tf4Xn0PZTHZYcjXmvUydDGI+geC4DjOeCSH/vE=;
+        b=FVCAyzgdQadTR5+MTVrcp8aBcgFZ3FKAU1D2FOXzvsyPwviegcvIKf0GUjrvfgNWZ8
+         cyJSV+E35hbR+AhYY6Fbp37auUsQNOIfw+RTHex+VbfhXtItvR8mNj4IGVfDtXxQUwxl
+         1+1XTaZknm8yEP9BeOfbvvuH5mnz3CumZAv45V8PWAfYII5y9hbcoz0QB2fGcRUr+9Kl
+         jCQOAKsi1bgZRhyiyo0LYxHIlRaG2k7lUZKMI+WZkGbJ8ns7VKJfScRK7kMkP5tx/k5E
+         BKEh6laNji7Rx796MjRnP6T3N8q6nRL1R9osRHYsJYFFZqOTpr8py5u1cXeF0OpmA7KF
+         f/7w==
+X-Forwarded-Encrypted: i=1; AFNElJ+ylXS62zdvtljHKdEwmIO19L2+/BDgf3WmQCqAp+YScTvY/Q/Vd0pzo9qJA/ojPHrnY/UT+b5cbbXO@gmail.com
+X-Gm-Gg: Acq92OEjY3xdSj8GsktVYHuEVNh87PABSdv1qzxYpm6/ig/gzSnxHNluaQexqPHcqP5
+	4HfXNI0YkMr5pQub+/RAckThJF8FRApq+zvY/EcxvVCSVR1RhAbjD1xp7xwjaJfmuxCAU6xnPXv
+	hNWBNwL/m8Ei8OhIPJza25HQedm+/Q6MKlzUh58WMswDsCPOyrgMYdpMZjQ85d0R69/fne+l42h
+	Svn6BzTkyDiMC3KGE6kzu5xq6QTZd5opxbou/77xX4GdLx+jxqEeCQveEgR6r9DPtkA4rWPGtWZ
+	XsquAhcpBqgFyBxgwT5JwWColpwsETtaWtwvjeph
+X-Received: by 2002:a05:690e:2514:20b0:65c:4889:30b3 with SMTP id
+ 956f58d0204a3-65e228995dcmr3980615d50.60.1778861407337; Fri, 15 May 2026
+ 09:10:07 -0700 (PDT)
+MIME-Version: 1.0
+References: <CALMaa80bEcnPBr74-4nMaejr3LL22DE-zuKcw6eTWUg_dcLQ1g@mail.gmail.com>
+In-Reply-To: <CALMaa80bEcnPBr74-4nMaejr3LL22DE-zuKcw6eTWUg_dcLQ1g@mail.gmail.com>
+From: Franco Pestilli <pestilli@utexas.edu>
+Date: Fri, 15 May 2026 18:09:55 +0200
+X-Gm-Features: AVHnY4IAlTHjEoMoFZsNaTZ7a9eeyKXvucfKHwrn4l70n6nULqrC6MPivnuc4NA
+Message-ID: <CAON1jmUDutav70C4E7TvPxaO-dUd=HgvkgM6R3MtwTJhjSMO_A@mail.gmail.com>
+To: JB <jbpoline@gmail.com>
+Cc: bids steering <bids.steering@gmail.com>, Chris Markiewicz <effigies@gmail.com>, 
+	Yaroslav Halchenko <yarikoptic@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000004a26b80651dd7237"
+X-SA-Exim-Connect-IP: 209.85.210.41
+X-SA-Exim-Rcpt-To: yoh@oneukrainian.com
+X-SA-Exim-Mail-From: yarikoptic+caf_=site-gmail=oneukrainian.com@gmail.com
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on smtp.onerussian.com
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.2 required=5.0 tests=AWL,BAYES_00,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,
+	RCVD_IN_DNSWL_NONE,RCVD_IN_MSPIKE_H3,RCVD_IN_MSPIKE_WL,SPF_PASS
+	shortcircuit=no autolearn=no autolearn_force=no version=3.4.2
+X-Spam-Report: * -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at http://www.dnswl.org/,
+	*       no trust
+	*      [209.85.210.41 listed in list.dnswl.org]
+	*  0.0 RCVD_IN_MSPIKE_H3 RBL: Good reputation (+3)
+	*      [209.85.210.41 listed in wl.mailspike.net]
+	*  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+	*      mail domains are different
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	* -1.9 BAYES_00 BODY: Bayes spam probability is 0 to 1%
+	*      [score: 0.0000]
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	*  0.0 RCVD_IN_MSPIKE_WL Mailspike good senders
+	* -0.4 AWL AWL: Adjusted score from AWL reputation of From: address
+Subject: Re: OS4S call
+X-SA-Exim-Version: 4.2.1 (built Wed, 08 May 2019 21:11:16 +0000)
+X-SA-Exim-Scanned: Yes (on smtp.onerussian.com)
+
+--0000000000004a26b80651dd7237
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Is this a bids grant?
+
+Or a lab grant?
+
+Franco Pestilli
+Professor
+The University of Texas
+
+On Fri, May 15, 2026, 4:32=E2=80=AFPM JB Poline <jbpoline@gmail.com> wrote:
+
+> Hi Everyone,
+>
+> Following steering conversations on funding the BIDS project(s), we had a
+> quick chat with Yarik. We plan to submit an LOI for TIER2 to this call
+> <https://os4science.org/funding_opportunity/os4ls/> for the BIDS
+> community. One idea is to develop the BIDS community towards
+> standardization of "bids-study", enabling agentic AI to do a whole
+> neuroimaging study and "biomarker discovery ready". I am sure other ideas
+> will emerge :)
+>
+> The call is going to be super competitive, we expect many to apply.
+>
+> Let us know what you think, and I would like to dedicate a steering
+> meeting to this before OHBM if possible.
+>
+> Cheers
+> JB
+>
+>
+> This message is from an external sender. Learn more about why this
+> matters. <https://ut.service-now.com/sp?id=3Dkb_article&number=3DKB001140=
+1>
+
+--0000000000004a26b80651dd7237
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"auto"><div>Is this a bids grant?</div><div dir=3D"auto"><br></d=
+iv><div dir=3D"auto">Or a lab grant?</div><div><br></div><div data-smartmai=
+l=3D"gmail_signature">Franco Pestilli <br>Professor<br>The University of Te=
+xas </div></div><br><div class=3D"gmail_quote gmail_quote_container"><div d=
+ir=3D"ltr" class=3D"gmail_attr">On Fri, May 15, 2026, 4:32=E2=80=AFPM JB Po=
+line &lt;<a href=3D"mailto:jbpoline@gmail.com">jbpoline@gmail.com</a>&gt; w=
+rote:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0 0 0 .8ex=
+;border-left:1px #ccc solid;padding-left:1ex"><div dir=3D"ltr"><div dir=3D"=
+ltr"><div class=3D"gmail_default" style=3D"font-family:arial,sans-serif;fon=
+t-size:small">Hi Everyone,</div><div class=3D"gmail_default" style=3D"font-=
+family:arial,sans-serif;font-size:small"><br></div><div class=3D"gmail_defa=
+ult" style=3D"font-family:arial,sans-serif;font-size:small">Following steer=
+ing conversations on funding the=C2=A0BIDS project(s), we had a quick chat =
+with Yarik. We plan to submit an LOI for TIER2 to <a href=3D"https://os4sci=
+ence.org/funding_opportunity/os4ls/" target=3D"_blank" rel=3D"noreferrer">t=
+his call</a> for the BIDS community. One idea is to develop the BIDS commun=
+ity towards standardization of &quot;bids-study&quot;, enabling agentic AI =
+to do a whole neuroimaging study and &quot;biomarker discovery ready&quot;.=
+ I am sure other ideas will emerge=C2=A0:)</div><div class=3D"gmail_default=
+" style=3D"font-family:arial,sans-serif;font-size:small"><br></div><div cla=
+ss=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:small"=
+>The call is going to be super competitive, we expect many to apply.=C2=A0<=
+/div><div class=3D"gmail_default" style=3D"font-family:arial,sans-serif;fon=
+t-size:small"><br></div><div class=3D"gmail_default" style=3D"font-family:a=
+rial,sans-serif;font-size:small">Let us know what you think, and I would li=
+ke to dedicate a steering meeting to this before OHBM if possible.</div><di=
+v class=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:s=
+mall"><br></div><div class=3D"gmail_default" style=3D"font-family:arial,san=
+s-serif;font-size:small">Cheers</div><div class=3D"gmail_default" style=3D"=
+font-family:arial,sans-serif;font-size:small">JB</div><div class=3D"gmail_d=
+efault" style=3D"font-family:arial,sans-serif;font-size:small"><br></div></=
+div>
+</div>
+
+<br><table style=3D"background-color:#fdfae7;border:solid #fcd146;border-wi=
+dth:0 0 0 1.0ex;color:black;font-family:Arial,&#39;Helvetica Neue&#39;,Helv=
+etica;font-size:10pt;padding:1.0ex 1.0ex 1.0ex 2.0ex"><tbody><tr><td>
+This message is from an external sender. <a href=3D"https://ut.service-now.=
+com/sp?id=3Dkb_article&amp;number=3DKB0011401" target=3D"_blank" rel=3D"nor=
+eferrer">Learn more about why this matters.</a>
+</td></tr></tbody></table></blockquote></div>
+
+--0000000000004a26b80651dd7237--
+

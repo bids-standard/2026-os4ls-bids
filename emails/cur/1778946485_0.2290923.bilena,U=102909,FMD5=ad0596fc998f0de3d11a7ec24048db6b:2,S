@@ -1,0 +1,247 @@
+Date: Sat, 16 May 2026 11:45:53 -0400
+From: Yaroslav Halchenko <yoh@dartmouth.edu>
+To: "Hermes Miller, Dora, Ph.D." <Hermes.Dora@mayo.edu>
+Cc: Franco Pestilli <pestilli@utexas.edu>,
+	"jbpoline@gmail.com" <jbpoline@gmail.com>,
+	bids steering <bids.steering@gmail.com>,
+	Chris Markiewicz <effigies@gmail.com>,
+	Kimberly Ray <kimray@utexas.edu>
+Subject: Re: [EXTERNAL] Re: OS4S call
+Message-ID: <agiRMXb8mod1L3-v@bilena>
+References: <CALMaa80bEcnPBr74-4nMaejr3LL22DE-zuKcw6eTWUg_dcLQ1g@mail.gmail.com>
+ <CAON1jmUDutav70C4E7TvPxaO-dUd=HgvkgM6R3MtwTJhjSMO_A@mail.gmail.com>
+ <CALMaa80N=+eTo3B8KxHSihJPK35ij6EaE5jrpJ-9348ecoXN3A@mail.gmail.com>
+ <CAON1jmWJ0F_A2k6M97Pq5J8R+TfWiT8E4gu+1p50e_VH_PiEuw@mail.gmail.com>
+ <SAWPR01MB994507E822F02AC99E8DB22F1D88052@SAWPR01MB994507.prod.exchangelabs.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: inline
+Content-Transfer-Encoding: 8bit
+In-Reply-To: <SAWPR01MB994507E822F02AC99E8DB22F1D88052@SAWPR01MB994507.prod.exchangelabs.com>
+X-URL: http://www.oneukrainian.com
+X-Image-Url: http://www.oneukrainian.com/img/yoh.png
+X-PGP-Key: http://www.oneukrainian.com/gpg-yoh.asc
+X-fingerprint: C5B9 05F0 E8D9 FD96 68FF  366F A2DE 2350 62DA 33FA
+
+Would it be possible to participate in that SC meeting even though I am
+now just an emeritus?  The time is short here, so I would prefer
+to avoid unnecessary delays and miscommunications.
+
+Cheers
+
+On Sat, 16 May 2026, Hermes Miller, Dora, Ph.D. wrote:
+
+>    Hi all,
+
+>    I think this grant is a great opportunity to support BIDS and it seems
+>    like we should have a dedicate a steering committee meeting for this,
+>    including Kim in this email as well.
+
+>    For the agenda, can we please add the following discussion points.
+>    These are some thoughts given that this is meant as a BIDS grant, not a
+>    personal research grant that involves BIDS?
+
+>     1. What are important design decisions for BIDS grants that supports
+>        the community?
+
+>     1. Current scenario: BIDS steering thinks this funding for BIDS would
+>        be great, how do we do this?
+>     2. Future scenario: someone reaches out to BIDS steering and wants to
+>        write a BIDS grant, what do we do?
+
+
+
+>    How do we ensure as BIDS steering that we do not have a conflict of
+>    interest:
+
+>     1. As steering, we all have a good overview of ‘what BIDS needs’. How
+>        do we best provide this input for BIDS grant development?
+>     2. Who does the ‘financial/grant management’ within the BIDS
+>        ecosystem?
+>     3. What should our roles be? Who will be the PIs/coPIs/coIs? Should
+>        steering refrain from lead-PI roles?
+
+
+
+>    From reading the web-page, Franco’s thoughts on ecosystem
+>    sustainability (e.g. BIDS 2.0, community tool development) seem
+>    required. It seems like ‘enabling AI/agentic workflows’ components are
+>    required as well, seems like JB has some cool ideas, I know Yahya also
+>    develops this type of stuff, probably others as well. Let’s brainstorm
+>    to make sure we check as many boxes as possible to support BIDS
+>    maintainers?
+
+
+
+>    Separately:
+
+>     1. It would be useful to figure out what the UT ‘Office of Open
+>        Science’ has for options for fiscal/grant support, also considering
+>        the international structure of BIDS?
+
+>    Thanks,
+
+>    Dora
+
+>    From: Franco Pestilli <pestilli@utexas.edu>
+>    Date: Friday, May 15, 2026 at 2:42 PM
+>    To: jbpoline@gmail.com <jbpoline@gmail.com>; Hermes Miller, Dora, Ph.D.
+>    <Hermes.Dora@mayo.edu>
+>    Cc: bids steering <bids.steering@gmail.com>; Chris Markiewicz
+>    <effigies@gmail.com>; Yaroslav Halchenko <yarikoptic@gmail.com>
+>    Subject: [EXTERNAL] Re: OS4S call
+>    External Email Notice: This message was sent by someone outside Mayo
+>    Clinic.
+
+>    Hi Dora, JB, and Yarik,
+
+>    I think, as I understand the call, that this is primarily a software
+>    ecosystem maintenance and sustainability opportunity rather than a
+>    research award. My interpretation is that the focus is less on
+>    developing entirely new tools and more on maturing the usability,
+>    interoperability, sustainability, governance, and long-term support of
+>    foundational community infrastructure.
+
+>    That is why I previously asked whether this was intended as a research
+>    proposal. What was pitched sounded more like a research-oriented
+>    effort, namely the development of something novel in the way an
+>    individual laboratory might pursue, but it was less clear to me how the
+>    proposed activities would directly strengthen or expand the BIDS
+>    ecosystem itself.
+
+>    For this particular call, my impression is that the proposal should
+>    focus on activities such as:
+
+>    (A) Expanding the coverage of data types and derivatives supported
+>    within BIDS
+>    (B) Developing mechanisms to engage more tool developers and improve
+>    compatibility across the ecosystem
+>    (C) Increasing community adoption, usability, training, documentation,
+>    and sustainability
+>    (D) Major refactoring of BIDS like BIDS 2.0
+
+>    Other ecosystem-oriented activities also seem compatible with the RFA.
+>    I may be missing something, however, as I am currently in transit and
+>    may not have interpreted every aspect correctly.
+
+>    On a separate topic regarding fiscal responsibility and organizational
+>    support, the UT System recently established a new Office of Open
+>    Science. My understanding is that one of their goals is precisely to
+>    support and coordinate open-science infrastructure and sustainability
+>    efforts across the system. I wonder whether they could potentially help
+>    handle some of the fiscal and administrative aspects related to BIDS.
+>    Since the office is newly established, they may also be motivated to
+>    demonstrate capacity in this area. I would be happy to reach out and
+>    explore this possibility if the group thinks it could be useful. I had
+>    not raised it earlier because I thought the INCF arrangement was likely
+>    to work out, and this office was only recently created.
+
+>    To be clear, I am not saying that JB’s proposal is not interesting or
+>    valuable. My only point is that, at least to me, it currently reads
+>    more like a research proposal than a sustainability and ecosystem
+>    proposal. A proposal like that could be more competitive in a standard
+>    call and part of the funds could still be sent to BIDS maintainers.
+
+>    Just my two cents.
+
+>    Best,
+>    Franco
+
+>    FRANCO PESTILLI, Ph.D. | Professor
+
+>    The University of Texas at Austin
+
+>    [1]Psychology | [2]College of Liberal Arts
+
+>    [3]Neuroscience | [4]College of Natural Sciences
+
+>    [5]pestilli@utexas.edu | [6]web | [7]Laboratory
+
+>    Director, [8]brainlife.io
+
+>    Director of Data Technology, [9]mesoscale-connectivity.org
+
+>    Director, [10]braindatagovernance.org
+
+>    Chair, [11]Infrastructure Committee INCF.org
+
+>    Director, [12]Brain Imaging Data Structure (BIDS) Connectivity Project
+
+>    Principal Investigator [13]BRAIN CONNECTS Data Coordination Center
+>    On Fri, May 15, 2026 at 7:31 PM JB Poline <[14]jbpoline@gmail.com>
+>    wrote:
+
+>    Hi Franco
+
+>    BIDS, as described in the email, but we will circulate some first ideas
+>    asap
+
+>    Cheers
+
+>    JB
+
+>    On Fri, May 15, 2026, 12:10 Franco Pestilli <[15]pestilli@utexas.edu>
+>    wrote:
+
+>    Is this a bids grant?
+
+>    Or a lab grant?
+
+>    Franco Pestilli
+>    Professor
+>    The University of Texas
+
+>    On Fri, May 15, 2026, 4:32 PM JB Poline <[16]jbpoline@gmail.com> wrote:
+
+>    Hi Everyone,
+
+>    Following steering conversations on funding the BIDS project(s), we had
+>    a quick chat with Yarik. We plan to submit an LOI for TIER2 to [17]this
+>    call for the BIDS community. One idea is to develop the BIDS community
+>    towards standardization of "bids-study", enabling agentic AI to do a
+>    whole neuroimaging study and "biomarker discovery ready". I am sure
+>    other ideas will emerge :)
+
+>    The call is going to be super competitive, we expect many to apply.
+
+>    Let us know what you think, and I would like to dedicate a steering
+>    meeting to this before OHBM if possible.
+
+>    Cheers
+
+>    JB
+
+>    This message is from an external sender. [18]Learn more about why this
+>    matters.
+
+>    This message is from an external sender. [19]Learn more about why this
+>    matters.
+
+> References
+
+>    1. https://liberalarts.utexas.edu/psychology/index.php
+>    2. https://liberalarts.utexas.edu/
+>    3. https://neuroscience.utexas.edu/
+>    4. http://cns.utexas.edu/
+>    5. mailto:pestilli@utexas.edu
+>    6. https://liberalarts.utexas.edu/psychology/faculty/fp4834
+>    7. https://pestillilab.github.io/
+>    8. http://brainlife.io/
+>    9. https://www.mesoscale-connectivity.org/
+>   10. http://braindatagovernance.org/
+>   11. https://incf.org/about/governance/infrastructure-committee-ic
+>   12. https://pestillilab.github.io/bids-connectivity/
+>   13. https://brain-connects.org/
+>   14. mailto:jbpoline@gmail.com
+>   15. mailto:pestilli@utexas.edu
+>   16. mailto:jbpoline@gmail.com
+>   17. https://os4science.org/funding_opportunity/os4ls/
+>   18. https://ut.service-now.com/sp?id=kb_article&number=KB0011401
+>   19. https://ut.service-now.com/sp?id=kb_article&number=KB0011401
+
+-- 
+Yaroslav O. Halchenko
+Center for Open Neuroscience     http://centerforopenneuroscience.org
+Dartmouth College, 419 Moore Hall, Hinman Box 6207, Hanover, NH 03755
+WWW:   http://www.linkedin.com/in/yarik        
+

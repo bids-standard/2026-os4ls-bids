@@ -1,0 +1,1004 @@
+Received: from mail-eastus2azon11020119.outbound.protection.outlook.com ([52.101.56.119] helo=BN1PR04CU002.outbound.protection.outlook.com)
+	by smtp.onerussian.com with esmtps (TLS1.3:ECDHE_RSA_AES_256_GCM_SHA384:256)
+	(Exim 4.92)
+	(envelope-from <yaroslav.o.halchenko+SRS=DVjjY=DP=gmail.com=jbpoline@dartmouth.edu>)
+	id 1wOwOt-00083O-K1
+	for yoh@onerussian.com; Mon, 18 May 2026 07:44:49 -0400
+ARC-Seal: i=3; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=op1fMBpXsNnxmNI08Bna11K+s92DK3iJ3RaCb9QzEUwsm45mYJQpZa2YSf9J5WtQhQh4Bn4MkOlZc+xsoWGvBqvBOFtA3po1TyMOdbpUMMyRSOrlOHs3HfJyGt8IaTiA0ngSmZWLmHkLROSAmmG4YqtOmms9AznzFs/6X+bkV8HJMoE61xFbuBb4vovmXpJcyq6apYvHeUMCv1o16k3djEH02+OHY16pWxz5+sgLxELNcmKwDjxV0xKRdv4EKJJ8hv/RTnXrfRYCcz+52ITQ9QExBD3p86eFdpni84zB/XAtvzgYK4guuG4RVjCIxYgllCMt9+rXg8mLQLuhUcLdWA==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=Xlxf+hUF4kxFMFhRvDp7d0B42itxIQ1sWvJ2THrfoQo=;
+ b=IbSThyR5BPB4eNGRjBtk0q6Z2YfhyNo/eIqR8kDTf6PqYdzQa1pIsrKvc7/C+BVmPi0USRAHaynE28JWnCh4amsu7CrAR7q1oitgeAlmtjN4QXCD+z4BkBhpLxeLYeWqcBaL7kBdFwxkvlU7P0Pg854o4G2TCBk7BsiEkyoK/Ip3pr38M94tL9wLyNY+cxm139cP5GkKzUYoLUmoV4dkfMnbXAP7wJYsUTZNrYOVmohXq42kGh6ODN6rERCY/TxwOUw9+isXjK0wFtEYX2iyLCqHswwvvQUH3bthDRrS9mJPGsPzIS49nRj9TfsVuKqDZzZ52Fubb64Z2PJRhdKOTQ==
+ARC-Authentication-Results: i=3; mx.microsoft.com 1; spf=pass (sender ip is
+ 2607:f8b0:4864:20::334) smtp.rcpttodomain=dartmouth.edu
+ smtp.mailfrom=gmail.com; dmarc=pass (p=none sp=quarantine pct=100)
+ action=none header.from=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com; arc=pass (0 oda=0 ltdi=1)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=dartmouth.onmicrosoft.com; s=selector2-dartmouth-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=Xlxf+hUF4kxFMFhRvDp7d0B42itxIQ1sWvJ2THrfoQo=;
+ b=N2My2ZQwjOujksUMwcdimgwwgWokgnAt7LECactzbHVy1RALIwE3rU5AkD3JyuINswl53jcgxoV4hTLn0eYiMmi0Zp3sNN/opcji4pFTlxAEdoi9U6y+knk3yKqm6IV8nAGJhLIpCZYA/JT12r0RVelIwPYGILRC66Dr+EvMWZ8=
+Resent-From: <yaroslav.o.halchenko@dartmouth.edu>
+ARC-Seal: i=2; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=pass;
+ b=daP3JEPQFMTZUmB9QuObE+WkeZEjClSD6TKXFIH5eHvHD/o3hjlz58Cj5ea/qL+mEGxGarBMAg0IBZLi1fSstZBPMKUIy8eMLzWnnUIQ5bSTYOnBLWHp8GHthhYfWZX5ARtKAdWdlHBoWttEFO2Y8d9G7g03mbPiQXG43UvgynW39BjImmLLjcqLr578+/YTR9Bn707kjMxb1htullp+8/IzcnHMjizpMBM83qKR3VhItSiZB4jytgr9RBouXHwvX/6o7ipWPHSmRKvMwHlhU3na+pPFAqYMxNLG3ZIUWpj5qbJW1ELNB/w9Aa2MUDPtkm73dX1NgsY3YQpCm3qg5g==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=Xlxf+hUF4kxFMFhRvDp7d0B42itxIQ1sWvJ2THrfoQo=;
+ b=xYFBSVQhz4ExjpM4iUhq7b0s1+PYLe6YWdVeyTQWS2S5Wcbwz7D4u/4+XJEy3Ixuf/VJgYj/l0NH06CpPpgzW8e2+oDyaDYYZGp6SQ3xHqqx/Brm8vGIO/dNUy/6qxDbVg5XlLlxgFe5Dl3AnrHlMfjYbSBwflv1r4/vrE1SVavPzAvsE1N+nbzIp8//BRaPs4tNNvmEFSbdAhdGaNYGobjJhrJpKxFNys3izdR23v8wpviV4zRJZzQAz/UTGVs3erenGIl3TeFsaVaRnOkKqLEoej0c3/C1Hkn2WASIQcNJwF9cLZCWfwdEuNCcgCLf8a+rlq+zcEcEmi7ZJQNj0w==
+ARC-Authentication-Results: i=2; mx.microsoft.com 1; spf=pass (sender ip is
+ 2607:f8b0:4864:20::334) smtp.rcpttodomain=dartmouth.edu
+ smtp.mailfrom=gmail.com; dmarc=pass (p=none sp=quarantine pct=100)
+ action=none header.from=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com; arc=pass (0 oda=0 ltdi=1)
+Received: from DS1P220CA0007.NAMP220.PROD.OUTLOOK.COM (2603:10b6:8:455::13) by
+ IA3PR03MB7716.namprd03.prod.outlook.com (2603:10b6:208:515::18) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.21.25.23; Mon, 18 May
+ 2026 11:44:44 +0000
+Received: from DS3PEPF0000C37C.namprd04.prod.outlook.com
+ (2603:10b6:8:455:cafe::3b) by DS1P220CA0007.outlook.office365.com
+ (2603:10b6:8:455::13) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.21.25.24 via Frontend Transport; Mon, 18
+ May 2026 11:44:43 +0000
+Authentication-Results: spf=pass (sender IP is 2607:f8b0:4864:20::334)
+ smtp.mailfrom=gmail.com; dkim=pass (signature was verified)
+ header.d=gmail.com;dmarc=pass action=none header.from=gmail.com;
+Received-SPF: Pass (protection.outlook.com: domain of gmail.com designates
+ 2607:f8b0:4864:20::334 as permitted sender) receiver=protection.outlook.com;
+ client-ip=2607:f8b0:4864:20::334; helo=mail-ot1-x334.google.com; pr=C
+Received: from mail-ot1-x334.google.com (2607:f8b0:4864:20::334) by
+ DS3PEPF0000C37C.mail.protection.outlook.com (2603:10b6:f:fc00::206) with
+ Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id
+ 15.21.48.11 via Frontend Transport; Mon, 18 May 2026 11:44:43 +0000
+Received: by mail-ot1-x334.google.com with SMTP id 46e09a7af769-7dbec19732eso2696852a34.3
+        for <yaroslav.o.halchenko@dartmouth.edu>; Mon, 18 May 2026 04:44:43 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1779104683; cv=none;
+        d=google.com; s=arc-20240605;
+        b=JzPc0g3erzRZzFkCvZc9+BN4YEbFG5roB032zCyPy5OevAxxsbQ9Y1Qlk/olv/4UAr
+         eKD0dWN6VhPecIrxjC8zBrXWH1dHp9e1TWZv7IP3fjWZJtKkFCuBhg6afZRtEheLG9D3
+         4413vKq//7pXhJvBI7X6OGq+dNcian6xvl/u6hKfzFWa62War9nRxOU/ma0oLs15eFsh
+         VDH/DaHatiol1WsrMZ3dJclKD9800sc1J7spdIWtCnaP2vuAxD5u2CglYeSqHoW9n6ca
+         W4x6fxdlZN5JIAs3OGkMxWzQOUbyYaLdRUwivPolp/UF7YU/xM3vuJPGwBYXYULdqlI9
+         Rhmg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=Xlxf+hUF4kxFMFhRvDp7d0B42itxIQ1sWvJ2THrfoQo=;
+        fh=h7uOiewUcQBTixLzLqEE23lvZ5nSFmLPooYjCJFOrVM=;
+        b=hnmiXNB9tP7sNu/W8tfKBSDnEjtBWlheurGyGYInyydbdo2EhsjRvtq6E7zFWKtKhI
+         Ol4rjKiA+zcJJAH7cJmVSp5RgV+aInLLDYYaEwHateAariQmjuPbI8SrdN3HzkK8jZQf
+         feXCv4t9FjL6xvZ00SLAAm0J1fOWd6MSWkZbEesJImd6BUSt9bk0iWEQa/Q0flOJKz7+
+         tJuxNodxYOHkalGXiSkRBwmdAM2mr0UiRyd2J9yYMrmO4SiyI7Mn4btWOEhTZcpGcGeM
+         yYIuS94VPRqdxN5vO+iKVGsGhzDdmc4q3OlhzY0d3bmhBqhWmksUQOTIn+u4prZ+8+vg
+         oqRA==;
+        darn=dartmouth.edu
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=gmail.com; s=20251104; t=1779104683; x=1779709483; darn=dartmouth.edu;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=Xlxf+hUF4kxFMFhRvDp7d0B42itxIQ1sWvJ2THrfoQo=;
+        b=WC7Jfl2dEXPQ7InnzxLZuv+dsIHHSVgcJ/EjzOY4qoxcT59NhSQc0PpXBEh/bVbCxv
+         QAsX2UOE9bNAd0aPpSzNBB+GlG7K5JpI2fLc3tGGi2SU92rXB/pWD/aWeS4uJl43pfm8
+         p4AUBQV3c0WEGlPBN95KTPzkEVxUDy86Ar9WY+9se4zdsylCtLQSoKVpegvX327ApE9S
+         8EiNJAwQZDfEmCSYUap1V5lASjuPs8gm7GgFCOiP0ZSLgRr+PtGA6vY1xDA6Hgi26p19
+         X/yk9y6vG1f2/GHVy2Njkh+stIVLwvsuey6pSb2FRXrDrGKJP7wrk43ag/mg9zd5ECRI
+         BEGg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1779104683; x=1779709483;
+        h=cc:to:subject:message-id:date:from:reply-to:in-reply-to:references
+         :mime-version:x-gm-gg:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=Xlxf+hUF4kxFMFhRvDp7d0B42itxIQ1sWvJ2THrfoQo=;
+        b=p6deCEFm2Fx4+1WtKtDxRX+Ok9A5kMAgFp+CDhIAImEzQLxkrrd8KoPZ9+524dhYqZ
+         267o93C8OF6g+/vMqA1gZ2vo0iGXSpxYF+RYm6q09WJPMeMI/LD6hablHYwti+N4N8rP
+         Kqcf4BiO+t+wJDkGJlvq87ByjOpLHNgaZjcaNOGRZa/QXNZTx6k1tnjHwOyRsIUDYWsN
+         Ivl3fOMxtdrgxSXTpLX7fD34VZZqV9NXtdIrGmqYfsZNpdwlqxFWfdGBPLsszJq4nJIX
+         IgZ+dKDyVaRjuPAPbdmf06tq9g1YR8MZW2NxabpfZPegb622j6fw829oq2fBSSJCdy0V
+         094A==
+X-Gm-Message-State: AOJu0Yz6hiKXF6+SptfTODF+HwRovhIW6XQVlj4reI8HhWDdWCG6LseQ
+	geELNU97SOr/LJTQgL9zIvaPwOjYknkMMNuFn+sKpgSyljk7M2gK4Hdg4Zg7U+nXiSq0xOF/UYt
+	8UzN13TeY2XrdFLKEUVQC4yIcUx0gQ64=
+X-Gm-Gg: Acq92OEt/XbQz4qx1uyuTqmlNeBaCOLbN4LB1KnMPVa/09olx5huf+7kOlxtdWJT3QA
+	xtAdfgWP5qPxhm6o4GK4Nrpkg69sbNpl+LQTdzMR2F7XBtymp+Ry7oaKBfh3iHLMklMrKu8KJU8
+	3qEGqTsrWXHoXMdWtcpjxyYLTWs5LbEIIxTG2v1kD/HK2pfGIh3GO+41w+S9SD7MYGCu8Lng1rN
+	tQ76c4/X3H1iqB+ptZZY8H43MY0hqaeflKEnA7wi6XYdiLLnJFpTp1rxmkFrjLt93jjCrVABGb4
+	z7EtUiBJ
+X-Received: by 2002:a05:6820:4c0b:b0:694:8e6e:2e1c with SMTP id
+ 006d021491bc7-69c9bfc92a9mr9079581eaf.60.1779104682659; Mon, 18 May 2026
+ 04:44:42 -0700 (PDT)
+MIME-Version: 1.0
+References: <CALMaa80bEcnPBr74-4nMaejr3LL22DE-zuKcw6eTWUg_dcLQ1g@mail.gmail.com>
+ <CAON1jmUDutav70C4E7TvPxaO-dUd=HgvkgM6R3MtwTJhjSMO_A@mail.gmail.com>
+ <CALMaa80N=+eTo3B8KxHSihJPK35ij6EaE5jrpJ-9348ecoXN3A@mail.gmail.com>
+ <CAON1jmWJ0F_A2k6M97Pq5J8R+TfWiT8E4gu+1p50e_VH_PiEuw@mail.gmail.com>
+ <SAWPR01MB994507E822F02AC99E8DB22F1D88052@SAWPR01MB994507.prod.exchangelabs.com>
+ <agiRMXb8mod1L3-v@bilena> <CALMaa82z0ADWuus_4pOyK_tjSU3nQpoAhPuytrL0bW8iWb7uoA@mail.gmail.com>
+ <CAON1jmXgDb3=Zk7-L69J=PpzDPjCnyWPNLHM8HW_JM83VtyXeg@mail.gmail.com>
+In-Reply-To: <CAON1jmXgDb3=Zk7-L69J=PpzDPjCnyWPNLHM8HW_JM83VtyXeg@mail.gmail.com>
+Reply-To: jbpoline@gmail.com
+From: JB Poline <jbpoline@gmail.com>
+Date: Mon, 18 May 2026 07:44:30 -0400
+X-Gm-Features: AVHnY4IeeXFNBU5113u16p38V9dxMvWfYHykZLXV1PRNUqMC5IxSlV-XIuxwIYU
+Message-ID: <CALMaa83hKuPrsD9wruax+t6T49gV1O=ADyxh=r89w-38RCSHRQ@mail.gmail.com>
+To: Franco Pestilli <pestilli@utexas.edu>
+Cc: Yaroslav Halchenko <yaroslav.o.halchenko@dartmouth.edu>, 
+	"Hermes Miller, Dora, Ph.D." <Hermes.Dora@mayo.edu>, bids steering <bids.steering@gmail.com>, 
+	Chris Markiewicz <effigies@gmail.com>, Kimberly Ray <kimray@utexas.edu>
+Content-Type: multipart/alternative; boundary="000000000000a0d357065216161f"
+X-EOPAttributedMessage: 0
+X-EOPTenantAttributedMessage: 995b0936-48d6-40e5-a31e-bf689ec9446f:0
+X-MS-PublicTrafficType: Email
+X-MS-TrafficTypeDiagnostic: DS3PEPF0000C37C:EE_|IA3PR03MB7716:EE_
+X-MS-Office365-Filtering-Correlation-Id: 22128a95-5e2f-4913-b78f-08deb4d2dab4
+X-LD-Processed: 995b0936-48d6-40e5-a31e-bf689ec9446f,ExtFwd
+X-MS-Exchange-AtpMessageProperties: SA
+X-Dartmouth-ETR-Authentication-Results: dmarc=pass
+X-MS-Exchange-SenderADCheck: 0
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam: BCL:0;ARA:13230040|376014|7093399015|786006|48200799018|9140799003|61400799027|4143699003|3023799003|11063799003|56012099003|18002099003|19002099003|16102099003|55112099003|13003099007|22082099003|8096899003;
+X-Microsoft-Antispam-Message-Info: =?utf-8?B?Nkw5VTBUR2FzM05WVnZXT1ZDa2NaUTcrUmpLdlgyQ2pXMCtTTVlBK2YvS0Y2?=
+ =?utf-8?B?a2U4S1pUYStrSXFDNkNDYlZxWFhMVlY4ZXdoNGZRMCswVjJVYmlzcEJEU0do?=
+ =?utf-8?B?OFZ0STdKMkw4Zk5WWUdGVHVGYzhXaVNpYlgwbVpYRFlQSmw2WHJKaW1xUndN?=
+ =?utf-8?B?N2wycnlwVjVtRlIza1BWZkc3NWxKYzNaaytrMWFRVWcxS3RnZWYxK0ZFSzcr?=
+ =?utf-8?B?RHhYcXFlOGM5V0gzUHFNbkVubVhzQ3VCNm1tdmUzSlhIbE5VSDcrZ1pWT0N5?=
+ =?utf-8?B?VktHZ3oyWTZ1RmNpMmFXMk8waFlZc2pib0NsR2RQcWN2R1Y2TGFJODhRN1RE?=
+ =?utf-8?B?K3E3ZXZPNlNpSWZWWU9INkxJbGJPVlY1TGtrNmNBZDdsWVNEanlSN1VPMW1s?=
+ =?utf-8?B?TjhYc0pvbzBEODZ4eFQvbjcrVjdVbHNIaExab3VUWWVRMm5MVTEzWTZ6eXRj?=
+ =?utf-8?B?UmlkVDNPYkFRU1NVRGV3VVBhd2IvN1lYZTI1cU0yS3FsOHVQWC9iZDVmVTBG?=
+ =?utf-8?B?QVBZUU45Y0tOVnF5bE5LSGRrRUVsYnRJZk5GcGUwM1N4TERzeklwaWlnZEtn?=
+ =?utf-8?B?OFpPODkxWWpmMmJSZjlLZkd6eXJmRllBNUhlaUVnTjF4aFlnd0o3Y0ZyWnhH?=
+ =?utf-8?B?L1ZZYzhJenJwRStsZWtmZ0QyNTNUTVhoMkVpRmhkR3BsbkNxeEFWQy9iekp2?=
+ =?utf-8?B?eDBYY1ZrL203aXVTYmlkbTA3OVhES29NSys4VUZLcEZUdzY1QlIrOTNvZElQ?=
+ =?utf-8?B?YXV0Z252Wmh1SEs4L01SMEMvS2huakpiNy83b3pOTkRkREJDVHhQYk5mYkJC?=
+ =?utf-8?B?aEJ4ckZRMUhvNjZBa3Zja3cxTmRzVkxkUVdoWk1rM2RxVjJiRVppam45c3Vh?=
+ =?utf-8?B?VTZIS1ZIbUc1elA1VWQ1MTJiM2hORyttSFNYdGZibjdjb1NCTHo3ZFNlQ3dI?=
+ =?utf-8?B?dm5sWXgwUEJPUG8wVmpyMGxMeWtCQk02V1o3UzBPUkVlbTBqRlFwc0lrWXM5?=
+ =?utf-8?B?ZXJXSDA2NVg4S0dJZ09WQzJCK1JEbUJreEJlcnNneUttcVlkTE5Jclc4dnJ1?=
+ =?utf-8?B?a1dZYU9DUEJHV0Z5THFoeHlZNjMwYjA5WENlbjVyOUxIaEJlN2pmb3dmdkwy?=
+ =?utf-8?B?OERTdVlwZWhieXNiOHZqSzVLcDdNdzMrWTluNmltMmwzdTZxTmRONkF4eHFj?=
+ =?utf-8?B?eEpHUEpxRUpUeWJJdnh6aWM5THlManprU2tsS05lalROUmJMWU5TajlJN1Ur?=
+ =?utf-8?B?TVBGR2p6Lzk5OXR6TnI5dlFoY1Z0aS9rL2NHQzU5VEI1VkJWdWpFVkswYWYy?=
+ =?utf-8?B?RUhmcGxvMFZES1NtR3lrUlV6UnF4NndPclZBZFAxd2ljK05TSDJnYmlVYmxO?=
+ =?utf-8?B?US9FYTNvbExGR0J1dlpXd2U3UjFyNUVEUEthNW1uaWV4SUs0d1NWRTRXQTl1?=
+ =?utf-8?B?NkU3QUY3UnVpcVpYMjlzWm03dmxzdHpJOC8wVWxteS9WTy93bDlYVUZFQXM0?=
+ =?utf-8?B?Z2lJS1RSUS9tRWlicXVZMWZVMXR3OWVmUlMrS1dHQnEzeEZNMVdxODBmNk1C?=
+ =?utf-8?Q?s9nal478LpN+XCt6OYMuFbATg=3D?=
+X-Forefront-Antispam-Report: CIP:2607:f8b0:4864:20::334;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:mail-ot1-x334.google.com;PTR:mail-ot1-x334.google.com;CAT:NONE;SFS:(13230040)(376014)(7093399015)(786006)(48200799018)(9140799003)(61400799027)(4143699003)(3023799003)(11063799003)(56012099003)(18002099003)(19002099003)(16102099003)(55112099003)(13003099007)(22082099003)(8096899003);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0: O+ERYaqv5FBeemO3xFMbrV3V5xJUw0FHtA+2jP5tnAOCF6XaAVt3kIXDo+lfeNDXyuFOkiqMyJ984jKepRRzhQp86lIhROHfmu0YNsBNtIjizth5rREb93spx7oB1nrynb+g+bhgMzo413hYdGrOcMR92xXiou1436qGpyR873yi/cUhofG78Jl2H9m1zBFvofms+6RZb7713E6i80KU8u2BKo3+D5hq5h4EAjOo3hv7KTECufhg8V0ZS5euQ+1ff6dQ3+9E60aCo3QBkvFL0j9BVASNB5vgdQZKobjx6z8+9oZn9/tmf4KD9Jdiq2n5vREI+5D3DNwLoCZc0gFTa1m63QNAvBgoSxRF/PF5v6tAJ+Be2ywb8MlAXLk7rbJcLPH2L14TAed7qh3F3G9PgpcoVkONdzTQ/pp4xj82I4Zb9AvJr3D5Gm8M/dxH37T1
+X-ExternalRecipientOutboundConnectors: 995b0936-48d6-40e5-a31e-bf689ec9446f
+X-MS-Exchange-ForwardingLoop: yaroslav.o.halchenko@dartmouth.edu;995b0936-48d6-40e5-a31e-bf689ec9446f
+X-OriginatorOrg: dartmouth.onmicrosoft.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 18 May 2026 11:44:43.8264
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 22128a95-5e2f-4913-b78f-08deb4d2dab4
+X-MS-Exchange-CrossTenant-Id: 995b0936-48d6-40e5-a31e-bf689ec9446f
+X-MS-Exchange-CrossTenant-AuthSource: DS3PEPF0000C37C.namprd04.prod.outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Anonymous
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: IA3PR03MB7716
+X-SA-Exim-Connect-IP: 52.101.56.119
+X-SA-Exim-Rcpt-To: yoh@onerussian.com
+X-SA-Exim-Mail-From: yaroslav.o.halchenko+SRS=DVjjY=DP=gmail.com=jbpoline@dartmouth.edu
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on smtp.onerussian.com
+X-Spam-Level: 
+X-Spam-Status: No, score=-100.6 required=5.0 tests=AWL,BAYES_00,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU,FORGED_GMAIL_RCVD,FREEMAIL_FORGED_REPLYTO,
+	HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,RCVD_IN_DNSWL_NONE,
+	RCVD_IN_MSPIKE_H2,SPF_HELO_PASS,SPF_PASS,USER_IN_WHITELIST
+	shortcircuit=no autolearn=no autolearn_force=no version=3.4.2
+X-Spam-Report: * -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at http://www.dnswl.org/,
+	*       no trust
+	*      [52.101.56.119 listed in list.dnswl.org]
+	* -0.0 RCVD_IN_MSPIKE_H2 RBL: Average reputation (+2)
+	*      [52.101.56.119 listed in wl.mailspike.net]
+	* -100 USER_IN_WHITELIST From: address is in the user's white-list
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	*  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+	*      mail domains are different
+	* -0.0 SPF_HELO_PASS SPF: HELO matches SPF record
+	*  1.0 FORGED_GMAIL_RCVD 'From' gmail.com does not match 'Received'
+	*      headers
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	* -1.9 BAYES_00 BODY: Bayes spam probability is 0 to 1%
+	*      [score: 0.0000]
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	*  2.1 FREEMAIL_FORGED_REPLYTO Freemail in Reply-To, but not From
+	* -1.9 AWL AWL: Adjusted score from AWL reputation of From: address
+Subject: Re: [EXTERNAL] Re: OS4S call
+X-SA-Exim-Version: 4.2.1 (built Wed, 08 May 2019 21:11:16 +0000)
+X-SA-Exim-Scanned: Yes (on smtp.onerussian.com)
+
+--000000000000a0d357065216161f
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Franco,
+
+Thanks for the email: that's my interpretation as well. Let's discuss when
+Yarik and I have sent something to the group so that you have more than 3
+words to give feedback on :)
+
+cheers
+JB
+
+
+On Mon, May 18, 2026 at 5:21=E2=80=AFAM Franco Pestilli <pestilli@utexas.ed=
+u> wrote:
+
+> Hi JB,
+>
+> Thanks for clarifying. This is how I interpreted the call:
+>
+>    - CURATING DATA FOR AI: Representing, managing, curating, and
+>    structuring scientific data for use in model training
+>    - BUILDING DATA ENDPOINTS FOR AI AGENTS: Developing benchmarks,
+>    standards, endpoints, or protocols that enable the use of open-source =
+tools
+>    within agentic workflows
+>    - CODE REFACTORING AND PERFORMANCE IMPROVEMENT FOR AI: Scalability and
+>    performance improvements, including support for hardware acceleration
+>    - INTEROPERABILITY TOOLS FOR AI: Interoperability frameworks that make
+>    tools composable within AI-driven pipelines
+>
+> The all-caps wording above reflects my interpretation of the priorities
+> emphasized in the call.
+>
+> My reading is that the RFA is primarily targeting mechanisms that make
+> scientific data, standards, and software ecosystems AI-ready. In other
+> words, the emphasis seems to be less on developing new agentic systems
+> themselves, and more on enabling existing data infrastructures and tools =
+to
+> interface effectively with AI workflows and future AI agents.
+>
+> Am I misinterpreting the scope of the call?
+>
+> Looking forward to the discussion.
+>
+> Franco
+>
+>
+> On Sat, May 16, 2026 at 9:51=E2=80=AFPM JB Poline <jbpoline@gmail.com> wr=
+ote:
+>
+>> @yarek : yes, of course on my side - @steering: let us know
+>>
+>> @franco : yes, the intent is not research but support for the standard
+>> ecosystem - but they also ask for a bit of development, that I would lik=
+e
+>> to go towards bids-study, but let's wait for the first brainstorming to
+>> confirm.
+>>
+>> @dora :yes, good questions, at the moment Yarik has agreed to take the
+>> lead on it and that makes sense to me given his involvement in the BIDS
+>> ecosystem implementation. There are many solutions for fiscal sponsorshi=
+p;
+>> For that grant, money could also flow from Dartmouth.
+>>
+>> cheers
+>> JB
+>>
+>>
+>> On Sat, May 16, 2026 at 11:45=E2=80=AFAM Yaroslav Halchenko <
+>> yaroslav.o.halchenko@dartmouth.edu> wrote:
+>>
+>>> Would it be possible to participate in that SC meeting even though I am
+>>> now just an emeritus?  The time is short here, so I would prefer
+>>> to avoid unnecessary delays and miscommunications.
+>>>
+>>> Cheers
+>>>
+>>> On Sat, 16 May 2026, Hermes Miller, Dora, Ph.D. wrote:
+>>>
+>>> >    Hi all,
+>>>
+>>> >    I think this grant is a great opportunity to support BIDS and it
+>>> seems
+>>> >    like we should have a dedicate a steering committee meeting for
+>>> this,
+>>> >    including Kim in this email as well.
+>>>
+>>> >    For the agenda, can we please add the following discussion points.
+>>> >    These are some thoughts given that this is meant as a BIDS grant,
+>>> not a
+>>> >    personal research grant that involves BIDS?
+>>>
+>>> >     1. What are important design decisions for BIDS grants that
+>>> supports
+>>> >        the community?
+>>>
+>>> >     1. Current scenario: BIDS steering thinks this funding for BIDS
+>>> would
+>>> >        be great, how do we do this?
+>>> >     2. Future scenario: someone reaches out to BIDS steering and want=
+s
+>>> to
+>>> >        write a BIDS grant, what do we do?
+>>>
+>>>
+>>>
+>>> >    How do we ensure as BIDS steering that we do not have a conflict o=
+f
+>>> >    interest:
+>>>
+>>> >     1. As steering, we all have a good overview of =E2=80=98what BIDS=
+ needs=E2=80=99.
+>>> How
+>>> >        do we best provide this input for BIDS grant development?
+>>> >     2. Who does the =E2=80=98financial/grant management=E2=80=99 with=
+in the BIDS
+>>> >        ecosystem?
+>>> >     3. What should our roles be? Who will be the PIs/coPIs/coIs? Shou=
+ld
+>>> >        steering refrain from lead-PI roles?
+>>>
+>>>
+>>>
+>>> >    From reading the web-page, Franco=E2=80=99s thoughts on ecosystem
+>>> >    sustainability (e.g. BIDS 2.0, community tool development) seem
+>>> >    required. It seems like =E2=80=98enabling AI/agentic workflows=E2=
+=80=99 components
+>>> are
+>>> >    required as well, seems like JB has some cool ideas, I know Yahya
+>>> also
+>>> >    develops this type of stuff, probably others as well. Let=E2=80=99=
+s
+>>> brainstorm
+>>> >    to make sure we check as many boxes as possible to support BIDS
+>>> >    maintainers?
+>>>
+>>>
+>>>
+>>> >    Separately:
+>>>
+>>> >     1. It would be useful to figure out what the UT =E2=80=98Office o=
+f Open
+>>> >        Science=E2=80=99 has for options for fiscal/grant support, als=
+o
+>>> considering
+>>> >        the international structure of BIDS?
+>>>
+>>> >    Thanks,
+>>>
+>>> >    Dora
+>>>
+>>> >    From: Franco Pestilli <pestilli@utexas.edu>
+>>> >    Date: Friday, May 15, 2026 at 2:42=E2=80=AFPM
+>>> >    To: jbpoline@gmail.com <jbpoline@gmail.com>; Hermes Miller, Dora,
+>>> Ph.D.
+>>> >    <Hermes.Dora@mayo.edu>
+>>> >    Cc: bids steering <bids.steering@gmail.com>; Chris Markiewicz
+>>> >    <effigies@gmail.com>; Yaroslav Halchenko <yarikoptic@gmail.com>
+>>> >    Subject: [EXTERNAL] Re: OS4S call
+>>> >    External Email Notice: This message was sent by someone outside Ma=
+yo
+>>> >    Clinic.
+>>>
+>>> >    Hi Dora, JB, and Yarik,
+>>>
+>>> >    I think, as I understand the call, that this is primarily a softwa=
+re
+>>> >    ecosystem maintenance and sustainability opportunity rather than a
+>>> >    research award. My interpretation is that the focus is less on
+>>> >    developing entirely new tools and more on maturing the usability,
+>>> >    interoperability, sustainability, governance, and long-term suppor=
+t
+>>> of
+>>> >    foundational community infrastructure.
+>>>
+>>> >    That is why I previously asked whether this was intended as a
+>>> research
+>>> >    proposal. What was pitched sounded more like a research-oriented
+>>> >    effort, namely the development of something novel in the way an
+>>> >    individual laboratory might pursue, but it was less clear to me ho=
+w
+>>> the
+>>> >    proposed activities would directly strengthen or expand the BIDS
+>>> >    ecosystem itself.
+>>>
+>>> >    For this particular call, my impression is that the proposal shoul=
+d
+>>> >    focus on activities such as:
+>>>
+>>> >    (A) Expanding the coverage of data types and derivatives supported
+>>> >    within BIDS
+>>> >    (B) Developing mechanisms to engage more tool developers and impro=
+ve
+>>> >    compatibility across the ecosystem
+>>> >    (C) Increasing community adoption, usability, training,
+>>> documentation,
+>>> >    and sustainability
+>>> >    (D) Major refactoring of BIDS like BIDS 2.0
+>>>
+>>> >    Other ecosystem-oriented activities also seem compatible with the
+>>> RFA.
+>>> >    I may be missing something, however, as I am currently in transit
+>>> and
+>>> >    may not have interpreted every aspect correctly.
+>>>
+>>> >    On a separate topic regarding fiscal responsibility and
+>>> organizational
+>>> >    support, the UT System recently established a new Office of Open
+>>> >    Science. My understanding is that one of their goals is precisely =
+to
+>>> >    support and coordinate open-science infrastructure and
+>>> sustainability
+>>> >    efforts across the system. I wonder whether they could potentially
+>>> help
+>>> >    handle some of the fiscal and administrative aspects related to
+>>> BIDS.
+>>> >    Since the office is newly established, they may also be motivated =
+to
+>>> >    demonstrate capacity in this area. I would be happy to reach out a=
+nd
+>>> >    explore this possibility if the group thinks it could be useful. I
+>>> had
+>>> >    not raised it earlier because I thought the INCF arrangement was
+>>> likely
+>>> >    to work out, and this office was only recently created.
+>>>
+>>> >    To be clear, I am not saying that JB=E2=80=99s proposal is not int=
+eresting
+>>> or
+>>> >    valuable. My only point is that, at least to me, it currently read=
+s
+>>> >    more like a research proposal than a sustainability and ecosystem
+>>> >    proposal. A proposal like that could be more competitive in a
+>>> standard
+>>> >    call and part of the funds could still be sent to BIDS maintainers=
+.
+>>>
+>>> >    Just my two cents.
+>>>
+>>> >    Best,
+>>> >    Franco
+>>>
+>>> >    FRANCO PESTILLI, Ph.D. | Professor
+>>>
+>>> >    The University of Texas at Austin
+>>>
+>>> >    [1]Psychology | [2]College of Liberal Arts
+>>>
+>>> >    [3]Neuroscience | [4]College of Natural Sciences
+>>>
+>>> >    [5]pestilli@utexas.edu | [6]web | [7]Laboratory
+>>>
+>>> >    Director, [8]brainlife.io
+>>>
+>>> >    Director of Data Technology, [9]mesoscale-connectivity.org
+>>>
+>>> >    Director, [10]braindatagovernance.org
+>>>
+>>> >    Chair, [11]Infrastructure Committee INCF.org
+>>>
+>>> >    Director, [12]Brain Imaging Data Structure (BIDS) Connectivity
+>>> Project
+>>>
+>>> >    Principal Investigator [13]BRAIN CONNECTS Data Coordination Center
+>>> >    On Fri, May 15, 2026 at 7:31=E2=80=AFPM JB Poline <[14]jbpoline@gm=
+ail.com>
+>>> >    wrote:
+>>>
+>>> >    Hi Franco
+>>>
+>>> >    BIDS, as described in the email, but we will circulate some first
+>>> ideas
+>>> >    asap
+>>>
+>>> >    Cheers
+>>>
+>>> >    JB
+>>>
+>>> >    On Fri, May 15, 2026, 12:10 Franco Pestilli <[15]
+>>> pestilli@utexas.edu>
+>>> >    wrote:
+>>>
+>>> >    Is this a bids grant?
+>>>
+>>> >    Or a lab grant?
+>>>
+>>> >    Franco Pestilli
+>>> >    Professor
+>>> >    The University of Texas
+>>>
+>>> >    On Fri, May 15, 2026, 4:32=E2=80=AFPM JB Poline <[16]jbpoline@gmai=
+l.com>
+>>> wrote:
+>>>
+>>> >    Hi Everyone,
+>>>
+>>> >    Following steering conversations on funding the BIDS project(s), w=
+e
+>>> had
+>>> >    a quick chat with Yarik. We plan to submit an LOI for TIER2 to
+>>> [17]this
+>>> >    call for the BIDS community. One idea is to develop the BIDS
+>>> community
+>>> >    towards standardization of "bids-study", enabling agentic AI to do=
+ a
+>>> >    whole neuroimaging study and "biomarker discovery ready". I am sur=
+e
+>>> >    other ideas will emerge :)
+>>>
+>>> >    The call is going to be super competitive, we expect many to apply=
+.
+>>>
+>>> >    Let us know what you think, and I would like to dedicate a steerin=
+g
+>>> >    meeting to this before OHBM if possible.
+>>>
+>>> >    Cheers
+>>>
+>>> >    JB
+>>>
+>>> >    This message is from an external sender. [18]Learn more about why
+>>> this
+>>> >    matters.
+>>>
+>>> >    This message is from an external sender. [19]Learn more about why
+>>> this
+>>> >    matters.
+>>>
+>>> > References
+>>>
+>>> >    1. https://liberalarts.utexas.edu/psychology/index.php
+>>> >    2. https://liberalarts.utexas.edu/
+>>> >    3. https://neuroscience.utexas.edu/
+>>> >    4. http://cns.utexas.edu/
+>>> >    5. mailto:pestilli@utexas.edu
+>>> >    6. https://liberalarts.utexas.edu/psychology/faculty/fp4834
+>>> >    7. https://pestillilab.github.io/
+>>> >    8. http://brainlife.io/
+>>> >    9. https://www.mesoscale-connectivity.org/
+>>> >   10. http://braindatagovernance.org/
+>>> >   11. https://incf.org/about/governance/infrastructure-committee-ic
+>>> >   12. https://pestillilab.github.io/bids-connectivity/
+>>> >   13. https://brain-connects.org/
+>>> >   14. mailto:jbpoline@gmail.com
+>>> >   15. mailto:pestilli@utexas.edu
+>>> >   16. mailto:jbpoline@gmail.com
+>>> >   17. https://os4science.org/funding_opportunity/os4ls/
+>>> >   18. https://ut.service-now.com/sp?id=3Dkb_article&number=3DKB001140=
+1
+>>> >   19. https://ut.service-now.com/sp?id=3Dkb_article&number=3DKB001140=
+1
+>>>
+>>> --
+>>> Yaroslav O. Halchenko
+>>> Center for Open Neuroscience     http://centerforopenneuroscience.org
+>>> Dartmouth College, 419 Moore Hall, Hinman Box 6207, Hanover, NH 03755
+>>> WWW:   http://www.linkedin.com/in/yarik
+>>>
+>>>
+>> This message is from an external sender. Learn more about why this
+>> matters. <https://ut.service-now.com/sp?id=3Dkb_article&number=3DKB00114=
+01>
+>
+>
+
+--000000000000a0d357065216161f
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:arial,sa=
+ns-serif;font-size:small">Hi Franco,</div><div class=3D"gmail_default" styl=
+e=3D"font-family:arial,sans-serif;font-size:small"><br></div><div class=3D"=
+gmail_default" style=3D"font-family:arial,sans-serif;font-size:small">Thank=
+s for the=C2=A0email: that&#39;s my interpretation as well. Let&#39;s discu=
+ss when Yarik and I have sent something to the group so that you have more =
+than 3 words to give feedback on :)</div><div class=3D"gmail_default" style=
+=3D"font-family:arial,sans-serif;font-size:small"><br></div><div class=3D"g=
+mail_default" style=3D"font-family:arial,sans-serif;font-size:small">cheers=
+</div><div class=3D"gmail_default" style=3D"font-family:arial,sans-serif;fo=
+nt-size:small">JB</div><div class=3D"gmail_default" style=3D"font-family:ar=
+ial,sans-serif;font-size:small"><br></div></div><br><div class=3D"gmail_quo=
+te gmail_quote_container"><div dir=3D"ltr" class=3D"gmail_attr">On Mon, May=
+ 18, 2026 at 5:21=E2=80=AFAM Franco Pestilli &lt;<a href=3D"mailto:pestilli=
+@utexas.edu">pestilli@utexas.edu</a>&gt; wrote:<br></div><blockquote class=
+=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px solid rg=
+b(204,204,204);padding-left:1ex"><div dir=3D"ltr">Hi JB,<br><br>Thanks for =
+clarifying. This is how I interpreted the call:<br><ul><li>CURATING DATA FO=
+R AI: Representing, managing, curating, and structuring scientific data for=
+ use in model training</li><li>BUILDING DATA ENDPOINTS FOR AI AGENTS: Devel=
+oping benchmarks, standards, endpoints, or protocols that enable the use of=
+ open-source tools within agentic workflows</li><li>CODE REFACTORING AND PE=
+RFORMANCE IMPROVEMENT FOR AI: Scalability and performance improvements, inc=
+luding support for hardware acceleration</li><li>INTEROPERABILITY TOOLS FOR=
+ AI: Interoperability frameworks that make tools composable within AI-drive=
+n pipelines</li></ul>The all-caps wording above reflects my interpretation =
+of the priorities emphasized in the call.<br><br>My reading is that the RFA=
+ is primarily targeting mechanisms that make scientific data, standards, an=
+d software ecosystems AI-ready. In other words, the emphasis seems to be le=
+ss on developing new agentic systems themselves, and more on enabling exist=
+ing data infrastructures and tools to interface effectively with AI workflo=
+ws and future AI agents.<br><br>Am I misinterpreting the scope of the call?=
+<br><br>Looking forward to the discussion.<br><br>Franco<br><br></div><br><=
+div class=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Sat, May=
+ 16, 2026 at 9:51=E2=80=AFPM JB Poline &lt;<a href=3D"mailto:jbpoline@gmail=
+.com" target=3D"_blank">jbpoline@gmail.com</a>&gt; wrote:<br></div><blockqu=
+ote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;border-left:1px=
+ solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div class=3D"gm=
+ail_default" style=3D"font-family:arial,sans-serif;font-size:small">@yarek =
+: yes, of course on my side -=C2=A0@steering: let us know</div><div class=
+=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:small"><=
+br></div><div class=3D"gmail_default" style=3D"font-family:arial,sans-serif=
+;font-size:small">@franco : yes, the intent is not research but support for=
+ the standard ecosystem - but they also ask for a bit of development, that =
+I would like to go towards bids-study, but let&#39;s wait for the first bra=
+instorming to confirm.=C2=A0</div><div class=3D"gmail_default" style=3D"fon=
+t-family:arial,sans-serif;font-size:small"><br></div><div class=3D"gmail_de=
+fault" style=3D"font-family:arial,sans-serif;font-size:small">@dora :yes, g=
+ood questions, at the moment Yarik has agreed to take the lead on it and th=
+at makes sense to me given his involvement in the BIDS ecosystem implementa=
+tion. There are many solutions for fiscal sponsorship; For that grant, mone=
+y could also flow from Dartmouth.</div><div class=3D"gmail_default" style=
+=3D"font-family:arial,sans-serif;font-size:small"><br></div><div class=3D"g=
+mail_default" style=3D"font-family:arial,sans-serif;font-size:small">cheers=
+</div><div class=3D"gmail_default" style=3D"font-family:arial,sans-serif;fo=
+nt-size:small">JB</div><div class=3D"gmail_default" style=3D"font-family:ar=
+ial,sans-serif;font-size:small"><br></div></div><br><div class=3D"gmail_quo=
+te"><div dir=3D"ltr" class=3D"gmail_attr">On Sat, May 16, 2026 at 11:45=E2=
+=80=AFAM Yaroslav Halchenko &lt;<a href=3D"mailto:yaroslav.o.halchenko@dart=
+mouth.edu" target=3D"_blank">yaroslav.o.halchenko@dartmouth.edu</a>&gt; wro=
+te:<br></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px =
+0.8ex;border-left:1px solid rgb(204,204,204);padding-left:1ex">Would it be =
+possible to participate in that SC meeting even though I am<br>
+now just an emeritus?=C2=A0 The time is short here, so I would prefer<br>
+to avoid unnecessary delays and miscommunications.<br>
+<br>
+Cheers<br>
+<br>
+On Sat, 16 May 2026, Hermes Miller, Dora, Ph.D. wrote:<br>
+<br>
+&gt;=C2=A0 =C2=A0 Hi all,<br>
+<br>
+&gt;=C2=A0 =C2=A0 I think this grant is a great opportunity to support BIDS=
+ and it seems<br>
+&gt;=C2=A0 =C2=A0 like we should have a dedicate a steering committee meeti=
+ng for this,<br>
+&gt;=C2=A0 =C2=A0 including Kim in this email as well.<br>
+<br>
+&gt;=C2=A0 =C2=A0 For the agenda, can we please add the following discussio=
+n points.<br>
+&gt;=C2=A0 =C2=A0 These are some thoughts given that this is meant as a BID=
+S grant, not a<br>
+&gt;=C2=A0 =C2=A0 personal research grant that involves BIDS?<br>
+<br>
+&gt;=C2=A0 =C2=A0 =C2=A01. What are important design decisions for BIDS gra=
+nts that supports<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 the community?<br>
+<br>
+&gt;=C2=A0 =C2=A0 =C2=A01. Current scenario: BIDS steering thinks this fund=
+ing for BIDS would<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 be great, how do we do this?<br>
+&gt;=C2=A0 =C2=A0 =C2=A02. Future scenario: someone reaches out to BIDS ste=
+ering and wants to<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 write a BIDS grant, what do we do?<br>
+<br>
+<br>
+<br>
+&gt;=C2=A0 =C2=A0 How do we ensure as BIDS steering that we do not have a c=
+onflict of<br>
+&gt;=C2=A0 =C2=A0 interest:<br>
+<br>
+&gt;=C2=A0 =C2=A0 =C2=A01. As steering, we all have a good overview of =E2=
+=80=98what BIDS needs=E2=80=99. How<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 do we best provide this input for BIDS gran=
+t development?<br>
+&gt;=C2=A0 =C2=A0 =C2=A02. Who does the =E2=80=98financial/grant management=
+=E2=80=99 within the BIDS<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 ecosystem?<br>
+&gt;=C2=A0 =C2=A0 =C2=A03. What should our roles be? Who will be the PIs/co=
+PIs/coIs? Should<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 steering refrain from lead-PI roles?<br>
+<br>
+<br>
+<br>
+&gt;=C2=A0 =C2=A0 From reading the web-page, Franco=E2=80=99s thoughts on e=
+cosystem<br>
+&gt;=C2=A0 =C2=A0 sustainability (e.g. BIDS 2.0, community tool development=
+) seem<br>
+&gt;=C2=A0 =C2=A0 required. It seems like =E2=80=98enabling AI/agentic work=
+flows=E2=80=99 components are<br>
+&gt;=C2=A0 =C2=A0 required as well, seems like JB has some cool ideas, I kn=
+ow Yahya also<br>
+&gt;=C2=A0 =C2=A0 develops this type of stuff, probably others as well. Let=
+=E2=80=99s brainstorm<br>
+&gt;=C2=A0 =C2=A0 to make sure we check as many boxes as possible to suppor=
+t BIDS<br>
+&gt;=C2=A0 =C2=A0 maintainers?<br>
+<br>
+<br>
+<br>
+&gt;=C2=A0 =C2=A0 Separately:<br>
+<br>
+&gt;=C2=A0 =C2=A0 =C2=A01. It would be useful to figure out what the UT =E2=
+=80=98Office of Open<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 Science=E2=80=99 has for options for fiscal=
+/grant support, also considering<br>
+&gt;=C2=A0 =C2=A0 =C2=A0 =C2=A0 the international structure of BIDS?<br>
+<br>
+&gt;=C2=A0 =C2=A0 Thanks,<br>
+<br>
+&gt;=C2=A0 =C2=A0 Dora<br>
+<br>
+&gt;=C2=A0 =C2=A0 From: Franco Pestilli &lt;<a href=3D"mailto:pestilli@utex=
+as.edu" target=3D"_blank">pestilli@utexas.edu</a>&gt;<br>
+&gt;=C2=A0 =C2=A0 Date: Friday, May 15, 2026 at 2:42=E2=80=AFPM<br>
+&gt;=C2=A0 =C2=A0 To: <a href=3D"mailto:jbpoline@gmail.com" target=3D"_blan=
+k">jbpoline@gmail.com</a> &lt;<a href=3D"mailto:jbpoline@gmail.com" target=
+=3D"_blank">jbpoline@gmail.com</a>&gt;; Hermes Miller, Dora, Ph.D.<br>
+&gt;=C2=A0 =C2=A0 &lt;<a href=3D"mailto:Hermes.Dora@mayo.edu" target=3D"_bl=
+ank">Hermes.Dora@mayo.edu</a>&gt;<br>
+&gt;=C2=A0 =C2=A0 Cc: bids steering &lt;<a href=3D"mailto:bids.steering@gma=
+il.com" target=3D"_blank">bids.steering@gmail.com</a>&gt;; Chris Markiewicz=
+<br>
+&gt;=C2=A0 =C2=A0 &lt;<a href=3D"mailto:effigies@gmail.com" target=3D"_blan=
+k">effigies@gmail.com</a>&gt;; Yaroslav Halchenko &lt;<a href=3D"mailto:yar=
+ikoptic@gmail.com" target=3D"_blank">yarikoptic@gmail.com</a>&gt;<br>
+&gt;=C2=A0 =C2=A0 Subject: [EXTERNAL] Re: OS4S call<br>
+&gt;=C2=A0 =C2=A0 External Email Notice: This message was sent by someone o=
+utside Mayo<br>
+&gt;=C2=A0 =C2=A0 Clinic.<br>
+<br>
+&gt;=C2=A0 =C2=A0 Hi Dora, JB, and Yarik,<br>
+<br>
+&gt;=C2=A0 =C2=A0 I think, as I understand the call, that this is primarily=
+ a software<br>
+&gt;=C2=A0 =C2=A0 ecosystem maintenance and sustainability opportunity rath=
+er than a<br>
+&gt;=C2=A0 =C2=A0 research award. My interpretation is that the focus is le=
+ss on<br>
+&gt;=C2=A0 =C2=A0 developing entirely new tools and more on maturing the us=
+ability,<br>
+&gt;=C2=A0 =C2=A0 interoperability, sustainability, governance, and long-te=
+rm support of<br>
+&gt;=C2=A0 =C2=A0 foundational community infrastructure.<br>
+<br>
+&gt;=C2=A0 =C2=A0 That is why I previously asked whether this was intended =
+as a research<br>
+&gt;=C2=A0 =C2=A0 proposal. What was pitched sounded more like a research-o=
+riented<br>
+&gt;=C2=A0 =C2=A0 effort, namely the development of something novel in the =
+way an<br>
+&gt;=C2=A0 =C2=A0 individual laboratory might pursue, but it was less clear=
+ to me how the<br>
+&gt;=C2=A0 =C2=A0 proposed activities would directly strengthen or expand t=
+he BIDS<br>
+&gt;=C2=A0 =C2=A0 ecosystem itself.<br>
+<br>
+&gt;=C2=A0 =C2=A0 For this particular call, my impression is that the propo=
+sal should<br>
+&gt;=C2=A0 =C2=A0 focus on activities such as:<br>
+<br>
+&gt;=C2=A0 =C2=A0 (A) Expanding the coverage of data types and derivatives =
+supported<br>
+&gt;=C2=A0 =C2=A0 within BIDS<br>
+&gt;=C2=A0 =C2=A0 (B) Developing mechanisms to engage more tool developers =
+and improve<br>
+&gt;=C2=A0 =C2=A0 compatibility across the ecosystem<br>
+&gt;=C2=A0 =C2=A0 (C) Increasing community adoption, usability, training, d=
+ocumentation,<br>
+&gt;=C2=A0 =C2=A0 and sustainability<br>
+&gt;=C2=A0 =C2=A0 (D) Major refactoring of BIDS like BIDS 2.0<br>
+<br>
+&gt;=C2=A0 =C2=A0 Other ecosystem-oriented activities also seem compatible =
+with the RFA.<br>
+&gt;=C2=A0 =C2=A0 I may be missing something, however, as I am currently in=
+ transit and<br>
+&gt;=C2=A0 =C2=A0 may not have interpreted every aspect correctly.<br>
+<br>
+&gt;=C2=A0 =C2=A0 On a separate topic regarding fiscal responsibility and o=
+rganizational<br>
+&gt;=C2=A0 =C2=A0 support, the UT System recently established a new Office =
+of Open<br>
+&gt;=C2=A0 =C2=A0 Science. My understanding is that one of their goals is p=
+recisely to<br>
+&gt;=C2=A0 =C2=A0 support and coordinate open-science infrastructure and su=
+stainability<br>
+&gt;=C2=A0 =C2=A0 efforts across the system. I wonder whether they could po=
+tentially help<br>
+&gt;=C2=A0 =C2=A0 handle some of the fiscal and administrative aspects rela=
+ted to BIDS.<br>
+&gt;=C2=A0 =C2=A0 Since the office is newly established, they may also be m=
+otivated to<br>
+&gt;=C2=A0 =C2=A0 demonstrate capacity in this area. I would be happy to re=
+ach out and<br>
+&gt;=C2=A0 =C2=A0 explore this possibility if the group thinks it could be =
+useful. I had<br>
+&gt;=C2=A0 =C2=A0 not raised it earlier because I thought the INCF arrangem=
+ent was likely<br>
+&gt;=C2=A0 =C2=A0 to work out, and this office was only recently created.<b=
+r>
+<br>
+&gt;=C2=A0 =C2=A0 To be clear, I am not saying that JB=E2=80=99s proposal i=
+s not interesting or<br>
+&gt;=C2=A0 =C2=A0 valuable. My only point is that, at least to me, it curre=
+ntly reads<br>
+&gt;=C2=A0 =C2=A0 more like a research proposal than a sustainability and e=
+cosystem<br>
+&gt;=C2=A0 =C2=A0 proposal. A proposal like that could be more competitive =
+in a standard<br>
+&gt;=C2=A0 =C2=A0 call and part of the funds could still be sent to BIDS ma=
+intainers.<br>
+<br>
+&gt;=C2=A0 =C2=A0 Just my two cents.<br>
+<br>
+&gt;=C2=A0 =C2=A0 Best,<br>
+&gt;=C2=A0 =C2=A0 Franco<br>
+<br>
+&gt;=C2=A0 =C2=A0 FRANCO PESTILLI, Ph.D. | Professor<br>
+<br>
+&gt;=C2=A0 =C2=A0 The University of Texas at Austin<br>
+<br>
+&gt;=C2=A0 =C2=A0 [1]Psychology | [2]College of Liberal Arts<br>
+<br>
+&gt;=C2=A0 =C2=A0 [3]Neuroscience | [4]College of Natural Sciences<br>
+<br>
+&gt;=C2=A0 =C2=A0 [5]<a href=3D"mailto:pestilli@utexas.edu" target=3D"_blan=
+k">pestilli@utexas.edu</a> | [6]web | [7]Laboratory<br>
+<br>
+&gt;=C2=A0 =C2=A0 Director, [8]<a href=3D"http://brainlife.io" rel=3D"noref=
+errer" target=3D"_blank">brainlife.io</a><br>
+<br>
+&gt;=C2=A0 =C2=A0 Director of Data Technology, [9]<a href=3D"http://mesosca=
+le-connectivity.org" rel=3D"noreferrer" target=3D"_blank">mesoscale-connect=
+ivity.org</a><br>
+<br>
+&gt;=C2=A0 =C2=A0 Director, [10]<a href=3D"http://braindatagovernance.org" =
+rel=3D"noreferrer" target=3D"_blank">braindatagovernance.org</a><br>
+<br>
+&gt;=C2=A0 =C2=A0 Chair, [11]Infrastructure Committee INCF.org<br>
+<br>
+&gt;=C2=A0 =C2=A0 Director, [12]Brain Imaging Data Structure (BIDS) Connect=
+ivity Project<br>
+<br>
+&gt;=C2=A0 =C2=A0 Principal Investigator [13]BRAIN CONNECTS Data Coordinati=
+on Center<br>
+&gt;=C2=A0 =C2=A0 On Fri, May 15, 2026 at 7:31=E2=80=AFPM JB Poline &lt;[14=
+]<a href=3D"mailto:jbpoline@gmail.com" target=3D"_blank">jbpoline@gmail.com=
+</a>&gt;<br>
+&gt;=C2=A0 =C2=A0 wrote:<br>
+<br>
+&gt;=C2=A0 =C2=A0 Hi Franco<br>
+<br>
+&gt;=C2=A0 =C2=A0 BIDS, as described in the email, but we will circulate so=
+me first ideas<br>
+&gt;=C2=A0 =C2=A0 asap<br>
+<br>
+&gt;=C2=A0 =C2=A0 Cheers<br>
+<br>
+&gt;=C2=A0 =C2=A0 JB<br>
+<br>
+&gt;=C2=A0 =C2=A0 On Fri, May 15, 2026, 12:10 Franco Pestilli &lt;[15]<a hr=
+ef=3D"mailto:pestilli@utexas.edu" target=3D"_blank">pestilli@utexas.edu</a>=
+&gt;<br>
+&gt;=C2=A0 =C2=A0 wrote:<br>
+<br>
+&gt;=C2=A0 =C2=A0 Is this a bids grant?<br>
+<br>
+&gt;=C2=A0 =C2=A0 Or a lab grant?<br>
+<br>
+&gt;=C2=A0 =C2=A0 Franco Pestilli<br>
+&gt;=C2=A0 =C2=A0 Professor<br>
+&gt;=C2=A0 =C2=A0 The University of Texas<br>
+<br>
+&gt;=C2=A0 =C2=A0 On Fri, May 15, 2026, 4:32=E2=80=AFPM JB Poline &lt;[16]<=
+a href=3D"mailto:jbpoline@gmail.com" target=3D"_blank">jbpoline@gmail.com</=
+a>&gt; wrote:<br>
+<br>
+&gt;=C2=A0 =C2=A0 Hi Everyone,<br>
+<br>
+&gt;=C2=A0 =C2=A0 Following steering conversations on funding the BIDS proj=
+ect(s), we had<br>
+&gt;=C2=A0 =C2=A0 a quick chat with Yarik. We plan to submit an LOI for TIE=
+R2 to [17]this<br>
+&gt;=C2=A0 =C2=A0 call for the BIDS community. One idea is to develop the B=
+IDS community<br>
+&gt;=C2=A0 =C2=A0 towards standardization of &quot;bids-study&quot;, enabli=
+ng agentic AI to do a<br>
+&gt;=C2=A0 =C2=A0 whole neuroimaging study and &quot;biomarker discovery re=
+ady&quot;. I am sure<br>
+&gt;=C2=A0 =C2=A0 other ideas will emerge :)<br>
+<br>
+&gt;=C2=A0 =C2=A0 The call is going to be super competitive, we expect many=
+ to apply.<br>
+<br>
+&gt;=C2=A0 =C2=A0 Let us know what you think, and I would like to dedicate =
+a steering<br>
+&gt;=C2=A0 =C2=A0 meeting to this before OHBM if possible.<br>
+<br>
+&gt;=C2=A0 =C2=A0 Cheers<br>
+<br>
+&gt;=C2=A0 =C2=A0 JB<br>
+<br>
+&gt;=C2=A0 =C2=A0 This message is from an external sender. [18]Learn more a=
+bout why this<br>
+&gt;=C2=A0 =C2=A0 matters.<br>
+<br>
+&gt;=C2=A0 =C2=A0 This message is from an external sender. [19]Learn more a=
+bout why this<br>
+&gt;=C2=A0 =C2=A0 matters.<br>
+<br>
+&gt; References<br>
+<br>
+&gt;=C2=A0 =C2=A0 1. <a href=3D"https://liberalarts.utexas.edu/psychology/i=
+ndex.php" rel=3D"noreferrer" target=3D"_blank">https://liberalarts.utexas.e=
+du/psychology/index.php</a><br>
+&gt;=C2=A0 =C2=A0 2. <a href=3D"https://liberalarts.utexas.edu/" rel=3D"nor=
+eferrer" target=3D"_blank">https://liberalarts.utexas.edu/</a><br>
+&gt;=C2=A0 =C2=A0 3. <a href=3D"https://neuroscience.utexas.edu/" rel=3D"no=
+referrer" target=3D"_blank">https://neuroscience.utexas.edu/</a><br>
+&gt;=C2=A0 =C2=A0 4. <a href=3D"http://cns.utexas.edu/" rel=3D"noreferrer" =
+target=3D"_blank">http://cns.utexas.edu/</a><br>
+&gt;=C2=A0 =C2=A0 5. mailto:<a href=3D"mailto:pestilli@utexas.edu" target=
+=3D"_blank">pestilli@utexas.edu</a><br>
+&gt;=C2=A0 =C2=A0 6. <a href=3D"https://liberalarts.utexas.edu/psychology/f=
+aculty/fp4834" rel=3D"noreferrer" target=3D"_blank">https://liberalarts.ute=
+xas.edu/psychology/faculty/fp4834</a><br>
+&gt;=C2=A0 =C2=A0 7. <a href=3D"https://pestillilab.github.io/" rel=3D"nore=
+ferrer" target=3D"_blank">https://pestillilab.github.io/</a><br>
+&gt;=C2=A0 =C2=A0 8. <a href=3D"http://brainlife.io/" rel=3D"noreferrer" ta=
+rget=3D"_blank">http://brainlife.io/</a><br>
+&gt;=C2=A0 =C2=A0 9. <a href=3D"https://www.mesoscale-connectivity.org/" re=
+l=3D"noreferrer" target=3D"_blank">https://www.mesoscale-connectivity.org/<=
+/a><br>
+&gt;=C2=A0 =C2=A010. <a href=3D"http://braindatagovernance.org/" rel=3D"nor=
+eferrer" target=3D"_blank">http://braindatagovernance.org/</a><br>
+&gt;=C2=A0 =C2=A011. <a href=3D"https://incf.org/about/governance/infrastru=
+cture-committee-ic" rel=3D"noreferrer" target=3D"_blank">https://incf.org/a=
+bout/governance/infrastructure-committee-ic</a><br>
+&gt;=C2=A0 =C2=A012. <a href=3D"https://pestillilab.github.io/bids-connecti=
+vity/" rel=3D"noreferrer" target=3D"_blank">https://pestillilab.github.io/b=
+ids-connectivity/</a><br>
+&gt;=C2=A0 =C2=A013. <a href=3D"https://brain-connects.org/" rel=3D"norefer=
+rer" target=3D"_blank">https://brain-connects.org/</a><br>
+&gt;=C2=A0 =C2=A014. mailto:<a href=3D"mailto:jbpoline@gmail.com" target=3D=
+"_blank">jbpoline@gmail.com</a><br>
+&gt;=C2=A0 =C2=A015. mailto:<a href=3D"mailto:pestilli@utexas.edu" target=
+=3D"_blank">pestilli@utexas.edu</a><br>
+&gt;=C2=A0 =C2=A016. mailto:<a href=3D"mailto:jbpoline@gmail.com" target=3D=
+"_blank">jbpoline@gmail.com</a><br>
+&gt;=C2=A0 =C2=A017. <a href=3D"https://os4science.org/funding_opportunity/=
+os4ls/" rel=3D"noreferrer" target=3D"_blank">https://os4science.org/funding=
+_opportunity/os4ls/</a><br>
+&gt;=C2=A0 =C2=A018. <a href=3D"https://ut.service-now.com/sp?id=3Dkb_artic=
+le&amp;number=3DKB0011401" rel=3D"noreferrer" target=3D"_blank">https://ut.=
+service-now.com/sp?id=3Dkb_article&amp;number=3DKB0011401</a><br>
+&gt;=C2=A0 =C2=A019. <a href=3D"https://ut.service-now.com/sp?id=3Dkb_artic=
+le&amp;number=3DKB0011401" rel=3D"noreferrer" target=3D"_blank">https://ut.=
+service-now.com/sp?id=3Dkb_article&amp;number=3DKB0011401</a><br>
+<br>
+-- <br>
+Yaroslav O. Halchenko<br>
+Center for Open Neuroscience=C2=A0 =C2=A0 =C2=A0<a href=3D"http://centerfor=
+openneuroscience.org" rel=3D"noreferrer" target=3D"_blank">http://centerfor=
+openneuroscience.org</a><br>
+Dartmouth College, 419 Moore Hall, Hinman Box 6207, Hanover, NH 03755<br>
+WWW:=C2=A0 =C2=A0<a href=3D"http://www.linkedin.com/in/yarik" rel=3D"norefe=
+rrer" target=3D"_blank">http://www.linkedin.com/in/yarik</a>=C2=A0 =C2=A0 =
+=C2=A0 =C2=A0 <br>
+<br>
+</blockquote></div>
+
+<br><table style=3D"background-color:rgb(253,250,231);border-style:solid;bo=
+rder-color:rgb(252,209,70);border-width:0px 0px 0px 1ex;color:black;font-fa=
+mily:Arial,&quot;Helvetica Neue&quot;,Helvetica;font-size:10pt;padding:1ex =
+1ex 1ex 2ex"><tbody><tr><td>
+This message is from an external sender. <a href=3D"https://ut.service-now.=
+com/sp?id=3Dkb_article&amp;number=3DKB0011401" target=3D"_blank">Learn more=
+ about why this matters.</a>
+</td></tr></tbody></table></blockquote></div>
+</blockquote></div>
+
+--000000000000a0d357065216161f--
+

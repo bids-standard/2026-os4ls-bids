@@ -1,0 +1,555 @@
+Received: from mail-ot1-f42.google.com ([209.85.210.42])
+	by smtp.onerussian.com with esmtps (TLS1.3:ECDHE_RSA_AES_128_GCM_SHA256:128)
+	(Exim 4.92)
+	(envelope-from <yarikoptic+caf_=site-gmail=oneukrainian.com@gmail.com>)
+	id 1wNyPv-0006lf-CL
+	for yoh@oneukrainian.com; Fri, 15 May 2026 15:41:53 -0400
+Received: by mail-ot1-f42.google.com with SMTP id 46e09a7af769-7de46b8e432so248754a34.1
+        for <site-gmail@oneukrainian.com>; Fri, 15 May 2026 12:41:51 -0700 (PDT)
+ARC-Seal: i=3; a=rsa-sha256; t=1778874110; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=hZunf7chgceHcAFhIgd39gQaOqh5Xtls3+n5v+SoaJB/Yu5WGrrXa3pO/sK2a+tMYj
+         ciXo0rwOoewZ8N5CUnNWa8Li2HcFBNQhkgFuhZahwQxWt+tlIIkBq9L3+OBSLqbNlJpT
+         9U4kM6izRiqd5aZi36Pa11dQqh0Gcws/Fv40Hi9K9JRl8OVECnXQ8Z/O7KhqzitKQ4kr
+         XLnqpjsZvFBUNNCicynhoL/+l81J1nDEJxlqfZzK7biyryDHrqrW9RY+LvSTjG1vY2rJ
+         /iHvFTimb1agT5mJpBSxVjEvB1wd868+83haI3KHPXB3u4zQKccmLCMBPFie+OQlGDTu
+         4CNg==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature:delivered-to;
+        bh=BcmqcXc9GlcH2Cv9BWeV3xio+kFyTp8m83Rz5fI46Mk=;
+        fh=fwT5UNynXWrYZcxM5fhMKTI0xKC+efpGpn4ha5HOR8c=;
+        b=R7BunvCzMls0eFA9D4DFj65Kpz6/3a3ozVUrpx0fatu0h1F6foAxo31xkMDwlrnS4l
+         mtwE0R2FwM2K+lNIuwyBqKW7hNnleSsjmb471/oxLXy2tCDAdou2e7bJ2ek9cM7ebqh/
+         HUtqczDXXi55IdrjvF6ZjcbvTAmNL+hysF18HWmLR0XusmqkF4FiITI/MAATV80d2BFj
+         hPWcfEuhYzNdRsMPKTQBBUPSOUzIqvoDsLgHUAhHwe5u/NXe5WGNjz1d4IfqRWqI39Tm
+         aj5T5DlRtEiWus5srMPMT3SNum717/2G00KPRS7zJixjhjVGa6FIKmbCYqN+bYlBMqUd
+         k4Wg==;
+        darn=oneukrainian.com
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@utexas.edu header.s=google header.b=bvIC2UAz;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=pestilli@utexas.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utexas.edu;
+       dara=pass header.i=@gmail.com
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20251104; t=1778874110; x=1779478910;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:x-gm-gg:dkim-signature:delivered-to:x-forwarded-for
+         :x-forwarded-to:x-gm-message-state:from:to:cc:subject:date
+         :message-id:reply-to;
+        bh=BcmqcXc9GlcH2Cv9BWeV3xio+kFyTp8m83Rz5fI46Mk=;
+        b=LEQzv9x/1HZOaD2tIzdlg+rJaVpd2CQUHan0kjjwZoazv28UdSifGDTt3dFlGbThbP
+         whfI+XQNjBHz68MekJPOT5d9+m0L4MKtJ73LU9a/LlAyMa1RwtcRjK7ZQ+u8qCsOlp1M
+         Bubgkap3akiUJ402jF5yACG2Tf50GmPuf7dfyfb0o+yKByvWAapIDTZFcvxRjy3Vq8YH
+         S11wPgmsk0xK2wpYzkKvH4v4MIHQiebYxF7hMi64Wjs1H2pyWczkzogq1HNMCAnFsxvF
+         MWEOzWDyUWAUZOqsHp7Ny5t4KreQhyGaEt5jZl43jfuE0zqrEgdpaRavmn9cKfk26938
+         Wa5w==
+X-Forwarded-Encrypted: i=3; AFNElJ9qMHgJEq2Ic7QRXto9mHHbvd8N5quDFhUE/1EW8mnb3ghMPZAfAkUoXsM6ihmMcCA6QqYSJ6iVscXV@oneukrainian.com
+X-Gm-Message-State: AOJu0Yx+FSHLTkxN6GLwjeUQc7t+Vp5rA3kBzw/6WJ8+Kvva8bToXTTE
+	sfU1Xf9YKswmcUgUynj+iAoN2glMlpbjCUeoQdch40bt7TB5VynLKCnhmYvV1TczERONX5a9jvW
+	3LSLsI+nu5HDjMSqogQ1y+dT1aSEx1Vn27Yt8vZ2iZg4nHb36/u/D6PiWRg5ISQ==
+X-Received: by 2002:a05:6830:6f48:b0:7dc:e0d4:70c5 with SMTP id 46e09a7af769-7e4fa063f50mr4283126a34.25.1778874110492;
+        Fri, 15 May 2026 12:41:50 -0700 (PDT)
+X-Forwarded-To: site-gmail@oneukrainian.com
+X-Forwarded-For: yarikoptic@gmail.com site-gmail@oneukrainian.com
+Delivered-To: yarikoptic@gmail.com
+Received: by 2002:a05:6830:25cb:b0:7dc:d3a6:e6e9 with SMTP id d11csp258702otu;
+        Fri, 15 May 2026 12:41:49 -0700 (PDT)
+X-Forwarded-Encrypted: i=3; AFNElJ8ZBk0QT+T/E27qQDC8HJXdh0zFYJqb93MeOjFPKZFa3pTBMW1b0dipDpSmhd8CMZDIMpVUSgs4Uo2E@gmail.com
+X-Received: by 2002:a05:690e:1551:10b0:65d:b511:3aaa with SMTP id 956f58d0204a3-65e227048c1mr4946719d50.18.1778874108734;
+        Fri, 15 May 2026 12:41:48 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1778874108; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=HcCEVXDX9dcldG13kaS/EEm6XmYG50JDYq4r1y6hlvDg7imQOMXf9SlJtAqM2dgaAB
+         I6jsffK9LBjfCixa/C44WdoxYZymIpWeSTB5eUsuaENMtYoGFferFyCijk+0pD6zRk//
+         52dYSmEmpAb4dy804Z6cUfTGbB5VRWk/dMrej9P5ysk6xsCoFAgoD4zEX/6fKQqqX/2k
+         sx0WvLApmKF5j4Vym11tk2G+AWqBE1rSSvDrvL3BeICKAsG2ACa9S9peHUeckAIhBEXL
+         lPzukCh8+uNZoh0qaS8+KIQRRv9WmJnAIAp24W0FiPF4jla/M24LfXUS95iqzajUjnRb
+         bWIw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=BcmqcXc9GlcH2Cv9BWeV3xio+kFyTp8m83Rz5fI46Mk=;
+        fh=qys2gne83MIiXB/23Abl0BgCa8xw5cU/6T8pr2WQjfM=;
+        b=JiE5wgbtOZGXdx3pa30oNLSmZfESc7VPTAyH/qQbRBxjr2e/a1Id8wHi2HzjEorQOg
+         1nuDaGyt7HmwvAKg1tnCzUasLVhzWNvOi3izBRsUxFAmWsFBlLFtjjKo3njCjCMDHvEl
+         sIGHFuTLqlF0w0ncN8NBfGM1IZs4gRrF384YuYnfNVeKhex/gUwzLfIUKCfV9y8V7uv/
+         b4zxkgO2j1BlrF8TK1JhN3kr3Ttaud6pxqaDbVlI0fQO1fIrS1OTv1J9mVTs4w9PtvqD
+         mF/JQ4f1N8c1w6UQ53oWolbHNnc/gEZKGXAuXwFp7l/77aXTv7w3n4IxB86IQXL+sSla
+         xalQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@utexas.edu header.s=google header.b=bvIC2UAz;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=pestilli@utexas.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utexas.edu;
+       dara=pass header.i=@gmail.com
+Received: from mail-sor-f41.google.com (mail-sor-f41.google.com. [209.85.220.41])
+        by mx.google.com with SMTPS id 956f58d0204a3-65e0db30d6bsor3437639d50.12.2026.05.15.12.41.48
+        for <yarikoptic@gmail.com>
+        (Google Transport Security);
+        Fri, 15 May 2026 12:41:48 -0700 (PDT)
+Received-SPF: pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@utexas.edu header.s=google header.b=bvIC2UAz;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of pestilli@utexas.edu designates 209.85.220.41 as permitted sender) smtp.mailfrom=pestilli@utexas.edu;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=utexas.edu;
+       dara=pass header.i=@gmail.com
+ARC-Seal: i=1; a=rsa-sha256; t=1778874108; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QopapIzxcGmEk2IVYJJS69NmAmEx9FZpVnedY8ZX/K/qFR0low/mUcU6pCfvrzGbBR
+         SjXPRh9hY7GSQJoOiMWDEp9p4nEgKPZmjwvDSjXYLUqxOzjPuT8g2vNe8u/YUmv7GfqP
+         aIAbe1C7IhRVzRoO5fusppmtSkmEeWnqWtHs5tLArZlt0O+XuaTVzsetTJZC5D2CXc3i
+         NJz+wjB7VxyBM0r8MMRItHOk36+yVfv5qeehFyePBrK4advGb9rgilidvEkPMeOH14bs
+         Y9j+QNHGyaKv+acNR482TOzLCLtmfrDU3xzlXrdmV4VL5o3CvasoVMU5d6vSDDZC025A
+         w0Yg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:dkim-signature;
+        bh=BcmqcXc9GlcH2Cv9BWeV3xio+kFyTp8m83Rz5fI46Mk=;
+        fh=qys2gne83MIiXB/23Abl0BgCa8xw5cU/6T8pr2WQjfM=;
+        b=FKz1z9Pykzhzbpc6jxzAkAHobHIOIsc26+TeXTByFX/cQwnnTptsiWdsG3IMSlSSA5
+         bGG1mpJyl7apJvudG9ztcc4s5SE/vsx9+a49r/TX7h7z0j9r093DPkcnTutwQTLGpYet
+         n9MjAC7DeBKP3/Xl08UQXo/3wUEtu/Z0veEOSG/GC07bAbJTULvfYXwb57mt/s+xIs4O
+         qGTu/2SffPWxmr+z6cpbvI6XYvhpCpKqgVzk05wjDhrItH4i29roCo+qBQO0Sdom9Nxx
+         MQA9pX/Y6RrFf4M/e/XyWmsES/6TI6kASq8kaYDSh8+hXS+O+PH4Nw3zWfyuKgb/Fgm9
+         L7YQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=utexas.edu; s=google; t=1778874108; x=1779478908; dara=google.com;
+        h=cc:to:subject:message-id:date:from:in-reply-to:references
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=BcmqcXc9GlcH2Cv9BWeV3xio+kFyTp8m83Rz5fI46Mk=;
+        b=bvIC2UAzra/tka6zCsdtbkCnVJ1JZk+3Tm3TVumQCETmGN8WNjjEDC/0bLXp0vUwmP
+         K1MXYq5xEB5qR7HKQc5FLD1yNrLc8hnPP75H7yGuHvuDHWCddMqTzKJIlWSRr/BjqYZ6
+         IvXjTH4YVJAa8leFQFW2Hb54zABOR2Gs2dQPE4QYDfO8qxM1ou2ujddTpEKpcgIgnWAo
+         auSyiyfxROBHbDdb07Nf8agpzV0rYAtCec6C8MXJNWsZSdE8RxmIndCB+fmFyWVRwCUo
+         30tok7LMq0YP6BF5u6BtNCn9Szl8unTwF9GSXBe8Wf0dRBeRFRe+vSfoRoQUgq/FbYBN
+         pWpg==
+X-Forwarded-Encrypted: i=1; AFNElJ+GashmxcdSAp1+uXen3SrxhEV8amTtyxfAGMnIKDjkhVAX1Trk+zOh9G3VNtgpVzQkgs2j4k4bUvIt@gmail.com
+X-Gm-Gg: Acq92OG3HwR6e3RWBxYp0XER10IJg4vHdP2YJb38Q7ZoXzml4xF8zbNDFGACpGuQPHH
+	1a6MSQ0slf1awj3QqalXsyN6h9ImihVjASjs8qCyhD84haiO0au6x78ADSTOvqCZBrlr8BESSe3
+	E6C9aHQgB9h+xWpEe+hLzXhl6Y9Xyc6z+Vavxqgg5XEcu4PaVH6zzT1Av2FMGfZBlva6drbzwH9
+	7I7Lxbe1s0NKyAgNCSJMCfDDAJApk6Ws7dzag/ihbpwuwPzToRrN4S1JGnei0PzoTFt2BdzXNnG
+	Z+JRXY8TgxspqfV0Mb+ErEdd6KP8ZqBTJz4M
+X-Received: by 2002:a53:d047:0:20b0:651:bcc4:c1 with SMTP id
+ 956f58d0204a3-65e22856498mr4612769d50.48.1778874108005; Fri, 15 May 2026
+ 12:41:48 -0700 (PDT)
+MIME-Version: 1.0
+References: <CALMaa80bEcnPBr74-4nMaejr3LL22DE-zuKcw6eTWUg_dcLQ1g@mail.gmail.com>
+ <CAON1jmUDutav70C4E7TvPxaO-dUd=HgvkgM6R3MtwTJhjSMO_A@mail.gmail.com> <CALMaa80N=+eTo3B8KxHSihJPK35ij6EaE5jrpJ-9348ecoXN3A@mail.gmail.com>
+In-Reply-To: <CALMaa80N=+eTo3B8KxHSihJPK35ij6EaE5jrpJ-9348ecoXN3A@mail.gmail.com>
+From: Franco Pestilli <pestilli@utexas.edu>
+Date: Fri, 15 May 2026 21:41:10 +0200
+X-Gm-Features: AVHnY4Lp_tGK_g624qeIQzNr9wQ-In44hRmpObzL01FD5qKwq44LbNw6ifARh8c
+Message-ID: <CAON1jmWJ0F_A2k6M97Pq5J8R+TfWiT8E4gu+1p50e_VH_PiEuw@mail.gmail.com>
+To: jbpoline@gmail.com, "Hermes Miller, Dora, Ph.D." <Hermes.Dora@mayo.edu>
+Cc: bids steering <bids.steering@gmail.com>, Chris Markiewicz <effigies@gmail.com>, 
+	Yaroslav Halchenko <yarikoptic@gmail.com>
+Content-Type: multipart/alternative; boundary="0000000000004ef3740651e0674a"
+X-SA-Exim-Connect-IP: 209.85.210.42
+X-SA-Exim-Rcpt-To: yoh@oneukrainian.com
+X-SA-Exim-Mail-From: yarikoptic+caf_=site-gmail=oneukrainian.com@gmail.com
+X-Spam-Checker-Version: SpamAssassin 3.4.2 (2018-09-13) on smtp.onerussian.com
+X-Spam-Level: 
+X-Spam-Status: No, score=-2.2 required=5.0 tests=AWL,BAYES_00,DKIM_SIGNED,
+	DKIM_VALID,DKIM_VALID_AU,HEADER_FROM_DIFFERENT_DOMAINS,HTML_MESSAGE,
+	RCVD_IN_DNSWL_NONE,RCVD_IN_MSPIKE_H3,RCVD_IN_MSPIKE_WL,SPF_PASS,
+	T_KAM_HTML_FONT_INVALID shortcircuit=no autolearn=no
+	autolearn_force=no version=3.4.2
+X-Spam-Report: * -0.0 RCVD_IN_DNSWL_NONE RBL: Sender listed at http://www.dnswl.org/,
+	*       no trust
+	*      [209.85.210.42 listed in list.dnswl.org]
+	*  0.0 RCVD_IN_MSPIKE_H3 RBL: Good reputation (+3)
+	*      [209.85.210.42 listed in wl.mailspike.net]
+	*  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+	*      mail domains are different
+	* -0.0 SPF_PASS SPF: sender matches SPF record
+	* -1.9 BAYES_00 BODY: Bayes spam probability is 0 to 1%
+	*      [score: 0.0000]
+	*  0.0 T_KAM_HTML_FONT_INVALID BODY: Test for Invalidly Named or
+	*      Formatted Colors in HTML
+	*  0.0 HTML_MESSAGE BODY: HTML included in message
+	* -0.1 DKIM_VALID_AU Message has a valid DKIM or DK signature from
+	*      author's domain
+	* -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+	*  0.1 DKIM_SIGNED Message has a DKIM or DK signature, not necessarily
+	*       valid
+	*  0.0 RCVD_IN_MSPIKE_WL Mailspike good senders
+	* -0.4 AWL AWL: Adjusted score from AWL reputation of From: address
+Subject: Re: OS4S call
+X-SA-Exim-Version: 4.2.1 (built Wed, 08 May 2019 21:11:16 +0000)
+X-SA-Exim-Scanned: Yes (on smtp.onerussian.com)
+
+--0000000000004ef3740651e0674a
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Hi Dora, JB, and Yarik,
+
+I think, as I understand the call, that this is primarily a software
+ecosystem maintenance and sustainability opportunity rather than a research
+award. My interpretation is that the focus is less on developing entirely
+new tools and more on maturing the usability, interoperability,
+sustainability, governance, and long-term support of foundational community
+infrastructure.
+
+That is why I previously asked whether this was intended as a research
+proposal. What was pitched sounded more like a research-oriented effort,
+namely the development of something novel in the way an individual
+laboratory might pursue, but it was less clear to me how the proposed
+activities would directly strengthen or expand the BIDS ecosystem itself.
+
+For this particular call, my impression is that the proposal should focus
+on activities such as:
+
+(A) Expanding the coverage of data types and derivatives supported within
+BIDS
+(B) Developing mechanisms to engage more tool developers and improve
+compatibility across the ecosystem
+(C) Increasing community adoption, usability, training, documentation, and
+sustainability
+(D) Major refactoring of BIDS like BIDS 2.0
+
+Other ecosystem-oriented activities also seem compatible with the RFA. I
+may be missing something, however, as I am currently in transit and may not
+have interpreted every aspect correctly.
+
+On a separate topic regarding fiscal responsibility and organizational
+support, the UT System recently established a new Office of Open Science.
+My understanding is that one of their goals is precisely to support and
+coordinate open-science infrastructure and sustainability efforts across
+the system. I wonder whether they could potentially help handle some of the
+fiscal and administrative aspects related to BIDS. Since the office is
+newly established, they may also be motivated to demonstrate capacity in
+this area. I would be happy to reach out and explore this possibility if
+the group thinks it could be useful. I had not raised it earlier because I
+thought the INCF arrangement was likely to work out, and this office was
+only recently created.
+
+To be clear, I am not saying that JB=E2=80=99s proposal is not interesting =
+or
+valuable. My only point is that, at least to me, it currently reads more
+like a research proposal than a sustainability and ecosystem proposal. A
+proposal like that could be more competitive in a standard call and part of
+the funds could still be sent to BIDS maintainers.
+
+Just my two cents.
+
+Best,
+Franco
+
+FRANCO PESTILLI, Ph.D. | Professor
+
+The University of Texas at Austin
+
+Psychology <https://liberalarts.utexas.edu/psychology/index.php> | College
+of Liberal Arts <https://liberalarts.utexas.edu/>
+
+Neuroscience <https://neuroscience.utexas.edu/> | College of Natural
+Sciences <http://cns.utexas.edu/>
+
+pestilli@utexas.edu | web
+<https://liberalarts.utexas.edu/psychology/faculty/fp4834> | Laboratory
+<https://pestillilab.github.io/>
+
+Director, brainlife.io
+
+Director of Data Technology, mesoscale-connectivity.org
+<https://www.mesoscale-connectivity.org/>
+
+Director, braindatagovernance.org
+
+Chair, Infrastructure Committee INCF.org
+<https://incf.org/about/governance/infrastructure-committee-ic>
+
+Director, Brain Imaging Data Structure (BIDS) Connectivity Project
+<https://pestillilab.github.io/bids-connectivity/>
+
+Principal Investigator BRAIN CONNECTS <https://brain-connects.org/> Data
+Coordination Center
+
+On Fri, May 15, 2026 at 7:31=E2=80=AFPM JB Poline <jbpoline@gmail.com> wrot=
+e:
+
+> Hi Franco
+> BIDS, as described in the email, but we will circulate some first ideas
+> asap
+> Cheers
+> JB
+>
+> On Fri, May 15, 2026, 12:10 Franco Pestilli <pestilli@utexas.edu> wrote:
+>
+>> Is this a bids grant?
+>>
+>> Or a lab grant?
+>>
+>> Franco Pestilli
+>> Professor
+>> The University of Texas
+>>
+>> On Fri, May 15, 2026, 4:32=E2=80=AFPM JB Poline <jbpoline@gmail.com> wro=
+te:
+>>
+>>> Hi Everyone,
+>>>
+>>> Following steering conversations on funding the BIDS project(s), we had
+>>> a quick chat with Yarik. We plan to submit an LOI for TIER2 to this cal=
+l
+>>> <https://os4science.org/funding_opportunity/os4ls/> for the BIDS
+>>> community. One idea is to develop the BIDS community towards
+>>> standardization of "bids-study", enabling agentic AI to do a whole
+>>> neuroimaging study and "biomarker discovery ready". I am sure other ide=
+as
+>>> will emerge :)
+>>>
+>>> The call is going to be super competitive, we expect many to apply.
+>>>
+>>> Let us know what you think, and I would like to dedicate a steering
+>>> meeting to this before OHBM if possible.
+>>>
+>>> Cheers
+>>> JB
+>>>
+>>>
+>>> This message is from an external sender. Learn more about why this
+>>> matters. <https://ut.service-now.com/sp?id=3Dkb_article&number=3DKB0011=
+401>
+>>
+>>
+> This message is from an external sender. Learn more about why this
+> matters. <https://ut.service-now.com/sp?id=3Dkb_article&number=3DKB001140=
+1>
+
+--0000000000004ef3740651e0674a
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><p class=3D"gmail-isSelectedEnd">Hi Dora, JB, and Yar=
+ik,</p><p class=3D"gmail-isSelectedEnd">I think, as I understand the call, =
+that this is primarily a software ecosystem maintenance and sustainability =
+opportunity rather than a research award. My interpretation is that the foc=
+us is less on developing entirely new tools and more on maturing the usabil=
+ity, interoperability, sustainability, governance, and long-term support of=
+ foundational community infrastructure.</p><p class=3D"gmail-isSelectedEnd"=
+>That is why I previously asked whether this was intended as a research pro=
+posal. What was pitched sounded more like a research-oriented effort, namel=
+y the development of something novel in the way an individual laboratory mi=
+ght pursue, but it was less clear to me how the proposed activities would d=
+irectly strengthen or expand the BIDS ecosystem itself.</p><p class=3D"gmai=
+l-isSelectedEnd">For this particular call, my impression is that the propos=
+al should focus on activities such as:</p><p class=3D"gmail-isSelectedEnd">=
+(A) Expanding the coverage of data types and derivatives supported within B=
+IDS<br>(B) Developing mechanisms to engage more tool developers and improve=
+ compatibility across the ecosystem<br>(C) Increasing community adoption, u=
+sability, training, documentation, and sustainability<br>(D) Major refactor=
+ing of BIDS like BIDS 2.0</p><p class=3D"gmail-isSelectedEnd">Other ecosyst=
+em-oriented activities also seem compatible with the RFA. I may be missing =
+something, however, as I am currently in transit and may not have interpret=
+ed every aspect correctly.</p><p class=3D"gmail-isSelectedEnd">On a separat=
+e topic regarding fiscal responsibility and organizational support, the UT =
+System recently established a new Office of Open Science. My understanding =
+is that one of their goals is precisely to support and coordinate open-scie=
+nce infrastructure and sustainability efforts across the system. I wonder w=
+hether they could potentially help handle some of the fiscal and administra=
+tive aspects related to BIDS. Since the office is newly established, they m=
+ay also be motivated to demonstrate capacity in this area. I would be happy=
+ to reach out and explore this possibility if the group thinks it could be =
+useful. I had not raised it earlier because I thought the INCF arrangement =
+was likely to work out, and this office was only recently created.</p><p cl=
+ass=3D"gmail-isSelectedEnd">To be clear, I am not saying that JB=E2=80=99s =
+proposal is not interesting or valuable. My only point is that, at least to=
+ me, it currently reads more like a research proposal than a sustainability=
+ and ecosystem proposal. A proposal like that could be more competitive in =
+a standard call and part of the funds could still be sent to BIDS maintaine=
+rs.=C2=A0</p><p class=3D"gmail-isSelectedEnd">Just my two cents.</p><p>Best=
+,<br>Franco</p></div><div><div dir=3D"ltr" class=3D"gmail_signature" data-s=
+martmail=3D"gmail_signature"><div dir=3D"ltr"><div style=3D"font-family:Hel=
+vetica;font-size:12px"><p dir=3D"ltr" style=3D"color:rgb(0,0,0);line-height=
+:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10pt;font-=
+family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(51,63,72);background=
+-color:transparent;font-weight:700;vertical-align:baseline">FRANCO PESTILLI=
+</span><span style=3D"font-size:10pt;font-family:&quot;Helvetica Neue&quot;=
+,sans-serif;color:rgb(51,63,72);background-color:transparent;vertical-align=
+:baseline">, </span><span style=3D"font-size:10pt;font-family:&quot;Helveti=
+ca Neue&quot;,sans-serif;color:rgb(51,63,72);background-color:transparent;f=
+ont-weight:700;vertical-align:baseline">Ph.D.</span><span style=3D"font-siz=
+e:10pt;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(51,63,72=
+);background-color:transparent;vertical-align:baseline"> |</span><span styl=
+e=3D"font-size:10pt;font-family:&quot;Helvetica Neue&quot;,sans-serif;color=
+:rgb(191,87,0);background-color:transparent;font-weight:700;vertical-align:=
+baseline"> Professor</span></p><p dir=3D"ltr" style=3D"color:rgb(0,0,0);lin=
+e-height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10=
+pt;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(180,95,6);ba=
+ckground-color:transparent;font-weight:700;vertical-align:baseline">The Uni=
+versity of Texas at Austin</span></p><p dir=3D"ltr" style=3D"line-height:1.=
+38;margin-top:0pt;margin-bottom:0pt"><a href=3D"https://liberalarts.utexas.=
+edu/psychology/index.php" target=3D"_blank"><span style=3D"font-size:10pt;f=
+ont-family:&quot;Helvetica Neue&quot;,sans-serif;background-color:transpare=
+nt;vertical-align:baseline"><font color=3D"#0b5394">Psychology</font></span=
+></a><span style=3D"color:rgb(0,0,255);font-size:10pt;font-family:&quot;Hel=
+vetica Neue&quot;,sans-serif;background-color:transparent;vertical-align:ba=
+seline"> </span><span style=3D"color:rgb(102,102,102);font-size:10pt;font-f=
+amily:&quot;Helvetica Neue&quot;,sans-serif;background-color:transparent;ve=
+rtical-align:baseline">| </span><a href=3D"https://liberalarts.utexas.edu/"=
+ style=3D"color:rgb(0,0,0)" target=3D"_blank"><span style=3D"font-size:10pt=
+;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(102,102,102);b=
+ackground-color:transparent;vertical-align:baseline">College of Liberal Art=
+s</span></a><span style=3D"color:rgb(102,102,102);font-size:10pt;font-famil=
+y:&quot;Helvetica Neue&quot;,sans-serif;background-color:transparent;vertic=
+al-align:baseline">=C2=A0</span></p><p dir=3D"ltr" style=3D"line-height:1.3=
+8;margin-top:0pt;margin-bottom:0pt"><a href=3D"https://neuroscience.utexas.=
+edu/" target=3D"_blank"><span style=3D"font-size:10pt;font-family:&quot;Hel=
+vetica Neue&quot;,sans-serif;background-color:transparent;vertical-align:ba=
+seline"><font color=3D"#0b5394">Neuroscience</font></span></a><span style=
+=3D"color:rgb(0,0,255);font-size:10pt;font-family:&quot;Helvetica Neue&quot=
+;,sans-serif;background-color:transparent;vertical-align:baseline"> </span>=
+<span style=3D"color:rgb(102,102,102);font-size:10pt;font-family:&quot;Helv=
+etica Neue&quot;,sans-serif;background-color:transparent;vertical-align:bas=
+eline">| </span><a href=3D"http://cns.utexas.edu/" style=3D"color:rgb(0,0,0=
+)" target=3D"_blank"><span style=3D"font-size:10pt;font-family:&quot;Helvet=
+ica Neue&quot;,sans-serif;color:rgb(102,102,102);background-color:transpare=
+nt;vertical-align:baseline">College of Natural Sciences</span></a></p><p di=
+r=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt"><span=
+ style=3D"font-size:10pt;font-family:&quot;Helvetica Neue&quot;,sans-serif;=
+background-color:transparent;vertical-align:baseline"><a href=3D"mailto:pes=
+tilli@utexas.edu" target=3D"_blank"><font color=3D"#0b5394">pestilli@utexas=
+.edu</font></a></span><span style=3D"color:rgb(34,34,34);font-size:10pt;fon=
+t-family:&quot;Helvetica Neue&quot;,sans-serif;background-color:transparent=
+;vertical-align:baseline"> | </span><a href=3D"https://liberalarts.utexas.e=
+du/psychology/faculty/fp4834" style=3D"color:rgb(0,0,0)" target=3D"_blank">=
+<span style=3D"font-size:10pt;font-family:&quot;Helvetica Neue&quot;,sans-s=
+erif;color:rgb(17,85,204);background-color:transparent;vertical-align:basel=
+ine">web</span></a><span style=3D"color:rgb(34,34,34);font-size:10pt;font-f=
+amily:&quot;Helvetica Neue&quot;,sans-serif;background-color:transparent;ve=
+rtical-align:baseline"> | </span><a href=3D"https://pestillilab.github.io/"=
+ style=3D"color:rgb(0,0,0)" target=3D"_blank"><span style=3D"font-size:10pt=
+;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(17,85,204);bac=
+kground-color:transparent;vertical-align:baseline">Laboratory</span></a><sp=
+an style=3D"color:rgb(17,85,204);font-size:10pt;font-family:&quot;Helvetica=
+ Neue&quot;,sans-serif;background-color:transparent;vertical-align:baseline=
+">=C2=A0</span></p><p dir=3D"ltr" style=3D"color:rgb(0,0,0);line-height:1.3=
+8;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10pt;font-fami=
+ly:&quot;Helvetica Neue&quot;,sans-serif;background-color:transparent;verti=
+cal-align:baseline">Director,</span><span style=3D"font-size:10pt;font-fami=
+ly:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(11,83,148);background-co=
+lor:transparent;vertical-align:baseline"> </span><a href=3D"http://brainlif=
+e.io/" target=3D"_blank"><span style=3D"font-size:10pt;font-family:&quot;He=
+lvetica Neue&quot;,sans-serif;color:rgb(17,85,204);background-color:transpa=
+rent;vertical-align:baseline">brainlife.io</span></a><span style=3D"font-si=
+ze:10pt;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(17,85,2=
+04);background-color:transparent;vertical-align:baseline">=C2=A0</span></p>=
+<p dir=3D"ltr" style=3D"color:rgb(0,0,0);line-height:1.38;margin-top:0pt;ma=
+rgin-bottom:0pt"><span style=3D"font-size:10pt;font-family:&quot;Helvetica =
+Neue&quot;,sans-serif;background-color:transparent;vertical-align:baseline"=
+>Director of Data Technology,</span><span style=3D"font-size:10pt;font-fami=
+ly:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(0,0,255);background-colo=
+r:transparent;vertical-align:baseline"> </span><a href=3D"https://www.mesos=
+cale-connectivity.org/" target=3D"_blank"><span style=3D"font-size:10pt;fon=
+t-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(17,85,204);backgro=
+und-color:transparent;vertical-align:baseline">mesoscale-connectivity.org</=
+span></a><span style=3D"font-size:10pt;font-family:&quot;Helvetica Neue&quo=
+t;,sans-serif;color:rgb(0,0,255);background-color:transparent;vertical-alig=
+n:baseline">=C2=A0</span></p><p dir=3D"ltr" style=3D"color:rgb(0,0,0);line-=
+height:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10pt=
+;font-family:&quot;Helvetica Neue&quot;,sans-serif;background-color:transpa=
+rent;vertical-align:baseline">Director,</span><span style=3D"font-size:10pt=
+;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(17,85,204);bac=
+kground-color:transparent;vertical-align:baseline"> </span><a href=3D"http:=
+//braindatagovernance.org/" target=3D"_blank"><span style=3D"font-size:10pt=
+;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(17,85,204);bac=
+kground-color:transparent;vertical-align:baseline">braindatagovernance.org<=
+/span></a></p><p dir=3D"ltr" style=3D"color:rgb(0,0,0);line-height:1.38;mar=
+gin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10pt;font-family:&q=
+uot;Helvetica Neue&quot;,sans-serif;background-color:transparent;vertical-a=
+lign:baseline">Chair, </span><a href=3D"https://incf.org/about/governance/i=
+nfrastructure-committee-ic" target=3D"_blank"><span style=3D"font-size:10pt=
+;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(17,85,204);bac=
+kground-color:transparent;vertical-align:baseline">Infrastructure Committee=
+ INCF.org</span></a></p><p dir=3D"ltr" style=3D"color:rgb(0,0,0);line-heigh=
+t:1.38;margin-top:0pt;margin-bottom:0pt"><span style=3D"font-size:10pt;font=
+-family:&quot;Helvetica Neue&quot;,sans-serif;background-color:transparent;=
+vertical-align:baseline">Director,</span><span style=3D"font-size:10pt;font=
+-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(11,83,148);backgrou=
+nd-color:transparent;vertical-align:baseline"> </span><a href=3D"https://pe=
+stillilab.github.io/bids-connectivity/" target=3D"_blank"><span style=3D"fo=
+nt-size:10pt;font-family:&quot;Helvetica Neue&quot;,sans-serif;color:rgb(17=
+,85,204);background-color:transparent;vertical-align:baseline">Brain Imagin=
+g Data Structure (BIDS) Connectivity Project</span></a></p><p dir=3D"ltr" s=
+tyle=3D"color:rgb(0,0,0);line-height:1.38;margin-top:0pt;margin-bottom:0pt"=
+><span style=3D"font-family:&quot;Helvetica Neue&quot;,sans-serif;font-size=
+:13.3333px">Principal Investigator=C2=A0</span><a href=3D"https://brain-con=
+nects.org/" style=3D"color:rgb(17,85,204);font-family:&quot;Helvetica Neue&=
+quot;,sans-serif;font-size:13.3333px" target=3D"_blank">BRAIN CONNECTS</a><=
+span style=3D"font-family:&quot;Helvetica Neue&quot;,sans-serif;font-size:1=
+3.3333px">=C2=A0Data Coordination Center</span></p></div></div></div></div>=
+</div><br><div class=3D"gmail_quote gmail_quote_container"><div dir=3D"ltr"=
+ class=3D"gmail_attr">On Fri, May 15, 2026 at 7:31=E2=80=AFPM JB Poline &lt=
+;<a href=3D"mailto:jbpoline@gmail.com">jbpoline@gmail.com</a>&gt; wrote:<br=
+></div><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;=
+border-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"auto">=
+<div>Hi Franco</div><div dir=3D"auto">BIDS, as described in the email, but =
+we will circulate some first ideas asap</div><div dir=3D"auto">Cheers</div>=
+<div dir=3D"auto">JB<br><br><div class=3D"gmail_quote" dir=3D"auto"><div di=
+r=3D"ltr" class=3D"gmail_attr">On Fri, May 15, 2026, 12:10 Franco Pestilli =
+&lt;<a href=3D"mailto:pestilli@utexas.edu" target=3D"_blank">pestilli@utexa=
+s.edu</a>&gt; wrote:<br></div><blockquote class=3D"gmail_quote" style=3D"ma=
+rgin:0px 0px 0px 0.8ex;border-left:1px solid rgb(204,204,204);padding-left:=
+1ex"><div dir=3D"auto"><div>Is this a bids grant?</div><div dir=3D"auto"><b=
+r></div><div dir=3D"auto">Or a lab grant?</div><div><br></div><div>Franco P=
+estilli <br>Professor<br>The University of Texas </div></div><br><div class=
+=3D"gmail_quote"><div dir=3D"ltr" class=3D"gmail_attr">On Fri, May 15, 2026=
+, 4:32=E2=80=AFPM JB Poline &lt;<a href=3D"mailto:jbpoline@gmail.com" rel=
+=3D"noreferrer" target=3D"_blank">jbpoline@gmail.com</a>&gt; wrote:<br></di=
+v><blockquote class=3D"gmail_quote" style=3D"margin:0px 0px 0px 0.8ex;borde=
+r-left:1px solid rgb(204,204,204);padding-left:1ex"><div dir=3D"ltr"><div d=
+ir=3D"ltr"><div class=3D"gmail_default" style=3D"font-family:arial,sans-ser=
+if;font-size:small">Hi Everyone,</div><div class=3D"gmail_default" style=3D=
+"font-family:arial,sans-serif;font-size:small"><br></div><div class=3D"gmai=
+l_default" style=3D"font-family:arial,sans-serif;font-size:small">Following=
+ steering conversations on funding the=C2=A0BIDS project(s), we had a quick=
+ chat with Yarik. We plan to submit an LOI for TIER2 to <a href=3D"https://=
+os4science.org/funding_opportunity/os4ls/" rel=3D"noreferrer noreferrer" ta=
+rget=3D"_blank">this call</a> for the BIDS community. One idea is to develo=
+p the BIDS community towards standardization of &quot;bids-study&quot;, ena=
+bling agentic AI to do a whole neuroimaging study and &quot;biomarker disco=
+very ready&quot;. I am sure other ideas will emerge=C2=A0:)</div><div class=
+=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:small"><=
+br></div><div class=3D"gmail_default" style=3D"font-family:arial,sans-serif=
+;font-size:small">The call is going to be super competitive, we expect many=
+ to apply.=C2=A0</div><div class=3D"gmail_default" style=3D"font-family:ari=
+al,sans-serif;font-size:small"><br></div><div class=3D"gmail_default" style=
+=3D"font-family:arial,sans-serif;font-size:small">Let us know what you thin=
+k, and I would like to dedicate a steering meeting to this before OHBM if p=
+ossible.</div><div class=3D"gmail_default" style=3D"font-family:arial,sans-=
+serif;font-size:small"><br></div><div class=3D"gmail_default" style=3D"font=
+-family:arial,sans-serif;font-size:small">Cheers</div><div class=3D"gmail_d=
+efault" style=3D"font-family:arial,sans-serif;font-size:small">JB</div><div=
+ class=3D"gmail_default" style=3D"font-family:arial,sans-serif;font-size:sm=
+all"><br></div></div>
+</div>
+
+<br><table style=3D"background-color:rgb(253,250,231);border-style:solid;bo=
+rder-color:rgb(252,209,70);border-width:0px 0px 0px 1ex;color:black;font-fa=
+mily:Arial,&quot;Helvetica Neue&quot;,Helvetica;font-size:10pt;padding:1ex =
+1ex 1ex 2ex"><tbody><tr><td>
+This message is from an external sender. <a href=3D"https://ut.service-now.=
+com/sp?id=3Dkb_article&amp;number=3DKB0011401" rel=3D"noreferrer noreferrer=
+" target=3D"_blank">Learn more about why this matters.</a>
+</td></tr></tbody></table></blockquote></div>
+</blockquote></div></div></div>
+
+<br><table style=3D"background-color:rgb(253,250,231);border-style:solid;bo=
+rder-color:rgb(252,209,70);border-width:0px 0px 0px 1ex;color:black;font-fa=
+mily:Arial,&quot;Helvetica Neue&quot;,Helvetica;font-size:10pt;padding:1ex =
+1ex 1ex 2ex"><tbody><tr><td>
+This message is from an external sender. <a href=3D"https://ut.service-now.=
+com/sp?id=3Dkb_article&amp;number=3DKB0011401" target=3D"_blank">Learn more=
+ about why this matters.</a>
+</td></tr></tbody></table></blockquote></div>
+
+--0000000000004ef3740651e0674a--
+
