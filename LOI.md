@@ -26,6 +26,8 @@
   - Dora Hermes — Mayo Clinic PI (BIDS Steering; iEEG)
   - Cody Baker — Dartmouth/CatalystNeuro (BEP032, NWB ↔ BIDS interoperability, `*`omics scoping)
   - Franco Pestilli - UT Austin PI (BIDS Steering; connectomics, brainlife)
+  - Kimberly Ray - UT Austin PI (BIDS Steering) to provide "Project Manager" role to orchestrate activities
+  
 
 ---
 
@@ -121,7 +123,7 @@ Software Project's Website URL
 
 2. **BIDS validators (Deno + Python)**
    - Deno (current): https://github.com/bids-standard/bids-validator
-   - Python validator: https://github.com/bids-standard/bids2-validator
+   - Python validator: https://github.com/bids-standard/python-validator
    - License: MIT — open
 
 3. **bids-utils (query/manipulation + MCP/skills layer)**
