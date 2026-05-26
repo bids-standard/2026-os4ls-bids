@@ -23,7 +23,6 @@
   - Oscar Esteban — Lausanne University Hospital / EPFL PI (nipreps; AI-assisted pipelines)
   - Gregory Kiar — Child Mind Institute PI (Niwrap, Styx, Boutiques)
   - Alejandro de la Vega — UT Austin PI (pybids, fitlins)
-  - Dora Hermes — Mayo Clinic PI (BIDS Steering; iEEG)
   - Cody Baker — Dartmouth/CatalystNeuro (BEP032, NWB ↔ BIDS interoperability, `*`omics scoping)
   - Franco Pestilli - UT Austin PI (BIDS Steering; connectomics, brainlife)
   - Kimberly Ray - UT Austin PI (BIDS Steering) to provide "Project Manager" role to orchestrate activities
