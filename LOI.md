@@ -56,9 +56,9 @@ The **Brain Imaging Data Structure (BIDS)** is a community-driven, openly govern
 Since 2016, BIDS has grown from an MRI-only convention into an ecosystem covering over 10 modalities at the moment: MRI, EEG, MEG, iEEG, PET, NIRS, microscopy, motion, MRS, physiological, behavioral.
 There are over 1,500+ public BIDS datasets on OpenNeuro and some multi-TBs microscopy datasets on DANDI BRAIN Initiative archives.
 Provides common data language for dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep, …), and is cited by thousands of peer-reviewed papers.
-Work on new extensions (BEP036 Phenotypic Data, BEP044/047 stimuli & audio/video, BEP028 provenance) is introducing BIDS into adjacent life-science domains — animal behavior, audiology, `*`omics-linked phenotyping, and animal pose estamation and tracking -- domains of interest for AI agentic workflows.
+Work on new extensions (BEP036 Phenotypic Data, BEP044/047 stimuli & audio/video, BEP028 provenance) is introducing BIDS into adjacent life-science domains — animal behavior, audiology, `*`omics-linked phenotyping, and animal pose estimation and tracking -- domains of interest for AI agentic workflows.
 
-This proposal supports the **coordinated evolution of the BIDS ecosystem to be natively AI-ready**, on the premise: *what is good for human intelligence is good for AI — only AI benefits even more from explicit structure*.
+This proposal supports the **coordinated evolution of the BIDS ecosystem to be natively AI-ready**, on the premise that: *what is good for human intelligence is good for AI — only AI benefits even more from explicit structure*.
 We will fund five tightly coupled open-source pillars whose maintainers have collectively committed to this work:
 
 1. **BIDS specification & schema** — finalize BIDS 2.0, harden the machine-readable schema as a true *Data Structure Standard*, land BEP036 (phenotypes) and the BEP044 (Stimuli) and BEP047 (behavior) audio-video extensions that broaden BIDS beyond neuro;
@@ -90,7 +90,7 @@ No new datasets (besides new example ones), no new ML models — only the standa
 **Upstream impact.** A versioned schema-first specification with first-class machine-readable extension points enables BEPs in `*`omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
 **Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI datasets because of ongoing work for nwb2bids), every nipreps pipeline, brainlife.io App or Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, or custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
-**The same investment that makes BIDS easier for humans makes it actually usable for AI** — and exposes a template other life-science communities and standards can mirror.
+**The same investment that makes BIDS easier for humans makes it more usable for AI** — and exposes a template other life-science communities and standards can mirror.
 
 ---
 
@@ -102,7 +102,7 @@ Adjacent open standards — **NWB** (neurophysiology data model), **NIfTI** (fil
 For the analysis layer, **Boutiques / Niwrap / Styx** is the leading open descriptor stack and lacks a true peer; commercial alternatives (Flywheel, QMENTA) are closed-source software and BIDS-consuming.
 
 **AI use.** BIDS is already the de-facto input contract for AI tools in the field: ML training pipelines (ABCD-derived, UK Biobank, BIDS-Brain-Score, Facebook's Neuro AI), virtual scientist and foundation-model efforts (KOSMOS, BrainLM), and AI assistants like **OSA** all rely on BIDS layout.
-Yet BIDS standard has various "evolutional quirks" requiring more work toward consistency, and validators, APIs, and pipeline descriptors were designed for human authors — this proposal closes those gaps.
+Yet the first BIDS 1.0 version of the standard has naturally evolved  with validators, APIs, and pipeline descriptors that were designed for human authors —  to a point where more work and a major new 2.0 version would be required to advance it towards higher consistency, and this proposal closes those gaps.
 
 ---
 
@@ -140,7 +140,7 @@ Software Project's Website URL
 5. **OSA (Open Science Assistant) — AI assistance with BIDS awareness**
    - Repo: https://github.com/OpenScience-Collective/osa/
    - Maintainer: Seyed Yahya Shirazi (UCSD), under the Open Science Collective org
-   - License: open (to confirm in full application)
+   - License: MIT — open
 
 ---
 
