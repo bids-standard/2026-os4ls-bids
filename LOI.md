@@ -65,7 +65,7 @@ We will fund five tightly coupled open-source pillars whose maintainers have col
 2. **BIDS validators (Deno bids-validator + Python bids-validator)** — converge implementations on the schema, produce machine-consumable, agent-friendly validation records, and integrate with cross-standard validators (HED, NWB-Inspector, Zarr, DANDI) via the con/validation common schema;
 3. **PyBIDS + a consolidated `bids-utils` library + MCP/skills** — replace today's scattered helper code with a maintained query/manipulation core, exposed through Model Context Protocol servers and reusable agent skills so any LLM agent can read, write, and reason about BIDS datasets;
 4. **BIDS-Apps 2.0 + Boutiques / Niwrap / Styx + bids-models / fitlins** — modernize the interface contract between BIDS data and analysis containers, enabling AI agents (e.g. AI-assisted nipreps) to compose, parametrize, and run pipelines reliably;
-5. **OSA (Open Science Assistant) + dataset/study observability** — extend the existing OSA AI-assistance framework with deep BIDS awareness, and formalize a *study-state* observability layer so dashboards (Nipoppy, brainlife, OpenNeuroStudies), archives (OpenNeuro, DANDI, registry.datalad.org) and human-in-the-loop reviewers can introspect what AI agents have done.
+5. **OSA (Open Science Assistant) + dataset/study observability** — extend the existing OSA AI-assistance framework with deep BIDS awareness, and formalize a *study-state* observability layer so dashboards (Nipoppy, brainlife, OpenNeuroStudies), archives (OpenNeuro, DANDI, registry.datalad.org, connects.brainlife.io) and human-in-the-loop reviewers can introspect what AI agents have done.
 
 The work is **explicitly horizontal**: every advance lifts every downstream tool.
 Funds also support an annual cross-project hackathon to keep the ecosystem coherent.
@@ -89,7 +89,7 @@ No new datasets (besides new example ones), no new ML models — only the standa
 
 **Upstream impact.** A versioned schema-first specification with first-class machine-readable extension points enables BEPs in `*`omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
-**Downstream impact.** Every BIDS App, every OpenNeuro dataset (potentially DANDI datasets since nwb2bids work is ongoing), every nipreps pipeline, brainlife/Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
+**Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI datasets because of ongoing work for nwb2bids), every nipreps pipeline, brainlife.io App or Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, or custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
 **The same investment that makes BIDS easier for humans makes it actually usable for AI** — and exposes a template other life-science communities and standards can mirror.
 
 ---
@@ -148,11 +148,10 @@ Software Project's Website URL
 
 select/vote from candidates (potentially add others)
 
-- [ ] **Data formats and storage**
-- [ ] **Interoperability**
 - [ ] **Neuroscience**
-
 - [ ] **Biological and biomedical imaging**
+- [ ] **Data formats and storage**
+- [ ] **Platforms interoperability**
 - [ ] **Agentic frameworks**
 - [ ] **Software ecosystem infrastructure**
 
