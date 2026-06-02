@@ -90,7 +90,7 @@ No new datasets (besides new example ones), no new ML models — only the standa
 
 **Upstream impact.** A versioned schema-first specification with first-class machine-readable extension points enables BEPs in `*`omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
-**Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI datasets because of ongoing work for nwb2bids), every nipreps pipeline, brainlife.io App or Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, brainlife.io/skai or custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
+**Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI datasets because of ongoing work for nwb2bids), every nipreps pipeline, brainlife.io App or Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, or custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
 **The same investment that makes BIDS easier for humans makes it actually usable for AI** — and exposes a template other life-science communities and standards can mirror.
 
 ---
