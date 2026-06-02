@@ -34,9 +34,9 @@
 
 ### Proposal Title — *60 characters max*
 
-**Candidate (53 chars):**
+**Candidate (50 chars):**
 
-> AI-Ready BIDS: Structured Life Science Data for HI & AI
+> BIDS 2.0+: Life Sciences Data Standard for HI & AI
 
 **Alternates (under 60 chars):**
 
