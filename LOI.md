@@ -38,71 +38,61 @@
 
 > BIDS 2.0+: Life Sciences Data Standard for HI & AI
 
-**Alternates (under 60 chars):**
-
-- "Good for Humans, Better for AI: an AI-Ready BIDS Ecosystem" (58)
-
-or we could make it more concrete as to target 2.0:
-
-- "BIDS 2.0 Ecosystem: AI-Ready Standards and Tooling for Life Sciences" (56)
-
-- "BIDS Ecosystem: Standardizing Life Science Data for AI" (54)
-
 ---
 
 ### Short Summary — *3,000 characters max*
 
-The **Brain Imaging Data Structure (BIDS)** is a community-driven, openly governed standard that organizes scientific datasets so they can be unambiguously consumed by Human Intelligence (HI, also known as Humans), conventional pipelines, and increasingly autonomous AI agents.
-Since 2016, BIDS has grown from an MRI-only convention into an ecosystem covering over 10 modalities at the moment: MRI, EEG, MEG, iEEG, PET, NIRS, microscopy, motion, MRS, physiological, behavioral.
-There are over 1,500+ public BIDS datasets on OpenNeuro and some multi-TBs microscopy datasets on DANDI BRAIN Initiative archives.
-Provides common data language for dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep, …), and is cited by thousands of peer-reviewed papers.
-Work on new extensions (BEP036 Phenotypic Data, BEP044/047 stimuli & audio/video, BEP028 provenance) is introducing BIDS into adjacent life-science domains — animal behavior, audiology, `*`omics-linked phenotyping, and animal pose estimation and tracking -- domains of interest for AI agentic workflows.
+The **Brain Imaging Data Structure (BIDS)** is a community-driven, openly governed standard that organizes scientific datasets so they can be unambiguously consumed by Human Intelligence (HI), conventional pipelines, and AI agents.
+Since 2016, BIDS has grown from an MRI-only convention into an ecosystem covering 10+ modalities (MRI, EEG/MEG/iEEG, PET, NIRS, microscopy, motion, MRS, physiological, behavioral), with 1,500+ public datasets on OpenNeuro and multi-TB microscopy on DANDI.
+It provides the common data language for dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep, …) and is cited by thousands of peer-reviewed papers.
+Active BIDS Extension Proposals (BEPs) — BEP036 (phenotypes), BEP044/047 (stimuli, audio/video) — and initial dialogue with `*`omics archives are pulling BIDS into adjacent life-science domains (animal behavior, audiology, pose estimation, `*`omics-linked phenotyping) of growing interest for AI agentic workflows.
 
-This proposal supports the **coordinated evolution of the BIDS ecosystem to be natively AI-ready**, on the premise that: *what is good for human intelligence is good for AI — only AI benefits even more from explicit structure*.
-We will fund five tightly coupled open-source pillars whose maintainers have collectively committed to this work:
+This proposal supports the **coordinated evolution of the BIDS ecosystem into a natively AI-ready standard**, on the premise that *what is good for HI is good for AI — only AI benefits even more from explicit structure*.
+Funding will advance five tightly coupled components whose maintainers have collectively committed to the work:
 
-1. **BIDS specification & schema** — finalize BIDS 2.0, harden the machine-readable schema as a true *Data Structure Standard*, land BEP036 (phenotypes) and the BEP044 (Stimuli) and BEP047 (behavior) audio-video extensions that broaden BIDS beyond neuro;
-2. **BIDS validators (Deno bids-validator + Python bids-validator)** — converge implementations on the schema, produce machine-consumable, agent-friendly validation records, and integrate with cross-standard validators (HED, NWB-Inspector, Zarr, DANDI) via the con/validation common schema;
-3. **PyBIDS + a consolidated `bids-utils` library + MCP/skills** — replace today's scattered helper code with a maintained query/manipulation core, exposed through Model Context Protocol servers and reusable agent skills so any LLM agent can read, write, and reason about BIDS datasets;
-4. **BIDS-Apps 2.0 + Boutiques / Niwrap / Styx + bids-models / fitlins** — modernize the interface contract between BIDS data and analysis containers, enabling AI agents (e.g. AI-assisted nipreps) to compose, parametrize, and run pipelines reliably;
-5. **OSA (Open Science Assistant) + dataset/study observability** — extend the existing OSA AI-assistance framework with deep BIDS awareness, and formalize a *study-state* observability layer so dashboards (Nipoppy, brainlife, OpenNeuroStudies), archives (OpenNeuro, DANDI, registry.datalad.org, connects.brainlife.io) and human-in-the-loop reviewers can introspect what AI agents have done.
+1. **BIDS specification & schema** — release BIDS 2.0 (more consistent, more modular), scope the 3.0 roadmap, harden the machine-readable schema as a true *Data Structure Standard*, and land queued BEPs (BEP036 phenotypes, BEP044 stimuli, BEP047 behavior) to broaden BIDS beyond neuro;
+2. **BIDS validators** — converge implementations on the schema, produce machine-consumable, agent-friendly validation records, and integrate cross-standard validators (HED, NWB-Inspector, Zarr, DANDI) — the critical step toward trustworthy AI-produced results;
+3. **Python + CLI utilities with MCP interfaces and skills** — replace scattered helper code with a maintained query/manipulation core, exposed through Model Context Protocol servers and reusable agent skills so any LLM agent can read, write, and reason about BIDS datasets;
+4. **BIDS-Apps 2.0+** — modernize the interface contract between BIDS data and analysis containers (BIDS-Apps 2.0 + Boutiques + Niwrap), so AI agents (e.g. AI-assisted nipreps) can compose, parametrize, and run pipelines reliably;
+5. **BIDS Users Assistant** — extend the OSA AI-assistance framework with deep BIDS awareness, and formalize a *study-state* observability layer so dashboards (Nipoppy, brainlife, OpenNeuroStudies), archives (OpenNeuro, DANDI), and human-in-the-loop reviewers can introspect what AI agents have done.
 
-The work is **explicitly horizontal**: every advance lifts every downstream tool.
-Funds also support an annual cross-project hackathon to keep the ecosystem coherent.
-No new datasets (besides new example ones), no new ML models — only the standard, the tools, and the AI-readiness layer that the rest of the life sciences can adopt.
+The work is **explicitly modular**: advance in any component lifts every downstream tool.
+Funds also support annual cross-project hackathons and conference participation for dissemination.
+No new datasets (beyond examples), no new ML models — only the standard, the tools, and the AI-readiness layer that the rest of the life sciences can adopt.
 
 ---
 
 ### Expected Value — *1,500 characters max*
 
-**Capabilities unlocked.** Success means that, by month 24, any life-sciences researcher *or* any LLM agent operating in the life sciences can: 
+**Capabilities unlocked.** By month 24, any life-sciences researcher *or* LLM agent will be able to:
 
-(i) discover whether a dataset (tool, HI or AI constructed) is BIDS "deep-valid" - valid recursively, against all used formats and standards (e.g. HED, NWB, OME-Zarr); 
+(i) check whether a dataset is BIDS "deep-valid" — valid recursively against every used format and sibling standard (HED, NWB, OME-Zarr);
 
-(ii) query and manipulate it via maintained Command Line interfaces (CLI), Python API and MCP servers, and collection of domain- and target- specialized SKILLs;
+(ii) query and manipulate it via maintained CLI, Python API, and MCP servers, plus a collection of domain-specialized SKILLs;
 
-(iii) wrap any analysis tool as a Boutiques/Niwrap descriptor and run it as a BIDS App 2.0 direcly or by an agent;
+(iii) wrap any analysis tool as a Boutiques/Niwrap descriptor and run it as a BIDS App 2.0, directly or via an agent;
 
-(iv) introspect provenance, derivatives state, and outstanding QC through a common observability schema regardless on what performed an action;
+(iv) introspect provenance, derivatives state, and outstanding QC through a common observability schema regardless of who performed the action;
 
 (v) get human- and agent-readable explanations and guidance through the OSA AI assistant.
 
-**Upstream impact.** A versioned schema-first specification with first-class machine-readable extension points enables BEPs in `*`omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
+**Upstream impact.** A versioned schema-first specification with machine-readable extension points unlocks BEPs in `*`omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
-**Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI datasets because of ongoing work for nwb2bids), every nipreps pipeline, brainlife.io App or Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, or custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
-**The same investment that makes BIDS easier for humans makes it more usable for AI** — and exposes a template other life-science communities and standards can mirror.
+**Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI via nwb2bids), every nipreps pipeline, brainlife.io App or Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
+
+**The same investment that makes BIDS easier for humans makes it more usable for AI** — and exposes a template other life-science standards can mirror.
 
 ---
 
 ### Landscape Analysis — *1,500 characters max*
 
-BIDS occupies a near-monopoly position as the *organization* standard for the neuroscience and broader biomedical-imaging audience: OpenNeuro (1,500+ datasets), DANDI, the EU/HBP, NIH BRAIN, ABCD, UK Biobank derivatives, and most major pipelines (fMRIPrep, QSIPrep, MRIQC, EEGLAB-BIDS, MNE-BIDS, fitlins) consume and/or produce BIDS.
-There is no proprietary equivalent; vendor formats (BrainVision, CTF, Plexon) and industry standards (DICOM) are *inputs* that BIDS organizes and collaborates with, not competitors.
-Adjacent open standards — **NWB** (neurophysiology data model), **NIfTI** (file format), **HED** (event annotation), **Zarr/OME-Zarr** (large arrays), **git/git-annex/DataLad** (data versioning and logistics) — are *complementary*, not substitutable: this proposal explicitly invests in their interoperability rather than re-implementation.
-For the analysis layer, **Boutiques / Niwrap / Styx** is the leading open descriptor stack and lacks a true peer; commercial alternatives (Flywheel, QMENTA) are closed-source software and BIDS-consuming.
+BIDS is the near-monopoly *organization* standard for neuroscience and broader biomedical imaging: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), EU/HBP, NIH BRAIN, ABCD, UK Biobank derivatives, and most major pipelines (fMRIPrep, QSIPrep, MRIQC, EEGLAB-BIDS, MNE-BIDS, fitlins) consume or produce BIDS.
+There is no proprietary equivalent; vendor formats (BrainVision, CTF, Plexon) and industry standards (DICOM) are *inputs* BIDS organizes, not competitors.
+Adjacent open standards — **NWB** (neurophysiology), **NIfTI** (file format), **HED** (event annotation), **Zarr/OME-Zarr** (large arrays), **git/git-annex/DataLad** (data versioning) — are *complementary* and used by or with BIDS; this proposal invests in interoperability rather than re-implementation.
+For the analysis layer, **Boutiques / Niwrap / Styx** is the leading open descriptor stack and lacks a true peer; commercial alternatives (Flywheel, QMENTA) are closed-source and BIDS-consuming.
 
-**AI use.** BIDS is already the de-facto input contract for AI tools in the field: ML training pipelines (ABCD-derived, UK Biobank, BIDS-Brain-Score, Facebook's Neuro AI), virtual scientist and foundation-model efforts (KOSMOS, BrainLM), and AI assistants like **OSA** all rely on BIDS layout.
-Yet the first BIDS 1.0 version of the standard has naturally evolved  with validators, APIs, and pipeline descriptors that were designed for human authors —  to a point where more work and a major new 2.0 version would be required to advance it towards higher consistency, and this proposal closes those gaps.
+**AI use.** BIDS is already the de-facto input contract for AI tools in the field: ML training pipelines (ABCD-derived, UK Biobank, BIDS-Brain-Score, Facebook's Neuro AI), virtual-scientist and foundation-model efforts (KOSMOS, BrainLM), and AI assistants like **OSA** all rely on BIDS layout to make data legible.
+Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency — gaps this proposal closes.
 
 ---
 
@@ -114,33 +104,49 @@ Software Project Name * 30 characters maximum
 Software Project's Repository URL *
 Software Project's Website URL
 
-1. **BIDS specification & schema & schematools**
+1. **BIDS spec, schema, schematools"
    - Repo: https://github.com/bids-standard/bids-specification
-   - Schema: https://github.com/bids-standard/bids-specification/tree/master/src/schema
-   - BIDS 2.0 dev ('fork' to streamline management, overarching): https://github.com/bids-standard/bids-2-devel
-   - License: CC-BY 4.0 (text) / MIT (schema tooling) — open
+   - Website: https://bids-specification.readthedocs.io/
+   - Unused extras:
+     - Schema: https://github.com/bids-standard/bids-specification/tree/master/src/schema
+     - BIDS 2.0 dev ('fork' to streamline management, overarching): https://github.com/bids-standard/bids-2-devel
+     - License: CC-BY 4.0 (text) / MIT (schema tooling) — open
 
-2. **BIDS validators (Deno + Python)**
-   - Deno (current): https://github.com/bids-standard/bids-validator
-   - Python validator: https://github.com/bids-standard/python-validator
-   - License: MIT — open
+2. **BIDS validator(s)**
+   - Repo: https://github.com/bids-standard/bids-validator
+   - Website: https://bids-validator.readthedocs.io/en/latest/
+   - Unused extras:
+     - Deno (current): https://github.com/bids-standard/bids-validator
+     - Python validator: https://github.com/bids-standard/python-validator
+     - License: MIT — open
 
-3. **bids-utils (query/manipulation + MCP/skills layer)**
-   - bids-utils: https://github.com/bids-standard/bids-utils , to be developed/coordinated under the `bids-standard/` org (umbrella issue forthcoming); **complements** pybids — it does not supplant or merge with it. Roughly: pybids covers structured query/indexing; bids-utils covers the smaller, agent- and CLI-friendly read/write/inspect verbs and integrations with sibling standards
-   - PyBIDS: https://github.com/bids-standard/pybids
-   - License: Apache-2.0 — open
+3. **PyBIDS**
+   - Repo: https://github.com/bids-standard/pybids
+   - Website: https://bids-standard.github.io/pybids/
+   - Unused extras:
+     - **bids-utils (query/manipulation + MCP/skills layer)**
+     - bids-utils: https://github.com/bids-standard/bids-utils , to be developed/coordinated under the `bids-standard/` org (umbrella issue forthcoming); **complements** pybids — it does not supplant or merge with it. Roughly: pybids covers structured query/indexing; bids-utils covers the smaller, agent- and CLI-friendly read/write/inspect verbs and integrations with sibling standards
+     - License: Apache-2.0 — open
 
-4. **Boutiques / Niwrap / Styx + BIDS-Apps 2.0 (pipeline interoperability)**
-   - Boutiques: https://github.com/boutiques/boutiques
-   - BIDS-Apps: https://github.com/bids-apps
-   - Niwrap: https://github.com/childmindresearch/niwrap
-   - Styx: https://github.com/childmindresearch/styx
-   - License: MIT / Apache-2.0 — open
+4. **BIDS-Apps**
+   - "Repo" (org): https://github.com/bids-apps
+   - Website: https://bids-apps.neuroimaging.io/
+   - Unused extra(s) (we better incorporate refs at least into above!):
+     - Repo: https://github.com/bids-standard/execution-spec
+     - Website: https://bids-standard.github.io/execution-spec/
+     - Boutiques / Niwrap / Styx + BIDS-Apps 2.0 (pipeline interoperability)
+     - Boutiques: https://github.com/boutiques/boutiques
+     - BIDS-Apps: https://github.com/bids-apps
+     - Niwrap: https://github.com/childmindresearch/niwrap
+     - Styx: https://github.com/childmindresearch/styx
+     - License: MIT / Apache-2.0 — open
 
-5. **OSA (Open Science Assistant) — AI assistance with BIDS awareness**
+5. **OSA — Open Science Assistant** *(submit as: "OSA — Open Science Assistant" — 28 chars)*
    - Repo: https://github.com/OpenScience-Collective/osa/
-   - Maintainer: Seyed Yahya Shirazi (UCSD), under the Open Science Collective org
-   - License: MIT — open
+   - Website: https://demo.osc.earth/bids
+   - Unused extras:
+     - Maintainer: Seyed Yahya Shirazi (UCSD), under the Open Science Collective org
+     - License: MIT — open
 
 ---
 
@@ -166,10 +172,9 @@ select/vote from candidates (potentially add others)
 
 ### Statement of PI Involvement
 
-The PI (Yaroslav Halchenko) is an emeritus member of the BIDS Steering Committee and a long-standing core contributor across the BIDS specification, bids-validator, pybids, bids-examples, and bids-utils repositories.
+The PI (Yaroslav Halchenko) is an emeritus member of the BIDS Steering Committee and a long-standing core contributor across the BIDS specification and ecosystem at large. He is a Co-PI or Co-I on a number of national data archives (DANDI, OpenNeuro, EMBER) which facilitate archival of data in BIDS standard. He will be responsible to direct the work under this funding.
 
-Target wording TODO, along the lines of :
-The proposed work has been discussed and endorsed by the BIDS Steering Committee, by the maintainers of each of the five named software projects (named above as co-Is/collaborating maintainers), and is *aligned with the published BIDS roadmap*: BIDS 2.0 (bids-standard/bids-2-devel), the active BEP queue (BEP028 provenance, BEP036 phenotypic, BEP044/047 stimuli & A/V), and the bids-standard validator convergence effort.
+The proposed work has been discussed and endorsed by the BIDS Steering Committee, and by the maintainers of involved software projects, and is *aligned with the published BIDS roadmap*: BIDS 2.0 (bids-standard/bids-2-devel), the active BEP queue (BEP028 provenance, BEP036 phenotypic, BEP044/047 stimuli & A/V), and the bids-standard validator convergence effort.
 No proposed activity introduces work outside the existing community roadmap but community contributions could potentially augment the roadmap.
 
 ---
