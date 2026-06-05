@@ -1,0 +1,55 @@
+Dear steering,
+
+In response to the https://os4science.org/funding_opportunity/os4ls/
+opportunity, I am proposing to submit an OS4S grant to support the
+BIDS project & its community. 
+
+A draft of the letter of intent (LOI) is being worked on at
+https://github.com/yarikoptic/2026-os4s-bids/pull/2 and I am attaching
+current version to this email for the book keeping.
+
+The grant, if awarded, would provide support
+
+- some % of personnel on related work at 
+
+  - my lab (me + RSEs)
+  - Russ Poldrack's lab @ Stanford (Chris Markiewics), 
+  - JB Poline's lab @ McGill (Julia Pfarr, Remi Gau),
+  - Yahya Shirazi @ UCSD
+  - Kim Ray for helping with the community coordination.
+  - potentially others, TBD as we streamline the work roadmap
+
+- organization of hackathons/meetings with other BIDS
+  maintainers/steering/community
+
+- any infrastructure related costs (AI subscriptions etc) as needed for
+  the project, etc
+
+The list above and (extended in the LOI) is preliminary, the exact
+list of personnel, and % details are yet to be ironed out after submitting
+the LOI and hearing back from OS4S.  I will continue developing this
+submission as much as possible&reasonable in the open, and update
+committee on the notable events on the course.
+
+If funded, I will report on the work progress and agree to make sure
+that the work aligns with the BIDS community direction through
+regular coordination (and at minimum every two months) with the steering
+committee.  As some of the BIDS maintainers will also be on the team, we
+will plan ongoing work cohesively with other BIDS project activities.
+
+I would like to request the BIDS steering committee support for this
+effort, and specifically ATM the blessing to move
+
+https://github.com/yarikoptic/2026-os4s-bids
+
+under 
+
+https://github.com/bids-standard/ organization.
+
+Yours,
+-- 
+Yaroslav O. Halchenko
+Center for Open Neuroscience     http://centerforopenneuroscience.org
+Dartmouth College, 419 Moore Hall, Hinman Box 6207, Hanover, NH 03755
+WWW:   http://www.linkedin.com/in/yarik        
+
