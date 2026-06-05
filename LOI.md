@@ -19,6 +19,7 @@ Application portal: https://renphil.fillout.com/os4ls
   - Chris Markiewicz — Stanford (BIDS Maintainer 'in charge', BEP043, bids-validator, pybids, nipreps)
   - Jean-Baptiste Poline — McGill PI (current Steering Group; Boutiques/Nipoppy)
   - Russell Poldrack — Stanford PI (BIDS co-founder; Emeritus Steering Group; bids-validator, OpenNeuro)
+  - Ariel Rokem - CAMH PI (Emeritus Steering Group; BEP16/BEP46)
   - Seyed Yahya Shirazi — UCSD PI (BIDS Maintainer; BEP042/BEP044; HED; OSA — Open Science Assistant)
   - Oscar Esteban — Lausanne University Hospital / EPFL PI (nipreps; AI-assisted pipelines)
   - Gregory Kiar — Child Mind Institute PI (Niwrap, Styx, Boutiques)
