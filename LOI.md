@@ -93,6 +93,7 @@ The same investment that makes BIDS easier for humans makes it more usable for A
 ### Landscape Analysis — 1,500 characters max (current 1402)
 
 BIDS is the near-monopoly organization standard across neuroscience, biomedical imaging, and adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), EU/HBP, NIH BRAIN, ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
+BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize.
 
 No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF, Plexon) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source and BIDS-consuming.
 Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; this proposal invests in interoperability, not re-implementation. BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC (parquet, zarr) outputs into BIDS — across legacy tooling and accelerator storage.
@@ -180,6 +181,8 @@ others considered
 ---
 
 ### Statement of PI Involvement
+
+(Note 2026-06-05: the live LOI form interprets this requirement as a single attestation checkbox — no free-text field. The content below is preserved verbatim for the **full application** due 2026-07-21, where it will populate Key Personnel, Project Metrics, Recent Institutional Support, and Endorsements sections. The strongest LOI-stage signals from this content — Cooper Prize 2023 — have been wedged into Landscape Analysis above.)
 
 The PI (Yaroslav Halchenko) is an Emeritus member of the BIDS Steering Group and a long-standing core contributor across the BIDS specification and ecosystem at large. He is a Co-PI or Co-I on a number of national US data archives (DANDI, OpenNeuro, EMBER) which facilitate archival of data in BIDS standard. He will be responsible to direct the work under this funding. PIs work will be done in coordination with Co-PIs subcontracted at a number of other sites, as BIDS is a global decentralized project at large: Poldrack, Poline, Ray, Esteban, and we have prior rich history of collaboration and joint funded work (e.g. PI Halchenko is currently Co-PI or Co-I with Poldrack and Poline on a number of federally funded grants).
 
