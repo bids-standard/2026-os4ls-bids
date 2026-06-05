@@ -51,14 +51,14 @@ This proposal supports the **coordinated evolution of the BIDS ecosystem into a 
 We will advance five tightly coupled components whose maintainers have collectively committed:
 
 1. **BIDS specification & schema** — release BIDS 2.0 (more consistent, modular), scope the 3.0 roadmap, harden the machine-readable schema as a *Data Structure Standard*, and land the BEP backlog to broaden BIDS beyond neuro;
-2. **BIDS validators** — converge implementations on the schema, produce machine-consumable validation records, and integrate cross-standard validators (HED, NWB, Zarr) — critical for trustworthy AI results;
+2. **BIDS validators** — **community-driven convergence** of implementations on the schema, machine-consumable records, and integration of cross-standard validators (HED, NWB, Zarr) — critical for trustworthy AI results;
 3. **Python + CLI utilities with MCP interfaces and skills** — consolidate scattered, in-use helpers into a maintained, pybids-adjacent query/manipulation library, exposed via MCP servers and reusable agent skills so LLM agents can read, write, and reason about BIDS datasets;
-4. **BIDS-Apps 2.0+** — on the mature BIDS-Apps registry (50+ apps incl. fMRIPrep) and Boutiques, modernize the contract between BIDS data and analysis containers (via Niwrap and the BIDS-Apps 2.0 execution spec) so AI agents can compose and run pipelines reliably — including GPU/accelerator containers (BEP032 Allen Institute + HuggingFace);
+4. **BIDS-Apps 2.0+** — on the mature BIDS-Apps registry (50+ apps) and Boutiques, modernize the contract between BIDS data and analysis containers (via Niwrap and the BIDS-Apps 2.0 execution spec) so AI agents can compose and run pipelines reliably — including GPU/accelerator containers (BEP032 Allen Institute + HuggingFace);
 5. **BIDS Users Assistant** — extend OSA with deep BIDS awareness, and formalize a *study-state* observability layer so dashboards and human reviewers can introspect AI agents' actions.
 
 **Together, these five close the loop for AI-enabled, large-scale data analysis** by formalizing the data and application contracts agentic workflows and training pipelines need.
 
-The work is **explicitly modular** — each component delivers standalone value; advance in any one lifts every downstream tool. Funds support annual hackathons, conference travel, and **dedicated cross-project coordination (PM + maintainer support) as enabling infrastructure for BIDS 2.0**.
+The work is **explicitly modular** — each component delivers standalone value; advance in any one lifts every downstream tool. Funds support hackathons, conference travel, and **dedicated cross-project coordination (PM + maintainer support) as enabling infrastructure for BIDS 2.0**.
 **Scope guard:** no new datasets (beyond examples), no new ML models, **no archive/repository infrastructure** — only the standard, the tools, and the AI-readiness layer the rest of the life sciences can adopt.
 
 ---
@@ -67,19 +67,19 @@ The work is **explicitly modular** — each component delivers standalone value;
 
 **Capabilities unlocked.** By month 24, any life-sciences researcher *or* LLM agent will be able to:
 
-(i) check whether a dataset is BIDS "deep-valid" — valid recursively against every used format and sibling standard (HED, NWB, OME-Zarr);
+(i) check whether a dataset is BIDS "deep-valid" against every format and sibling standard (HED, NWB, OME-Zarr) — **verdict consumed identically by agents, pipelines, and humans** (not deposit-pipeline tooling);
 
 (ii) query and manipulate it via maintained CLI, Python API, and MCP servers, plus a collection of domain-specialized SKILLs;
 
 (iii) wrap any analysis tool as a Boutiques/Niwrap descriptor and run it as a BIDS App 2.0 — including GPU/accelerator containers — directly or via an agent;
 
-(iv) introspect provenance, derivatives state, and outstanding QC through a common observability schema regardless of who performed the action;
+(iv) introspect provenance, derivatives state, and outstanding QC through a common observability schema regardless of who acted;
 
 (v) get human- and agent-readable explanations and guidance through the OSA AI assistant.
 
 **Upstream impact.** A versioned schema-first specification with machine-readable extension points unlocks BEPs in `*`omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
-**Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI via nwb2bids), every nipreps pipeline, brainlife.io App or Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
+**Downstream impact.** Every BIDS App, every OpenNeuro dataset (and soon DANDI via nwb2bids), every nipreps pipeline, brainlife/Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
 
 **The same investment that makes BIDS easier for humans makes it more usable for AI** — and exposes a template other life-science standards can mirror.
 
@@ -87,9 +87,9 @@ The work is **explicitly modular** — each component delivers standalone value;
 
 ### Landscape Analysis — *1,500 characters max*
 
-BIDS is the near-monopoly *organization* standard for neuroscience and broader biomedical imaging: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), EU/HBP, NIH BRAIN, ABCD, UK Biobank derivatives, and most major pipelines (fMRIPrep, QSIPrep, MRIQC, EEGLAB-BIDS, MNE-BIDS, fitlins) consume or produce BIDS.
+BIDS is the near-monopoly *organization* standard across neuroscience, biomedical imaging, and adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), EU/HBP, NIH BRAIN, ABCD, UK Biobank derivatives, and most major pipelines (fMRIPrep, QSIPrep, MRIQC, EEGLAB-BIDS, MNE-BIDS, fitlins) consume or produce BIDS.
 **No peer exists at the data-organization layer**, proprietary or open: vendor formats (BrainVision, CTF, Plexon) and DICOM are *inputs* BIDS organizes. At the analysis layer, **Boutiques / Niwrap / Styx** is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source and BIDS-consuming.
-Adjacent open standards — **NWB**, **NIfTI**, **HED**, **Zarr/OME-Zarr**, **git/git-annex/DataLad** — are *complementary*; this proposal invests in interoperability, not re-implementation. **BEP43 + Boutiques descriptors map legacy outputs (AFNI, FreeSurfer) and HPC formats (parquet, zarr) into BIDS** — extending it across legacy tool output and accelerator-friendly storage.
+Adjacent open standards — **NWB**, **NIfTI**, **HED**, **Zarr/OME-Zarr**, **git/git-annex/DataLad** — are *complementary*; this proposal invests in interoperability, not re-implementation. **BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC (parquet, zarr) outputs into BIDS** — across legacy tooling and accelerator storage.
 
 **AI use.** BIDS is the de-facto input contract for AI in this field: ML training pipelines (ABCD, UK Biobank, BIDS-Brain-Score), foundation-model efforts (KOSMOS, BrainLM), and AI assistants like **OSA** rely on BIDS layout to make data legible.
 Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency — gaps this proposal closes.
@@ -179,7 +179,7 @@ The PI (Yaroslav Halchenko) is an emeritus member of the BIDS Steering Committee
 
 **Governance and project health.** BIDS has formal, documented governance: an elected **Steering Committee** (co-PIs Poline, Poldrack, Pestilli, and Ray are current members; PI Halchenko is an Emeritus member), a **Maintainers** group with defined roles and merge authority, a public **BEP process** (`bids-standard/bids-extensions`) with documented review and merge gates, a published roadmap (`bids-standard/bids-2-devel`), and a documented contributor guide. Every named project in this proposal has active CI, public issue triage, Maintainers-level review on every merge, and a public release cadence — collectively the spec + apps + tooling repositories have 300+ contributors and a decade of sustained activity.
 
-**Funder lineage.** BIDS itself was not a CZI EOSS grantee, but multiple BIDS-adjacent open-source projects that directly depend on or consume BIDS were EOSS-funded across the program's cycles: **MNE-Python** (Cycle 2), **Nilearn** (Cycle 5, PI Poline), **NiPreps/fMRIPrep** (Cycle 5, PI Esteban), and **NeuroDesk** (Cycle 6, co-funded with Wellcome). **Two of those EOSS PIs (Poline, Esteban) are co-PIs on this proposal** — direct continuity from EOSS into the OS4LS successor program. In 2023, the **BIDS Steering Committee**, representing BIDS project, received **The Neuro – Irv and Helga Cooper Foundation Open Science International Prize** (citation: *"for its longstanding community-driven approach to standardizing neuroimaging data, resulting in widespread adoption"*); the PI is one of five named recipients (with Rokem/U.Washington, Pernet/Copenhagen, Niso/Cajal Institute, Oostenveld/Donders).
+**Funder lineage.** BIDS itself was not a CZI EOSS grantee, but multiple BIDS-adjacent open-source projects that directly depend on or consume BIDS were EOSS-funded across the program's lifespan: **MNE-Python** (Cycle 2), **Nilearn** (Cycle 5, PI Poline; awarded Nov 2022, 2-yr term), **NiPreps/fMRIPrep** (Cycle 5, PI Esteban; awarded Nov 2022, 2-yr term), and **NeuroDesk** (Cycle 6, awarded 2024, 2-yr term; co-funded with Wellcome Trust — ref 313306/Z/24/Z). **Two of those EOSS PIs (Poline, Esteban) are co-PIs on this proposal** — direct continuity from EOSS into the OS4LS successor program. Critically, **CZI did not run an EOSS cycle in 2025** as the program migrated to OS4LS at Renaissance Philanthropy (per the 2026-05-29 OS4LS info session, ~58:00: "*we didn't run a new cycle of EOSS at CZI precisely because we're launching this new initiative*"). In 2023, the **BIDS Steering Committee**, representing BIDS project, received **The Neuro – Irv and Helga Cooper Foundation Open Science International Prize** (citation: *"for its longstanding community-driven approach to standardizing neuroimaging data, resulting in widespread adoption"*); the PI is one of five named recipients (with Rokem/U.Washington, Pernet/Copenhagen, Niso/Cajal Institute, Oostenveld/Donders).
 
 **HPC and accelerated workloads.** The PI engages with the HPC container community (e.g., virtual meetings of the "HPC Containers Advisory Council") to keep BIDS-related design design choices coordinated with the HPC and accelerator-container ecosystem that runs BIDS workloads at scale. He also maintains the sunset archive of the singularity-hub.org portal, and the ///repronim/containers DataLad dataset/collection of BIDS-Apps Singularity containers which are widely used in the ecosystem to guarantee reuse, availability, and reproducibility of BIDS derivatives.
 
@@ -188,6 +188,8 @@ The PI (Yaroslav Halchenko) is an emeritus member of the BIDS Steering Committee
 The proposed work has been discussed and endorsed by the BIDS Steering Committee, and by the maintainers of involved software projects, and is *aligned with the published BIDS roadmap*: BIDS 2.0 (bids-standard/bids-2-devel), the active BEP queue (BEP028 provenance, BEP036 phenotypic, BEP044/047 stimuli & A/V, BEP032 animal/extracellular), and the bids-standard validator convergence effort. All proposed activities track the existing community roadmap; new community contributions during the grant may extend it but not redirect it.
 
 **Sustainability.** Post-grant maintenance continues through the existing BIDS Maintainers group; the EOSS / OS4LS continuation cycles are the natural reinvestment vehicle. **Track 2 fit:** the work bridges five related projects in the same ecosystem — the integration story across spec → validators → utilities → apps → assistant is the value, which Track 1's single-tool grain would lose.
+
+**Personnel allocation.** Per the 2026-05-29 OS4LS info session (~49:18, Megan Mitch: *"we don't have a percent funding for the PI time… the funds can be spent on personnel as you deem necessary"*), the call does not require a specific PI %FTE; funds may be allocated to non-PI personnel as the workplan dictates. The PI plans a modest ~5% FTE to direct the work and represent the proposal, with the substantial majority of personnel funds supporting the named co-Is, maintainers, and the Project Manager.
 
 ---
 
@@ -266,6 +268,16 @@ Items deferred from the OS4LS responsiveness review; none block the current draf
 - [x] **arokem — "modalities" jargon** (PR comment #3306778021) — *addressed.* Summary now reads "10+ **biological measurement and stimulation technologies**" (covers BEP037 NIBS — non-invasive brain stimulation — which extends BIDS beyond pure measurement into stimulation/intervention). BEP037 also added to the active BEP list, and the Coordination paragraph in PI Involvement now enumerates the BEP queue to reinforce the scope-expansion → coordination-need argument.
 - [x] **arokem — close-the-loop / "horizontal" → "modular" / Cooper Prize-style positive framing.** Addressed in current draft.
 - [x] **Dora Hermes (dorahermes) — won't need support.** Already removed from co-PI list per commit b959de0.
+
+### Info-session-derived items (from the 2026-05-29 OS4LS info session — RFA-OS4LS.pdf + transcript + slides 833/1000)
+
+- [x] **R1 — Track-2 "single-domain bundling" misread risk** — *addressed.* Dario noted (~24:00 in transcript) that proposals representing "coordination between tightly aligned projects within the same domain" may be bumped from Track 2 to Track 1. Defense: Landscape opening now reads "BIDS is the near-monopoly *organization* standard **across neuroscience, biomedical imaging, and adjacent life-science subfields**" — broadening from the prior "neuroscience and broader biomedical imaging" framing. Combined with the "biological measurement and stimulation technologies" + BEP037 NIBS additions from earlier rounds, the cross-domain Track-2 scope is now explicit.
+- [x] **R2 — Validators misread as "data-prep before repository deposit"** — *addressed.* Dario flagged (~39:17) that "preparation, curation, publication of metadata associated with data repository" is out of scope. Defense: Expected Value (i) now reads "verdict consumed identically by agents, pipelines, and humans **(not deposit-pipeline tooling)**" — explicit anti-misread inside the form text itself.
+- [x] **R3 — Schema convergence misread as "AI-assisted rewrite of legacy tool"** — *addressed.* Dario clarified (~10:45) that AI-assisted rewrites are in scope only when "from the same maintainer community." Defense: Pillar 2 now reads "**community-driven convergence** of implementations on the schema" — explicit qualifier defusing the rewrite-of-niche-tool reading.
+- [x] **EOSS in-flight claim — CORRECTED** (2026-06-05). My earlier "remain in flight" framing was inaccurate: per CZI's published cycle dates, Cycles 2 (~2020) and 5 (Nov 2022, 2-yr term) have concluded, and Cycle 6 (Jun 2024, 2-yr term) is concluding right around the 2026-06 LOI deadline. PI Involvement now uses cycle dates and 2-yr term language without making in-flight claims, and adds the verified 2025-transition-year fact from Dario at ~58:00 of the info session.
+- [x] **PI %FTE flexibility** — *addressed.* Per Megan Mitch at ~49:18, the call does not require a specific PI %FTE; funds can go fully to non-PI personnel. PI Involvement now records this with a "Personnel allocation" paragraph stating the PI's planned ~5% FTE and that the majority of funds support co-Is, maintainers, and the Project Manager.
+- [ ] **"Combining overlapping proposals" is welcomed** (Dario, ~57:08). No action needed — validates our 5-pillar bundling without further change.
+- [ ] **UX / user-centered design is in scope** (Dario, ~54:00). Could be leaned into for the OSA UX work in the *full application*; LOI is fine.
 
 ### Strengtheners (would lift "Existing impact" and "Quality" scores)
 
