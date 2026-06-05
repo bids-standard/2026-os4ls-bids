@@ -104,7 +104,7 @@ Software Project Name * 30 characters maximum
 Software Project's Repository URL *
 Software Project's Website URL
 
-1. **BIDS spec, schema, schematools"
+1. **BIDS spec, schema, schematools**
    - Repo: https://github.com/bids-standard/bids-specification
    - Website: https://bids-specification.readthedocs.io/
    - Unused extras:
@@ -185,9 +185,9 @@ The PI (Yaroslav Halchenko) is an Emeritus member of the BIDS Steering Group and
 
 **Coordination as enabling infrastructure.** The PI is actively engaged across the active BEP queue to varying degrees — BEP028 (provenance), BEP036 (phenotypes), BEP037 (NIBS), BEP044/047 (stimuli, A/V), and BEP032 (animal/extracellular electrophysiology) — and together with collaborating contributor **Cody Baker** (Dartmouth) initiated the ongoing dialogues with `*`omics archives that are extending BIDS into adjacent life-science domains. This PI-plus-maintainer pattern scales only with dedicated coordination capacity, which this proposal funds via **Kim Ray** (UT Austin / BIDS Maintainer) as Project Manager — operational infrastructure for cross-WG/BEP synchronization and downstream-tool coordination, yoked to the five technical pillars throughout.
 
-The proposed work has been discussed and endorsed by the BIDS Steering Group, and with the involved maintainers, and is *aligned with the published BIDS roadmap*: BIDS 2.0 (bids-standard/bids-2-devel), the active BEP queue (BEP028 provenance, BEP036 phenotypic, BEP037 NIBS, BEP044/047 stimuli & A/V, BEP032 animal/extracellular), and the bids-standard validator convergence effort. All proposed activities track the existing community roadmap; new community contributions during the grant may extend it but not redirect it.
+The proposed work has been discussed and endorsed by the BIDS Steering Group, and with the involved maintainers, and is *aligned with the published BIDS roadmap*: BIDS 2.0 (bids-standard/bids-2-devel), the active BEP queue, and the bids-standard validator convergence effort. All proposed activities track the existing community roadmap; new community contributions during the grant may extend it but not redirect it.
 
-**Sustainability.** Post-grant maintenance will continue through PI and Co-PIs involvement through existing governance and maintainenance structure and their involvement in BIDS related projects. Track 2 fits perfectly since the work bridges many related projects in the same ecosystem, where PI and Co-PIs participate and the integration story across spec → validators → utilities → apps → assistant and AI agentic systems at large is the value, which Track 1's single-tool grain would lose.
+**Sustainability.** Post-grant maintenance will continue through PI and Co-PIs involvement through existing governance and maintenance structure and their involvement in BIDS related projects. Track 2 fits perfectly since the work bridges many related projects in the same ecosystem, where PI and Co-PIs participate and the integration story across spec → validators → utilities → apps → assistant and AI agentic systems at large is the value, which Track 1's single-tool grain would lose.
 
 ---
 
