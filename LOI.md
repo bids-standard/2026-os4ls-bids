@@ -19,6 +19,7 @@ Application portal: https://renphil.fillout.com/os4ls
   - Chris Markiewicz — Stanford (BIDS Maintainer 'in charge', BEP043, bids-validator, pybids, nipreps)
   - Jean-Baptiste Poline — McGill PI (current Steering Group; Boutiques/Nipoppy)
   - Russell Poldrack — Stanford PI (BIDS co-founder; Emeritus Steering Group; bids-validator, OpenNeuro)
+  - Ariel Rokem - CAMH PI (Emeritus Steering Group; BEP16/BEP46)
   - Seyed Yahya Shirazi — UCSD PI (BIDS Maintainer; BEP042/BEP044; HED; OSA — Open Science Assistant)
   - Oscar Esteban — Lausanne University Hospital / EPFL PI (nipreps; AI-assisted pipelines)
   - Gregory Kiar — Child Mind Institute PI (Niwrap, Styx, Boutiques)
@@ -92,11 +93,11 @@ The same investment that makes BIDS easier for humans makes it more usable for A
 
 ### Landscape Analysis — 1,500 characters max (current 1402)
 
-BIDS is the near-monopoly organization standard across neuroscience, biomedical imaging, and adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), EU/HBP, NIH BRAIN, ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
-BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize.
+BIDS is the near-monopoly organization standard across neuroscience, biomedical imaging, and adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
+BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. Two co-PIs (Poline, Esteban) led CZI EOSS-funded BIDS-adjacent projects (Nilearn, NiPreps).
 
-No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF, Plexon) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source and BIDS-consuming.
-Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; this proposal invests in interoperability, not re-implementation. BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC (parquet, zarr) outputs into BIDS — across legacy tooling and accelerator storage.
+No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF, Plexon) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.
+Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; this proposal invests in interoperability, not re-implementation. BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC (parquet, zarr) outputs into BIDS.
 
 AI use. BIDS is the de-facto input contract for AI in this field: ML training pipelines (ABCD, UK Biobank, BIDS-Brain-Score), foundation-model efforts (KOSMOS, BrainLM), and AI assistants like OSA rely on BIDS layout to make data legible.
 Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency — gaps this proposal closes.
