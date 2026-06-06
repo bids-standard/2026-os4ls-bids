@@ -14,7 +14,7 @@ Auxiliary materials in LOI-MISC.md. Here we contain only what is to be submitted
 
 - Principal Investigator: Yaroslav O. Halchenko, Ph.D.
   - Center for Open Neuroscience, Dartmouth College
-  - Role on BIDS: Emeritus Steering Group member; core contributor to BIDS specification, bids-examples, bids-validator, pybids, bids-utils; initiator and lead of BIDS-Study, and BIDS 2.0 working group; lead of DataLad, ReproIn, ReproNim/containers; Co-PI and Co-I on National data archives using BIDS: DANDI, OpenNeuro, EMBER
+  - Role on BIDS: long-standing core contributor across BIDS specification, bids-examples, bids-validator, pybids, bids-utils; initiator and lead of BIDS-Study and BIDS 2.0 working group; lead of DataLad, ReproIn, ReproNim/containers; Co-PI and Co-I on National data archives using BIDS (DANDI, OpenNeuro, EMBER); Emeritus Steering Group member
   - Email: yaroslav.o.halchenko@dartmouth.edu
 - Host / fiscal sponsor: Trustees of Dartmouth College — institutionally agreed to 10% indirect cost rate (matching the RFA cap), and will issue subawards to the collaborating institutions
   
@@ -25,7 +25,7 @@ Auxiliary materials in LOI-MISC.md. Here we contain only what is to be submitted
 
 ### Proposal Title — 60 characters max
 
-BIDS 2.0+: AI-Ready Life Sciences Data Standard
+BIDS 2.0+ ecosystem: AI-Ready Life-Science Data Standard
 
 ---
 
@@ -37,8 +37,8 @@ Since 2016, BIDS has grown from MRI-only to 10+ biological measurement and stimu
 Dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep) consume it; thousands of papers cite it.
 Active BEPs (BEP028 provenance; BEP036 phenotypes; BEP037 NIBS; BEP044/047 stimuli & A/V; BEP032 animal/extracellular) and *omics-archive dialogues pull BIDS into adjacent domains.
 
-This proposal supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI — only AI benefits even more from explicit structure.
-We will advance five tightly coupled components whose maintainers have collectively committed:
+This proposal — a Track 2 ecosystem initiative — supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI — only AI benefits more from explicit structure.
+We will advance five coordinated components, whose maintainers have collectively committed:
 
 1. BIDS specification & schema — release BIDS 2.0 (more consistent, modular), scope the 3.0 roadmap, harden the machine-readable schema as a Data Structure Standard, and land the BEP backlog to broaden BIDS beyond neuro;
 
@@ -46,13 +46,13 @@ We will advance five tightly coupled components whose maintainers have collectiv
 
 3. Python + CLI utilities with MCP interfaces and skills — consolidate scattered, in-use helpers into a maintained, pybids-adjacent query/manipulation library, exposed via MCP servers and reusable agent skills so LLM agents can read, write, and reason about BIDS datasets;
 
-4. BIDS-Apps 2.0+ — on the mature BIDS-Apps registry (50+ apps) and Boutiques, modernize the contract between BIDS data and analysis containers (via Niwrap and the BIDS-Apps 2.0 execution spec) so AI agents can compose and run pipelines reliably — including GPU/accelerator containers (BEP032 Allen Institute + HuggingFace);
+4. BIDS-Apps 2.0+ — on the mature BIDS-Apps registry (50+ apps) and Boutiques, modernize the contract between BIDS data and analysis containers (via Niwrap and the BIDS-Apps 2.0 execution spec) so AI agents can compose and run pipelines reliably — including GPU/accelerator containers (Allen Institute pipelines which use models from HuggingFace);
 
 5. BIDS Users Assistant — extend OSA with deep BIDS awareness, and formalize a study-state observability layer so dashboards and human reviewers can introspect AI agents' actions.
 
 Together, these five close the loop for AI-enabled, large-scale data analysis by formalizing the data and application contracts agentic workflows and training pipelines need.
 
-The work is explicitly modular — each component delivers standalone value; advance in any one lifts every downstream tool. Funds support hackathons, conference travel, and dedicated cross-project coordination (PM + maintainer support) as enabling infrastructure for BIDS 2.0.
+The work is explicitly modular — each component delivers standalone value; advance in any one lifts every downstream tool. Outputs: enhanced spec, validator, new MCP-server, BIDS-Apps 2.0 contract, observability schema releases — coordinated by PM and via community hackathons.
 Scope guard: no new datasets (beyond examples), no new ML models, no archive/repository infrastructure — only the standard, the tools, and the AI-readiness layer the rest of the life sciences can adopt.
 
 ---
@@ -81,13 +81,13 @@ The same investment that makes BIDS easier for humans makes it more usable for A
 
 ### Landscape Analysis — 1,500 characters max
 
-BIDS is the near-monopoly organization standard across neuroscience, biomedical imaging, and adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
+BIDS is the near-monopoly organization standard in neuroimaging, expanding into adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
 BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. Two co-PIs (Poline, Esteban) led CZI EOSS-funded BIDS-adjacent projects (Nilearn, NiPreps).
 
-No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF, Plexon) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.
+No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.
 Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; this proposal invests in interoperability, not re-implementation. BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC outputs into BIDS.
 
-AI use. BIDS is the de-facto input contract for AI in this field: ML training pipelines (ABCD, UK Biobank, EEG2025 — NeurIPS, 1,100 teams), foundation-model efforts (KOSMOS, BrainLM), and AI assistants like OSA rely on BIDS layout to make data legible.
+AI use. BIDS is the de-facto input contract for AI: ML training pipelines and AI benchmarks (ABCD, UK Biobank, EEG2025 (NeurIPS, 1,100 teams)), AI "scientist" frameworks (KOSMOS, K-Dense-AI, Meta NeuroAI), and AI assistants like OSA benefit from BIDS to make data legible.
 Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency — gaps this proposal closes.
 
 ---
