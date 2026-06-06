@@ -85,9 +85,9 @@ BIDS is the near-monopoly organization standard across neuroscience, biomedical 
 BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. Two co-PIs (Poline, Esteban) led CZI EOSS-funded BIDS-adjacent projects (Nilearn, NiPreps).
 
 No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF, Plexon) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.
-Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; this proposal invests in interoperability, not re-implementation. BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC (parquet, zarr) outputs into BIDS.
+Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; this proposal invests in interoperability, not re-implementation. BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC outputs into BIDS.
 
-AI use. BIDS is the de-facto input contract for AI in this field: ML training pipelines (ABCD, UK Biobank, BIDS-Brain-Score), foundation-model efforts (KOSMOS, BrainLM), and AI assistants like OSA rely on BIDS layout to make data legible.
+AI use. BIDS is the de-facto input contract for AI in this field: ML training pipelines (ABCD, UK Biobank, EEG2025 — NeurIPS, 1,100 teams), foundation-model efforts (KOSMOS, BrainLM), and AI assistants like OSA rely on BIDS layout to make data legible.
 Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency — gaps this proposal closes.
 
 ---
