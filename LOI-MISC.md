@@ -156,6 +156,7 @@ For internal use; not part of the LOI form, but useful to ensure the narrative a
 - [x] **Title chosen:** *"BIDS 2.0+: AI-Ready Life Sciences Data Standard"* (47 chars).
 - [x] **Categories chosen:** Neuroscience / Biological and biomedical imaging / Data formats and storage.
 - [ ] Steering Group formal sign-off email thread (already in progress per the email Message-ID `<agscKEH3Tceh4Ei2@bilena>`).
+- [x] **Shirazi (OSA maintainer + co-PI) — LGTM received 2026-06-06.** Email reply: *"LGTM. Thanks for including OSA."* This serves as the OSA-leg attestation for the LOI form's PI-involvement checkbox (PI = designated representative of OSA; OSA inclusion has core-maintainer support; aligned with OSA's direction). Shirazi also flagged that BIDS underpinned the **EEG Foundation Challenge** (https://eeg2025.github.io — the largest neuroscience competition in NeurIPS history, 1,100 teams, 8K+ submissions; 2026 edition under review). This signal has been wedged into LOI.md Landscape Analysis "AI use" paragraph, substituted in for the weaker "BIDS-Brain-Score" item.
 
 ---
 
