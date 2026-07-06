@@ -1,4 +1,4 @@
-.PHONY: emails pdf clean
+.PHONY: emails pdf clean sync-docs
 
 # Requires: pandoc + a TeX distribution providing xelatex
 #   (Debian/Ubuntu: apt install pandoc texlive-xetex texlive-fonts-recommended)
@@ -19,6 +19,18 @@ pdf: LOI.pdf
 
 clean:
 	rm -f LOI.pdf
+
+# Sync shared project documents from Google Drive and convert every .xlsx to .tsv.
+# Requires: rclone (with a "gdrive" remote), csvkit (in2csv, csvformat).
+GDRIVE_REMOTE ?= gdrive:BIDS/2026-OS4S-BIDS/
+GDRIVE_LOCAL  ?= gdrive
+
+sync-docs:
+	rclone sync $(GDRIVE_REMOTE) $(GDRIVE_LOCAL)/
+	for f in $(GDRIVE_LOCAL)/*.xlsx; do \
+		[ -e "$$f" ] || continue; \
+		in2csv "$$f" | csvformat -T > "$${f%.xlsx}.tsv"; \
+	done
 
 emails:
 	rsync -a $$(notmuch search --output files date:1w.. OS4S call bids) emails/cur/
