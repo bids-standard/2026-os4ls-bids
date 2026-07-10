@@ -14,7 +14,7 @@ These materials may be used in the future for full proposal preparation, but are
 - Oscar Esteban — Lausanne University Hospital / EPFL PI (nipreps; AI-assisted pipelines)
 - Gregory Kiar — Child Mind Institute PI (Niwrap, Styx, Boutiques)
 - Alejandro de la Vega — UT Austin PI (pybids, fitlins)
-- Cody Baker — Dartmouth/CatalystNeuro (BEP032, NWB ↔ BIDS interoperability, *omics scoping)
+- Cody Baker — Dartmouth/CatalystNeuro (BEP032, NWB <-> BIDS interoperability, *omics scoping)
 - Franco Pestilli - UT Austin PI (current Steering Group; connectomics, brainlife)
 - Kimberly Ray - UT Austin PI (BIDS Maintainer; facilitates Steering Group meetings) to provide "Project Manager" role to orchestrate activities
   

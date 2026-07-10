@@ -37,7 +37,7 @@ Since 2016, BIDS has grown from MRI-only to 10+ biological measurement and stimu
 Dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep) consume it; thousands of papers cite it.
 Active BEPs (BEP028 provenance; BEP036 phenotypes; BEP037 NIBS; BEP044/047 stimuli & A/V; BEP032 animal/extracellular) and *omics-archive dialogues pull BIDS into adjacent domains.
 
-This proposal — a Track 2 ecosystem initiative — supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI — only AI benefits more from explicit structure.
+	This proposal — a Track 2 ecosystem initiative — supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI — only AI benefits more from explicit structure.
 We will advance five coordinated components, whose maintainers have collectively committed:
 
 1. BIDS specification & schema — release BIDS 2.0 (more consistent, modular), scope the 3.0 roadmap, harden the machine-readable schema as a Data Structure Standard, and land the BEP backlog to broaden BIDS beyond neuro;
