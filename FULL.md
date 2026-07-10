@@ -62,6 +62,8 @@ Key personnel to be supported by the grant (or contributing to the work):
 
 Potentially list as Key but likely not:
 
+| Name | Email | Affiliation | Role |
+|---|---|---|---|
 | Florian Rupprecht | (via Child Mind Institute) | Child Mind Institute | Niwrap/Styx |
 | Jason Kai | (via Child Mind Institute) | Child Mind Institute | Niwrap/Styx |
 | Kay Robbins | (via UTSA, emeritus) | UT San Antonio | HED (unpaid contributor) |
@@ -70,7 +72,7 @@ Note: additional McGill personnel (Julia, Rémi, Michelle/Nikhil, Christine)
 and Stanford’s Jeanette Mumford (fitlins) are indicated in the
 sub-award planning worksheet
 (`gdrive/2026-os4ls-bids_subawards_and_consultants.tsv`) and may be
-added here once subaward paperwork is finalized.
+added here while subaward paperwork is being finalized.
 
 ---
 
