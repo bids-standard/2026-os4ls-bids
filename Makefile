@@ -1,4 +1,4 @@
-.PHONY: emails pdf clean sync-docs
+.PHONY: emails pdf clean sync-docs dartmouth-md
 
 # Requires: pandoc + a TeX distribution providing xelatex
 #   (Debian/Ubuntu: apt install pandoc texlive-xetex texlive-fonts-recommended)
@@ -31,6 +31,20 @@ sync-docs:
 		[ -e "$$f" ] || continue; \
 		in2csv "$$f" | csvformat -T > "$${f%.xlsx}.tsv"; \
 	done
+
+# Convert .docx to Markdown via docflow (https://github.com/…/docflow).
+# Override DOCFLOW to point at the CLI, e.g.:
+#   make dartmouth-md DOCFLOW=/home/you/proj/docflow/.venv/bin/docflow
+DOCFLOW ?= docflow
+
+# Generic pattern: any foo.docx -> foo.md via docflow.
+%.md: %.docx
+	$(DOCFLOW) convert docx-to-md $< -o $@
+
+DARTMOUTH_DOCX := $(wildcard dartmouth/*.docx)
+DARTMOUTH_MD   := $(DARTMOUTH_DOCX:.docx=.md)
+
+dartmouth-md: $(DARTMOUTH_MD)
 
 emails:
 	rsync -a $$(notmuch search --output files date:1w.. OS4S call bids) emails/cur/
