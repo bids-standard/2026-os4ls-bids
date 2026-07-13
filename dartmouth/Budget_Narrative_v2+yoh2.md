@@ -84,6 +84,41 @@ covering two annual BIDS hackathons / sprints, coordinated by the
 Project Manager (Kimberly Ray, UT Austin). Costs may include venue
 rental expenses and food for participants.
 
+**CONSULTANTS**
+
+Two consulting arrangements are budgeted through Dartmouth to engage
+Key Personnel whose contributions to the BIDS ecosystem are essential
+to the proposed work but do not require a full subaward.
+
+***[Child Mind Institute — Gregory Kiar and team]{.underline}***
+
+> [Gregory Kiar, Key Personnel]{.underline}, will lead the Child Mind
+> Institute team's contributions to the BIDS-Apps 2.0 execution
+> specification (BEP027), the Niwrap and Styx tool-interface
+> descriptors that let AI agents compose and run pipelines reliably,
+> and the bids2table dataset-loading tool — expanding it to fully
+> support the BIDS 2.0 schema and to track future schema versions
+> dynamically, with validation-on-load semantics that complement the
+> reference validators. Current team contributors under his direction include
+> Florian Rupprecht and Jason Kai. Consulting fees are budgeted at
+> $4,000/year to Dr. Kiar,
+> and a travel pool of $11,000/year supports attendance of 2-3 Child
+> Mind Institute contributors at the annual BIDS Hackathons and
+> community meetings.
+
+***[HES-SO Valais-Wallis (Lausanne) — Oscar Esteban]{.underline}***
+
+> [Oscar Esteban, Key Personnel]{.underline}, will contribute to
+> provenance modelling and QA/QC annotations for BIDS derivatives
+> (with reference implementations drawing from the NiPreps ecosystem),
+> the query and manipulation layer via MCP servers and agent Skills,
+> RAG/Wiki retrieval over the BIDS specifications, the fit+transform
+> execution model and autonomous-workflow patterns, and OSA
+> integration — in coordination with UCSD (Dr. Shirazi). Consulting fees are
+> budgeted at $11,000/year to Dr. Esteban, and $4,000/year of travel funds support his
+> attendance at BIDS community meetings and one project-related
+> conference per year.
+
 **SUBCONTRACTS**
 
 ***[Stanford University]{.underline}***
@@ -344,6 +379,9 @@ approved for the Open Source for the Life Sciences program.
 
 **High-Level Budget Summary**
 
+TODO: need Personnel adjustment to account for added 4+11=15k of
+consultant fees (their travel included in travel...)
+
   --------------------------------------------------------------------------------------------------------------------
   **Budget       **Description**           **Personnel (if    **Year 1 Estimated Costs**    **Year 2 Estimated Costs**
   Category**                               known)**                                      
@@ -364,6 +402,15 @@ approved for the Open Source for the Life Sciences program.
   Hackathons /   sprints, community                                                      
   Sprints        engagement, collaboration                                               
                  events                                                                  
+
+  Consultants    Child Mind Institute      Gregory Kiar +         \$[4,000]{.underline}       \$[4,000]{.underline}
+                 (BEP027, Niwrap/Styx,     team                                                                       
+                 bids2table)                                                                                          
+
+                 HES-SO Valais-Wallis      Oscar Esteban          \$[11,000]{.underline}       \$[11,000]{.underline}
+                 (Lausanne) (OSA/MCP,                                                                                 
+                 provenance, QA/QC,                                                                                   
+                 hackathon organization)                                                                              
 
   Subcontracts   Stanford University       Russell                \$[88,752]{.underline}        \$[91,248]{.underline}
                                            Poldrack,                                     
