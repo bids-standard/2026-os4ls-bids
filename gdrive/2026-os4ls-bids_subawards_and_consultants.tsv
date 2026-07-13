@@ -2,26 +2,25 @@ TITLE: BIDS 2.0+ ecosystem: AI-Ready Life-Science Data Standard	Admin Stage	STAR
 Site		PI/Co-PI	Admin Contact	Total $s / year	"""Desired"" total (if different)"	Budget Justification	*PI/Personnel to be supported	Function in BIDS 2.0+	Specific work items per LOI/proposal																				
 									Crude overall/detailed:	1. BIDS specification & schema	2. BIDS validators 	3. Python + CLI utilities + MCP/skills	4. BIDS-Apps 2.0+ 	5. BIDS Users Assistant 	MISC														
 																													
-Dartmouth (the lead)		Yaroslav Halchenko <yoh@dartmouth.edu>	"""Angela M. Beaupre"" <Angela.M.Beaupre@dartmouth.edu>"	163000.0		%FTE, Travel, Events, Misc, Travels of other maintainers etc	Yaroslav Halchenko (PI)	Lead, various BEPs, bids-utils (upgrade etc)		range of issues/PRs from https://github.com/orgs/bids-standard/projects/10	"- enhance for ""study"" (recursive) and ensure consistent records model for better integrations"	"- bids-utils (migrate, operations) and potential integration with pybids & bids2nda & neuroai et al
+Dartmouth (the lead)		Yaroslav Halchenko <yoh@dartmouth.edu>	"""Angela M. Beaupre"" <Angela.M.Beaupre@dartmouth.edu>"	141000.0		%FTE, Travel, Events, Misc, Travels of other maintainers etc	Yaroslav Halchenko (PI)	Lead, various BEPs, bids-utils (upgrade etc)		range of issues/PRs from https://github.com/orgs/bids-standard/projects/10	"- enhance for ""study"" (recursive) and ensure consistent records model for better integrations"	"- bids-utils (migrate, operations) and potential integration with pybids & bids2nda & neuroai et al
 - continue improving and maintaining BIDS skill (ATM in https://github.com/K-Dense-AI/scientific-agent-skills)"	- integration within ///repronim/containers??	- integrate in DANDI, datalad-registry 															
-							Cody Baker	BEP032, NWB, BIDS Motion, support in nwb2bids, ...																					
-Stanford	preparing the docs	Russell Alan Poldrack <russpold@stanford.edu>	LeAndre Sherrill <ford2024@stanford.edu>	90000.0		%FTE, Travel	Chris Markiewicz	BIDS Derivatives, execution, pybids, bids-validator, bids-schema		Schema development, cross-version migration, BEP43	PyBIDS integration with Python validators		Update BEP27 (Execution spec) with Boutiques/Styx improvements. Tooling for self-description and execution.																
+							Cody Baker	BEP032, NWB, BIDS Motion, support in nwb2bids, omics, ...																					
+Stanford	preparing the docs	Russell Alan Poldrack <russpold@stanford.edu>	LeAndre Sherrill <ford2024@stanford.edu>	90000.0		%FTE, Travel	Chris Markiewicz	BIDS Derivatives, execution, pybids, bids-validator, bids-schema		Schema development, cross-version migration, BEP43	PyBIDS integration with Python validator		Update BEP27 (Execution spec) with Boutiques/Styx improvements. Tooling for self-description and execution.																
 							Ross Blair <rosswilsonblair@gmail.com>	bids-validator, bids-schema		Schema development and implementation	Integration of cross-standard validators; standard validation output																		
 							Nell Hardcastle	bids-validator, ???		OpenNeuro adoption and integration of standards/descriptors				Integrate in OpenNeuro															
-							?Jeanette Mamford						fitlins																
+							?Jeanette Mumford						fitlins																
 UTexas Austin	preparing the docs	Kimberly Ray <kimray@utexas.edu>, Franco Pestilli <pestilli@utexas.edu>	Psychology Funding <psych-funding@austin.utexas.edu>	80000.0		%FTE, Travel	Kimberly Ray (Co-PI)	Project/Community Manager							"Coordinate communication between the Steering Group, Maintainers, and Working Groups.
 Coordinate elections, appointments, and leadership transitions. Meeting planning and facilitation
 Community Town Halls."														
-							Alejandro De La Vega <aleph4@gmail.com>	pybids																					
+							Alejandro De La Vega <aleph4@gmail.com>	pybids	Lead integration of scattered BIDS helpers into a BIDS Schema compliant PyBIDS 2.0, exposed via MCP and agent skills 			refactor pybids to be BIDS schema compliant, expose PyBIDS API via MCP server. 	fitlins / BIDS StatsModels																
 		Franco Pestilli <pestilli@utexas.edu> (Co-PI)					Franco Pestilli <pestilli@utexas.edu> (Co-PI)	BIDS Connectivity, BRAIN CONNECTS, standards and pipelines	"A. For point 1 in the summary, I will plan to continue work on BEPs related to connectivity. 
 B. For point 3, I will work on integrating  MCP servers related to BIDS Connectivity and BRAIN CONNECTS project. 
 C. For point 4, I will work on contributing BIDS-compliant pipelines, MCP servers and API integration to let pipelines work with agents. "	I will plan to continue work on BEPs related to connectivity. 		 integrating  MCP servers related to BIDS Connectivity and BRAIN CONNECTS project. 	contributing BIDS-compliant pipelines, MCP servers and API integration to let pipelines work with agents. 																
-McGill	"JB submitted online mcgil form
-TODO: yarik ping JB"	JB Poline <jean-baptiste.poline@mcgill.ca>	Michelle Picard-Aitken <michelle.picard-aitken@mcgill.ca> 	60000.0		%FTE, Travel	Julia	Maintainer, website																					
+McGill	reminded about the docs	JB Poline <jean-baptiste.poline@mcgill.ca>	Michelle Picard-Aitken <michelle.picard-aitken@mcgill.ca> 	60000.0		%FTE, Travel	Julia	Maintainer, website																					
 							?Remi			+																			
 							?Nikhil or Michelle						Interaction with niwraps																
 							?Christine								Assist with coordination (Kim)														
-UCSD	initial June contact	Yahya Shirazi <syshirazi@ucsd.edu>	"""Dvornikova, Xandra"" <xdvornikova@ucsd.edu>"	60000.0		%FTE, Travel, Computing	Yahya Shirazi (Co-PI)	Maintainer, BEP044:Stimuli, OSA, AI expertiese		"1. Lead BEP044
+UCSD	reminded about the docs	Yahya Shirazi <syshirazi@ucsd.edu>	"""Dvornikova, Xandra"" <xdvornikova@ucsd.edu>"	60000.0		%FTE, Travel, Computing	Yahya Shirazi (Co-PI)	Maintainer, BEP044:Stimuli, OSA, AI expertiese		"1. Lead BEP044
 2. Maintainer on record for BEP046 and BEP047"	"1. HED tools and resources (hed-lsp, hedtools)
 2. Zarr work and schema on NEMAR"	"1. NEMAR2.0, connecting data to GPU traning and AI agents
 2. Interface contract
@@ -29,23 +28,23 @@ UCSD	initial June contact	Yahya Shirazi <syshirazi@ucsd.edu>	"""Dvornikova, Xand
 2. tool-interface contract
 3. User/agent feedback"															
 							?Kay Robbins (UTSA, emiritus, not paid)																						
-CAMH	preparing the docs	Ariel Rokem <ariel.rokem@camh.ca>	Shradha Bhullar <Shradha.Bhullar@camh.ca>	17270.0		%FTE, Travel	Ariel Rokem (Co-PI)		"
+CAMH	preparing the docs	Ariel Rokem <ariel.rokem@camh.ca>	Shradha Bhullar <Shradha.Bhullar@camh.ca>	8635		%FTE, Travel	Ariel Rokem (Co-PI)		"
 A. For point 1 in the summary, I will plan to continue work on BEPs related to connectivity, particularly with derivatives from dMRI. 
 B. For point 2 in the summary, I will continue work that we’ve already started to bridge between different connectivity measurements using cloud-friendly backends (e.g., Zarr). 
 C. For point 4, I will work on integration of GPU-accelerated pipelines that we have developed into BIDS-apps 2.0. "	continue work on BEPs related to connectivity, particularly with derivatives from dMRI.	Extending validation to/for TRX		integration of GPU-accelerated pipelines that we have developed into BIDS-apps 2.0.																
-CatalystNeuro	TODO: yarik bring together	Ben Dichter <ben.dichter@catalystneuro.com>	Ben Dichter <ben.dichter@catalystneuro.com>	30000.0		%FTE, Travel	Ben Dichter (Co-PI)	BEP032, BEP047, AI expertiese to fascilitate demo analytics across openneuro&DANDI datasets		"* Lead BEP032 and BEP047
+CatalystNeuro	reminded about the docs	Benjamin Dichter <ben.dichter@catalystneuro.com>	Benjamin Dichter <ben.dichter@catalystneuro.com>	30000.0		%FTE, Travel	Ben Dichter (Co-PI)	BEP032, BEP047, AI expertiese to facilitate demo analytics across openneuro&DANDI datasets		"* Lead BEP032 and BEP047
 * Plans to expand BIDS to more neurophysiology, including optical physiology and pose estimation"		"Adding AI tools to:
 * NeuroConv, for standardizing neurophysiology data
 * NWB Inspector, for checking neurophysiology data for errors"	"My team develops:
 * VAME: ML-based behavioral analysis
-* GuPPy: fiber photometry analysis"																
+* GuPPy: fiber photometry analysis"		citeability/tracking tooling														
 																													
-Total				500270																									
+Total				499635																									
 target:				500000.0																									
 																													
 Included in above (e.g. in Dartmouth) travels/consulting																													
-ChildMind		Gregory Kiar <Gregory.Kiar@childmind.org>		???	a few $k consultant line would be nice if budget allows	Travel for 2-3 ppl for hackathon	Gregory Kiar, Florian Rupprecht, Jason Kai	Execution spec (BEP 027), bids2table	Pipeline construction, data management, and benchmarking of BIDS applications	BIDS2Table: expansion of the loading tool to fully support the spec and (ideally) dynamically scale to new versions that follow the same organization/structure.	BIDS2Table: data loading does validation by design — invalid data does not get loaded. Insufficient for providing feedback, can provide final validation pass.	Styx, NiWrap, defining tool interfaces in human and machine readable format to streamline workflow construction, validation, and AI enabled pipeline building.	Update of the spec to support the latest version of the Boutiques spec, post Styx development.																
-HES-SO Valais-Wallis		Oscar Esteban <phd@oscaresteban.es>		???		???		???																					
+ChildMind		Gregory Kiar <Gregory.Kiar@childmind.org>		15000.0	a few $k consultant line would be nice if budget allows	Travel for 2-3 ppl for hackathon	Gregory Kiar, Florian Rupprecht, Jason Kai	Execution spec (BEP 027), bids2table	Pipeline construction, data management, and benchmarking of BIDS applications	BIDS2Table: expansion of the loading tool to fully support the spec and (ideally) dynamically scale to new versions that follow the same organization/structure.	BIDS2Table: data loading does validation by design — invalid data does not get loaded. Insufficient for providing feedback, can provide final validation pass.	Styx, NiWrap, defining tool interfaces in human and machine readable format to streamline workflow construction, validation, and AI enabled pipeline building.	Update of the spec to support the latest version of the Boutiques spec, post Styx development.																
+HES-SO Valais-Wallis		Oscar Esteban <phd@oscaresteban.es>		15000.0		100h/yr x $150/h, travel for 1-2 ppl for hackathon	Oscar Esteban	OSA, AI expertise	Provenance, QA/QC, autonomous pipelines, MCP/Skills/RAG/Wiki, fit+transform, OSA integration	Provenance	QC annotations (toy example: warning if q/s-forms don't look great or missing, human annotations)	Query/manipulation via MCP server & agent Skills	RAG/Wiki retrieval from the BIDS specs, fit+transform execution model, autonomous workflows	OSA Integration	Hackathon organization														
 																													
 Q to Angela:																													
 		Will it be easier to reimburse Travel if person is a consultant or not?	doesn't matter																										
