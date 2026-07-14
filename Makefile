@@ -38,9 +38,13 @@ sync-docs:
 #   make dartmouth-md DOCFLOW=/home/you/proj/docflow/.venv/bin/docflow
 DOCFLOW ?= docflow
 
-# Generic pattern: any foo.docx -> foo.md via docflow.
+# Generic patterns: any foo.docx <-> foo.md via docflow.
 %.md: %.docx
 	$(DOCFLOW) convert docx-to-md $< -o $@
+
+%.docx: %.md
+	$(DOCFLOW) convert md-to-docx $< -o $@
+
 
 DARTMOUTH_DOCX := $(wildcard dartmouth/*.docx)
 DARTMOUTH_MD   := $(DARTMOUTH_DOCX:.docx=.md)
