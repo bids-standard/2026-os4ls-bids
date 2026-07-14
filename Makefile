@@ -1,4 +1,4 @@
-.PHONY: emails pdf clean sync-docs dartmouth-md BIDS.bib
+.PHONY: emails pdf clean sync-docs dartmouth-md
 
 # Requires: pandoc + a TeX distribution providing xelatex
 #   (Debian/Ubuntu: apt install pandoc texlive-xetex texlive-fonts-recommended)
@@ -16,6 +16,24 @@ pdf: LOI.pdf
 
 %.pdf: %.md
 	$(PANDOC) $< -o $@ $(PANDOC_PDF_OPTS)
+
+# Explicit rule for the bios PDF: adds pandoc citeproc against BIDS.bib,
+# Vancouver CSL, 1cm margins, and a small-font override for the
+# auto-generated References section so bios + refs fit inside the OS4LS
+# Optional Upload's 4-page cap.
+subs/biographies.pdf: subs/biographies.md BIDS.bib subs/vancouver.csl subs/refs-header.tex
+	$(PANDOC) $< -o $@ \
+		--pdf-engine=xelatex \
+		-V geometry:margin=1cm \
+		-V fontsize=11pt \
+		-V linestretch=1.1 \
+		-V colorlinks=true \
+		-V linkcolor=NavyBlue \
+		-V urlcolor=NavyBlue \
+		--citeproc \
+		--bibliography=BIDS.bib \
+		--csl=subs/vancouver.csl \
+		--include-in-header=subs/refs-header.tex
 
 clean:
 	rm -f LOI.pdf
@@ -42,8 +60,9 @@ DOCFLOW ?= docflow
 %.md: %.docx
 	$(DOCFLOW) convert docx-to-md $< -o $@
 
-%.docx: %.md
+%.docx_: %.md
 	$(DOCFLOW) convert md-to-docx $< -o $@
+	echo Run follow to rename if you like: mv "$@_" "$@"
 
 
 DARTMOUTH_DOCX := $(wildcard dartmouth/*.docx)
@@ -62,6 +81,10 @@ dartmouth-md: $(DARTMOUTH_MD)
 #   3. Leave ZOTERO_COLLECTION empty for the whole group, or set it to
 #      an 8-char collection key (find in Zotero web URL:
 #      https://www.zotero.org/groups/{GROUP}/collections/{COLLECTION_KEY}).
+#
+# BIDS.bib is tracked in git; `make BIDS.bib` will say "up to date" if the
+# file already exists. Force a refresh with `make -B BIDS.bib` (or
+# `rm BIDS.bib && make BIDS.bib`).
 ZOTERO_GROUP_ID   ?= 5111637
 ZOTERO_COLLECTION ?=
 
