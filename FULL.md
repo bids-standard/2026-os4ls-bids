@@ -571,7 +571,7 @@ chars before paste):
 TODOs: verify, extend and add total amounts!
 
 PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (NIH BRAIN Initiative; 2020–ongoing), OpenNeuro (NIH; 2018–ongoing), EMBER (NIH; 2023–ongoing), and the ReproNim center work (NIH; 2016–ongoing) all of which use BIDS and contribute necessary developments to it.
-Co-PI Poldrack directs OpenNeuro (NIH; 2018 ongoing).
+Co-PI Poldrack directs OpenNeuro (2018-2028, BRAIN Initiative data, NIH 5R24MH117179, $5,968,723 total costs for 2023-2027).
 Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024).
 Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024).
 Co-PI Pestilli leads NSF- and NIH-funded brainlife.io connectivity work (BRAIN CONNECTS).
