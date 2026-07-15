@@ -43,12 +43,13 @@ His group, which includes Key Personnel Cody C. Baker, is actively participating
 ## Russell A. Poldrack, PhD — Co-PI (Stanford)
 
 **Role:** Co-PI (Stanford lead); BIDS specification, bids-validator, PyBIDS, OpenNeuro integration.
-**Position:** Albert Ray Lang Professor of Psychology (courtesy: Psychiatry & Behavioral Sciences); Chair of Psychology; Associate Director, Stanford Data Science; Director, Stanford Center for Reproducible Neuroscience and SDS Center for Open and Reproducible Science, Stanford University.
+**Position:** Albert Ray Lang Professor of Psychology (courtesy: Psychiatry & Behavioral Sciences); Chair of Psychology;  Director, Center for Open and Reproducible Science, Stanford University.
 **IDs:** russpold@stanford.edu · [ORCID 0000-0001-6755-0259](https://orcid.org/0000-0001-6755-0259) · [GitHub poldrack](https://github.com/poldrack) · [Scholar](https://scholar.google.com/citations?user=RbmLvDIAAAAJ) · [poldracklab.org](http://poldracklab.org/)
 
 Dr. Poldrack is a BIDS [@gorgolewski_brain_2016] co-founder and Emeritus member of its Steering Group.
-He established and leads OpenfMRI in 2009 which later generalized into OpenNeuro [@markiewicz_openneuro_2021], the primary open archive for neuroimaging data; originated the Cognitive Atlas ontology, and co-founded Neurosynth.
+He established OpenfMRI in 2009 and currently leads its successor OpenNeuro [@markiewicz_openneuro_2021], the primary open archive for neuroimaging data; originated the Cognitive Atlas ontology, and co-founded Neurosynth.
 His group develops widely used open-source tools including fMRIPrep, MRIQC, PyBIDS [@yarkoni_pybids_2019], and the bids-validator, and drives community standardization efforts for reproducible neuroimaging [@gorgolewski_bids_2017; @poldrack_scanning_2017].
+He has also developed open-source educational materials including [Better Code, Better Science](https://bettercode-book.org) and [Statistical Thinking](https://statsthinking21.org/).
 
 ## Franco Pestilli, PhD — Co-PI (UT Austin)
 
