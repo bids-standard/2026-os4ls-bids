@@ -153,13 +153,20 @@ Monthly users, Dependent projects/packages, Scholarly citations.
   schematools (validation & code generation), and the BIDS 2.0
   refactor branch (`bids-2-devel`).
 
+  The umbrella organization https://github.com/bids-standard/ provides other
+  relevant repositories sattelite to this project, which is developed fully in
+  the open and all components are made available under OSI-compliant licenses.
+  See https://github.com/orgs/bids-standard/repositories to find bids-website
+  (source of project-wide https://bids.neuroimaging.io/), uptime monitor,
+  etc.
+
 - Software license: CC-BY 4.0 (specification text) / MIT (schema tooling)
 - Main programming language: Markdown + YAML (schema); Python (schematools)
 - Canonical citation: Gorgolewski KJ, et al. (2016). "The Brain Imaging
   Data Structure, a format for organizing and describing outputs of
   neuroimaging experiments." Scientific Data 3, 160044.
   https://doi.org/10.1038/sdata.2016.44
-- Code of Conduct: https://github.com/bids-standard/.github/blob/main/CODE_OF_CONDUCT.md
+- Code of Conduct: https://bids.neuroimaging.io/collaboration/bids_github/CODE_OF_CONDUCT.html
 - End-user documentation: https://bids-specification.readthedocs.io/
 - Contributor / developer guidelines: https://github.com/bids-standard/bids-specification/blob/master/CONTRIBUTING.md
 - Package manager entry: N/A (spec) — schematools: PyPI `bidsschematools`
@@ -192,7 +199,7 @@ Monthly users, Dependent projects/packages, Scholarly citations.
   the specification paper above for scientific use.
 - Code of Conduct: https://github.com/bids-standard/.github/blob/main/CODE_OF_CONDUCT.md
 - End-user documentation: https://bids-validator.readthedocs.io/en/latest/
-- Contributor / developer guidelines: TODO https://github.com/bids-standard/bids-validator/issues/430 https://github.com/bids-standard/bids-validator/blob/main/CONTRIBUTING.md
+- Contributor / developer guidelines: https://github.com/bids-standard/bids-validator/blob/main/.github/CONTRIBUTING.md
 - Package manager entry: npm `bids-validator`
   (legacy); deno.land / JSR distribution for current TS validator; PyPI: `bids-validator-deno`
 - Community / Q&A forum: https://neurostars.org/tag/bids-validator
@@ -209,22 +216,22 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Website URL: https://bids-standard.github.io/pybids/
 - Short description (max 500 chars): TEXT
 
-  PyBIDS is the reference Python library for querying and manipulating
-  BIDS datasets — used by fMRIPrep, MRIQC, QSIPrep, fitlins, and most
-  downstream BIDS Apps. This proposal maintains PyBIDS and consolidates
-  scattered ecosystem helpers into a maintained, pybids-adjacent
-  bids-utils library exposed via MCP servers and reusable agent skills,
-  so LLM agents can read, write, and reason about BIDS datasets through
+  PyBIDS is the reference Python library for querying and manipulating BIDS
+  datasets — used by fMRIPrep, MRIQC, QSIPrep, fitlins, and most downstream
+  BIDS Apps. This proposal maintains PyBIDS and consolidates scattered
+  ecosystem helpers into a maintained, pybids-adjacent bids-utils (under the
+  same organization) library exposed via MCP servers and reusable agent
+  skills, so LLM agents can read, write, and reason about BIDS datasets through
   a stable interface.
 
-- Software license: Apache-2.0 (PyBIDS); bids-utils: TBD (permissive)
+- Software license: Apache-2.0 (PyBIDS and bids-utils)
 - Main programming language: Python
 - Canonical citation: Yarkoni T, et al. (2019). "PyBIDS: Python tools for
   BIDS datasets." Journal of Open Source Software 4(40), 1294.
   https://doi.org/10.21105/joss.01294
-- Code of Conduct: https://github.com/bids-standard/pybids/blob/master/CODE_OF_CONDUCT.md
+- Code of Conduct: https://github.com/bids-standard/.github/blob/main/CODE_OF_CONDUCT.md
 - End-user documentation: https://bids-standard.github.io/pybids/
-- Contributor / developer guidelines: https://github.com/bids-standard/pybids/blob/master/CONTRIBUTING.md
+- Contributor / developer guidelines: https://github.com/bids-standard/.github/blob/main/CONTRIBUTING.md
 - Package manager entry: PyPI `pybids`; conda-forge `pybids`
 - Community / Q&A forum: https://neurostars.org/tag/pybids
 - Metrics (TODO):
@@ -288,10 +295,10 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Software license: MIT
 - Main programming language: Python + TypeScript (agent runtime)
 - Canonical citation: (software; no paper yet — will use software heritage / Zenodo release DOI)
-- Code of Conduct: https://github.com/OpenScience-Collective/osa/blob/main/CODE_OF_CONDUCT.md (verify)
+- Code of Conduct: https://github.com/OpenScience-Collective/osa/issues/347
 - End-user documentation: https://demo.osc.earth/bids
-- Contributor / developer guidelines: (see repo)
-- Package manager entry: TBD
+- Contributor / developer guidelines: https://github.com/OpenScience-Collective/osa/issues/348
+- Package manager entry: n/a
 - Community / Q&A forum: https://github.com/OpenScience-Collective/osa/discussions
 - Metrics (TODO):
   - Monthly users estimate: TBD
@@ -303,10 +310,6 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Neuroscience
 - Biological and biomedical imaging
 - Data formats and storage
-
-Alternate swap under consideration once portal opens (per
-LOI-MISC "Remaining responsiveness items"):
-Neuroscience → Platforms interoperability or Agentic frameworks.
 
 ---
 
