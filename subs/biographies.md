@@ -103,10 +103,10 @@ He also contributes to fitlins / BIDS StatsModels and to the BIDS specification 
 **Position:** Assistant Project Scientist, Swartz Center for Computational Neuroscience (SCCN), Institute for Neural Computation, University of California, San Diego.
 **IDs:** syshirazi@ucsd.edu · [ORCID 0000-0001-5557-259X](https://orcid.org/0000-0001-5557-259X) · [GitHub neuromechanist](https://github.com/neuromechanist) · [Scholar](https://scholar.google.com/citations?user=9QzpcEoAAAAJ) · [neuromechanist.github.io](https://neuromechanist.github.io/)
 
-Dr. Shirazi builds open-source neuroinformatics infrastructure for EEG, EMG, and multimodal biosignal research (Mobile Brain/Body Imaging, neural control of movement) with a strong emphasis on FAIR standards.
-He is a current BIDS Maintainer, lead of [BEP044](https://bids.neuroimaging.io/bep044) (Stimuli), and a maintainer on [BEP046](https://bids.neuroimaging.io/bep046) and [BEP047](https://bids.neuroimaging.io/bep047); a core contributor to EEGLAB and the HED working group [@hermes_hierarchical_2025]; and a co-author of the Lab Streaming Layer [@kothe_lab_2025] and prior electrode-methods work [@shirazi_more_2019].
-He leads the [Open Science Assistant](https://demo.osc.earth/bids), and drives HBN-EEG curation [@shirazi_hbn-eeg_2024], the EEG 2025 NeurIPS foundation-model challenge [@aristimunha_eeg_2025], and NEMAR 2.0 integration.
-Also contributes to hedtools, hed-lsp, HEDit, matlab-mcp-tools, and emg2mu.
+Dr. Shirazi builds open-source neuroinformatics infrastructure for ExG (EEG, EMG, iEEG), and multimodal biosignal research (Mobile Brain/Body Imaging) with a strong emphasis on FAIR standards.
+He is a current BIDS Maintainer, lead of [BEP044](https://bids.neuroimaging.io/bep044) (Stimuli), and a maintainer on [BEP046](https://bids.neuroimaging.io/bep046) and [BEP047](https://bids.neuroimaging.io/bep047); a core contributor to EEGLAB and the HED working group [@hermes_hierarchical_2025]; a co-author of the Lab Streaming Layer [@kothe_lab_2025], with curent and prior contributions to data acquisition and quality [@shirazi_more_2019].
+He leads the [Open Science Assistant](https://osc.earth/osa), and drives HBN-EEG curation [@shirazi_hbn-eeg_2024], the largest open-EEG dataset, the EEG 2025 NeurIPS foundation-model challenge [@aristimunha_eeg_2025], and [NEMAR 2.0](https://ww2.nemar.org) integration.
+He also is the archtiext of AI-agentic and native tools including [hed-lsp](https://github.com/hed-standard/hed-lsp), [HEDit](https://github.com/Annotation-Garden/HEDit), and [matlab-mcp-tools](https://github.com/neuromechanist/matlab-mcp-tools).
 
 
 ## Ariel Rokem, PhD — Co-PI (CAMH)
