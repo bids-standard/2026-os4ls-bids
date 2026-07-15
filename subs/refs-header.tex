@@ -1,0 +1,16 @@
+% Header injected by pandoc for subs/biographies.pdf.
+%
+% 1. Sans-serif throughout — more compact than serif and easier to skim in a
+%    biosketch.  Uses Latin Modern Sans (ships with texlive-fonts-recommended).
+% 2. References section: small font, zero vertical space between entries.
+%    Keeps bios + refs inside the OS4LS Optional Upload 4-page cap.
+
+\usepackage{fontspec}
+\setmainfont{Latin Modern Sans}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{CSLReferences}{%
+  \footnotesize%
+  \setlength{\parskip}{0pt}%
+  \setlength{\itemsep}{0pt}%
+}

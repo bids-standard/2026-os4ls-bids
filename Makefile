@@ -17,11 +17,11 @@ pdf: LOI.pdf
 %.pdf: %.md
 	$(PANDOC) $< -o $@ $(PANDOC_PDF_OPTS)
 
-# Explicit rule for the bios PDF: adds pandoc citeproc against BIDS.bib,
+# Explicit rule for the bios PDF: adds pandoc citeproc against
 # Vancouver CSL, 1cm margins, and a small-font override for the
 # auto-generated References section so bios + refs fit inside the OS4LS
-# Optional Upload's 4-page cap.
-subs/biographies.pdf: subs/biographies.md BIDS.bib subs/vancouver.csl subs/refs-header.tex
+# Optional Upload's 4-page cap.  Do not adding BIDS.bib since we do not need to refetch
+subs/biographies.pdf: subs/biographies.md subs/vancouver.csl subs/refs-header.tex
 	$(PANDOC) $< -o $@ \
 		--pdf-engine=xelatex \
 		-V geometry:margin=1cm \
