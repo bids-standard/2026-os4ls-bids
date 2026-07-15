@@ -570,13 +570,13 @@ chars before paste):
 
 TODOs: verify, extend and add total amounts!
 
-PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (NIH BRAIN Initiative; 2020–ongoing), OpenNeuro (NIH; 2018–ongoing), EMBER (NIH; 2023–ongoing), and the ReproNim center work (NIH; 2016–ongoing) all of which use BIDS and contribute necessary developments to it.
-Co-PI Poldrack directs OpenNeuro (2018-2028, BRAIN Initiative data, NIH 5R24MH117179, $5,968,723 total costs for 2023-2027).
+PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), OpenNeuro (see details in Poldrack), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim center work (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use BIDS and contribute necessary developments to it.
+Co-PI Poldrack directs OpenNeuro (2018-2028, NIH BRAIN Initiative 5R24MH117179, $5,968,723 for 2023-2027).
 Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024).
 Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024).
 Co-PI Pestilli leads NSF- and NIH-funded brainlife.io connectivity work (BRAIN CONNECTS).
 Co-PI Shirazi maintains OSA and HED-related work at UCSD's Swartz Center.
-Co-PI Rokem holds CAMH- and NIH-funded dMRI / TRX work.
+Co-PI Rokem holds CAMH- and NIH-funded dMRI/TRX work.
 Co-PI Dichter leads CatalystNeuro's NWB and NeuroConv work supported by the NIH BRAIN Initiative.
 In-kind: existing maintainer time from the BIDS Steering Group and Maintainers; Amazon Open Dataset program hosts TBs of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
 
