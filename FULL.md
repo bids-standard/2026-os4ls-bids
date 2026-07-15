@@ -235,7 +235,7 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Metrics (TODO):
   - Monthly users estimate: TBD (PyPI downloads/month via pypistats)
   - Dependent projects/packages: TBD (libraries.io / pypistats reverse deps)
-  - Scholarly citations estimate: TBD (Yarkoni 2019)
+  - Scholarly citations estimate: (Yarkoni 2019) cited by 74 (Google Scholar)
 
 ---
 
