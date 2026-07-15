@@ -171,11 +171,9 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Contributor / developer guidelines: https://github.com/bids-standard/bids-specification/blob/master/CONTRIBUTING.md
 - Package manager entry: N/A (spec) — schematools: PyPI `bidsschematools`
 - Community / Q&A forum: https://neurostars.org/tag/bids
-- Metrics (fill verified whole numbers before submit; TODO):
-  - https://bids.neuroimaging.io/impact/index.html collects various stats
-  - Monthly users estimate: TBD (spec readers via Read the Docs analytics)
-  - Dependent projects/packages: TBD (BIDS Apps registry ≈50+, plus validators, PyBIDS, bids2nda, brainlife/Nipoppy, etc.)
-  - Scholarly citations estimate: TBD (Gorgolewski 2016 + BEP-cited papers — fetch from Google Scholar / OpenAlex)
+- Metrics (​Software Project usage and impact metrics​ : List whole numbers and add optional​
+​comments (max 200 characters), as needed.​)
+  - Rough: 100+ PBs of data in 1,000+ datasets, created by 1,000+ of "creators" and used by 10,000+ users. https://bids.neuroimaging.io/impact/index.html and https://bids.neuroimaging.io/datasets/index.html collect and present various stats across various dimensions and locations. Original BIDS paper (Gorgolewski 2016) alone cited  2,308 times (Google Scholar).
 
 ---
 
