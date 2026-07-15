@@ -44,6 +44,7 @@ Co-PIs (jointly responsible for leading the work):
 | Franco Pestilli | pestilli@utexas.edu | The University of Texas at Austin | USA | Co-PI (Steering Group; connectomics) |
 | Kimberly Ray | kimray@utexas.edu | The University of Texas at Austin | USA | Co-PI (BIDS Maintainer; Project Manager) |
 | Jean-Baptiste Poline | jean-baptiste.poline@mcgill.ca | McGill University | Canada | Co-PI (Steering Group; Boutiques/Nipoppy) |
+| Alejandro de la Vega | aleph4@gmail.com | The University of Texas at Austin | USA | Co-PI (PyBIDS, fitlins) |
 | Seyed Yahya Shirazi | syshirazi@ucsd.edu | University of California, San Diego | USA | Co-PI (BIDS Maintainer; OSA; HED; BEP044) |
 | Ariel Rokem | ariel.rokem@camh.ca | Centre for Addiction and Mental Health (CAMH) | Canada | Co-PI (Emeritus Steering; dMRI/TRX) |
 | Ben Dichter | ben.dichter@catalystneuro.com | CatalystNeuro | USA | Co-PI (BEP032, BEP047; NWB<->BIDS) |
@@ -52,12 +53,11 @@ Key personnel to be supported by the grant (or contributing to the work):
 
 | Name | Email | Affiliation | Role |
 |---|---|---|---|
-| Cody Baker | (via Dartmouth) | Dartmouth College | Key (BEP032, NWB<->BIDS, nwb2bids, *omics scoping) |
+| Cody Baker | (via Dartmouth) | Dartmouth College | Key (BEP032, NWB<->BIDS, nwb2bids, \*omics scoping) |
 | Christopher J. Markiewicz | (via Stanford) | Stanford University | Key (BIDS Maintainer in charge; bids-validator, pybids, BEP043) |
 | Ross W. Blair | rosswilsonblair@gmail.com | Stanford University | Key (bids-validator, bids-schema) |
 | Nell Hardcastle | (via Stanford / OpenNeuro) | Stanford University / OpenNeuro | Key (bids-validator, OpenNeuro integration) |
-| Alejandro de la Vega | aleph4@gmail.com | The University of Texas at Austin | Key (PyBIDS, fitlins) |
-| Gregory Kiar | Gregory.Kiar@childmind.org | Child Mind Institute | Key(BEP027 execution spec, Niwrap/Styx, bids2table) |
+| Gregory Kiar | Gregory.Kiar@childmind.org | Child Mind Institute | Key (BEP027 execution spec, Niwrap/Styx, bids2table) |
 | Oscar Esteban | phd@oscaresteban.es | HES-SO Valais-Wallis (Lausanne) | Key (nipreps; AI-assisted pipelines (consultant/travel)) |
 
 Potentially list as Key but likely not:
@@ -79,19 +79,20 @@ added here while subaward paperwork is being finalized.
 ## Section 2 — Organization Information
 
 - Organization Name [pre-filled from LOI [x]]: Trustees of Dartmouth College
-- Organization Address:
-  - Street Address: (fill from Dartmouth OSP)
+- Organization Address (from Dartmouth OSP):
+  - Street Address: Office of Sponsored Projects, 11 Rope Ferry Road, #6210
   - City: Hanover
-  - State / Province: New Hampshire
+  - State / Province: NH
+  - Zip: 03755-1421
   - Country: United States
-- Organization Website [pre-filled from LOI [x]]: https://www.dartmouth.edu
-- Organization Tax ID (EIN, XX-XXXXXXX; 10 chars): (fill from Dartmouth OSP — do NOT commit)
+- Organization Website [pre-filled from LOI [x]]: www.dartmouth.edu/~osp
+- Organization Tax ID (EIN, XX-XXXXXXX; 10 chars): 02-0222111
 - Type of organization [pre-filled from LOI [x]]: academic institution
-- Organizational / Administrative Contact:
-  - Name: Angela M. Beaupre
-  - Email: Angela.M.Beaupre@dartmouth.edu
-- Signing Official (SO / AOR): (obtain from Dartmouth OSP)
-- Financial Contact: (obtain from Dartmouth OSP)
+- Organizational / Administrative Contact (from Dartmouth OSP):
+  - Name: Stephanie Morgan
+  - Email: sponsored.projects@dartmouth.edu
+- Signing Official (SO / AOR): Colleen Sullivan, sponsored.projects@dartmouth.edu
+- Financial Contact: Shelagh Eastridge, sponsored.projects@dartmouth.edu
 - Organizational Approval and Sign-Off Form: single PDF, signed by an
   institutional Signing Official. Not encrypted or password-protected;
   digital signatures OK.
@@ -109,7 +110,7 @@ collaborating institutions.
 
 ### Title [pre-filled from LOI [x]] — max 60 characters
 
-BIDS 2.0+ ecosystem: AI-Ready Life-Science Data Standard
+BIDS 2.0+: AI-Ready Life Sciences Data Standard
 
 ### Proposal Purpose — max 200 characters
 
@@ -317,8 +318,6 @@ Edit as needed from LOI. Briefly describe the purpose of the proposal
 and the software project(s) it involves. Details related to the work
 plan can be moved to the Work Plan section.
 
-TEXT (copy verbatim from LOI.md and lightly edit; count before paste).
-
 <!-- Seeded verbatim from LOI.md — edit here for the Full App as
      scope details / roadmap references get sharper. -->
 
@@ -351,7 +350,7 @@ Scope guard: no new datasets (beyond examples), no new ML models, no archive/rep
 
 ### Expected Value [pre-filled from LOI [x]] — max 1,500 characters
 
-TEXT (from LOI; retighten before paste):
+<!-- Seeded verbatim from LOI.md — might need tune ups -->
 
 Capabilities unlocked. By month 24, any life-sciences researcher or LLM agent will be able to:
 
@@ -365,7 +364,7 @@ Capabilities unlocked. By month 24, any life-sciences researcher or LLM agent wi
 
 (v) get human- and agent-readable explanations and guidance through the OSA AI assistant.
 
-Upstream impact. A versioned schema-first specification with machine-readable extension points unlocks BEPs in *omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
+Upstream impact. A versioned schema-first specification with machine-readable extension points unlocks BEPs in \*omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
 Downstream impact. Every BIDS App, every OpenNeuro dataset (and soon DANDI via nwb2bids), every nipreps pipeline, brainlife/Nipoppy dashboard, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
 
@@ -373,7 +372,7 @@ The same investment that makes BIDS easier for humans makes it more usable for A
 
 ### Landscape Analysis [pre-filled from LOI [x]] — max 1,500 characters
 
-TEXT (from LOI; retighten before paste):
+<!-- Seeded verbatim from LOI.md — might need tune ups -->
 
 BIDS is the near-monopoly organization standard in neuroimaging, expanding into adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
 BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. Two co-PIs (Poline, Esteban) led CZI EOSS-funded BIDS-adjacent projects (Nilearn, NiPreps).
@@ -387,15 +386,18 @@ Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors 
 
 ### Work Plan and Goals, Outcomes, Milestones and Deliverables
 
-This section is uploaded as a single PDF built from the Work Plan
-template (`docs/OS4LS_Work_Plan_template.pdf`). Local Markdown source
-for that PDF is maintained here so we can render it via
-`make WorkPlan.pdf` (using the generic `%.pdf: %.md` rule in
-`Makefile`).
+This section is uploaded as a single PDF built from the Work Plan template
+(originally on [google
+drive](https://docs.google.com/document/d/1QeloUWQCiDwTPzZlJQ55tKHAoTHztuhIqSm90aEkuWo/edit?tab=t.0]
+with a PDF render here under `docs/OS4LS_Work_Plan_template.pdf`). Local
+Markdown source for that PDF is maintained here so Yarik will later plug
+it as needed into the template to produce the PDF for submission.
 
 #### Work Plan (max 750 words) — narrative
 
 Word budget: 750 words. Count with `wc -w` before submit.
+
+TODO: heavy tune up!!!
 
 TEXT (draft narrative):
 
@@ -439,6 +441,22 @@ Zarr), plus quarterly community town halls and an in-person BIDS
 CC-BY-4.0 (specification text) / MIT / Apache-2.0 (tooling), with
 releases published on GitHub and PyPI/conda-forge/npm as applicable.
 
+Scalability and modular composition. BIDS already operates at
+scale — OpenNeuro hosts 1,500+ public datasets and DANDI stores
+multi-TB BIDS microscopy — because the standard's per-subject and
+per-session structure is the natural parallelization boundary:
+pipelines run near-embarrassingly-parallel without per-tool sharding
+logic. Composition works within a dataset (nested `sourcedata/`,
+raw, `derivatives/`) and across datasets via BIDS-Study,
+OpenNeuroStudies, and the Nipoppy study network, so summarization
+bubbles up cleanly through subject → study → cross-study →
+dashboard layers (brainlife, Nipoppy). Goal 2's schema-driven
+validator convergence keeps validation cheap enough to run inside
+agent loops; Goal 4's execution-spec + Boutiques / Niwrap / Styx
+path preserves this modularity when wrapping GPU / accelerator
+containers as BIDS Apps 2.0, so hardware-accelerated workloads
+inherit the same composition semantics as CPU pipelines.
+
 Personnel allocation follows the RFA's "no fixed PI %FTE"
 guidance from the info session: PI Halchenko commits ~5% FTE for
 overall coordination; the majority of funds support co-Is, named
@@ -464,6 +482,8 @@ Each goal has four fields per the Work Plan template
 Goal / Outcome / Milestones & Deliverables (numbered X.Y with
 Year 1 / Year 2 tag) / Success indicators.
 
+TODOs: heavey overview/tuneup
+
 ---
 
 **Goal 1: BIDS specification, schema, and BIDS 2.0 release**
@@ -488,7 +508,7 @@ Success indicators:
 - BIDS 2.0 tagged and adopted by ≥3 downstream tools (validators,
   PyBIDS, ≥1 major BIDS App) [Year 2].
 - ≥3 BEPs from the active queue merged. [Year 2]
-- Schema 2.x release consumed by both validators and PyBIDS. [Year 2]
+- Schema 2.x+ release consumed by both validators and PyBIDS. [Year 2]
 
 ---
 
@@ -603,25 +623,14 @@ Success indicators:
 
 ### Optional Upload — PI/Co-PI biographies, references, figures (≤4 pages)
 
-We plan to upload a single 4-page PDF containing:
+**External file(s):  [subs/biographies.md](subs/biographies.md)** (rendered to .pdf)
 
-1. Short biographies of PI (Halchenko) and Co-PIs (Poldrack,
-   Pestilli, Ray, Poline, Shirazi, Rokem, Dichter) — ≈100–150
-   words each, plus ORCID / GitHub / Google Scholar links, plus
-   selected relevant publications (target 3–5 per person).
-2. A single ecosystem figure showing spec → validators → PyBIDS /
+Potential TODOs:
+
+- [ ] A single ecosystem figure showing spec → validators → PyBIDS /
    bids-utils / MCP → BIDS-Apps 2.0 → OSA / observability, with
    downstream consumers (OpenNeuro, DANDI, brainlife, Nipoppy,
    agent frameworks).
-
-Source material for all 8 biographies (PI + 7 Co-PIs) lives in a
-single file — `subs/biographies.md` — with a shared, deduplicated
-References section (PI/Co-PI names shown in **bold** in each
-author list).
-
-Render via the generic Makefile rule: `make subs/biographies.pdf`
-(produces `subs/biographies.pdf`, ready to combine into the
-Optional-Upload PDF alongside the ecosystem figure — 4-page cap).
 
 ---
 
@@ -633,42 +642,13 @@ Enter as whole numbers, USD, no commas / no dollar signs. Track 2 max:
 $500,000 / year; $1,000,000 total. Numbers must match the Budget
 Description (uploaded as PDF and/or XLSX).
 
-Working numbers from
-`gdrive/2026-os4ls-bids_subawards_and_consultants.tsv`:
-
-| Site | Year 1 | Year 2 | Total |
-|---|---|---|---|
-| Dartmouth (lead) | 163000 | 163000 | 326000 |
-| Stanford | 90000 | 90000 | 180000 |
-| UT Austin | 80000 | 80000 | 160000 |
-| McGill | 60000 | 60000 | 120000 |
-| UCSD | 60000 | 60000 | 120000 |
-| CAMH | 17270 | 17270 | 34540 |
-| CatalystNeuro | 30000 | 30000 | 60000 |
-| Consultant / travel (ChildMind, HES-SO Valais-Wallis, other) | included in Dartmouth line | included in Dartmouth line | — |
-| Subtotal | 500270 | 500270 | 1000540 |
-| Target (Track 2 cap) | 500000 | 500000 | 1000000 |
-
-Delta of +$540 total against the Track 2 cap will be reconciled at
-the Dartmouth line before submission. Do NOT paste numbers above
-the cap into the portal.
+Status: Will be matched on what near $1mil we have in official budget estimates spreadsheet submitted to Dartmouth.
 
 ### Budget Description (uploaded as PDF / XLSX)
 
-Contents (per RFA / Full Application instructions):
-- Narrative + tabular high-level costs
-- Personnel (names where known — matches Section 1 tables above)
-- Supplies, equipment, travel, meetings / hackathons / sprints,
-  subcontracts, other costs
-- Up to 10% indirect costs (excluding equipment and subcontracts)
-- Per-year and 2-year totals
+**External file(s): [dartmouth/Budget_Narrative_v2.md](dartmouth/Budget_Narrative_v2.md)** (converted from/to .docx}
 
-Working sources:
-- `budgets/` (this repo) — narrative and per-site justifications
-- `gdrive/2026-os4ls-bids_subawards_and_consultants.tsv` — living
-  worksheet (source of truth for subaward planning)
-- `gdrive/2026-os4ls-bids_subawards_and_consultants.xlsx` — final
-  rendered xlsx (uploaded to the portal)
+Stage: submitted to Dartmouth OSP for review.
 
 ### Recent Financial Support — max 1,500 characters
 
@@ -680,12 +660,11 @@ directly or indirectly support this work — with duration, total USD
 TEXT (draft — collect from each Co-PI at kickoff and tighten to ≤1,500
 chars before paste):
 
-TODOs: verify add total amounts!
+TODOs: verify, extend and add total amounts!
 
 PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (NIH BRAIN Initiative; 2020–ongoing), OpenNeuro (NIH; 2018–ongoing), EMBER (NIH; 2023–ongoing), and the ReproNim center work (NIH; 2016–ongoing) all of which use BIDS and contribute necessary developments to it. Co-PI Poldrack directs OpenNeuro (NIH; 2018 ongoing). Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024); Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024). Co-PI Pestilli leads NSF- and NIH-funded brainlife.io connectivity work (BRAIN CONNECTS). Co-PI Shirazi maintains OSA and HED-related work at UCSD's Swartz Center. Co-PI Rokem holds CAMH- and NIH-funded dMRI / TRX work. Co-PI Dichter leads CatalystNeuro's NWB and NeuroConv work supported by the NIH BRAIN Initiative. In-kind: existing maintainer time from the BIDS Steering Group and Maintainers; Amazon Open Dataset program hosts TBs of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
 
-TODO: verify exact grant numbers / durations / totals with each
-Co-PI before submission. Convert to ≤1,500 chars.
+TODO: verify exact grant numbers / durations / totals with each Co-PI before submission. Ensure ≤1,500 chars.
 
 ---
 
@@ -716,4 +695,4 @@ above).
   - Recent Financial Support — draft only; verify with each Co-PI.
   - Budget subtotal $540 over cap — reconcile at Dartmouth line.
   - EIN / signing official / financial contact — obtain from
-    Dartmouth OSP; do NOT commit these to the public repo.
+    Dartmouth OSP;
