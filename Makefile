@@ -1,5 +1,10 @@
 .PHONY: emails pdf clean sync-docs dartmouth-md
 
+# Absolute path to the directory of this Makefile. Lets rules reference
+# scripts/, subs/, BIDS.bib etc. by an absolute path so `make -f ../Makefile`
+# (or any other subdir invocation) still finds them.
+TOPDIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
+
 # Requires: pandoc + a TeX distribution providing xelatex
 #   (Debian/Ubuntu: apt install pandoc texlive-xetex texlive-fonts-recommended)
 PANDOC ?= pandoc
@@ -56,9 +61,21 @@ sync-docs:
 #   make dartmouth-md DOCFLOW=/home/you/proj/docflow/.venv/bin/docflow
 DOCFLOW ?= docflow
 
-# Generic patterns: any foo.docx <-> foo.md via docflow.
+# .docx -> .md pipeline. Docflow's docx-to-md uses pandoc's default
+# `--wrap=auto`, which reshuffles line-wrapping across pandoc releases
+# and dominates diffs between successive Word-round-trip conversions.
+# We work around this by post-processing to sentence-per-line: run
+# docflow, then unescape pandoc-3.x escapes (\<, \>, \*), then rewrap
+# via scripts/sentence-per-line.py. Result: diffs between v_N and
+# v_N+1 show only real content changes.
+# Set RAW=1 to skip the post-processing (get docflow's raw output).
+RAW ?=
 %.md: %.docx
 	$(DOCFLOW) convert docx-to-md $< -o $@
+ifndef RAW
+	sed -i 's|\\<|<|g; s|\\>|>|g; s|\\\*|*|g' $@
+	python3 $(TOPDIR)scripts/sentence-per-line.py --in-place $@
+endif
 
 %.docx_: %.md
 	$(DOCFLOW) convert md-to-docx $< -o $@
