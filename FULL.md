@@ -570,7 +570,15 @@ chars before paste):
 
 TODOs: verify, extend and add total amounts!
 
-PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (NIH BRAIN Initiative; 2020–ongoing), OpenNeuro (NIH; 2018–ongoing), EMBER (NIH; 2023–ongoing), and the ReproNim center work (NIH; 2016–ongoing) all of which use BIDS and contribute necessary developments to it. Co-PI Poldrack directs OpenNeuro (NIH; 2018 ongoing). Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024); Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024). Co-PI Pestilli leads NSF- and NIH-funded brainlife.io connectivity work (BRAIN CONNECTS). Co-PI Shirazi maintains OSA and HED-related work at UCSD's Swartz Center. Co-PI Rokem holds CAMH- and NIH-funded dMRI / TRX work. Co-PI Dichter leads CatalystNeuro's NWB and NeuroConv work supported by the NIH BRAIN Initiative. In-kind: existing maintainer time from the BIDS Steering Group and Maintainers; Amazon Open Dataset program hosts TBs of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
+PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (NIH BRAIN Initiative; 2020–ongoing), OpenNeuro (NIH; 2018–ongoing), EMBER (NIH; 2023–ongoing), and the ReproNim center work (NIH; 2016–ongoing) all of which use BIDS and contribute necessary developments to it.
+Co-PI Poldrack directs OpenNeuro (NIH; 2018 ongoing).
+Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024).
+Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024).
+Co-PI Pestilli leads NSF- and NIH-funded brainlife.io connectivity work (BRAIN CONNECTS).
+Co-PI Shirazi maintains OSA and HED-related work at UCSD's Swartz Center.
+Co-PI Rokem holds CAMH- and NIH-funded dMRI / TRX work.
+Co-PI Dichter leads CatalystNeuro's NWB and NeuroConv work supported by the NIH BRAIN Initiative.
+In-kind: existing maintainer time from the BIDS Steering Group and Maintainers; Amazon Open Dataset program hosts TBs of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
 
 TODO: verify exact grant numbers / durations / totals with each Co-PI before submission. Ensure ≤1,500 chars.
 
