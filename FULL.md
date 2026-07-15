@@ -173,7 +173,7 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Community / Q&A forum: https://neurostars.org/tag/bids
 - Metrics (​Software Project usage and impact metrics​ : List whole numbers and add optional​
 ​comments (max 200 characters), as needed.​)
-  - Rough: 100+ PBs of data in 1,000+ datasets, created by 1,000+ of "creators" and used by 10,000+ users. https://bids.neuroimaging.io/impact/index.html and https://bids.neuroimaging.io/datasets/index.html collect and present various stats across various dimensions and locations. Original BIDS paper (Gorgolewski 2016) alone cited  2,308 times (Google Scholar).
+  - Rough: 100+ PBs of data in 1,000+ datasets, created by 1,000+ of "creators" and used by 10,000+ users. https://bids.neuroimaging.io/impact and https://bids.neuroimaging.io/datasets collect and present various stats across various dimensions and locations. Original BIDS paper (Gorgolewski 2016) alone cited  2,308 times (Google Scholar).
 
 ---
 
@@ -568,10 +568,12 @@ chars before paste):
 
 TODOs: verify, extend and add total amounts!
 
+https://bids.neuroimaging.io/collaboration/acknowledgments.html page lists various grants which supported some parts of work on BIDS currently or in the past.
+
 PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), OpenNeuro (see details in Poldrack), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim center work (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use BIDS and contribute necessary developments to it.
 Co-PI Poldrack directs OpenNeuro (2018-2028, NIH BRAIN Initiative 5R24MH117179, $5,968,723 for 2023-2027).
-Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024).
-Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024).
+Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024). (TODO: remove as outdated?)
+Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024). (TODO: remove as outdated?)
 Co-PI Pestilli leads NSF- and NIH-funded brainlife.io connectivity work (BRAIN CONNECTS).
 Co-PI Shirazi maintains OSA and HED-related work at UCSD's Swartz Center.
 Co-PI Rokem holds CAMH- and NIH-funded dMRI/TRX work.
