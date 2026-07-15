@@ -405,29 +405,34 @@ TODO: heavy tune up!!!
 
 TEXT (draft narrative):
 
-BIDS (Brain Imaging Data Structure) is a widely used open-source specification and tooling ecosystem for structured, machine- and human-legible organization of life-science data, maintained by a multi-institution community of contributors and a public Steering Group.
-This request supports a 24-month, five-institution effort to carry the BIDS ecosystem across the AI-ready threshold, organized around the five coordinated goals below.
-All work is inside our published roadmap: Goal 1 corresponds to the milestones tracked at https://github.com/orgs/bids-standard/projects/10 and in the `bids-2-devel` branch; Goal 2 continues the validator-convergence work already underway between the Deno and Python implementations; Goal 3 packages helpers that have accumulated across pybids, bids2nda, and DataLad into a maintained pybids-adjacent library plus MCP servers and reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills); Goal 4 continues the BEP027/BEP043 execution-spec work in coordination with Boutiques / Niwrap / Styx and the BIDS-Apps registry; and Goal 5 continues OSA's BIDS extension and formalizes a study-state observability layer used today in an ad-hoc form by brainlife.io and Nipoppy dashboards.
+BIDS (Brain Imaging Data Structure) is a widely used open-source specification and tooling ecosystem for structured, machine- and human-legible organization of life-science data, maintained by a international and multi-institution community of contributors and a public Steering and Maintainenance Groups following established Governance procedures.
+This request supports a 24-month, multi-institution effort to carry the BIDS ecosystem across the "always 1.x" to the more consistent and AI-ready state, organized around the five coordinated goals below.
+All work is inside our published roadmap: 
 
-Beyond the requested funds, each institution contributes existing maintainer time (uncompensated by this grant), CI credits, and existing test infrastructure.
-The BIDS Steering Group and the Maintainers organization contribute governance capacity in kind; Dartmouth contributes container/HPC infrastructure via the ///repronim/containers DataLad dataset and integration with the HPC Container community.
-OpenNeuro (Stanford) contributes deposit-side validation feedback; DANDI (via nwb2bids) contributes microscopy / extracellular electrophysiology alignment; CatalystNeuro contributes NeuroConv and NWB Inspector integration.
-Community activities include two annual BIDS hackathons / sprints organized by the Project Manager (Kimberly Ray, UT Austin) — one co-located with OHBM and one virtual — targeting maintainers, downstream BIDS-App authors, and adjacent-standard maintainers (HED, NWB, Zarr), plus quarterly community town halls and an in-person BIDS 2.0 release event.
-All code is developed in the open under CC-BY-4.0 (specification text) / MIT / Apache-2.0 (tooling), with releases published on GitHub and PyPI/conda-forge/npm as applicable.
+Goal 1 corresponds to addressing issues (primarily within bids-specification itself but also in related bids-examples, bids-website, pybids, and so on) assigned to BIDS 2.0 milestones tracked at https://github.com/orgs/bids-standard/projects/10;
+Goal 2 continues the validator-convergence work already underway between the Deno and Python implementations; 
+Goal 3 packages helpers that have accumulated across pybids, bids2nda, and DataLad into a maintained pybids-adjacent library plus MCP servers and reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills);
+Goal 4 continues the BEP027/BEP043 execution-spec work in coordination with Boutiques / Niwrap / Styx and the BIDS-Apps registry;
+and Goal 5 continues OSA's BIDS extension and formalizes a study-state observability layer used today in an ad-hoc form by brainlife.io and Nipoppy dashboards.
 
-Scalability and modular composition.
-BIDS already operates at scale — OpenNeuro hosts 1,500+ public datasets and DANDI stores multi-TB BIDS microscopy — because the standard's per-subject and per-session structure is the natural parallelization boundary: pipelines run near-embarrassingly-parallel without per-tool sharding logic.
-Composition works within a dataset (nested `sourcedata/`, raw, `derivatives/`) and across datasets via BIDS-Study, OpenNeuroStudies, and the Nipoppy study network, so summarization bubbles up cleanly through subject → study → cross-study → dashboard layers (brainlife, Nipoppy).
+Overall organization of work for Goals 2-5 will be organized and prioritized within projects like https://github.com/orgs/bids-standard/projects/24 project.
+Beyond the requested funds, each institution contributes existing personnel time (uncompensated by this grant) where people already work on BIDS in related projects but not directly toward the goals established in this grant proposal.
+The BIDS Steering Group and the Maintainers organization contribute governance capacity in kind.
+DANDI (Dartmouth) and OpenNeuro (Stanford) contribute deposit-side validation feedback as new datasets will be flowing into those repositories.
+DANDI (via nwb2bids) will also contribute feedback on alignment to microscopy / extracellular electrophysiology with CatalystNeuro contributing NeuroConv and NWB Inspector integration.
+Community activities include two annual BIDS hackathons / sprints organized by the PI & Project Manager (Kimberly Ray, UT Austin) — targeting maintainers, downstream BIDS-App authors, and adjacent-standard maintainers (HED, NWB, Zarr).
+All code is developed in the open under OSI-Approved licenses (e.g. CC-BY-4.0 (specification text) / MIT / Apache-2.0 (tooling)), with releases published on GitHub and PyPI/conda-forge/npm as applicable.
+
+Scalability and modular composition:
+BIDS already operates at scale — OpenNeuro hosts 1,500+ public datasets and DANDI stores multi-TB BIDS microscopy dataset — because the standard's per-subject and per-session structure is the natural parallelization boundary: pipelines can run near-embarrassingly-parallel per subject/session without per-tool sharding logic.
+Composition works within a dataset (nested `sourcedata/`, raw, `derivatives/`) and across datasets via BIDS-Study, OpenNeuroStudies, and the Nipoppy study network, so summarization bubbles up cleanly through subject → study → cross-study → dashboard layers (brainlife, Nipoppy), thus also fascilitating adherence to Self-containment and Modularity principles of https://stamped-principles.org (developed by the PIs group).
 Goal 2's schema-driven validator convergence keeps validation cheap enough to run inside agent loops; Goal 4's execution-spec + Boutiques / Niwrap / Styx path preserves this modularity when wrapping GPU / accelerator containers as BIDS Apps 2.0, so hardware-accelerated workloads inherit the same composition semantics as CPU pipelines.
 
-Personnel allocation follows the RFA's "no fixed PI %FTE" guidance from the info session: PI Halchenko commits ~5% FTE for overall coordination; the majority of funds support co-Is, named maintainers, and dedicated Project-Manager coordination capacity.
-
-Sustainability.
-Post-grant maintenance continues through the PI's and Co-PIs' involvement via the existing BIDS governance and maintenance structure and adjacent federally-funded work (DANDI, OpenNeuro, EMBER, nipreps, brainlife, Nipoppy).
+Sustainability:
+Post-grant maintenance continues through the PI's and Co-PIs' involvement via the existing BIDS governance and maintenance structure and adjacent federally-funded work (DANDI, OpenNeuro, EMBER, nipreps, brainlife, Nipoppy), all benefiting from the work done under this funding.
 
 TODO before submission:
-- Trim to under 750 words (currently ≈ TODO: run wc -w on the
-  fenced narrative above once tightened).
+- Trim to under 750 words
 - Cross-link each goal below by number to the pillars in Short
   Summary.
 - Add a one-line "not-in-scope" reiteration mirroring the LOI
@@ -447,10 +452,9 @@ Outcome: The BIDS 2.0 specification is released — more consistent, modular, sc
 Downstream tools (validators, PyBIDS, BIDS Apps) adopt the new schema without loss, and the active BEP backlog (BEP028, BEP032, BEP036, BEP037, BEP044/047) is landed so BIDS covers phenotypes, animal / extracellular electrophysiology, NIBS, stimuli and A/V.
 
 Milestones & Deliverables:
-1.1 Merge and tag BIDS 2.0 (`bids-standard/bids-specification` `bids-2-devel` branch → main). [Year 1]
+1.1 Prepare, finalize, merge and tag BIDS 2.0 (`bids-standard/bids-specification` `bids-2-devel` branch → main). [Year 1]
 1.2 Publish BIDS 3.0 roadmap document with community sign-off. [Year 2]
-1.3 Land BEPs from the active queue (subset to be selected with Steering Group at kickoff). [Years 1–2]
-1.4 Harden the machine-readable schema as a Data Structure Standard and cut a schema 2.x release. [Year 1]
+1.3 Land BEPs from the active queue (subset to be selected with Steering Group at kickoff; not blocked by BIDS 2.0 release per se). [Years 1–2]
 
 Success indicators:
 - BIDS 2.0 tagged and adopted by ≥3 downstream tools (validators, PyBIDS, ≥1 major BIDS App) [Year 2].
