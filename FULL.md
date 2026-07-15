@@ -398,77 +398,32 @@ it as needed into the template to produce the PDF for submission.
 
 #### Work Plan (max 750 words) — narrative
 
-Word budget: 750 words. Count with `wc -w` before submit.
+Word budget: 750 words.
+Count with `wc -w` before submit.
 
 TODO: heavy tune up!!!
 
 TEXT (draft narrative):
 
-BIDS (Brain Imaging Data Structure) is a widely used open-source
-specification and tooling ecosystem for structured, machine- and
-human-legible organization of life-science data, maintained by a
-multi-institution community of contributors and a public Steering
-Group. This request supports a 24-month, five-institution effort to
-carry the BIDS ecosystem across the AI-ready threshold, organized
-around the five coordinated goals below. All work is inside our
-published roadmap: Goal 1 corresponds to the milestones tracked at
-https://github.com/orgs/bids-standard/projects/10 and in the
-`bids-2-devel` branch; Goal 2 continues the validator-convergence
-work already underway between the Deno and Python implementations;
-Goal 3 packages helpers that have accumulated across pybids,
-bids2nda, and DataLad into a maintained pybids-adjacent library
-plus MCP servers and reusable agent skills (currently prototyped in
-K-Dense-AI/scientific-agent-skills); Goal 4 continues the
-BEP027/BEP043 execution-spec work in coordination with Boutiques /
-Niwrap / Styx and the BIDS-Apps registry; and Goal 5 continues
-OSA's BIDS extension and formalizes a study-state observability
-layer used today in an ad-hoc form by brainlife.io and Nipoppy
-dashboards.
+BIDS (Brain Imaging Data Structure) is a widely used open-source specification and tooling ecosystem for structured, machine- and human-legible organization of life-science data, maintained by a multi-institution community of contributors and a public Steering Group.
+This request supports a 24-month, five-institution effort to carry the BIDS ecosystem across the AI-ready threshold, organized around the five coordinated goals below.
+All work is inside our published roadmap: Goal 1 corresponds to the milestones tracked at https://github.com/orgs/bids-standard/projects/10 and in the `bids-2-devel` branch; Goal 2 continues the validator-convergence work already underway between the Deno and Python implementations; Goal 3 packages helpers that have accumulated across pybids, bids2nda, and DataLad into a maintained pybids-adjacent library plus MCP servers and reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills); Goal 4 continues the BEP027/BEP043 execution-spec work in coordination with Boutiques / Niwrap / Styx and the BIDS-Apps registry; and Goal 5 continues OSA's BIDS extension and formalizes a study-state observability layer used today in an ad-hoc form by brainlife.io and Nipoppy dashboards.
 
-Beyond the requested funds, each institution contributes existing
-maintainer time (uncompensated by this grant), CI credits, and
-existing test infrastructure. The BIDS Steering Group and the
-Maintainers organization contribute governance capacity in kind;
-Dartmouth contributes container/HPC infrastructure via the
-///repronim/containers DataLad dataset and integration with the HPC
-Container community. OpenNeuro (Stanford) contributes deposit-side
-validation feedback; DANDI (via nwb2bids) contributes microscopy /
-extracellular electrophysiology alignment; CatalystNeuro
-contributes NeuroConv and NWB Inspector integration. Community
-activities include two annual BIDS hackathons / sprints organized
-by the Project Manager (Kimberly Ray, UT Austin) — one co-located
-with OHBM and one virtual — targeting maintainers, downstream
-BIDS-App authors, and adjacent-standard maintainers (HED, NWB,
-Zarr), plus quarterly community town halls and an in-person BIDS
-2.0 release event. All code is developed in the open under
-CC-BY-4.0 (specification text) / MIT / Apache-2.0 (tooling), with
-releases published on GitHub and PyPI/conda-forge/npm as applicable.
+Beyond the requested funds, each institution contributes existing maintainer time (uncompensated by this grant), CI credits, and existing test infrastructure.
+The BIDS Steering Group and the Maintainers organization contribute governance capacity in kind; Dartmouth contributes container/HPC infrastructure via the ///repronim/containers DataLad dataset and integration with the HPC Container community.
+OpenNeuro (Stanford) contributes deposit-side validation feedback; DANDI (via nwb2bids) contributes microscopy / extracellular electrophysiology alignment; CatalystNeuro contributes NeuroConv and NWB Inspector integration.
+Community activities include two annual BIDS hackathons / sprints organized by the Project Manager (Kimberly Ray, UT Austin) — one co-located with OHBM and one virtual — targeting maintainers, downstream BIDS-App authors, and adjacent-standard maintainers (HED, NWB, Zarr), plus quarterly community town halls and an in-person BIDS 2.0 release event.
+All code is developed in the open under CC-BY-4.0 (specification text) / MIT / Apache-2.0 (tooling), with releases published on GitHub and PyPI/conda-forge/npm as applicable.
 
-Scalability and modular composition. BIDS already operates at
-scale — OpenNeuro hosts 1,500+ public datasets and DANDI stores
-multi-TB BIDS microscopy — because the standard's per-subject and
-per-session structure is the natural parallelization boundary:
-pipelines run near-embarrassingly-parallel without per-tool sharding
-logic. Composition works within a dataset (nested `sourcedata/`,
-raw, `derivatives/`) and across datasets via BIDS-Study,
-OpenNeuroStudies, and the Nipoppy study network, so summarization
-bubbles up cleanly through subject → study → cross-study →
-dashboard layers (brainlife, Nipoppy). Goal 2's schema-driven
-validator convergence keeps validation cheap enough to run inside
-agent loops; Goal 4's execution-spec + Boutiques / Niwrap / Styx
-path preserves this modularity when wrapping GPU / accelerator
-containers as BIDS Apps 2.0, so hardware-accelerated workloads
-inherit the same composition semantics as CPU pipelines.
+Scalability and modular composition.
+BIDS already operates at scale — OpenNeuro hosts 1,500+ public datasets and DANDI stores multi-TB BIDS microscopy — because the standard's per-subject and per-session structure is the natural parallelization boundary: pipelines run near-embarrassingly-parallel without per-tool sharding logic.
+Composition works within a dataset (nested `sourcedata/`, raw, `derivatives/`) and across datasets via BIDS-Study, OpenNeuroStudies, and the Nipoppy study network, so summarization bubbles up cleanly through subject → study → cross-study → dashboard layers (brainlife, Nipoppy).
+Goal 2's schema-driven validator convergence keeps validation cheap enough to run inside agent loops; Goal 4's execution-spec + Boutiques / Niwrap / Styx path preserves this modularity when wrapping GPU / accelerator containers as BIDS Apps 2.0, so hardware-accelerated workloads inherit the same composition semantics as CPU pipelines.
 
-Personnel allocation follows the RFA's "no fixed PI %FTE"
-guidance from the info session: PI Halchenko commits ~5% FTE for
-overall coordination; the majority of funds support co-Is, named
-maintainers, and dedicated Project-Manager coordination capacity.
+Personnel allocation follows the RFA's "no fixed PI %FTE" guidance from the info session: PI Halchenko commits ~5% FTE for overall coordination; the majority of funds support co-Is, named maintainers, and dedicated Project-Manager coordination capacity.
 
-Sustainability. Post-grant maintenance continues through the PI's
-and Co-PIs' involvement via the existing BIDS governance and
-maintenance structure and adjacent federally-funded work
-(DANDI, OpenNeuro, EMBER, nipreps, brainlife, Nipoppy).
+Sustainability.
+Post-grant maintenance continues through the PI's and Co-PIs' involvement via the existing BIDS governance and maintenance structure and adjacent federally-funded work (DANDI, OpenNeuro, EMBER, nipreps, brainlife, Nipoppy).
 
 TODO before submission:
 - Trim to under 750 words (currently ≈ TODO: run wc -w on the
@@ -480,10 +435,7 @@ TODO before submission:
 
 #### Goals, Outcomes, Milestones and Deliverables (up to 5 goals; NOT counted in the 750-word narrative limit)
 
-Each goal has four fields per the Work Plan template
-(`docs/OS4LS_Work_Plan_template.pdf`):
-Goal / Outcome / Milestones & Deliverables (numbered X.Y with
-Year 1 / Year 2 tag) / Success indicators.
+Each goal has four fields per the Work Plan template (`docs/OS4LS_Work_Plan_template.pdf`): Goal / Outcome / Milestones & Deliverables (numbered X.Y with Year 1 / Year 2 tag) / Success indicators.
 
 TODOs: heavey overview/tuneup
 
@@ -491,25 +443,17 @@ TODOs: heavey overview/tuneup
 
 **Goal 1: BIDS specification, schema, and BIDS 2.0 release**
 
-Outcome: The BIDS 2.0 specification is released — more consistent,
-modular, schema-first — and the 3.0 roadmap is scoped. Downstream
-tools (validators, PyBIDS, BIDS Apps) adopt the new schema without
-loss, and the active BEP backlog (BEP028, BEP032, BEP036, BEP037,
-BEP044/047) is landed so BIDS covers phenotypes, animal / extracellular
-electrophysiology, NIBS, stimuli and A/V.
+Outcome: The BIDS 2.0 specification is released — more consistent, modular, schema-first — and the 3.0 roadmap is scoped.
+Downstream tools (validators, PyBIDS, BIDS Apps) adopt the new schema without loss, and the active BEP backlog (BEP028, BEP032, BEP036, BEP037, BEP044/047) is landed so BIDS covers phenotypes, animal / extracellular electrophysiology, NIBS, stimuli and A/V.
 
 Milestones & Deliverables:
-1.1 Merge and tag BIDS 2.0 (`bids-standard/bids-specification`
-    `bids-2-devel` branch → main). [Year 1]
+1.1 Merge and tag BIDS 2.0 (`bids-standard/bids-specification` `bids-2-devel` branch → main). [Year 1]
 1.2 Publish BIDS 3.0 roadmap document with community sign-off. [Year 2]
-1.3 Land BEPs from the active queue (subset to be selected with
-    Steering Group at kickoff). [Years 1–2]
-1.4 Harden the machine-readable schema as a Data Structure Standard
-    and cut a schema 2.x release. [Year 1]
+1.3 Land BEPs from the active queue (subset to be selected with Steering Group at kickoff). [Years 1–2]
+1.4 Harden the machine-readable schema as a Data Structure Standard and cut a schema 2.x release. [Year 1]
 
 Success indicators:
-- BIDS 2.0 tagged and adopted by ≥3 downstream tools (validators,
-  PyBIDS, ≥1 major BIDS App) [Year 2].
+- BIDS 2.0 tagged and adopted by ≥3 downstream tools (validators, PyBIDS, ≥1 major BIDS App) [Year 2].
 - ≥3 BEPs from the active queue merged. [Year 2]
 - Schema 2.x+ release consumed by both validators and PyBIDS. [Year 2]
 
@@ -517,112 +461,69 @@ Success indicators:
 
 **Goal 2: BIDS validators — convergence, machine-consumable records, and cross-standard checks**
 
-Outcome: Validation is a first-class, agent-callable operation: the
-Deno and Python validators consume the same schema and produce
-identical, machine-consumable verdicts; cross-standard validators
-(HED, NWB, Zarr / OME-Zarr) are integrated so a "deep-valid" verdict
-means valid across formats and sibling standards.
+Outcome: Validation is a first-class, agent-callable operation: the Deno and Python validators consume the same schema and produce identical, machine-consumable verdicts; cross-standard validators (HED, NWB, Zarr / OME-Zarr) are integrated so a "deep-valid" verdict means valid across formats and sibling standards.
 
 Milestones & Deliverables:
-2.1 Converge Deno and Python validators on the shared schema —
-    identical CLI behavior and machine-readable output. [Year 1]
-2.2 Publish the machine-consumable validation-record schema
-    (JSON Schema + example datasets). [Year 1]
-2.3 Integrate HED, NWB (via nwb-inspector), and Zarr / OME-Zarr
-    cross-standard validation as pluggable checks. [Year 2]
-2.4 Ship validators in Deno / npm / PyPI / conda-forge with
-    reproducible container images. [Year 2]
+2.1 Converge Deno and Python validators on the shared schema — identical CLI behavior and machine-readable output. [Year 1]
+2.2 Publish the machine-consumable validation-record schema (JSON Schema + example datasets). [Year 1]
+2.3 Integrate HED, NWB (via nwb-inspector), and Zarr / OME-Zarr cross-standard validation as pluggable checks. [Year 2]
+2.4 Ship validators in Deno / npm / PyPI / conda-forge with reproducible container images. [Year 2]
 
 Success indicators:
-- Identical machine-readable output across Deno and Python
-  validators on the reference test corpus [Year 2].
-- ≥2 sibling standards (HED, NWB, OME-Zarr) integrated as
-  pluggable checks [Year 2].
-- Adoption by OpenNeuro deposit and ≥2 downstream pipelines
-  (fMRIPrep, MRIQC, or QSIPrep) [Year 2].
+- Identical machine-readable output across Deno and Python validators on the reference test corpus [Year 2].
+- ≥2 sibling standards (HED, NWB, OME-Zarr) integrated as pluggable checks [Year 2].
+- Adoption by OpenNeuro deposit and ≥2 downstream pipelines (fMRIPrep, MRIQC, or QSIPrep) [Year 2].
 
 ---
 
 **Goal 3: Python + CLI utilities with MCP interfaces and agent skills**
 
-Outcome: LLM agents, CLI users, and Python users read, write, and
-reason about BIDS datasets through a stable, maintained interface —
-via pybids for structured queries and bids-utils for the smaller,
-agent- and CLI-friendly read/write/inspect verbs, plus MCP servers
-and reusable agent skills.
+Outcome: LLM agents, CLI users, and Python users read, write, and reason about BIDS datasets through a stable, maintained interface — via pybids for structured queries and bids-utils for the smaller, agent- and CLI-friendly read/write/inspect verbs, plus MCP servers and reusable agent skills.
 
 Milestones & Deliverables:
-3.1 Consolidate scattered helpers into `bids-standard/bids-utils`
-    (release 0.1). [Year 1]
-3.2 Publish MCP servers wrapping the BIDS schema, validation, and
-    bids-utils; publish agent skills (extending the current
-    K-Dense-AI/scientific-agent-skills prototypes). [Year 1]
-3.3 Maintain and modernize PyBIDS; align its Layout / query API
-    with the schema 2.x release. [Years 1–2]
+3.1 Consolidate scattered helpers into `bids-standard/bids-utils` (release 0.1). [Year 1]
+3.2 Publish MCP servers wrapping the BIDS schema, validation, and bids-utils; publish agent skills (extending the current K-Dense-AI/scientific-agent-skills prototypes). [Year 1]
+3.3 Maintain and modernize PyBIDS; align its Layout / query API with the schema 2.x release. [Years 1–2]
 3.4 Ship stable, versioned Python and CLI API. [Year 2]
 
 Success indicators:
-- ≥3 downstream tools (fMRIPrep, brainlife, Nipoppy, KOSMOS-class
-  agents) call the new MCP servers or agent skills [Year 2].
+- ≥3 downstream tools (fMRIPrep, brainlife, Nipoppy, KOSMOS-class agents) call the new MCP servers or agent skills [Year 2].
 - bids-utils 1.0 release with public API stability policy. [Year 2]
-- PyBIDS release supporting BIDS 2.0 schema and adopted by ≥3
-  downstream libraries [Year 2].
+- PyBIDS release supporting BIDS 2.0 schema and adopted by ≥3 downstream libraries [Year 2].
 
 ---
 
 **Goal 4: BIDS-Apps 2.0+ — modernized execution contract, GPU-ready**
 
-Outcome: Analysis tools wrap as Boutiques / Niwrap descriptors and
-run as BIDS Apps 2.0 — including GPU / accelerator containers — so
-AI agents can compose and run pipelines reliably.
+Outcome: Analysis tools wrap as Boutiques / Niwrap descriptors and run as BIDS Apps 2.0 — including GPU / accelerator containers — so AI agents can compose and run pipelines reliably.
 
 Milestones & Deliverables:
-4.1 Update the BIDS-Apps execution spec (BEP027) to align with the
-    latest Boutiques + Styx developments. [Year 1]
-4.2 Publish reference implementation demonstrating a GPU /
-    accelerator container running as a BIDS App 2.0 (using an
-    Allen Institute / HuggingFace-model pipeline). [Year 2]
-4.3 Update BIDS-Apps registry (bids-apps.neuroimaging.io) to
-    surface BIDS-Apps 2.0 metadata. [Year 2]
-4.4 Integrate execution-spec self-description into ///repronim/containers
-    Singularity collection for reproducibility. [Year 2]
+4.1 Update the BIDS-Apps execution spec (BEP027) to align with the latest Boutiques + Styx developments. [Year 1]
+4.2 Publish reference implementation demonstrating a GPU / accelerator container running as a BIDS App 2.0 (using an Allen Institute / HuggingFace-model pipeline). [Year 2]
+4.3 Update BIDS-Apps registry (bids-apps.neuroimaging.io) to surface BIDS-Apps 2.0 metadata. [Year 2]
+4.4 Integrate execution-spec self-description into ///repronim/containers Singularity collection for reproducibility. [Year 2]
 
 Success indicators:
 - Execution-spec 2.x tagged and adopted by ≥3 BIDS Apps [Year 2].
 - ≥1 GPU / accelerator container demo in the registry [Year 2].
-- Niwrap / Styx / Boutiques descriptors published for ≥5 legacy
-  tools (AFNI / FreeSurfer subset) [Year 2].
+- Niwrap / Styx / Boutiques descriptors published for ≥5 legacy tools (AFNI / FreeSurfer subset) [Year 2].
 
 ---
 
 **Goal 5: BIDS Users Assistant (OSA) + study-state observability layer**
 
-Outcome: Human reviewers and AI agents share a common,
-human-readable, agent-callable view of a BIDS study — its
-provenance, derivatives, and outstanding QC — via OSA and a
-formalized study-state observability schema.
+Outcome: Human reviewers and AI agents share a common, human-readable, agent-callable view of a BIDS study — its provenance, derivatives, and outstanding QC — via OSA and a formalized study-state observability schema.
 
 Milestones & Deliverables:
-5.1 Extend OSA with deep BIDS awareness by wiring the schema,
-    validators, bids-utils MCP servers, and BIDS-Apps 2.0
-    execution. [Year 1]
-5.2 Publish study-state observability schema (JSON Schema +
-    example dashboards) covering provenance, derivatives, and QC
-    state. [Year 1]
-5.3 Reference dashboard integration with brainlife.io and Nipoppy
-    consuming the observability schema. [Year 2]
-5.4 User study of OSA-BIDS on real study datasets (with informed
-    consent; no new data collection) to measure assistance quality
-    and agent-action reviewability. [Year 2]
+5.1 Extend OSA with deep BIDS awareness by wiring the schema, validators, bids-utils MCP servers, and BIDS-Apps 2.0 execution. [Year 1]
+5.2 Publish study-state observability schema (JSON Schema + example dashboards) covering provenance, derivatives, and QC state. [Year 1]
+5.3 Reference dashboard integration with brainlife.io and Nipoppy consuming the observability schema. [Year 2]
+5.4 User study of OSA-BIDS on real study datasets (with informed consent; no new data collection) to measure assistance quality and agent-action reviewability. [Year 2]
 
 Success indicators:
-- OSA-BIDS deployed at https://demo.osc.earth/bids with published
-  changelog covering the funded work [Year 2].
-- Study-state observability schema 1.0 released and consumed by
-  ≥2 dashboards (brainlife, Nipoppy) [Year 2].
-- User-study report published with quantitative agent-action
-  reviewability metrics [Year 2].
-
+- OSA-BIDS deployed at https://demo.osc.earth/bids with published changelog covering the funded work [Year 2].
+- Study-state observability schema 1.0 released and consumed by ≥2 dashboards (brainlife, Nipoppy) [Year 2].
+- User-study report published with quantitative agent-action reviewability metrics [Year 2].
 
 ### Optional Upload — PI/Co-PI biographies, references, figures (≤4 pages)
 
