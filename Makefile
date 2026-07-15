@@ -62,7 +62,6 @@ DOCFLOW ?= docflow
 
 %.docx_: %.md
 	$(DOCFLOW) convert md-to-docx $< -o $@
-	echo Run follow to rename if you like: mv "$@_" "$@"
 
 
 DARTMOUTH_DOCX := $(wildcard dartmouth/*.docx)
