@@ -578,7 +578,7 @@ Key personnel Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024)
 Co-PI Pestilli is PI / Co-I on major NIH- and Wellcome-funded initiatives that develop and operationalize interoperable neuroinformatics infrastructure, data standards, and governance frameworks. These include the BRAIN CONNECTS Axonal Projectome Exchange (APEX; 2024–2029, NIH, $9,485,000), the Center for Mesoscale Connectomics (2023–2028, NIH BRAIN Initiative, $16,684,090), the international brain and mental-health data governance framework project (2023–2027, Wellcome Trust, $2,643,470), and the development of ezBIDS, NiiVue, and dcm2niix for cloud-based data integration and visualization (2023–2026, NIH, $2,039,629). Together, these projects support the adoption and extension of BIDS-compatible workflows, multimodal data exchange, cloud-based analysis and visualization, and responsible international data sharing.
 Co-PI Shirazi maintains OSA and HED-related work at UCSD's Swartz Center.
 Co-PI Dichter leads CatalystNeuro's NWB and NeuroConv work supported by the NIH BRAIN Initiative.
-In-kind: existing maintainer time from the BIDS Steering Group and Maintainers; Amazon Open Dataset program hosts TBs of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
+In-kind: existing maintainer time from the BIDS Steering Group and Maintainers; Amazon Open Dataset program hosts over 1 PB of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
 
 TODO: verify exact grant numbers / durations / totals with each Co-PI before submission. Ensure ≤1,500 chars.
 
