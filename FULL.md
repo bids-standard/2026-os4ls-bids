@@ -563,9 +563,6 @@ List active and recently completed grants (calendar years 2025 and
 directly or indirectly support this work — with duration, total USD
 (for grants), and funding source.
 
-TEXT (draft — collect from each Co-PI at kickoff and tighten to ≤1,500
-chars before paste):
-
 https://bids.neuroimaging.io/collaboration/acknowledgments.html page lists various grants which supported some parts of work on BIDS currently or in the past.
 
 PI Halchenko is Co-I/Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), OpenNeuro (see below), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use BIDS and contribute to it.
@@ -599,12 +596,6 @@ above).
   backticks before pasting into the Fillout form.
 
 - **Length-cap overages** (must be fixed before final paste):
-  - **Recent Financial Support**: 1,769 / 1,500 (269 over). Candidate
-    cuts: drop the opening acknowledgments-page sentence (~135 chars);
-    trim closing "which relate to development and use of BIDS spec and
-    tools" and "which rely on BIDS" (~80 chars); compress Amazon Open
-    Dataset in-kind line to "Amazon Open Dataset hosts >1 PB
-    OpenNeuro+DANDI BIDS data (~$700k/yr in-kind)."
   - **Landscape Analysis**: 1,628 / 1,500 (128 over). Candidate to drop:
     "the overall BIDS project is an integration project which improves
     reuse and interoperability while avoiding re-implementation. This
