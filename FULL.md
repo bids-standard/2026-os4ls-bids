@@ -345,7 +345,7 @@ We will advance five coordinated components, whose maintainers have collectively
 
 Together, these five close the loop for AI-enabled, large-scale data analysis by formalizing the data and application contracts agentic workflows and training pipelines need.
 
-The work is explicitly modular — each component delivers standalone value; advance in any one lifts every downstream tool.
+The work is explicitly modular with clear separation of functionality and responsibilities to overall provide a coherent ecosystem of the standard and supporting tools and interfaces.
 Outputs: enhanced spec, validator, new MCP-server, BIDS-Apps 2.0 contract, observability schema releases — coordinated by PM and via community hackathons.
 Scope guard: no new datasets (beyond examples), no new ML models, no archive/repository infrastructure — only the standard, the tools, and the AI-readiness layer the rest of the life sciences can adopt.
 
@@ -376,10 +376,12 @@ The same investment that makes BIDS easier for humans makes it more usable for A
 <!-- Seeded verbatim from LOI.md — might need tune ups -->
 
 BIDS is the most widely adopted standard in neuroimaging, expanding into adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
-BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. Two co-PIs (Poline, Esteban) led CZI EOSS-funded BIDS-adjacent projects (Nilearn, NiPreps).
+BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. A co-PI (Poline) led Nilearn's CZI EOSS-funded BIDS-adjacent project.
 
 No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.
-Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; this proposal invests in interoperability, not re-implementation. BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC outputs into BIDS.
+Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; the overall BIDS project is an integration project which improves reuse and interoperability while avoiding re-implementation.
+This proposal will facilitate internal consistency of the standard and improve interfaces to tools and AI. 
+BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC outputs into BIDS.
 
 AI use. BIDS is the de-facto input contract for AI: ML training pipelines and AI benchmarks (ABCD, UK Biobank, EEG2025 (NeurIPS, 1,100 teams)), AI "scientist" frameworks (KOSMOS, K-Dense-AI, Meta NeuroAI), and AI assistants like OSA benefit from BIDS to make data legible.
 Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency — gaps this proposal closes.
@@ -421,12 +423,12 @@ Community activities include two annual BIDS hackathons / sprints organized by t
 All code is developed in the open under OSI-Approved licenses (e.g. CC-BY-4.0 (specification text) / MIT / Apache-2.0 (tooling)), with releases published on GitHub and PyPI/conda-forge/npm as applicable.
 
 Scalability and modular composition:
-BIDS already operates at scale — OpenNeuro hosts 1,500+ public datasets brainlife.io stores dozens of PB multimodal datasets from BRAIN CONNECTS and DANDI stores multi-TB BIDS microscopy dataset — because the standard's per-subject and per-session structure is the natural parallelization boundary: pipelines can run near-embarrassingly-parallel per subject/session without per-tool sharding logic.
+BIDS already operates at scale — OpenNeuro hosts 1,500+ public datasets brainlife.io stores dozens of PB multimodal datasets from NIH BRAIN CONNECTS and DANDI stores multi-TB BIDS microscopy datasets. Its standardized subject/session hierarchy provides a natural unit of parallelization, enabling human workflows, HPC pipelines, and AI agents to scale without custom sharding logic.
 Composition works within a dataset (nested `sourcedata/`, raw, `derivatives/`) and across datasets via BIDS-Study, OpenNeuroStudies, and the Nipoppy study network, so summarization bubbles up cleanly through subject → study → cross-study → dashboard layers (brainlife, Nipoppy), thus also fascilitating adherence to Self-containment and Modularity principles of https://stamped-principles.org (developed by the PIs group).
 Goal 2's schema-driven validator convergence keeps validation cheap enough to run inside agent loops; Goal 4's execution-spec + Boutiques / Niwrap / Styx path preserves this modularity when wrapping GPU / accelerator containers as BIDS Apps 2.0, so hardware-accelerated workloads inherit the same composition semantics as CPU pipelines.
 
 Sustainability:
-Post-grant maintenance continues through the PI's and Co-PIs' involvement via the existing BIDS governance and maintenance structure and adjacent federally-funded work (DANDI, OpenNeuro, EMBER, nipreps, brainlife, Nipoppy), all benefiting from the work done under this funding.
+Post-grant maintenance continues through the PI's and Co-PIs' involvement via the existing BIDS governance and maintenance structure and adjacent federally-funded work (DANDI, OpenNeuro, EMBER, nipreps, brainlife.io, Nipoppy), all benefiting from the work done under this funding.
 
 TODO before submission:
 - Trim to under 750 words
@@ -572,7 +574,7 @@ https://bids.neuroimaging.io/collaboration/acknowledgments.html page lists vario
 PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), OpenNeuro (see details in Poldrack), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim center work (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use BIDS and contribute necessary developments to it.
 Co-PI Poldrack directs OpenNeuro (2018-2028, NIH BRAIN Initiative 5R24MH117179, $5,968,723 for 2023-2027).
 Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024). (TODO: remove as outdated?)
-Co-PI Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024). (TODO: remove as outdated?)
+Key personnel Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024). (TODO: remove as outdated?)
 Co-PI Pestilli is PI / Co-I on major NIH- and Wellcome-funded initiatives that develop and operationalize interoperable neuroinformatics infrastructure, data standards, and governance frameworks. These include the BRAIN CONNECTS Axonal Projectome Exchange (APEX; 2024–2029, NIH, $9,485,000), the Center for Mesoscale Connectomics (2023–2028, NIH BRAIN Initiative, $16,684,090), the international brain and mental-health data governance framework project (2023–2027, Wellcome Trust, $2,643,470), and the development of ezBIDS, NiiVue, and dcm2niix for cloud-based data integration and visualization (2023–2026, NIH, $2,039,629). Together, these projects support the adoption and extension of BIDS-compatible workflows, multimodal data exchange, cloud-based analysis and visualization, and responsible international data sharing.
 Co-PI Shirazi maintains OSA and HED-related work at UCSD's Swartz Center.
 Co-PI Dichter leads CatalystNeuro's NWB and NeuroConv work supported by the NIH BRAIN Initiative.
