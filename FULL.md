@@ -325,7 +325,11 @@ Since 2016, BIDS has grown from MRI-only to 10+ biological measurement and stimu
 Dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep) consume it; thousands of papers cite it.
 Active BIDS Extension Proposals (BEPs) — for provenance, phenotypes, non-invasive brain stimulation, stimuli & A/V, animal / extracellular electrophysiology — and *omics-archive dialogues pull BIDS into adjacent domains.
 
-This proposal supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI.
+BIDS is a very open, wide ecosystem project spanning far more than the five software projects explicitly listed here: ~30 repositories under github.com/bids-standard plus adjacent tooling and data archives (OpenNeuro, DANDI) are anchored on the BIDS specification.
+Years of practice have established a community-driven model where component authors lead their work while a public Steering Group and Maintainers coordinate under established (but evolving) governance principles (https://bids.neuroimaging.io/collaboration/governance.html).
+This explains the higher-than-typical Co-PI count: each Co-PI is an existing lead or maintainer for one or more components, jointly responsible for coordinated delivery.
+
+Altogether, this proposal supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI.
 We advance five coordinated components (fully detailed in the Work Plan section), whose maintainers have collectively committed:
 
 (1) BIDS specification & schema — release BIDS 2.0 and land the BEP backlog;
