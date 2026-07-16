@@ -7,15 +7,12 @@
 - Project start date: 2026-12-01
 - Project end date: 2028-11-30
 
-Structure of this document mirrors the Full Application Instructions
-(`docs/Full-Application-Instructions_-OS4LS.pdf`, June 2026). Each field
-below is annotated with its character/word limit as documented there.
+Structure of this document mirrors the Full Application Instructions (`docs/Full-Application-Instructions_-OS4LS.pdf`, June 2026).
+Each field below is annotated with its character/word limit as documented there.
 Fields pre-filled from the LOI are marked `[pre-filled from LOI [x]]`.
-Text intended for direct paste into the Fillout portal is kept
-plain (no markdown emphasis) so it renders identically in a plain
-textarea. Auxiliary strategy / internal-review material lives in
-`LOI-MISC.md`; short PI / Co-PI biosketches for the optional 4-page
-supporting-documentation PDF live under `subs/`.
+Text intended for direct paste into the Fillout portal is kept plain (no markdown emphasis) so it renders identically in a plain textarea.
+Some outstanding Work items are listed at the end of the document in "Working notes". It is preferable to have sentence-a-line formatting.
+Short PI / Co-PI biosketches for the optional 4-page supporting-documentation PDF live under `subs/`.
 
 ---
 
@@ -337,22 +334,21 @@ Dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep) consume it; thousands of papers c
 Active BIDS Extension Proposals (BEPs) — for provenance, phenotypes, non-invasive brain stimulation, stimuli & A/V, animal / extracellular electrophysiology — and *omics-archive dialogues pull BIDS into adjacent domains.
 
 This proposal supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI.
-We will advance five coordinated components, whose maintainers have collectively committed:
+We advance five coordinated components (fully detailed in the Work Plan section), whose maintainers have collectively committed:
 
-1. BIDS specification & schema — release BIDS 2.0 (more consistent, modular), scope the 3.0 roadmap, harden the machine-readable schema as a Data Structure Standard, and land the BEP backlog to broaden BIDS beyond neuro.
+(1) BIDS specification & schema — release BIDS 2.0 and land the BEP backlog;
 
-2. BIDS validators — community-driven convergence of implementations on the schema, machine-consumable records, and integration of cross-standard validators (HED, NWB, Zarr) — critical for trustworthy AI results.
+(2) validators — Deno/Python convergence with machine-consumable records and integrated cross-standard checks (HED, NWB, Zarr);
 
-3. Python + CLI utilities with MCP interfaces and skills — consolidate scattered, in-use helpers into a maintained, pybids-adjacent query/manipulation library, exposed via MCP servers and reusable agent skills so LLM agents can read, write, and reason about BIDS datasets.
+(3) Python + CLI utilities exposed via MCP servers and reusable agent skills;
 
-4. BIDS-Apps 2.0+ — on the mature BIDS-Apps registry and Boutiques, modernize the contract between BIDS data and analysis containers (via Niwrap and the BIDS-Apps 2.0 execution spec) so AI agents can compose and run pipelines reliably — including GPU/accelerator containers.
+(4) BIDS-Apps 2.0+ execution contract for reproducible pipelines including GPU / accelerator containers;
 
-5. BIDS Users Assistant — extend OSA with deep BIDS awareness, and formalize a study-state observability layer so dashboards and human reviewers can introspect AI agents' actions.
+(5) BIDS Users Assistant (OSA) with a study-state observability layer.
 
-Together, these five close the loop for AI-enabled, large-scale data analysis by formalizing the data and application contracts agentic workflows and training pipelines need.
+Together they close the loop for AI-enabled, large-scale data analysis by formalizing the data and application contracts that agentic workflows and training pipelines need.
 
-The work is explicitly modular with clear separation of functionality and responsibilities to overall provide a coherent ecosystem of the standard and supporting tools and interfaces.
-Outputs: enhanced spec, validator, new MCP-server, BIDS-Apps 2.0 contract, observability schema releases — coordinated by PM and via community hackathons.
+Outputs: enhanced spec, validators, MCP servers + agent skills, BIDS-Apps 2.0 contract, and OSA + observability releases — coordinated by the Project Manager and community hackathons.
 Scope guard: no new datasets (beyond examples), no new ML models, no archive/repository infrastructure — only the standard, the tools, and the AI-readiness layer the rest of the life sciences can adopt.
 
 ### Expected Value [pre-filled from LOI [x]] — max 1,500 characters
@@ -414,11 +410,11 @@ TEXT (draft narrative):
 BIDS is a widely used open-source specification and tooling ecosystem for structured, machine- and human-legible organization of life-science data, maintained by a international and multi-institution community of contributors and a public Steering and Maintainenance Groups following established Governance procedures.
 This request supports a 24-month plan to integrate the BIDS ecosystem at the core of computational scientists' preferred harnesses, organized around the five coordinated goals below.
 
-Goal 1 corresponds to addressing issues (primarily within bids-specification itself but also in related bids-examples, bids-website, pybids, and so on) assigned to BIDS 2.0 milestones tracked at https://github.com/orgs/bids-standard/projects/10;
-Goal 2 continues the validator-convergence work already underway between the Deno and Python implementations; 
-Goal 3 packages helpers that have accumulated across pybids, bids2nda, and DataLad into a maintained pybids-adjacent library plus MCP servers and reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills);
-Goal 4 continues the BEP027/BEP043 execution-spec work in coordination with Boutiques / Niwrap / Styx and the BIDS-Apps registry;
-and Goal 5 continues OSA's BIDS extension and formalizes a study-state observability layer used today in an ad-hoc form by brainlife.io and Nipoppy dashboards.
+Goal 1 delivers the BIDS 2.0 release (more consistent, modular, schema-first) with a scoped 3.0 roadmap and hardens the machine-readable schema as a Data Structure Standard, landing the active BEP backlog to broaden BIDS beyond neuroimaging — work spans bids-specification, bids-examples, bids-website, pybids, etc., tracked at https://github.com/orgs/bids-standard/projects/10.
+Goal 2 continues the community-driven convergence of the Deno and Python validators on the shared schema, adds machine-consumable validation records, and integrates cross-standard checks (HED, NWB, Zarr) so that a "deep-valid" verdict means valid across formats and sibling standards — critical for trustworthy AI results.
+Goal 3 consolidates scattered helpers (across pybids, bids2nda, DataLad) into a maintained pybids-adjacent bids-utils library, exposes both via MCP servers, and packages reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills) so LLM agents can read, write, and reason about BIDS datasets through a stable interface.
+Goal 4 modernizes the BIDS-Apps execution contract (BEP027/BEP043) in coordination with the Boutiques / Niwrap / Styx descriptor stack and the BIDS-Apps registry — including GPU/accelerator containers — so AI agents can compose and run pipelines reliably.
+Goal 5 extends OSA with deep BIDS awareness and formalizes a study-state observability layer used today in ad-hoc form by brainlife.io and Nipoppy dashboards, so human reviewers and AI agents share a common view of a study's provenance, derivatives, and outstanding QC.
 
 Overall organization of work for Goals 2-5 will be organized and prioritized within projects like https://github.com/orgs/bids-standard/projects/24.
 Beyond the requested funds, each institution contributes existing personnel time (uncompensated by this grant) where people already work on BIDS in related projects but not directly toward the goals established in this grant proposal.
@@ -559,7 +555,7 @@ Status: Will be matched on what near $1mil we have in official budget estimates 
 
 ### Budget Description (uploaded as PDF / XLSX)
 
-**External file(s): [dartmouth/Budget_Narrative_v2.md](dartmouth/Budget_Narrative_v2.md)** (converted from/to .docx}
+**External file(s): [dartmouth/Budget_Narrative_v3.md](dartmouth/Budget_Narrative_v3.md)** (converted from/to .docx)
 
 Stage: submitted to Dartmouth OSP for review.
 
@@ -617,5 +613,64 @@ above).
     (need verified whole numbers before submit).
   - Recent Financial Support — draft only; verify with each Co-PI.
   - Budget subtotal $540 over cap — reconcile at Dartmouth line.
-  - EIN / signing official / financial contact — obtain from
-    Dartmouth OSP;
+  - EIN / signing official / financial contact — obtained from
+    Dartmouth OSP (see Section 2).
+
+- **Length-cap overages** (must be fixed before final paste):
+  - **Recent Financial Support**: 3,064 / 1,500 chars (2× cap). Preserve
+    every grant ID + dollar amount + date already collected from Co-PIs;
+    drop qualitative connective tissue and inline `(TODO: remove as
+    outdated?)` notes to compress by ~50%.
+  - **Landscape Analysis**: 1,628 / 1,500 (128 over). Candidate to drop:
+    "the overall BIDS project is an integration project which improves
+    reuse and interoperability while avoiding re-implementation. This
+    proposal will facilitate internal consistency of the standard and
+    improve interfaces to tools and AI." — restates the prior sentence.
+  - **Expected Value**: 1,514 / 1,500 (14 over). One-word tighten.
+
+- **Section 3 — impact metrics** are all `TBD`. Session 3 (cue 305-314)
+  explicitly permits note-field justification when direct tracking is
+  impossible ("we don't have the ability to track direct monthly users
+  because of the nature of the project. That's fine"). Add per-project:
+  - Project 1 (spec): "Not directly trackable — spec is a text document;
+    downstream adoption measured via BIDS-Apps registry (≈50 apps) and
+    downstream tooling."
+  - Project 4 (BIDS-Apps + exec spec): "Tracked via BIDS-Apps registry
+    (bids-apps.neuroimaging.io); ≈50 apps as of 2026."
+  - Project 5 (OSA): "Pre-release; usage tracked via demo.osc.earth/bids
+    web analytics; no PyPI/npm release yet."
+  - Projects 2 (validators) + 3 (PyBIDS): pull real PyPI + npm downloads
+    before submit.
+
+- **Section 3 — potential project-to-org upgrade** (per Session 3 cue
+  107-117; Dario: "definitely encourages the GitHub organization as a
+  whole is involved in the proposal, especially for a track two
+  proposal"). The `bids-standard` org URL is currently referenced only
+  inside Project 1's description text. Consider whether one of the five
+  Project rows should be replaced by an org-level "project" (e.g.
+  `github.com/bids-standard` covers spec + validator + pybids + schema
+  + execution-spec + bids-2-devel + examples + website + more).
+  Trade-off: less concrete per-repo milestones vs stronger ecosystem
+  signal for a Track-2 review.
+
+- **Section 4 — ecosystem figure** for the Optional Upload PDF still
+  TODO. Session 3 (cue 68-75) confirms figures are welcome supporting
+  material.
+
+- **Section 5 — Amount Requested** — still pending final budget xlsx
+  numbers from Dartmouth OSP.
+
+- **Sign-off form** — Session 3 (cue 223-224) confirmed a blank PDF
+  placeholder is acceptable at upload time; the signed version can be
+  swapped in before final submission. Reduces schedule pressure on OSP
+  if timing is tight.
+
+- **Short Summary trims are echoed in the Work Plan narrative** — the
+  five-pillar deliverable enumeration was moved out of Short Summary
+  (per Session 3 cue 100-105) and the corresponding substance now
+  appears in the Work Plan narrative's per-Goal descriptions (Goal 1
+  release + roadmap + BEP backlog; Goal 2 validator convergence +
+  cross-standard checks; Goal 3 bids-utils + MCP + agent skills; Goal 4
+  BIDS-Apps 2.0 execution contract + GPU containers; Goal 5 OSA +
+  observability layer). Full detail also lives in the per-Goal
+  Outcome/Milestones/Success-indicators blocks below.
