@@ -41,7 +41,7 @@ Co-PIs (jointly responsible for leading the work):
 | Franco Pestilli | pestilli@utexas.edu | The University of Texas at Austin | USA | Co-PI (Steering Group; connectomics) |
 | Kimberly Ray | kimray@utexas.edu | The University of Texas at Austin | USA | Co-PI (BIDS Maintainer; Project Manager) |
 | Jean-Baptiste Poline | jean-baptiste.poline@mcgill.ca | McGill University | Canada | Co-PI (Steering Group; Boutiques/Nipoppy) |
-| Alejandro de la Vega | aleph4@gmail.com | The University of Texas at Austin | USA | Co-PI (PyBIDS, fitlins) |
+| Alejandro de la Vega | delavega@utexas.edu | The University of Texas at Austin | USA | Co-PI (PyBIDS, fitlins) |
 | Seyed Yahya Shirazi | syshirazi@ucsd.edu | University of California, San Diego | USA | Co-PI (BIDS Maintainer; OSA; HED; BEP044) |
 | Ariel Rokem | ariel.rokem@camh.ca | Centre for Addiction and Mental Health (CAMH) | Canada | Co-PI (Emeritus Steering; dMRI/TRX) |
 | Ben Dichter | ben.dichter@catalystneuro.com | CatalystNeuro | USA | Co-PI (BEP032, BEP047; NWB<->BIDS) |
@@ -218,9 +218,9 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 
   PyBIDS is the reference Python library for querying and manipulating BIDS
   datasets — used by fMRIPrep, MRIQC, QSIPrep, fitlins, and most downstream
-  BIDS Apps. This proposal maintains PyBIDS and consolidates scattered
-  ecosystem helpers into a maintained, pybids-adjacent bids-utils (under the
-  same organization) library exposed via MCP servers and reusable agent
+  BIDS Apps. This proposal modernizes PyBIDS for BIDS 2.0 and consolidates scattered
+  ecosystem helpers into bids-utils, a comanion tool under the
+  same organization. Both libraries will be exposed via MCP servers and reusable agent
   skills, so LLM agents can read, write, and reason about BIDS datasets through
   a stable interface.
 

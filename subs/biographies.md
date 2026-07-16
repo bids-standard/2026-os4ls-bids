@@ -91,9 +91,9 @@ He served as PI on the CZI EOSS Cycle 5 award "Improving Standard Practice for N
 
 **Role:** Co-PI (UT Austin); PyBIDS refactor for BIDS 2.0+; PyBIDS-as-MCP server and agent Skills; fitlins / BIDS StatsModels.
 **Position:** Research Assistant Professor, Department of Psychology, The University of Texas at Austin.
-**IDs:** aleph4@gmail.com · [ORCID 0000-0001-9062-3778](https://orcid.org/0000-0001-9062-3778) · [GitHub adelavega](https://github.com/adelavega) · [adelavega.github.io](https://adelavega.github.io/)
+**IDs:** delavega@utexas.edu · [ORCID 0000-0001-9062-3778](https://orcid.org/0000-0001-9062-3778) · [GitHub adelavega](https://github.com/adelavega) · [adelavega.github.io](https://adelavega.github.io/)
 
-Dr. de la Vega leads Neuroscout [@de_la_vega_neuroscout_2022], a BIDS-native platform for generalizable and reproducible fMRI meta-analysis, and is a core author and maintainer of PyBIDS [@yarkoni_pybids_2019] — the reference Python library for querying and manipulating BIDS datasets that underlies fMRIPrep [@esteban_fmriprep_2019], MRIQC [@esteban_mriqc_2017], QSIPrep, fitlins, and most BIDS-Apps.
+Dr. de la Vega leads Neurosynth Compose [@de_la_vega_neurosynth_2026], a free and open platform for AI-assisted neuroimaging meta-analysis, and is a core author and maintainer of PyBIDS [@yarkoni_pybids_2019] — the reference Python library for querying and manipulating BIDS datasets that underlies fMRIPrep [@esteban_fmriprep_2019], MRIQC [@esteban_mriqc_2017], QSIPrep, fitlins, and most BIDS-Apps.
 Under this proposal he will lead the PyBIDS refactor for BIDS 2.0+ — making it fully BIDS-Schema compliant and self-updating as the specification develops — integrate PyBIDS with bids-utils for core dataset operations, and expose PyBIDS as an MCP server with reusable agent Skills for robust and predictable agentic access to BIDS datasets.
 He also contributes to fitlins / BIDS StatsModels and to the BIDS specification and community roadmap [@poldrack_past_2023].
 
