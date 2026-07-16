@@ -177,7 +177,7 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Community / Q&A forum: https://neurostars.org/tag/bids
 - Metrics (​Software Project usage and impact metrics​ : List whole numbers and add optional​
 ​comments (max 200 characters), as needed.​)
-  - Rough: 100+ PBs of data in 1,000+ datasets, created by 1,000+ of "creators" and used by 10,000+ users. https://bids.neuroimaging.io/impact and https://bids.neuroimaging.io/datasets collect and present various stats across various dimensions and locations. Original BIDS paper (Gorgolewski 2016) alone cited  2,308 times (Google Scholar).
+  - 1+ PBs of data in 1k+ datasets, created by 1k+ of "creators", used by 10k+ users. https://bids.neuroimaging.io/impact and https://bids.neuroimaging.io/datasets . (Gorgolewski 2016) cited 2k+ times.
 
 ---
 
@@ -205,10 +205,8 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Package manager entry: npm `bids-validator`
   (legacy); deno.land / JSR distribution for current TS validator; PyPI: `bids-validator-deno`
 - Community / Q&A forum: https://neurostars.org/tag/bids-validator
-- Metrics (TODO — verified whole numbers): TODO https://github.com/bids-standard/bids-validator/issues/431
-  - Monthly users estimate: TBD
-  - Dependent projects/packages: TBD
-  - Scholarly citations estimate: TBD
+- Metrics (verified 2026-07-15 by C. Markiewicz; https://github.com/bids-standard/bids-validator/issues/431):
+  No telemetry by design; ~46k/month users from downloads, ~700 clones/month, ~1k runs of validator/mo on OpenNeuro.org; invoked by dandi-cli on each upload/validation of a BIDS DANDI package.
 
 ---
 
@@ -233,13 +231,11 @@ Monthly users, Dependent projects/packages, Scholarly citations.
   https://doi.org/10.21105/joss.01294
 - Code of Conduct: https://github.com/bids-standard/.github/blob/main/CODE_OF_CONDUCT.md
 - End-user documentation: https://bids-standard.github.io/pybids/
-- Contributor / developer guidelines: https://github.com/bids-standard/.github/blob/main/CONTRIBUTING.md
+- Contributor / developer guidelines: https://github.com/bids-standard/pybids/blob/main/CONTRIBUTING.md
 - Package manager entry: PyPI `pybids`; conda-forge `pybids`
 - Community / Q&A forum: https://neurostars.org/tag/pybids
-- Metrics (TODO):
-  - Monthly users estimate: TBD (PyPI downloads/month via pypistats)
-  - Dependent projects/packages: TBD (libraries.io / pypistats reverse deps)
-  - Scholarly citations estimate: (Yarkoni 2019) cited by 74 (Google Scholar)
+- Metrics:
+  - No telemetry; 125k/mo downloads (PyPI+conda-forge); 570 dependent repositories, 17 dependent PyPI packages; 70+ citations of (Yarkoni 2019) PyBIDS paper
 
 ---
 
@@ -254,30 +250,26 @@ Monthly users, Dependent projects/packages, Scholarly citations.
   https://bids-apps.neuroimaging.io/)
 - Short description (max 500 chars): TEXT
 
-  BIDS Apps are containerized analysis tools that consume BIDS input
-  and emit BIDS derivatives; the registry lists ≈50+ apps
-  (fMRIPrep, MRIQC, QSIPrep, etc.). This proposal modernizes the
+  Containerized analysis tools that consume BIDS input;
+  the registry lists 50+ apps (fMRIPrep, MRIQC, etc.). This proposal modernizes the
   contract between BIDS data and analysis containers via the
-  execution-spec (BEP027/BEP043) and the Boutiques / Niwrap / Styx
+  execution-spec (BEP027/BEP043) and the Boutiques/Niwrap/Styx
   descriptor stack — so agents can compose and run pipelines
-  reliably, including GPU / accelerator containers (Allen Institute,
+  reliably, including GPU/accelerator containers (Allen Institute,
   HuggingFace-model workloads).
 
-- Software license: MIT / Apache-2.0 (across the stack)
+- Software license: CC Attribution 4.0 International; Tools & Apps - varying OSI-compliant
 - Main programming language: Python (Boutiques, Niwrap, Styx); shell (container recipes)
 - Canonical citation: Gorgolewski KJ, et al. (2017). "BIDS apps:
   Improving ease of use, accessibility, and reproducibility of
   neuroimaging data analysis methods." PLOS Computational Biology
   13(3): e1005209. https://doi.org/10.1371/journal.pcbi.1005209
-- Code of Conduct: per project (bids-standard org / boutiques org / childmindresearch org)
+- Code of Conduct: per project, e.g. https://github.com/bids-standard/.github/blob/main/CODE_OF_CONDUCT.md
 - End-user documentation: https://bids-apps.neuroimaging.io/
 - Contributor / developer guidelines: per project (see repos)
 - Package manager entry: PyPI `boutiques`, `niwrap`, `styx` (as applicable)
 - Community / Q&A forum: https://neurostars.org/tag/bids-apps
-- Metrics (TODO):
-  - Monthly users estimate: TBD
-  - Dependent projects/packages: TBD
-  - Scholarly citations estimate: TBD
+- Metrics (TODO): No telemetry in invocations, 50+ tools, thousands of produced derived datasets, varying use across BIDS-apps. BIDS-apps paper (Gorgolewski, 2017) cited 400+ times (Scholar).
 
 ---
 
