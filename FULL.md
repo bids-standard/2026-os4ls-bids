@@ -68,11 +68,15 @@ Potentially list as Key but likely not:
 | Jason Kai | (via Child Mind Institute) | Child Mind Institute | Niwrap/Styx |
 | Kay Robbins | (via UTSA, emeritus) | UT San Antonio | HED (unpaid contributor) |
 
-Note: additional McGill personnel (Julia, Rémi, Michelle/Nikhil, Christine)
-and Stanford’s Jeanette Mumford (fitlins) are indicated in the
+Note: additional personnel supported under the confirmed subawards —
+e.g., at McGill (Julia, Rémi, Michelle/Nikhil, Christine)
+and Stanford (Jeanette Mumford, fitlins) — are indicated in the
 sub-award planning worksheet
-(`gdrive/2026-os4ls-bids_subawards_and_consultants.tsv`) and may be
-added here while subaward paperwork is being finalized.
+(`gdrive/2026-os4ls-bids_subawards_and_consultants.tsv`) and will be
+added here as the subaward paperwork is finalized. Dartmouth OSP has
+confirmed prior experience issuing subawards to McGill, so the McGill
+subaward is not expected to introduce international-collaboration
+risk.
 
 ---
 
@@ -102,7 +106,10 @@ added here while subaward paperwork is being finalized.
 
 Indirect-cost commitment: Dartmouth has agreed to cap indirect costs at
 10% (matching the RFA limit) and to issue subawards to all
-collaborating institutions.
+collaborating institutions. All subaward institutions have
+separately confirmed acceptance of the 10% IDC rate for the Open
+Source for the Life Sciences program via their respective
+sponsored-projects offices.
 
 ---
 
@@ -325,10 +332,9 @@ plan can be moved to the Work Plan section.
 BIDS (Brain Imaging Data Structure) is the community-driven, openly governed standard that organizes scientific datasets to be
 unambiguously consumed by Human Intelligence (HI), conventional pipelines, and AI agents.
 
-Since 2016, BIDS has grown from MRI-only to 10+ biological measurement and stimulation technologies (MRI, EEG/MEG/iEEG, PET, NIRS,
-microscopy, motion, MRS, physiological, behavioral, NIBS), with 1,500+ public datasets on OpenNeuro and multi-TB microscopy on DANDI.
+Since 2016, BIDS has grown from MRI-only to 10+ biological measurement and stimulation technologies (MRI, EEG/MEG, PET, microscopy, motion, MRS, and others), with 1,500+ public datasets on OpenNeuro and multi-TB microscopy on DANDI.
 Dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep) consume it; thousands of papers cite it.
-Active BEPs (BEP028 provenance; BEP036 phenotypes; BEP037 NIBS; BEP044/047 stimuli & A/V; BEP032 animal/extracellular) and *omics-archive dialogues pull BIDS into adjacent domains.
+Active BIDS Extension Proposals (BEPs) — for provenance, phenotypes, non-invasive brain stimulation, stimuli & A/V, animal / extracellular electrophysiology — and *omics-archive dialogues pull BIDS into adjacent domains.
 
 This proposal supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI.
 We will advance five coordinated components, whose maintainers have collectively committed:
@@ -447,7 +453,7 @@ TODOs: heavey overview/tuneup
 
 **Goal 1: BIDS specification, schema, and BIDS 2.0 release**
 
-Outcome: The BIDS 2.0 specification is released — more consistent, modular, schema-first — and the 3.0 roadmap is scoped.
+Outcome: The BIDS 2.0 specification is released — more consistent, modular, schema-first — with hardened derivatives contracts (provenance, connectivity, stimuli), and the 3.0 roadmap is scoped.
 Downstream tools (validators, PyBIDS, BIDS Apps) adopt the new schema without loss, and the active BEP backlog (BEP028, BEP032, BEP036, BEP037, BEP044/047) is landed so BIDS covers phenotypes, animal / extracellular electrophysiology, NIBS, stimuli and A/V.
 
 Milestones & Deliverables:
