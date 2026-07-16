@@ -1,6 +1,6 @@
 TITLE: BIDS 2.0+ ecosystem: AI-Ready Life-Science Data Standard	Admin Stage	START DATE: 12/1/2026	END DATE: 11/30/2028	Column4	Column5	Column6	Column7	Column8	Column9	Column10	Column11	Column12	Column13	Column14	Column15	Column16	Column17	Column18	Column19	Column20	Column21	Column22	Column23	Column24	Column25	Column26	Column27	Column28	Column29
 Site		PI/Co-PI	Admin Contact	Total $s / year	"""Desired"" total (if different)"	Budget Justification	*PI/Personnel to be supported	Function in BIDS 2.0+	Specific work items per LOI/proposal																				
-									Crude overall/detailed:	1. BIDS specification & schema	2. BIDS validators 	3. Python + CLI utilities + MCP/skills	4. BIDS-Apps 2.0+ 	5. BIDS Users Assistant 	MISC														
+									Crude overall/detailed:	1. BIDS specification & schema	2. BIDS validators 	3. Python + CLI utilities + MCP/skills	4. BIDS-Apps 2.0+ 	5. OSA: BIDS integration + study-state observability	MISC														
 Dartmouth (the lead)	n/a	Yaroslav Halchenko <yoh@dartmouth.edu>	"""Angela M. Beaupre"" <Angela.M.Beaupre@dartmouth.edu>"	141000.0		%FTE, Travel, Events, Misc, Travels of other maintainers etc	Yaroslav Halchenko (PI)	Lead, various BEPs, bids-utils (upgrade etc)		range of issues/PRs from https://github.com/orgs/bids-standard/projects/10	"- enhance for ""study"" (recursive) and ensure consistent records model for better integrations"	"- bids-utils (migrate, operations) and potential integration with pybids & bids2nda & neuroai et al
 - continue improving and maintaining BIDS skill (ATM in https://github.com/K-Dense-AI/scientific-agent-skills)"	- integration within ///repronim/containers??	- integrate in DANDI, datalad-registry 															
 							Cody Baker	BEP032, NWB, BIDS Motion, support in nwb2bids, omics, ...																					
@@ -23,8 +23,8 @@ UCSD	reminded about the docs	Yahya Shirazi <syshirazi@ucsd.edu>	"""Dvornikova, X
 2. Maintainer on record for BEP046 and BEP047"	"1. HED tools and resources (hed-lsp, hedtools)
 2. Zarr work and schema on NEMAR"	"1. NEMAR2.0, connecting data to GPU traning and AI agents
 2. Interface contract
-3. HED-MCP"		"1. OSA integration with tools,
-2. tool-interface contract
+3. HED-MCP"		"1. OSA BIDS data, specification, validation, and selected ecosystem tools
+2. Study-state observability
 3. User/agent feedback"															
 							?Kay Robbins (UTSA, emiritus, not paid)																						
 CAMH	preparing the docs	Ariel Rokem <ariel.rokem@camh.ca>	Shradha Bhullar <Shradha.Bhullar@camh.ca>	8635		%FTE, Travel	Ariel Rokem (Co-PI)		"
