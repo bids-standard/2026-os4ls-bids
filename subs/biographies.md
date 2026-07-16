@@ -22,7 +22,7 @@
       co-author on either paper; removed from his biosketch.
 -->
 ---
-title: "BIDS 2.0+ ecosystem — PI and Co-PI Biographies"
+title: "BIDS 2.0+ ecosystem — PI, Co-PI and selected Key Biographies; References"
 link-citations: true
 reference-section-title: "References"
 ---
@@ -135,7 +135,7 @@ Active proponent in using AI coding agents for answering fundamental research qu
 
 ## Christopher J. Markiewicz, PhD — <something> (Stanford)
 
-**Role:** BEP lead: [BEP002](https://bids.neuroimaging.io/bep002), [BEP003](https://bids.neuroimaging.io/bep003), [BEP012](https://bids.neuroimaging.io/bep012), [BEP027](https://bids.neuroimaging.io/bep027), [BEP043](https://bids.neuroimaging.io/bep043)
+**Role:** Key, BIDS Maintainer, BEP lead: [BEP002](https://bids.neuroimaging.io/bep002), [BEP003](https://bids.neuroimaging.io/bep003), [BEP012](https://bids.neuroimaging.io/bep012), [BEP027](https://bids.neuroimaging.io/bep027), [BEP043](https://bids.neuroimaging.io/bep043)
 **Position:** Senior Research Scholar, Department of Psychology, Stanford University.
 **IDs:** markiewicz@stanford.edu · [ORCID 0000-0002-6533-164X](https://orcid.org/0000-0002-6533-164X) · [GitHub effigies](https://github.com/effigies) · [Scholar](https://scholar.google.com/citations?user=8yh5_cgAAAAJ)
 
