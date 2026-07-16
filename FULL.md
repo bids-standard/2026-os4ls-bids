@@ -41,7 +41,7 @@ Co-PIs (jointly responsible for leading the work):
 | Franco Pestilli | pestilli@utexas.edu | The University of Texas at Austin | USA | Co-PI (Steering Group; connectomics) |
 | Kimberly Ray | kimray@utexas.edu | The University of Texas at Austin | USA | Co-PI (BIDS Maintainer; Project Manager) |
 | Jean-Baptiste Poline | jean-baptiste.poline@mcgill.ca | McGill University | Canada | Co-PI (Steering Group; Boutiques/Nipoppy) |
-| Alejandro de la Vega | aleph4@gmail.com | The University of Texas at Austin | USA | Co-PI (PyBIDS, fitlins) |
+| Alejandro de la Vega | delavega@utexas.edu | The University of Texas at Austin | USA | Co-PI (PyBIDS, fitlins) |
 | Seyed Yahya Shirazi | syshirazi@ucsd.edu | University of California, San Diego | USA | Co-PI (BIDS Maintainer; OSA; HED; BEP044) |
 | Ariel Rokem | ariel.rokem@camh.ca | Centre for Addiction and Mental Health (CAMH) | Canada | Co-PI (Emeritus Steering; dMRI/TRX) |
 | Ben Dichter | ben.dichter@catalystneuro.com | CatalystNeuro | USA | Co-PI (BEP032, BEP047; NWB<->BIDS) |
@@ -218,9 +218,9 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 
   PyBIDS is the reference Python library for querying and manipulating BIDS
   datasets — used by fMRIPrep, MRIQC, QSIPrep, fitlins, and most downstream
-  BIDS Apps. This proposal maintains PyBIDS and consolidates scattered
-  ecosystem helpers into a maintained, pybids-adjacent bids-utils (under the
-  same organization) library exposed via MCP servers and reusable agent
+  BIDS Apps. This proposal modernizes PyBIDS for BIDS 2.0 and consolidates scattered
+  ecosystem helpers into bids-utils, a comanion tool under the
+  same organization. Both libraries will be exposed via MCP servers and reusable agent
   skills, so LLM agents can read, write, and reason about BIDS datasets through
   a stable interface.
 
@@ -566,11 +566,9 @@ directly or indirectly support this work — with duration, total USD
 TEXT (draft — collect from each Co-PI at kickoff and tighten to ≤1,500
 chars before paste):
 
-TODOs: verify, extend and add total amounts!
-
 https://bids.neuroimaging.io/collaboration/acknowledgments.html page lists various grants which supported some parts of work on BIDS currently or in the past.
 
-PI Halchenko is Co-I / Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), OpenNeuro (see details in Poldrack), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim center work (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use BIDS and contribute necessary developments to it.
+PI Halchenko is Co-I/Co-PI on federally funded U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), OpenNeuro (see below), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use BIDS and contribute to it.
 Co-PI Poldrack directs OpenNeuro (2018-2028, NIH BRAIN Initiative 5R24MH117179, $5,968,723 for 2023-2027).
 Co-PI Poline was CZI EOSS Cycle 5 PI for Nilearn (2022-2024). (TODO: remove as outdated?)
 Key personnel Esteban was CZI EOSS Cycle 5 PI for NiPreps / fMRIPrep (2022-2024). (TODO: remove as outdated?)
@@ -579,8 +577,11 @@ Co-PI Shirazi is PI of the Meta BIDS/open-science gift (2025–2026, $130,000) a
 Co-PI Dichter leads CatalystNeuro's NWB and NeuroConv work supported by the NIH BRAIN Initiative.
 Key person Kiar leads development work on Styx and NiWrap, core to the BIDS Execution standard, BIDS2Table, a large-data compatible BIDS dataset indexer, and is funded by NIH BRAIN Initiative Awards (1RF1MH130859-01, 2022–2026, 1,504,004; 1R01MH139565, 2025–2027, $889,582) alongside grants from Private Foundations, including several projects focused specifically on reproducible infrastructure for life sciences (cumulative awards value of over $16,300,000 received from 2021–2027).
 In-kind: existing maintainer time from the BIDS Steering Group and Maintainers; Amazon Open Dataset program hosts over 1 PB of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
+Co-PI Pestilli is PI/Co-I on the BRAIN CONNECTS APEX (2024–2029, NIH, $9,485,000), the Center for Mesoscale Connectomics (2023–2028, NIH, $16,684,090),  ezBIDS, NiiVue, and dcm2niix (2023–2026, NIH, $2,039,629), which relate to development and use of BIDS spec and tools.
+Co-PI Dichter leads CatalystNeuro's NWB work (NIH BRAIN Initiative).
+Key person Kiar leads development work on Styx and NiWrap, core to the BIDS Execution standard, BIDS2Table funded by NIH (1RF1MH130859-01, 2022–2026, 1,504,004; 1R01MH139565, 2025–2027, $889,582) alongside grants from Private Foundations (cumulative awards value of over $16,300,000 received from 2021–2027) which rely on BIDS.
+In-kind: Amazon Open Dataset program hosts over 1 PB of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
 
-TODO: verify exact grant numbers / durations / totals with each Co-PI before submission. Ensure ≤1,500 chars.
 
 ---
 
@@ -600,24 +601,16 @@ above).
 
 ## Working notes (NOT part of submission — strip before paste)
 
-- Strip this section, `LOI-MISC.md` "Open items" content, all
-  Message-IDs, and any markdown emphasis / backticks before pasting
-  into the Fillout form.
-- Verified vs. TODO status:
-  - Personnel table Section 1 — Co-PI names verified against LOI &
-    subawards TSV; emails from TSV.
-  - Impact metrics under each software project — mostly TODO
-    (need verified whole numbers before submit).
-  - Recent Financial Support — draft only; verify with each Co-PI.
-  - Budget subtotal $540 over cap — reconcile at Dartmouth line.
-  - EIN / signing official / financial contact — obtained from
-    Dartmouth OSP (see Section 2).
+- Strip this section, all Message-IDs, and any markdown emphasis /
+  backticks before pasting into the Fillout form.
 
 - **Length-cap overages** (must be fixed before final paste):
-  - **Recent Financial Support**: 3,064 / 1,500 chars (2× cap). Preserve
-    every grant ID + dollar amount + date already collected from Co-PIs;
-    drop qualitative connective tissue and inline `(TODO: remove as
-    outdated?)` notes to compress by ~50%.
+  - **Recent Financial Support**: 1,769 / 1,500 (269 over). Candidate
+    cuts: drop the opening acknowledgments-page sentence (~135 chars);
+    trim closing "which relate to development and use of BIDS spec and
+    tools" and "which rely on BIDS" (~80 chars); compress Amazon Open
+    Dataset in-kind line to "Amazon Open Dataset hosts >1 PB
+    OpenNeuro+DANDI BIDS data (~$700k/yr in-kind)."
   - **Landscape Analysis**: 1,628 / 1,500 (128 over). Candidate to drop:
     "the overall BIDS project is an integration project which improves
     reuse and interoperability while avoiding re-implementation. This
@@ -625,19 +618,14 @@ above).
     improve interfaces to tools and AI." — restates the prior sentence.
   - **Expected Value**: 1,514 / 1,500 (14 over). One-word tighten.
 
-- **Section 3 — impact metrics** are all `TBD`. Session 3 (cue 305-314)
-  explicitly permits note-field justification when direct tracking is
-  impossible ("we don't have the ability to track direct monthly users
-  because of the nature of the project. That's fine"). Add per-project:
-  - Project 1 (spec): "Not directly trackable — spec is a text document;
-    downstream adoption measured via BIDS-Apps registry (≈50 apps) and
-    downstream tooling."
-  - Project 4 (BIDS-Apps + exec spec): "Tracked via BIDS-Apps registry
-    (bids-apps.neuroimaging.io); ≈50 apps as of 2026."
-  - Project 5 (OSA): "Pre-release; usage tracked via demo.osc.earth/bids
-    web analytics; no PyPI/npm release yet."
-  - Projects 2 (validators) + 3 (PyBIDS): pull real PyPI + npm downloads
-    before submit.
+- **Section 3 — impact metrics remaining**:
+  - Project 5 (OSA) — still all `TBD`. Session 3 (cue 305-314) permits
+    note-field justification: e.g., "Pre-release; usage tracked via
+    demo.osc.earth/bids web analytics; no PyPI/npm release yet."
+  - Project 4 (BIDS-Apps + exec spec) — has content ("50+ tools,
+    Gorgolewski 2017 cited 400+"), just needs the `(TODO)` tag stripped.
+  - Projects 1 (spec), 2 (validators), 3 (PyBIDS) — filled with verified
+    numbers ✓.
 
 - **Section 3 — potential project-to-org upgrade** (per Session 3 cue
   107-117; Dario: "definitely encourages the GitHub organization as a
@@ -659,15 +647,4 @@ above).
 
 - **Sign-off form** — Session 3 (cue 223-224) confirmed a blank PDF
   placeholder is acceptable at upload time; the signed version can be
-  swapped in before final submission. Reduces schedule pressure on OSP
-  if timing is tight.
-
-- **Short Summary trims are echoed in the Work Plan narrative** — the
-  five-pillar deliverable enumeration was moved out of Short Summary
-  (per Session 3 cue 100-105) and the corresponding substance now
-  appears in the Work Plan narrative's per-Goal descriptions (Goal 1
-  release + roadmap + BEP backlog; Goal 2 validator convergence +
-  cross-standard checks; Goal 3 bids-utils + MCP + agent skills; Goal 4
-  BIDS-Apps 2.0 execution contract + GPU containers; Goal 5 OSA +
-  observability layer). Full detail also lives in the per-Goal
-  Outcome/Milestones/Success-indicators blocks below.
+  swapped in before final submission if OSP timing is tight.

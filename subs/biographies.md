@@ -91,9 +91,9 @@ He served as PI on the CZI EOSS Cycle 5 award "Improving Standard Practice for N
 
 **Role:** Co-PI (UT Austin); PyBIDS refactor for BIDS 2.0+; PyBIDS-as-MCP server and agent Skills; fitlins / BIDS StatsModels.
 **Position:** Research Assistant Professor, Department of Psychology, The University of Texas at Austin.
-**IDs:** aleph4@gmail.com · [ORCID 0000-0001-9062-3778](https://orcid.org/0000-0001-9062-3778) · [GitHub adelavega](https://github.com/adelavega) · [adelavega.github.io](https://adelavega.github.io/)
+**IDs:** delavega@utexas.edu · [ORCID 0000-0001-9062-3778](https://orcid.org/0000-0001-9062-3778) · [GitHub adelavega](https://github.com/adelavega) · [adelavega.github.io](https://adelavega.github.io/)
 
-Dr. de la Vega leads Neuroscout [@de_la_vega_neuroscout_2022], a BIDS-native platform for generalizable and reproducible fMRI meta-analysis, and is a core author and maintainer of PyBIDS [@yarkoni_pybids_2019] — the reference Python library for querying and manipulating BIDS datasets that underlies fMRIPrep [@esteban_fmriprep_2019], MRIQC [@esteban_mriqc_2017], QSIPrep, fitlins, and most BIDS-Apps.
+Dr. de la Vega leads Neurosynth Compose [@kent_neurosynth_2026], a free and open platform for AI-assisted neuroimaging meta-analysis, and is a core author and maintainer of PyBIDS [@yarkoni_pybids_2019] — the reference Python library for querying and manipulating BIDS datasets that underlies fMRIPrep [@esteban_fmriprep_2019], MRIQC [@esteban_mriqc_2017], QSIPrep, fitlins, and most BIDS-Apps.
 Under this proposal he will lead the PyBIDS refactor for BIDS 2.0+ — making it fully BIDS-Schema compliant and self-updating as the specification develops — integrate PyBIDS with bids-utils for core dataset operations, and expose PyBIDS as an MCP server with reusable agent Skills for robust and predictable agentic access to BIDS datasets.
 He also contributes to fitlins / BIDS StatsModels and to the BIDS specification and community roadmap [@poldrack_past_2023].
 
@@ -129,7 +129,7 @@ Co-founder / co-director of the Summer Institute in Neuroimaging and Data Scienc
 **IDs:** ben.dichter@catalystneuro.com · [ORCID 0000-0001-5725-6910](https://orcid.org/0000-0001-5725-6910) · [GitHub bendichter](https://github.com/bendichter) · [Scholar](https://scholar.google.com/citations?user=_IwI_oEAAAAJ) · [bendichter.com](https://bendichter.com) · [catalystneuro.com](https://www.catalystneuro.com)
 
 Dr. Dichter leads CatalystNeuro, which is the primary maintainer of the Neurodata Without Borders (NWB) tooling ecosystem [@rubel_neurodata_2022; @rubel_ecosystem_2025] — including NeuroConv (converting 50+ proprietary neurophysiology formats to NWB), the NWB Inspector, and substantial contributions to PyNWB — and coordinates data-conversion partnerships with dozens of experimental labs and DANDI Archive.
-He leads BIDS [BEP032](https://bids.neuroimaging.io/bep032) (microelectrode / animal electrophysiology) and [BEP047](https://bids.neuroimaging.io/bep047) (behavioral recordings), and contributed to the extension for iEEG [@holdgraf_ieeg-bids_2019]. He sits at the NWB↔BIDS interoperability seam central to this proposal, and supports downstream tools that CatalystNeuro integrates into the NWB ecosystem, including VAME (behavior) and GuPPy (fiber photometry).
+He leads BIDS [BEP032](https://bids.neuroimaging.io/bep032) (microelectrode / animal electrophysiology) and [BEP047](https://bids.neuroimaging.io/bep047) (behavioral recordings), and contributed to the extension for iEEG [@holdgraf_ieeg-bids_2019]. He sits at the NWB<->BIDS interoperability seam central to this proposal, and supports downstream tools that CatalystNeuro integrates into the NWB ecosystem, including VAME (behavior) and GuPPy (fiber photometry).
 Co-author on [Neurosift](https://neurosift.app/) which provides NWB visualization, OpenNeuro and DANDI archives navigation and AI-assisted "search".
 Active proponent in using AI coding agents for answering fundamental research questions [@dichter_ai_2026].
 
