@@ -2,4 +2,5 @@
 **/.git* annex.largefiles=nothing
 * annex.largefiles=((mimeencoding=binary)and(largerthan=0))
 *-transcript.txt annex.largefiles=anything
+*.vtt annex.largefiles=anything
 emails/** annex.largefiles=anything
