@@ -339,7 +339,7 @@ We advance five coordinated components (fully detailed in the Work Plan section)
 
 (4) BIDS-Apps 2.0+ execution contract for reproducible pipelines including GPU / accelerator containers;
 
-(5) OSA: deep BIDS data, specification, validation, and tool integration.
+(5) OSA: deep BIDS integration + study-state observability.
 
 Together they close the loop for AI-enabled, large-scale data analysis by formalizing the data and application contracts that agentic workflows and training pipelines need.
 
@@ -512,7 +512,7 @@ Success indicators:
 
 ---
 
-**Goal 5: Open Science Assistant (OSA) — deep BIDS integration + reviewable agent activity**
+**Goal 5: Open Science Assistant (OSA) — deep BIDS integration + study-state observability**
 
 Outcome: OSA is an extensible, community-facing AI-assistant platform. The funded BIDS work makes OSA able to use BIDS data, the BIDS specification, validation results, and selected ecosystem tools through its YAML-driven community registry and specialized tool/plugin architecture. OSA produces a common, human-readable and machine-consumable study-state record of agent actions, supporting evidence, provenance, derivatives, and outstanding QC.
 
