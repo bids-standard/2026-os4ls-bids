@@ -279,13 +279,11 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Website URL: https://demo.osc.earth/bids
 - Short description (max 500 chars): TEXT
 
-  OSA (Open Science Assistant) is an open community project initiated
-  and led at UCSD. This proposal connects OSA to BIDS/HED validation,
-  query, and manipulation through MCP tool interfaces, and evaluates
-  data-to-agent workflows on public BIDS datasets. The >89%-implemented
-  NEMAR Zarr conversion (760 datasets, 39,000 subjects, 57 TB) provides
-  the test bed. OSA also releases a study-state observability schema
-  for inspecting agent actions, supporting evidence, derivatives, and QC.
+  OSA (Open Science Assistant) is an extensible AI-assistant platform
+  for open-science communities. This BIDS project deepens OSA's ability
+  to use BIDS data, the BIDS specification, validation, and ecosystem
+  tools through its existing YAML-driven tool/plugin architecture. It
+  adds user feedback and reviewable agent activity for BIDS workflows.
 
 - Software license: MIT
 - Main programming language: Python + TypeScript (agent runtime)
@@ -341,7 +339,7 @@ We advance five coordinated components (fully detailed in the Work Plan section)
 
 (4) BIDS-Apps 2.0+ execution contract for reproducible pipelines including GPU / accelerator containers;
 
-(5) Open Science Assistant (OSA) with a study-state observability layer.
+(5) OSA: deep BIDS data, specification, validation, and tool integration.
 
 Together they close the loop for AI-enabled, large-scale data analysis by formalizing the data and application contracts that agentic workflows and training pipelines need.
 
@@ -408,10 +406,10 @@ BIDS is a widely used open-source specification and tooling ecosystem for struct
 This request supports a 24-month plan to integrate the BIDS ecosystem at the core of computational scientists' preferred harnesses, organized around the five coordinated goals below.
 
 Goal 1 delivers the BIDS 2.0 release (more consistent, modular, schema-first) with a scoped 3.0 roadmap and hardens the machine-readable schema as a Data Structure Standard, landing the active BEP backlog to broaden BIDS beyond neuroimaging — work spans bids-specification, bids-examples, bids-website, pybids, etc., tracked at https://github.com/orgs/bids-standard/projects/10.
-Goal 2 continues the community-driven convergence of the Deno and Python validators on the shared schema, adds machine-consumable validation records, and integrates cross-standard checks (HED, NWB, Zarr) so that a "deep-valid" verdict means valid across formats and sibling standards — critical for trustworthy AI results.
-Goal 3 consolidates scattered helpers (across pybids, bids2nda, DataLad) into a maintained pybids-adjacent bids-utils library, exposes both via MCP servers including HED-MCP and a shared tool-interface contract, and packages reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills) so OSA and other LLM agents can read, write, and reason about BIDS datasets through a stable interface.
+Goal 2 continues the community-driven convergence of the Deno and Python validators on the shared schema, adds machine-consumable validation records, and integrates cross-standard checks (HED, NWB, Zarr) so that a "deep-valid" verdict means valid across formats and sibling standards — critical for trustworthy AI results. This includes a BIDS-aligned Zarr profile exercised on the NEMAR conversion datasets.
+Goal 3 consolidates scattered helpers (across pybids, bids2nda, DataLad) into a maintained pybids-adjacent bids-utils library, exposes both via MCP servers including HED-MCP and a shared tool-interface contract, and packages reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills) so LLM agents can read, write, and reason about BIDS datasets through a stable interface. It also connects NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows, exercised on the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB).
 Goal 4 modernizes the BIDS-Apps execution contract (BEP027/BEP043) in coordination with the Boutiques / Niwrap / Styx descriptor stack and the BIDS-Apps registry — including GPU/accelerator containers — so AI agents can compose and run pipelines reliably.
-Goal 5 connects the Open Science Assistant (OSA) to the BIDS/HED toolchain for validation, query, and manipulation through the shared MCP tool interfaces, and evaluates end-to-end data-to-agent workflows on public BIDS datasets. NEMAR's ongoing Zarr conversion, now >89% implemented across 760 datasets, 39,000 subjects, and 57 TB, provides a realistic large-scale test bed. Goal 5 then formalizes a study-state observability schema that records agent actions, supporting evidence, provenance, derivatives, and outstanding QC, so a dashboard or human reviewer can inspect what an agent did and why.
+Goal 5 makes OSA a deeper BIDS project by bringing BIDS data, the BIDS specification, validation results, and selected ecosystem tools into OSA through its existing YAML-driven tool/plugin architecture. It adds user feedback and reviewable agent activity for BIDS workflows. Goal 5 formalizes a study-state observability schema that records agent actions, supporting evidence, provenance, derivatives, and outstanding QC, so a dashboard or human reviewer can inspect what an agent did and why.
 
 Overall organization of work for Goals 2-5 will be organized and prioritized within projects like https://github.com/orgs/bids-standard/projects/24.
 Beyond the requested funds, each institution contributes existing personnel time (uncompensated by this grant) where people already work on BIDS in related projects but not directly toward the goals established in this grant proposal.
@@ -463,12 +461,12 @@ Success indicators:
 
 **Goal 2: BIDS validators — convergence, machine-consumable records, and cross-standard checks**
 
-Outcome: Validation is a first-class, agent-callable operation: the Deno and Python validators consume the same schema and produce identical, machine-consumable verdicts; cross-standard validators (HED, NWB, Zarr / OME-Zarr) are integrated so a "deep-valid" verdict means valid across formats and sibling standards.
+Outcome: Validation is a first-class, agent-callable operation: the Deno and Python validators consume the same schema and produce identical, machine-consumable verdicts; cross-standard validators (HED, NWB, Zarr / OME-Zarr) are integrated so a "deep-valid" verdict means valid across formats and sibling standards. The Zarr work includes a BIDS-aligned profile exercised on NEMAR conversion datasets.
 
 Milestones & Deliverables:
 2.1 Converge Deno and Python validators on the shared schema — identical CLI behavior and machine-readable output. [Year 1]
 2.2 Publish the machine-consumable validation-record schema (JSON Schema + example datasets). [Year 1]
-2.3 Integrate HED, NWB (via nwb-inspector), and Zarr / OME-Zarr cross-standard validation as pluggable checks. [Year 2]
+2.3 Integrate HED, NWB (via nwb-inspector), and Zarr / OME-Zarr cross-standard validation as pluggable checks, including a BIDS-aligned Zarr profile exercised on NEMAR conversion datasets. [Year 2]
 2.4 Ship validators in Deno / npm / PyPI / conda-forge with reproducible container images. [Year 2]
 
 Success indicators:
@@ -480,18 +478,20 @@ Success indicators:
 
 **Goal 3: Python + CLI utilities with MCP interfaces and agent skills**
 
-Outcome: LLM agents, CLI users, and Python users read, write, and reason about BIDS datasets through a stable, maintained interface — via pybids for structured queries and bids-utils for the smaller, agent- and CLI-friendly read/write/inspect verbs, plus MCP servers (including HED-MCP), a shared tool-interface contract, and reusable agent skills.
+Outcome: LLM agents, CLI users, and Python users read, write, and reason about BIDS datasets through a stable, maintained interface — via pybids for structured queries and bids-utils for the smaller, agent- and CLI-friendly read/write/inspect verbs, plus MCP servers (including HED-MCP), a shared tool-interface contract, and reusable agent skills. The same interfaces connect NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows, using the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB).
 
 Milestones & Deliverables:
 3.1 Consolidate scattered helpers into `bids-standard/bids-utils` (release 0.1). [Year 1]
 3.2 Publish MCP servers wrapping the BIDS schema, validation, and bids-utils, including HED-MCP; publish the shared tool-interface contract and agent skills (extending the current K-Dense-AI/scientific-agent-skills prototypes). [Year 1]
 3.3 Maintain and modernize PyBIDS; align its Layout / query API with the schema 2.x release. [Years 1–2]
-3.4 Ship stable, versioned Python and CLI API. [Year 2]
+3.4 Connect NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows through the shared interfaces, using the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB). [Year 2]
+3.5 Ship stable, versioned Python and CLI API. [Year 2]
 
 Success indicators:
-- ≥3 downstream tools (fMRIPrep, brainlife, Nipoppy, KOSMOS-class agents) call the new MCP servers or agent skills [Year 2].
+- ≥3 downstream tools or agent workflows (fMRIPrep, brainlife, Nipoppy, KOSMOS-class agents) call the new MCP servers or agent skills [Year 2].
 - bids-utils 1.0 release with public API stability policy. [Year 2]
 - PyBIDS release supporting BIDS 2.0 schema and adopted by ≥3 downstream libraries [Year 2].
+- A NEMAR Zarr-backed, BIDS/HED-annotated dataset reaches a GPU training or agent workflow through the shared interfaces. [Year 2]
 
 ---
 
@@ -512,20 +512,20 @@ Success indicators:
 
 ---
 
-**Goal 5: Open Science Assistant (OSA) + study-state observability layer**
+**Goal 5: Open Science Assistant (OSA) — deep BIDS integration + reviewable agent activity**
 
-Outcome: OSA is a capable, reviewable agent over BIDS datasets and a reference client for NEMAR's data-to-agent initiative. It uses versioned BIDS/HED tool interfaces for validation, query, and manipulation, and produces a common, human-readable and machine-consumable study-state record of agent actions, supporting evidence, provenance, derivatives, and outstanding QC.
+Outcome: OSA is an extensible, community-facing AI-assistant platform. The funded BIDS work makes OSA able to use BIDS data, the BIDS specification, validation results, and selected ecosystem tools through its YAML-driven community registry and specialized tool/plugin architecture. OSA produces a common, human-readable and machine-consumable study-state record of agent actions, supporting evidence, provenance, derivatives, and outstanding QC.
 
 Milestones & Deliverables:
-5.1 Connect OSA to BIDS/HED validation, query, and manipulation through the shared MCP tool-interface contract, including the BIDS schema, validators, bids-utils, and `hed-mcp`. [Year 1]
-5.2 Establish a public-dataset evaluation and user/agent feedback loop that documents where OSA succeeds or fails in end-to-end data-to-agent BIDS/HED workflows, using NEMAR's Zarr-conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB). [Year 1]
+5.1 Integrate BIDS data, the BIDS specification, validation results, and selected ecosystem tools into OSA through its existing YAML-driven community registry and specialized tool/plugin architecture. [Year 1]
+5.2 Establish a user/agent feedback loop that documents where OSA succeeds or fails in BIDS workflows. [Year 1]
 5.3 Publish study-state observability schema 1.0 (JSON Schema, examples, and implementation guidance) covering agent actions, supporting evidence, provenance, derivatives, and QC state. [Year 2]
-5.4 Demonstrate consumption of observability records in a dashboard or human-reviewer workflow; incorporate the evaluation feedback into the tool interfaces and OSA. [Year 2]
+5.4 Demonstrate consumption of observability records in a dashboard or human-reviewer workflow; incorporate the evaluation feedback into OSA. [Year 2]
 
 Success indicators:
-- OSA drives the BIDS/HED toolchain in end-to-end data-to-agent workflows on public datasets, with published evaluation cases and a release changelog covering the funded work [Year 2].
+- OSA's BIDS assistant uses BIDS data, specification, validation, and selected ecosystem tools, with published evaluation cases and a release changelog covering the funded work [Year 2].
 - Study-state observability schema 1.0 is released and consumed by at least one dashboard or human-reviewer workflow [Year 2].
-- OSA evaluation feedback produces documented improvements to the shared tool-interface contract or OSA release [Year 2].
+- OSA evaluation feedback produces documented improvements to an OSA release [Year 2].
 
 ### Optional Upload — PI/Co-PI biographies, references, figures (≤4 pages)
 
