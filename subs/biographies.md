@@ -48,7 +48,7 @@ His group, which includes Key Personnel Cody C. Baker, is actively participating
 
 Dr. Poldrack is a BIDS [@gorgolewski_brain_2016] co-founder and Emeritus member of its Steering Group.
 He established OpenfMRI in 2009 and currently leads its successor OpenNeuro [@markiewicz_openneuro_2021], the primary open archive for neuroimaging data; originated the Cognitive Atlas ontology, and co-founded Neurosynth.
-His group develops widely used open-source tools including fMRIPrep, MRIQC, PyBIDS [@yarkoni_pybids_2019], and the bids-validator, and drives community standardization efforts for reproducible neuroimaging [@gorgolewski_bids_2017; @poldrack_scanning_2017].
+His group develops widely used open-source tools including fMRIPrep [@esteban_fmriprep_2019], MRIQC [@esteban_mriqc_2017], PyBIDS [@yarkoni_pybids_2019], and the bids-validator, and drives community standardization efforts for reproducible neuroimaging [@gorgolewski_bids_2017; @poldrack_scanning_2017].
 He has also developed open-source educational materials including [Better Code, Better Science](https://bettercode-book.org) and [Statistical Thinking](https://statsthinking21.org/).
 
 ## Franco Pestilli, PhD — Co-PI (UT Austin)
@@ -92,7 +92,7 @@ He served as PI on the CZI EOSS Cycle 5 award "Improving Standard Practice for N
 **Position:** Research Assistant Professor, Department of Psychology, The University of Texas at Austin.
 **IDs:** aleph4@gmail.com · [ORCID 0000-0001-9062-3778](https://orcid.org/0000-0001-9062-3778) · [GitHub adelavega](https://github.com/adelavega) · [adelavega.github.io](https://adelavega.github.io/)
 
-Dr. de la Vega leads Neuroscout [@de_la_vega_neuroscout_2022], a BIDS-native platform for generalizable and reproducible fMRI meta-analysis, and is a core author and maintainer of PyBIDS [@yarkoni_pybids_2019] — the reference Python library for querying and manipulating BIDS datasets that underlies fMRIPrep, MRIQC, QSIPrep, fitlins, and most BIDS-Apps.
+Dr. de la Vega leads Neuroscout [@de_la_vega_neuroscout_2022], a BIDS-native platform for generalizable and reproducible fMRI meta-analysis, and is a core author and maintainer of PyBIDS [@yarkoni_pybids_2019] — the reference Python library for querying and manipulating BIDS datasets that underlies fMRIPrep [@esteban_fmriprep_2019], MRIQC [@esteban_mriqc_2017], QSIPrep, fitlins, and most BIDS-Apps.
 Under this proposal he will lead the PyBIDS refactor for BIDS 2.0+ — making it fully BIDS-Schema compliant and self-updating as the specification develops — integrate PyBIDS with bids-utils for core dataset operations, and expose PyBIDS as an MCP server with reusable agent Skills for robust and predictable agentic access to BIDS datasets.
 He also contributes to fitlins / BIDS StatsModels and to the BIDS specification and community roadmap [@poldrack_past_2023].
 
@@ -133,3 +133,15 @@ He leads BIDS [BEP032](https://bids.neuroimaging.io/bep032) (microelectrode / an
 Co-author on [Neurosift](https://neurosift.app/) which provides NWB visualization, OpenNeuro and DANDI archives navigation and AI-assisted "search".
 Active proponent in using AI coding agents for answering fundamental research questions [@dichter_ai_2026].
 
+## Christopher J. Markiewicz, PhD — <something> (Stanford)
+
+**Role:** BEP lead: [BEP002](https://bids.neuroimaging.io/bep002), [BEP003](https://bids.neuroimaging.io/bep003), [BEP012](https://bids.neuroimaging.io/bep012), [BEP027](https://bids.neuroimaging.io/bep027), [BEP043](https://bids.neuroimaging.io/bep043)
+**Position:** Senior Research Scholar, Department of Psychology, Stanford University.
+**IDs:** markiewicz@stanford.edu · [ORCID 0000-0002-6533-164X](https://orcid.org/0000-0002-6533-164X) · [GitHub effigies](https://github.com/effigies) · [Scholar](https://scholar.google.com/citations?user=8yh5_cgAAAAJ)
+
+Dr. Markiewicz is a founding member of the BIDS Maintainers Group,
+the technical lead for the OpenNeuro project [@markiewicz_openneuro_2021],
+the lead developer of FitLins, and a core maintainer of fMRIPrep [@esteban_fmriprep_2019],
+PyBIDS [@yarkoni_pybids_2019], the BIDS Validator, NiBabel and Nipype [@gorgolewski_nipype_2011].
+He co-developed the [NiPraxis](https://nipraxis.org/) online course on the practice and theory of brain imaging.
+He was recipient of the 2026 OHBM Open Science Award.
