@@ -26,6 +26,8 @@ link-citations: true
 reference-section-title: "References"
 ---
 
+# BIDS 2.0+ ecosystem — Biographies & References
+
 ## Yaroslav O. Halchenko, PhD — PI (Dartmouth)
 
 **Role:** PI (Applicant); overall coordination; BIDS specification, schema, bids-utils.
