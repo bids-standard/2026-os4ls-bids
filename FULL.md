@@ -394,15 +394,14 @@ Stage: submitted to Dartmouth OSP for review.
 
 ### Recent Financial Support — max 1,500 characters
 
-https://bids.neuroimaging.io/collaboration/acknowledgments.html lists various grants which supported work on parts of BIDS.
-PI Halchenko is Co-PI/I on U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), OpenNeuro (see below), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use and contribute to BIDS.
-Co-PI Poldrack directs OpenNeuro (2018-2028, NIH BRAIN Initiative 5R24MH117179, $5,968,723 for 2023-2027).
-Co-PI Shirazi is PI of the Meta BIDS/open-science gift (2025–2026, $130,000) and the AWS OSA Research Starter Fund (2026, $20,000), with BIDS-related work supported through NEMAR (NIH 2R24MH120037-06A1, 2026–2030, $4,845,051) and EEGLAB (NIH 2R01NS047293, 2023–2028, $2,589,740).
-Co-PI Poline is PI of Canadian Institute of Health, CIHR PJT-197805, CAD204,000/year to partly support the Nipoppy/BIDS-Study.
-Co-PI Pestilli is PI/Co-I on the BRAIN CONNECTS APEX (2024–2029, NIH, $9,485,000), the Center for Mesoscale Connectomics (2023–2028, NIH, $16,684,090), ezBIDS, NiiVue, and dcm2niix (2023–2026, NIH, $2,039,629), which use/develop BIDS spec and tools.
-Key person Kiar leads Styx, NiWrap, BIDS2Table funded by NIH (1RF1MH130859-01, 2022–2026, $1,504,004; 1R01MH139565, 2025–2027, $889,582) alongside grants from Private Foundations ($16,300,000+ received from 2021–2027) which rely on BIDS.
-Co-PI De La Vega is PI on (5R01MH096906; 2024–2030, NIH, $3,600,000), which supports related work on AI-assisted large-scale neuroimaging data analysis.
-In-kind: Amazon Open Dataset program hosts over 1 PB of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
+Halchenko is Co-PI/I on U.S. archives that underpin BIDS in production: DANDI (2020–2029, NIH R24MH117295, $6,500,256 for 2024-2026), EMBER (2024-2029, NIH R24MH136632, $3,526,488 for 2024-2026), and the ReproNim (2016-2026, NIH NIBIB P41EB019936, $1,174,836 for 2025) all of which use and contribute to BIDS.
+Poldrack directs OpenNeuro (2018-2028, NIH BRAIN Initiative 5R24MH117179, $5,968,723 for 2023-2027).
+Shirazi is PI of the Meta BIDS/open-science gift (2025–2026, $130,000) and the AWS OSA Research Starter Fund (2026, $20,000), with BIDS-related work supported through NEMAR (NIH 2R24MH120037-06A1, 2026–2030, $4,845,051) and EEGLAB (NIH 2R01NS047293, 2023–2028, $2,589,740).
+Poline is PI of Canadian Institute of Health, CIHR PJT-197805, CAD204,000/year to partly support the Nipoppy/BIDS-Study.
+Pestilli is PI/Co-I on the BRAIN CONNECTS APEX (2024–2029, NIH, $9,485,000), the Center for Mesoscale Connectomics (2023–2028, NIH, $16,684,090), ezBIDS, NiiVue, and dcm2niix (2023–2026, NIH, $2,039,629), which use/develop BIDS spec and tools.
+Kiar leads Styx, NiWrap, BIDS2Table funded by NIH (1RF1MH130859-01, 2022–2026, $1,504,004; 1R01MH139565, 2025–2027, $889,582) which rely on BIDS.
+De La Vega is PI on (5R01MH096906; 2024–2030, NIH, $3,600,000), supporting work on AI-assisted large-scale neuroimaging data analysis.
+In-kind: Amazon Open Dataset program hosts over 1 PB of OpenNeuro and DANDI BIDS datasets (~700k$/year cost for both store/egress).
 
 
 ---
