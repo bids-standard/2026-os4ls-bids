@@ -148,9 +148,9 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Website URL: https://bids-specification.readthedocs.io/
 - Short description (max 500 chars): TEXT
 
-The Brain Imaging Data Structure (BIDS) — the community-driven, openly governed specification and machine-readable schema that organizes life-science datasets (MRI, EEG/MEG/iEEG, PET, NIRS, microscopy, motion, MRS, physiology, behavior, NIBS) into a standard, unambiguous layout so humans, pipelines, and AI agents read them identically. Also includes the schema (`src/schema`), schematools (validation & code generation), and the BIDS 2.0 refactor branch (`bids-2-devel`).
+The Brain Imaging Data Structure (BIDS) specification repository includes the schema, schematools (validation & code generation), and the BIDS 2.0 refactor branch.
 
-The umbrella organization https://github.com/bids-standard/ provides other relevant repositories sattelite to this project, which is developed fully in the open and all components are made available under OSI-compliant licenses.  See https://github.com/orgs/bids-standard/repositories to find bids-website (source of project-wide https://bids.neuroimaging.io/), uptime monitor, etc.
+The organization https://github.com/bids-standard/ provides relevant repositories satellite to this project, which is developed in the open and made available under OSI-compliant licenses.  E.g.  bids-website (source of project-wide https://bids.neuroimaging.io/), uptime monitor, etc.
 
 - Software license: Permissive (was: CC-BY 4.0 (specification text) / MIT (schema tooling))
 - Main programming language: Markdown (spec) + YAML (schema); Python (schematools)
@@ -182,44 +182,36 @@ The umbrella organization https://github.com/bids-standard/ provides other relev
 - Website URL: https://bids-validator.readthedocs.io/en/latest/
 - Short description (max 500 chars): TEXT
 
-  Reference BIDS validators — the Deno/TypeScript schema-driven
-  implementation used by OpenNeuro deposit and dataset authors, and
-  the Python validator (bids-standard/python-validator) used inside
-  Python pipelines and by pybids. Both consume the same
-  machine-readable BIDS schema. This proposal drives cross-implementation
-  convergence, adds machine-consumable validation records, and
-  integrates cross-standard checks (HED, NWB, Zarr).
+Reference BIDS validators: the Deno/TypeScript schema-driven implementation used by OpenNeuro deposit and dataset authors, and the Python validator (bids-standard/python-validator) used inside Python pipelines and by pybids. Both consume the same machine-readable BIDS schema. This proposal drives cross-implementation convergence, adds machine-consumable validation records, and integrates cross-standard checks (HED, NWB, Zarr).
 
-- Software license: MIT
+- Software license: Permissive # MIT
 - Main programming language: TypeScript (Deno) / Python
-- Canonical citation: bids-standard/bids-validator (software) — cite as
-  the specification paper above for scientific use.
+- Canonical citation: https://doi.org/10.5281/zenodo.17902244
 - Code of Conduct: https://github.com/bids-standard/.github/blob/main/CODE_OF_CONDUCT.md
 - End-user documentation: https://bids-validator.readthedocs.io/en/latest/
-- Contributor / developer guidelines: https://github.com/bids-standard/bids-validator/blob/main/.github/CONTRIBUTING.md
-- Package manager entry: npm `bids-validator`
-  (legacy); deno.land / JSR distribution for current TS validator; PyPI: `bids-validator-deno`
+- Contributor / developer guidelines: https://github.com/bids-standard/bids-validator/blob/main/CONTRIBUTING.md
+- Package manager entry: https://jsr.io/@bids/validator
+  could not enter: npm `bids-validator`  (legacy); deno.land / JSR distribution for current TS validator; PyPI: `bids-validator-deno`
 - Community / Q&A forum: https://neurostars.org/tag/bids-validator
 - Metrics (verified 2026-07-15 by C. Markiewicz; https://github.com/bids-standard/bids-validator/issues/431):
   No telemetry by design; ~46k/month users from downloads, ~700 clones/month, ~1k runs of validator/mo on OpenNeuro.org; invoked by dandi-cli on each upload/validation of a BIDS DANDI package.
+  - Number of dependent packages: 55
+    Note: 5 packages and over 50 BIDS-Apps since they should run bids-validator first to ensure that underlying dataset is valid first.
+  - citations estimate: 20
+    notes: https://rrid.site/data/record/nlx_144509-1/SCR_017255/resolver/mentions?q=R&i=rrid:scr_017255 lists 20, and there could be more for DOI
 
 ---
 
-**Project 3 — PyBIDS + bids-utils** (30 chars: `PyBIDS + bids-utils`)
+**Project 3 — PyBIDS**
 
+- Note: @yarikoptic removed bids-utils, since there is nothing in here about it
 - Repository URL: https://github.com/bids-standard/pybids
 - Website URL: https://bids-standard.github.io/pybids/
 - Short description (max 500 chars): TEXT
 
-  PyBIDS is the reference Python library for querying and manipulating BIDS
-  datasets — used by fMRIPrep, MRIQC, QSIPrep, fitlins, and most downstream
-  BIDS Apps. This proposal modernizes PyBIDS for BIDS 2.0 and consolidates scattered
-  ecosystem helpers into bids-utils, a comanion tool under the
-  same organization. Both libraries will be exposed via MCP servers and reusable agent
-  skills, so LLM agents can read, write, and reason about BIDS datasets through
-  a stable interface.
+PyBIDS is the reference Python library for querying and manipulating BIDS datasets — used by fMRIPrep, MRIQC, QSIPrep, fitlins, and most downstream BIDS Apps. This proposal modernizes PyBIDS for BIDS 2.0 and consolidates scattered ecosystem helpers into bids-utils, a comanion tool under the same organization. Both libraries will be exposed via MCP servers and reusable agent skills, so LLM agents can read, write, and reason about BIDS datasets through a stable interface.
 
-- Software license: Apache-2.0 (PyBIDS and bids-utils)
+- Software license: Permissive # Apache-2.0 (PyBIDS and bids-utils)
 - Main programming language: Python
 - Canonical citation: Yarkoni T, et al. (2019). "PyBIDS: Python tools for
   BIDS datasets." Journal of Open Source Software 4(40), 1294.
@@ -230,68 +222,66 @@ The umbrella organization https://github.com/bids-standard/ provides other relev
 - Package manager entry: PyPI `pybids`; conda-forge `pybids`
 - Community / Q&A forum: https://neurostars.org/tag/pybids
 - Metrics:
-  - No telemetry; 125k/mo downloads (PyPI+conda-forge); 570 dependent repositories, 17 dependent PyPI packages; 70+ citations of (Yarkoni 2019) PyBIDS paper
+  - Monthly users: 1000
+    notes: No telemetry; 125k/mo downloads (PyPI+conda-forge).  Used by containerize BIDS-Apps fMRIPrep.
+  - dependent packages: 17
+    notes: https://github.com/bids-standard/pybids/network/dependents lists over 900 repos and mentions 124 packages.
+  - scholarly citations: 74
 
 ---
 
-**Project 4 — BIDS-Apps + execution spec** (30 chars: `BIDS-Apps + execution spec`)
+**Project 4 — BIDS-Apps + Execution spec**
 
-- Repository URL: https://github.com/bids-standard/execution-spec
-  (companion registry: https://github.com/bids-apps ;
-  Boutiques/Niwrap/Styx: https://github.com/boutiques/boutiques ,
-  https://github.com/childmindresearch/niwrap ,
-  https://github.com/childmindresearch/styx)
-- Website URL: https://bids-standard.github.io/execution-spec/ (registry:
-  https://bids-apps.neuroimaging.io/)
+- Repository URL: https://github.com/bids-apps
+- Website URL: https://bids-apps.neuroimaging.io/
 - Short description (max 500 chars): TEXT
 
-  Containerized analysis tools that consume BIDS input;
-  the registry lists 50+ apps (fMRIPrep, MRIQC, etc.). This proposal modernizes the
-  contract between BIDS data and analysis containers via the
-  execution-spec (BEP027/BEP043) and the Boutiques/Niwrap/Styx
-  descriptor stack — so agents can compose and run pipelines
-  reliably, including GPU/accelerator containers (Allen Institute,
-  HuggingFace-model workloads).
+BIDS-Apps are containerized analysis tools that consume BIDS input; the registry lists 50+ apps (such as fMRIPrep and MRIQC), and BIDS-Apps 2.0 specification available in https://bids-standard.github.io/execution-spec/ .
+Companion projects:  https://github.com/boutiques/boutiques for interface specifications and https://github.com/childmindresearch/niwrap, https://github.com/childmindresearch/styx-ts to assist wrapping existing tools in Python.
 
-- Software license: CC Attribution 4.0 International; Tools & Apps - varying OSI-compliant
-- Main programming language: Python (Boutiques, Niwrap, Styx); shell (container recipes)
+- Software license: Permissive # CC Attribution 4.0 International; Tools & Apps - varying OSI-compliant
+- Main programming language: YAML for registry, Markdown (specification), Python (Boutiques, Niwrap, Styx, ...)
 - Canonical citation: Gorgolewski KJ, et al. (2017). "BIDS apps:
   Improving ease of use, accessibility, and reproducibility of
   neuroimaging data analysis methods." PLOS Computational Biology
   13(3): e1005209. https://doi.org/10.1371/journal.pcbi.1005209
-- Code of Conduct: per project, e.g. https://github.com/bids-standard/.github/blob/main/CODE_OF_CONDUCT.md
+- Code of Conduct: https://github.com/BIDS-Apps/.github/blob/main/CODE_OF_CONDUCT.md
 - End-user documentation: https://bids-apps.neuroimaging.io/
-- Contributor / developer guidelines: per project (see repos)
-- Package manager entry: PyPI `boutiques`, `niwrap`, `styx` (as applicable)
+- Contributor / developer guidelines: https://bids.neuroimaging.io/faq/bids-apps.html
+- Package manager entry: https://github.com/ReproNim/containers/tree/master/images/bids
 - Community / Q&A forum: https://neurostars.org/tag/bids-apps
-- Metrics: No telemetry in invocations, 50+ tools, thousands of produced derived datasets, varying use across BIDS-apps. BIDS-apps paper (Gorgolewski, 2017) cited 400+ times (Scholar).
+- Metrics: 
+  - monthly users estimate: 1000
+    notes: No telemetry in invocations, 50+ Apps, thousands of produced derived datasets, varying use across BIDS-apps.
+  - # dependent pkgs:
+    notes: BIDS-Apps are self-contained containers. The related/used tools have varying reuse. E.g. boutiques - 10 packages and 100 repos on github analytics.
+  - citations: 400
 
 ---
 
-**Project 5 — OSA — Open Science Assistant** (30 chars: `OSA — Open Science Assistant`)
+**Project 5 — OSA — Open Science Assistant**
 
 - Repository URL: https://github.com/OpenScience-Collective/osa
 - Website URL: https://demo.osc.earth/bids
 - Short description (max 500 chars): TEXT
 
-  OSA (Open Science Assistant) is an extensible AI-assistant platform
-  for open-science communities. This BIDS project deepens OSA's ability
-  to use BIDS data, the BIDS specification, validation, and ecosystem
-  tools through its existing YAML-driven tool/plugin architecture. It
-  adds user feedback and reviewable agent activity for BIDS workflows.
+OSA (Open Science Assistant) is an extensible AI-assistant platform for open-science communities. This BIDS project deepens OSA's ability to use BIDS data, the BIDS specification, validation, and ecosystem tools through its existing YAML-driven tool/plugin architecture. It adds user feedback and reviewable agent activity for BIDS workflows.
 
-- Software license: MIT
+- Software license: Permissive  # MIT
 - Main programming language: Python + TypeScript (agent runtime)
 - Canonical citation: (software; no paper yet — will use software heritage / Zenodo release DOI)
-- Code of Conduct: https://github.com/OpenScience-Collective/osa/issues/347
+- Code of Conduct: https://github.com/OpenScience-Collective/osa/blob/main/CODE_OF_CONDUCT.md
 - End-user documentation: https://demo.osc.earth/bids
-- Contributor / developer guidelines: https://github.com/OpenScience-Collective/osa/issues/348
+- Contributor / developer guidelines: https://github.com/OpenScience-Collective/osa/blob/main/CLAUDE.md
 - Package manager entry: n/a
 - Community / Q&A forum: https://github.com/OpenScience-Collective/osa/discussions
 - Metrics: Pre-release; usage tracked via demo.osc.earth/bids web analytics; no PyPI/npm release yet.
-  - Monthly users: 0 (pre-release)
-  - Dependent projects/packages: 0 (pre-release)
-  - Scholarly citations: 0 (pre-release; software heritage / Zenodo release DOI planned)
+  - Monthly users: 5
+    notes: It is in pre-release stage. We (maintainers) test-drive it in https://github.com/bids-standard/bids-specification/pull/2442 
+  - Dependent projects/packages:
+  - Scholarly citations: 0
+    notes: not published work yet!
+	pre-release; software heritage / Zenodo release DOI planned
 
 ### Categories [pre-filled from LOI [x]] — up to 3
 
