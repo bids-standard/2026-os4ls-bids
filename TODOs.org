@@ -1,4 +1,3 @@
 * For submission
-** Dartmouth -- follow/use https://www.dartmouth.edu/osp/about/institutional_profile/index.php
-*** Use "Trustees of Dartmouth College" not just "Dartmouth College"
-** For ChMI/Greg folks -- add to other funding information on what funds their work
+** !!! Replace on the first page the sign off form (ATM blank) with the one from dartmouth
+**

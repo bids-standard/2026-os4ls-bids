@@ -148,24 +148,12 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Website URL: https://bids-specification.readthedocs.io/
 - Short description (max 500 chars): TEXT
 
-  The Brain Imaging Data Structure (BIDS) — the community-driven,
-  openly governed specification and machine-readable schema that
-  organizes life-science datasets (MRI, EEG/MEG/iEEG, PET, NIRS,
-  microscopy, motion, MRS, physiology, behavior, NIBS) into a
-  standard, unambiguous layout so humans, pipelines, and AI agents
-  read them identically. Also includes the schema (`src/schema`),
-  schematools (validation & code generation), and the BIDS 2.0
-  refactor branch (`bids-2-devel`).
+The Brain Imaging Data Structure (BIDS) — the community-driven, openly governed specification and machine-readable schema that organizes life-science datasets (MRI, EEG/MEG/iEEG, PET, NIRS, microscopy, motion, MRS, physiology, behavior, NIBS) into a standard, unambiguous layout so humans, pipelines, and AI agents read them identically. Also includes the schema (`src/schema`), schematools (validation & code generation), and the BIDS 2.0 refactor branch (`bids-2-devel`).
 
-  The umbrella organization https://github.com/bids-standard/ provides other
-  relevant repositories sattelite to this project, which is developed fully in
-  the open and all components are made available under OSI-compliant licenses.
-  See https://github.com/orgs/bids-standard/repositories to find bids-website
-  (source of project-wide https://bids.neuroimaging.io/), uptime monitor,
-  etc.
+The umbrella organization https://github.com/bids-standard/ provides other relevant repositories sattelite to this project, which is developed fully in the open and all components are made available under OSI-compliant licenses.  See https://github.com/orgs/bids-standard/repositories to find bids-website (source of project-wide https://bids.neuroimaging.io/), uptime monitor, etc.
 
-- Software license: CC-BY 4.0 (specification text) / MIT (schema tooling)
-- Main programming language: Markdown + YAML (schema); Python (schematools)
+- Software license: Permissive (was: CC-BY 4.0 (specification text) / MIT (schema tooling))
+- Main programming language: Markdown (spec) + YAML (schema); Python (schematools)
 - Canonical citation: Gorgolewski KJ, et al. (2016). "The Brain Imaging
   Data Structure, a format for organizing and describing outputs of
   neuroimaging experiments." Scientific Data 3, 160044.
@@ -173,11 +161,18 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Code of Conduct: https://bids.neuroimaging.io/collaboration/bids_github/CODE_OF_CONDUCT.html
 - End-user documentation: https://bids-specification.readthedocs.io/
 - Contributor / developer guidelines: https://github.com/bids-standard/bids-specification/blob/master/CONTRIBUTING.md
-- Package manager entry: N/A (spec) — schematools: PyPI `bidsschematools`
+- Package manager entry: RTD+GitHub (spec), schematools: PyPI `bidsschematools`
 - Community / Q&A forum: https://neurostars.org/tag/bids
 - Metrics (​Software Project usage and impact metrics​ : List whole numbers and add optional​
 ​comments (max 200 characters), as needed.​)
-  - 1+ PBs of data in 1k+ datasets, created by 1k+ of "creators", used by 10k+ users. https://bids.neuroimaging.io/impact and https://bids.neuroimaging.io/datasets . (Gorgolewski 2016) cited 2k+ times.
+  - 10000
+  - notes: no telemetry!  https://bids.neuroimaging.io/impact and https://bids.neuroimaging.io/datasets collect some stats on BIDS use. Over 1PB of data in BIDS.
+  - how many depend on it: 13
+  - notes: 13 is just packages from https://github.com/bids-standard/bids-specification/network/dependents . BIDS specification itself is CORE for 50+ Apps etc
+  - citations: 2312
+  - notes: 2312 is just for the canonical BIDS paper. There are extra papers for many BEPs etc, not included in the count.
+  - not used: 1+ PBs of data in 1000+ datasets, created by 1000+ of "creators", used by 1000+/month users. https://bids.neuroimaging.io/impact and https://bids.neuroimaging.io/datasets . 
+  - (Gorgolewski 2016) cited 2k+ times.
 
 ---
 
