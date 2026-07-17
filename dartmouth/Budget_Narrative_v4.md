@@ -1,4 +1,74 @@
-**Budget Description**
+**High-Level Budget Summary**
+
+  -----------------------------------------------------------------------------------------------------------------
+  **Budget       **Description**        **Personnel (if    **Year 1 Estimated Costs**    **Year 2 Estimated Costs**
+  Category**                            known)**                                      
+  -------------- ---------------------- --------------- ----------------------------- -----------------------------
+  Personnel      Salaries and fringe    Yaroslav               \$[37,459]{.underline}        \$[31,618]{.underline}
+                 benefits for project   Halchenko, PI;                                
+                 staff                  Cody Baker                                    
+
+  Supplies       Software, cloud                               \$[10,000]{.underline}        \$[10,000]{.underline}
+                 services, consumables                                                
+
+  Travel         Hackathon participant  Project team           \$[72,446]{.underline}        \$[72,446]{.underline}
+                 travel, Project                                                      
+                 meetings, Conferences,                                               
+                 Partner Coordination                                                 
+                 Meetings                                                             
+
+  Meetings /     Workshops, technical   Project team           \$[10,000]{.underline}        \$[10,000]{.underline}
+  Hackathons /   sprints, community                                                   
+  Sprints        engagement,                                                          
+                 collaboration events                                                 
+
+  Consultants    Child Mind Institute   Gregory Kiar +         \$[15,000]{.underline}        \$[15,000]{.underline}
+                 (BEP027, Niwrap/Styx,  team                                          
+                 bids2table)                                                          
+
+                 HES-SO Valais-Wallis   Oscar Esteban          \$[15,000]{.underline}        \$[15,000]{.underline}
+                 (Lausanne) (OSA/MCP,                                                 
+                 provenance, QA/QC,                                                   
+                 hackathon                                                            
+                 organization)                                                        
+
+  Subcontracts   Stanford University    Russell                \$[88,752]{.underline}        \$[91,248]{.underline}
+                                        Poldrack,                                     
+                                        Co-PI; Chris                                  
+                                        Markiewicz;                                   
+                                        Nell                                          
+                                        Hardcastle;                                   
+                                        Ross Blair                                    
+
+                 University of Texas at Franco                 \$[78,553]{.underline}        \$[78,812]{.underline}
+                 Austin                 Pestilli,                                     
+                                        Co-PI; Kimberly                               
+                                        Ray, Co-PI;                                   
+                                        Alejandro De La                               
+                                        Vega, Co-PI                                   
+
+                 McGill University      Jean-Baptiste          \$[60,000]{.underline}        \$[60,000]{.underline}
+                                        Poline, Co-PI                                 
+
+                 University of          Seyed Yahya            \$[60,000]{.underline}        \$[60,000]{.underline}
+                 California, San Diego  Shirazi, Co-PI                                
+
+                 Centre for Addiction   Ariel Rokem,            \$[6,800]{.underline}        \$[10,470]{.underline}
+                 and Mental Health      Co-PI                                         
+                 (CAMH)                                                               
+
+                 CatalystNeuro, LLC     Benjamin               \$[30,000]{.underline}        \$[30,000]{.underline}
+                                        Dichter, Co-PI                                
+
+  Indirect Costs Excluding equipment    N/A                    \$[15,990]{.underline}        \$[15,406]{.underline}
+  (≤10%)         and subcontract costs                                                
+
+  **Total                                                 **\$[500,000]{.underline}**   **\$[500,000]{.underline}**
+  Requested                                                                           
+  Funding**                                                                           
+  -----------------------------------------------------------------------------------------------------------------
+
+****
 
 **Budget Narrative**
 
@@ -177,74 +247,3 @@ Two consulting arrangements are budgeted through Dartmouth to engage Key Personn
 
 Dartmouth has included indirect costs calculated on their total direct costs (excluding equipment and subcontracts) using the 10% rate approved for the Open Source for the Life Sciences program.
 
-****
-
-**High-Level Budget Summary**
-
-  -----------------------------------------------------------------------------------------------------------------
-  **Budget       **Description**        **Personnel (if    **Year 1 Estimated Costs**    **Year 2 Estimated Costs**
-  Category**                            known)**                                      
-  -------------- ---------------------- --------------- ----------------------------- -----------------------------
-  Personnel      Salaries and fringe    Yaroslav               \$[37,459]{.underline}        \$[31,618]{.underline}
-                 benefits for project   Halchenko, PI;                                
-                 staff                  Cody Baker                                    
-
-  Supplies       Software, cloud                               \$[10,000]{.underline}        \$[10,000]{.underline}
-                 services, consumables                                                
-
-  Travel         Hackathon participant  Project team           \$[72,446]{.underline}        \$[72,446]{.underline}
-                 travel, Project                                                      
-                 meetings, Conferences,                                               
-                 Partner Coordination                                                 
-                 Meetings                                                             
-
-  Meetings /     Workshops, technical   Project team           \$[10,000]{.underline}        \$[10,000]{.underline}
-  Hackathons /   sprints, community                                                   
-  Sprints        engagement,                                                          
-                 collaboration events                                                 
-
-  Consultants    Child Mind Institute   Gregory Kiar +         \$[15,000]{.underline}        \$[15,000]{.underline}
-                 (BEP027, Niwrap/Styx,  team                                          
-                 bids2table)                                                          
-
-                 HES-SO Valais-Wallis   Oscar Esteban          \$[15,000]{.underline}        \$[15,000]{.underline}
-                 (Lausanne) (OSA/MCP,                                                 
-                 provenance, QA/QC,                                                   
-                 hackathon                                                            
-                 organization)                                                        
-
-  Subcontracts   Stanford University    Russell                \$[88,752]{.underline}        \$[91,248]{.underline}
-                                        Poldrack,                                     
-                                        Co-PI; Chris                                  
-                                        Markiewicz;                                   
-                                        Nell                                          
-                                        Hardcastle;                                   
-                                        Ross Blair                                    
-
-                 University of Texas at Franco                 \$[78,553]{.underline}        \$[78,812]{.underline}
-                 Austin                 Pestilli,                                     
-                                        Co-PI; Kimberly                               
-                                        Ray, Co-PI;                                   
-                                        Alejandro De La                               
-                                        Vega, Co-PI                                   
-
-                 McGill University      Jean-Baptiste          \$[60,000]{.underline}        \$[60,000]{.underline}
-                                        Poline, Co-PI                                 
-
-                 University of          Seyed Yahya            \$[60,000]{.underline}        \$[60,000]{.underline}
-                 California, San Diego  Shirazi, Co-PI                                
-
-                 Centre for Addiction   Ariel Rokem,            \$[6,800]{.underline}        \$[10,470]{.underline}
-                 and Mental Health      Co-PI                                         
-                 (CAMH)                                                               
-
-                 CatalystNeuro, LLC     Benjamin               \$[30,000]{.underline}        \$[30,000]{.underline}
-                                        Dichter, Co-PI                                
-
-  Indirect Costs Excluding equipment    N/A                    \$[15,990]{.underline}        \$[15,406]{.underline}
-  (≤10%)         and subcontract costs                                                
-
-  **Total                                                 **\$[500,000]{.underline}**   **\$[500,000]{.underline}**
-  Requested                                                                           
-  Funding**                                                                           
-  -----------------------------------------------------------------------------------------------------------------
