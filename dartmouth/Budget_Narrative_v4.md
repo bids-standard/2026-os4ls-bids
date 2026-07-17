@@ -181,8 +181,6 @@ Dartmouth has included indirect costs calculated on their total direct costs (ex
 
 **High-Level Budget Summary**
 
-TODO: need Personnel adjustment to account for added 4+11=15k of consultant fees (their travel included in travel...)
-
   -----------------------------------------------------------------------------------------------------------------
   **Budget       **Description**        **Personnel (if    **Year 1 Estimated Costs**    **Year 2 Estimated Costs**
   Category**                            known)**                                      
