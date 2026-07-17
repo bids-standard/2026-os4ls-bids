@@ -302,19 +302,13 @@ plan can be moved to the Work Plan section.
 <!-- Seeded verbatim from LOI.md — edit here for the Full App as
      scope details / roadmap references get sharper. -->
 
-BIDS (Brain Imaging Data Structure) is the community-driven, openly governed standard that organizes scientific datasets to be
-unambiguously consumed by Human Intelligence (HI), conventional pipelines, and AI agents.
+BIDS (Brain Imaging Data Structure) is the community-driven, openly governed standard that organizes scientific datasets to be unambiguously consumed by Human Intelligence (HI), conventional pipelines, and AI agents.
 
-Since 2016, BIDS has grown from MRI-only to 10+ biological measurement and stimulation technologies (MRI, EEG/MEG, PET, microscopy, motion, MRS, and others), with 1,500+ public datasets on OpenNeuro and multi-TB microscopy on DANDI.
-Dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep) consume it; thousands of papers cite it.
-Active BIDS Extension Proposals (BEPs) — for provenance, phenotypes, non-invasive brain stimulation, stimuli & A/V, animal / extracellular electrophysiology — and *omics-archive dialogues pull BIDS into adjacent domains.
+Since 2016, BIDS has grown from MRI-only to 10+ biological measurement and stimulation technologies (MRI, EEG/MEG, PET, microscopy, motion, MRS, and others), with 1,500+ public datasets on OpenNeuro and multi-TB microscopy on DANDI.  Dozens of BIDS Apps (fMRIPrep, MRIQC, QSIPrep) consume it; thousands of papers cite it.  Active BIDS Extension Proposals (BEPs) — for provenance, phenotypes, non-invasive brain stimulation, stimuli & A/V, animal / extracellular electrophysiology — and *omics-archive dialogues pull BIDS into adjacent domains.
 
-BIDS is a very open, wide ecosystem project spanning far more than the five software projects explicitly listed here: ~30 repositories under github.com/bids-standard plus adjacent tooling and data archives (OpenNeuro, DANDI) are anchored on the BIDS specification.
-Years of practice have established a community-driven model where component authors lead their work while a public Steering Group and Maintainers coordinate under established (but evolving) governance principles (https://bids.neuroimaging.io/collaboration/governance.html).
-This explains the higher-than-typical Co-PI count: each Co-PI is an existing lead or maintainer for one or more components, jointly responsible for coordinated delivery.
+BIDS is a very open, wide ecosystem project spanning far more than the five software projects explicitly listed here: ~30 repositories under github.com/bids-standard plus adjacent tooling and data archives (OpenNeuro, DANDI) are anchored on the BIDS specification.  Years of practice have established a community-driven model where component authors lead their work while a public Steering Group and Maintainers coordinate under established (but evolving) governance principles (https://bids.neuroimaging.io/collaboration/governance.html).  This explains the higher-than-typical Co-PI count: each Co-PI is an existing lead or maintainer for one or more components, jointly responsible for coordinated delivery.
 
-Altogether, this proposal supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI.
-We advance five coordinated components (fully detailed in the Work Plan section), whose maintainers have collectively committed:
+Altogether, this proposal supports the coordinated evolution of the BIDS ecosystem into a natively AI-ready standard, on the premise that what is good for HI is good for AI.  We advance five coordinated components (fully detailed in the Work Plan section), whose maintainers have collectively committed:
 
 (1) BIDS specification & schema — release BIDS 2.0 and land the BEP backlog;
 
@@ -328,14 +322,13 @@ We advance five coordinated components (fully detailed in the Work Plan section)
 
 Together, these five coordinated components close the gap between HI and AI by formalizing the data and application contracts needed for collaborative, AI-enabled, large-scale scientific analysis.
 
-Outputs: enhanced spec, validators, MCP servers + agent skills, BIDS-Apps 2.0 contract, and OSA + observability releases — coordinated by the Project Manager and community hackathons.
-Scope guard: no new datasets (beyond examples), no new ML models, no archive/repository infrastructure — only the standard, the tools, and the AI-readiness layer the rest of the life sciences can adopt.
+Outputs: enhanced spec, validators, MCP servers + agent skills, BIDS-Apps 2.0 contract, and OSA + observability releases — coordinated by the Project Manager and community hackathons.  Scope guard: no new datasets (beyond examples), no new ML models, no archive/repository infrastructure — only the standard, the tools, and the AI-readiness layer the rest of the life sciences can adopt.
 
 ### Expected Value [pre-filled from LOI [x]] — max 1,500 characters
 
 <!-- Seeded verbatim from LOI.md — might need tune ups -->
 
-Capabilities unlocked. By month 24, any life-sciences researcher or LLM agent can:
+Capabilities unlocked: By month 24, any life-sciences researcher or LLM agent can:
 
 (i) check whether a dataset is BIDS "deep-valid" against every format and sibling standard (HED, NWB, OME-Zarr) — verdict consumed identically by agents, pipelines, and humans (not deposit-pipeline tooling);
 
@@ -347,26 +340,21 @@ Capabilities unlocked. By month 24, any life-sciences researcher or LLM agent ca
 
 (v) get human- and agent-readable explanations and guidance through the OSA AI assistant.
 
-Upstream impact. A versioned schema-first specification with machine-readable extension points unlocks BEPs in \*omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
+Upstream impact. A versioned schema-first specification with machine-readable extension points unlocks BEPs in *omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
 Downstream impact. Every BIDS App, every OpenNeuro and most brainlife.io datasets (and soon DANDI via nwb2bids), every nipreps pipeline, the brainlife/Nipoppy dashboards, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
 
-The same investment that makes BIDS easier for humans makes it more usable for AI — and exposes a template other life-science standards can mirror.
+The same investment that makes BIDS easier for humans makes it more usable for AI, and exposes a template other life-science standards can mirror.
 
 ### Landscape Analysis [pre-filled from LOI [x]] — max 1,500 characters
 
 <!-- Seeded verbatim from LOI.md — might need tune ups -->
 
-BIDS is the most widely adopted standard in neuroimaging, expanding into adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.
-BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. A co-PI (Poline) led Nilearn's CZI EOSS-funded BIDS-adjacent project.
+BIDS is the most widely adopted standard in neuroimaging, expanding into adjacent life-science subfields: OpenNeuro (1,500+ datasets), DANDI (1,000+ joining BIDS), ABCD, UK Biobank derivatives, and major pipelines (fMRIPrep, QSIPrep, etc) consume or produce BIDS.  BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. A co-PI (Poline) led Nilearn's CZI EOSS-funded BIDS-adjacent project.
 
-No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.
-Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS.
-This proposal improves internal consistency of the standard and its interfaces to tools and AI.
-BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC outputs into BIDS.
+No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.  Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS.  This proposal improves internal consistency of the standard and its interfaces to tools and AI.  BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC outputs into BIDS.
 
-BIDS is the de-facto input contract for AI: ML training pipelines and AI benchmarks (ABCD, UK Biobank, EEG2025 (NeurIPS, 1,100 teams)), AI "scientist" frameworks (KOSMOS, K-Dense-AI, Meta NeuroAI), and AI assistants like OSA benefit from BIDS to make data legible.
-Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency for AI use which we want to tackle with this proposal.
+BIDS is the de-facto input contract for AI: ML training pipelines and AI benchmarks (ABCD, UK Biobank, EEG2025 (NeurIPS, 1,100 teams)), AI "scientist" frameworks (KOSMOS, K-Dense-AI, Meta NeuroAI), and AI assistants like OSA benefit from BIDS to make data legible.  Yet the BIDS 1.x series evolved with validators, APIs, and pipeline descriptors designed for human authors; the major 2.0 (and queued 3.0) revisions are required to raise consistency for AI use which we want to tackle with this proposal.
 
 
 ### Work Plan and Goals, Outcomes, Milestones and Deliverables
