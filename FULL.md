@@ -11,7 +11,7 @@ Structure of this document mirrors the Full Application Instructions (`docs/Full
 Each field below is annotated with its character/word limit as documented there.
 Fields pre-filled from the LOI are marked `[pre-filled from LOI [x]]`.
 Text intended for direct paste into the Fillout portal is kept plain (no markdown emphasis) so it renders identically in a plain textarea.
-Some outstanding Work items are listed at the end of the document in "Working notes". It is preferable to have sentence-a-line formatting.
+Sentence-per-line formatting is preferred for editability.
 Short PI / Co-PI biosketches for the optional 4-page supporting-documentation PDF live under `subs/`.
 
 ---
@@ -269,7 +269,7 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Contributor / developer guidelines: per project (see repos)
 - Package manager entry: PyPI `boutiques`, `niwrap`, `styx` (as applicable)
 - Community / Q&A forum: https://neurostars.org/tag/bids-apps
-- Metrics (TODO): No telemetry in invocations, 50+ tools, thousands of produced derived datasets, varying use across BIDS-apps. BIDS-apps paper (Gorgolewski, 2017) cited 400+ times (Scholar).
+- Metrics: No telemetry in invocations, 50+ tools, thousands of produced derived datasets, varying use across BIDS-apps. BIDS-apps paper (Gorgolewski, 2017) cited 400+ times (Scholar).
 
 ---
 
@@ -293,10 +293,10 @@ Monthly users, Dependent projects/packages, Scholarly citations.
 - Contributor / developer guidelines: https://github.com/OpenScience-Collective/osa/issues/348
 - Package manager entry: n/a
 - Community / Q&A forum: https://github.com/OpenScience-Collective/osa/discussions
-- Metrics (TODO):
-  - Monthly users estimate: TBD
-  - Dependent projects/packages: TBD
-  - Scholarly citations estimate: TBD
+- Metrics: Pre-release; usage tracked via demo.osc.earth/bids web analytics; no PyPI/npm release yet.
+  - Monthly users: 0 (pre-release)
+  - Dependent projects/packages: 0 (pre-release)
+  - Scholarly citations: 0 (pre-release; software heritage / Zenodo release DOI planned)
 
 ### Categories [pre-filled from LOI [x]] — up to 3
 
@@ -341,7 +341,7 @@ We advance five coordinated components (fully detailed in the Work Plan section)
 
 (5) OSA: deep BIDS integration + study-state observability.
 
-Together they close the loop for AI-enabled, large-scale data analysis by formalizing the data and application contracts that agentic workflows and training pipelines need.
+Together, these five coordinated components close the gap between HI and AI by formalizing the data and application contracts needed for collaborative, AI-enabled, large-scale scientific analysis.
 
 Outputs: enhanced spec, validators, MCP servers + agent skills, BIDS-Apps 2.0 contract, and OSA + observability releases — coordinated by the Project Manager and community hackathons.
 Scope guard: no new datasets (beyond examples), no new ML models, no archive/repository infrastructure — only the standard, the tools, and the AI-readiness layer the rest of the life sciences can adopt.
@@ -350,7 +350,7 @@ Scope guard: no new datasets (beyond examples), no new ML models, no archive/rep
 
 <!-- Seeded verbatim from LOI.md — might need tune ups -->
 
-Capabilities unlocked. By month 24, any life-sciences researcher or LLM agent will be able to:
+Capabilities unlocked. By month 24, any life-sciences researcher or LLM agent can:
 
 (i) check whether a dataset is BIDS "deep-valid" against every format and sibling standard (HED, NWB, OME-Zarr) — verdict consumed identically by agents, pipelines, and humans (not deposit-pipeline tooling);
 
@@ -364,7 +364,7 @@ Capabilities unlocked. By month 24, any life-sciences researcher or LLM agent wi
 
 Upstream impact. A versioned schema-first specification with machine-readable extension points unlocks BEPs in \*omics-linked phenotypes, animal behavior, stimuli, and audio/video — pulling new life-sciences communities into BIDS.
 
-Downstream impact. Every BIDS App, every OpenNeuro and a majority of brainlife.io datasets (and soon DANDI via nwb2bids), every nipreps pipeline, the brainlife/Nipoppy dashboards, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
+Downstream impact. Every BIDS App, every OpenNeuro and most brainlife.io datasets (and soon DANDI via nwb2bids), every nipreps pipeline, the brainlife/Nipoppy dashboards, and every emerging AI agent (KOSMOS-style, OSA, custom MCP clients) inherits cleaner inputs, stricter validation, and well-defined endpoints.
 
 The same investment that makes BIDS easier for humans makes it more usable for AI — and exposes a template other life-science standards can mirror.
 
@@ -376,8 +376,8 @@ BIDS is the most widely adopted standard in neuroimaging, expanding into adjacen
 BIDS received the 2023 Neuro – Cooper Foundation Open Science International Prize. A co-PI (Poline) led Nilearn's CZI EOSS-funded BIDS-adjacent project.
 
 No peer exists at the data-organization layer, proprietary or open: vendor formats (BrainVision, CTF) and DICOM are inputs BIDS ingests and organizes. At the analysis layer, Boutiques / Niwrap / Styx is the leading open descriptor stack with no true peer; commercial alternatives (Flywheel, QMENTA) are closed-source.
-Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS; the overall BIDS project is an integration project which improves reuse and interoperability while avoiding re-implementation.
-This proposal will facilitate internal consistency of the standard and improve interfaces to tools and AI. 
+Adjacent open standards — NWB, NIfTI, HED, Zarr/OME-Zarr — are integrated into BIDS.
+This proposal improves internal consistency of the standard and its interfaces to tools and AI.
 BEP43 + Boutiques descriptors map legacy (AFNI, FreeSurfer) and HPC outputs into BIDS.
 
 AI use. BIDS is the de-facto input contract for AI: ML training pipelines and AI benchmarks (ABCD, UK Biobank, EEG2025 (NeurIPS, 1,100 teams)), AI "scientist" frameworks (KOSMOS, K-Dense-AI, Meta NeuroAI), and AI assistants like OSA benefit from BIDS to make data legible.
@@ -398,8 +398,6 @@ it as needed into the template to produce the PDF for submission.
 Word budget: 750 words.
 Count with `wc -w` before submit.
 
-TODO: heavy tune up!!!
-
 TEXT (draft narrative):
 
 BIDS is a widely used open-source specification and tooling ecosystem for structured, machine- and human-legible organization of life-science data, maintained by a international and multi-institution community of contributors and a public Steering and Maintainenance Groups following established Governance procedures.
@@ -407,7 +405,7 @@ This request supports a 24-month plan to integrate the BIDS ecosystem at the cor
 
 Goal 1 delivers the BIDS 2.0 release (more consistent, modular, schema-first) with a scoped 3.0 roadmap and hardens the machine-readable schema as a Data Structure Standard, landing the active BEP backlog to broaden BIDS beyond neuroimaging — work spans bids-specification, bids-examples, bids-website, pybids, etc., tracked at https://github.com/orgs/bids-standard/projects/10.
 Goal 2 continues the community-driven convergence of the Deno and Python validators on the shared schema, adds machine-consumable validation records, and integrates cross-standard checks (HED, NWB, Zarr) so that a "deep-valid" verdict means valid across formats and sibling standards — critical for trustworthy AI results. This includes a BIDS-aligned Zarr profile exercised on the NEMAR conversion datasets.
-Goal 3 consolidates scattered helpers (across pybids, bids2nda, DataLad) into a maintained pybids-adjacent bids-utils library, exposes both via MCP servers including HED-MCP and a shared tool-interface contract, and packages reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills) so LLM agents can read, write, and reason about BIDS datasets through a stable interface. It also connects NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows, exercised on the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB).
+Goal 3 consolidates scattered helpers (across pybids, bids2table, bids2nda, DataLad) into a maintained pybids-adjacent bids-utils library, exposes both via MCP servers including HED-MCP and a shared tool-interface contract, and packages reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills) so LLM agents can read, write, and reason about BIDS datasets through a stable interface. It also connects NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows, exercised on the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB).
 Goal 4 modernizes the BIDS-Apps execution contract (BEP027/BEP043) in coordination with the Boutiques / Niwrap / Styx descriptor stack and the BIDS-Apps registry — including GPU/accelerator containers — so AI agents can create scientific tool metadata, as well as consume it to compose and run pipelines reliably.
 Goal 5 makes OSA a deeper BIDS project by bringing BIDS data, the BIDS specification, validation results, and selected ecosystem tools into OSA through its existing YAML-driven tool/plugin architecture. It adds user feedback and reviewable agent activity for BIDS workflows. Goal 5 formalizes a study-state observability schema that records agent actions, supporting evidence, provenance, derivatives, and outstanding QC, so a dashboard or human reviewer can inspect what an agent did and why.
 
@@ -427,18 +425,9 @@ Goal 2's schema-driven validator convergence keeps validation cheap enough to ru
 Sustainability:
 Post-grant maintenance continues through the PI's and Co-PIs' involvement via the existing BIDS governance and maintenance structure and adjacent federally-funded work (DANDI, OpenNeuro, EMBER, nipreps, brainlife.io, Nipoppy), all benefiting from the work done under this funding.
 
-TODO before submission:
-- Trim to under 750 words
-- Cross-link each goal below by number to the pillars in Short
-  Summary.
-- Add a one-line "not-in-scope" reiteration mirroring the LOI
-  scope guard.
-
 #### Goals, Outcomes, Milestones and Deliverables (up to 5 goals; NOT counted in the 750-word narrative limit)
 
 Each goal has four fields per the Work Plan template (`docs/OS4LS_Work_Plan_template.pdf`): Goal / Outcome / Milestones & Deliverables (numbered X.Y with Year 1 / Year 2 tag) / Success indicators.
-
-TODOs: heavey overview/tuneup
 
 ---
 
@@ -478,7 +467,7 @@ Success indicators:
 
 **Goal 3: Python + CLI utilities with MCP interfaces and agent skills**
 
-Outcome: LLM agents, CLI users, and Python users read, write, and reason about BIDS datasets through a stable, maintained interface — via pybids for structured queries and bids-utils for the smaller, agent- and CLI-friendly read/write/inspect verbs, plus MCP servers (including HED-MCP), a shared tool-interface contract, and reusable agent skills. The same interfaces connect NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows, using the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB).
+Outcome: LLM agents, CLI users, and Python users read, write, and reason about BIDS datasets through a stable, maintained interface — via pybids for structured queries and bids-utils for the smaller, agent- and CLI-friendly read/write/inspect verbs, plus MCP servers (including HED-MCP), a shared tool-interface contract, and reusable agent skills. Critically, the modernized PyBIDS query API will be semantically consistent and interpretable by both humans and agents, and backend-agnostic — decoupling querying logic from implementation so it can be reimplemented in other languages (e.g., Rust) while keeping that logic consistent and verifiable across backends. The same interfaces connect NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows, using the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB).
 
 Milestones & Deliverables:
 3.1 Consolidate scattered helpers into `bids-standard/bids-utils` (release 0.1). [Year 1]
@@ -491,6 +480,7 @@ Success indicators:
 - ≥3 downstream tools or agent workflows (fMRIPrep, brainlife, Nipoppy, KOSMOS-class agents) call the new MCP servers or agent skills [Year 2].
 - bids-utils 1.0 release with public API stability policy. [Year 2]
 - PyBIDS release supporting BIDS 2.0 schema and adopted by ≥3 downstream libraries [Year 2].
+- Backend-agnostic query API validated by a reference reimplementation (e.g., Rust) producing verifiably identical query results. [Year 2]
 - A NEMAR Zarr-backed, BIDS/HED-annotated dataset reaches a GPU training or agent workflow through the shared interfaces. [Year 2]
 
 ---
@@ -526,17 +516,11 @@ Success indicators:
 - OSA's BIDS assistant uses BIDS data, specification, validation, and selected ecosystem tools, with published evaluation cases and a release changelog covering the funded work [Year 2].
 - Study-state observability schema 1.0 is released and consumed by at least one dashboard or human-reviewer workflow [Year 2].
 - OSA evaluation feedback produces documented improvements to an OSA release [Year 2].
+- Quantitative agent-task success rate reported for an evaluation suite of typical tasks on a BIDS dataset (baseline vs. MCP-server + agent-skills-enabled agent), demonstrating measurable improvement [Year 2].
 
 ### Optional Upload — PI/Co-PI biographies, references, figures (≤4 pages)
 
 **External file(s):  [subs/biographies.md](subs/biographies.md)** (rendered to .pdf)
-
-Potential TODOs:
-
-- [ ] A single ecosystem figure showing spec → validators → PyBIDS /
-   bids-utils / MCP → BIDS-Apps 2.0 → OSA / observability, with
-   downstream consumers (OpenNeuro, DANDI, brainlife, Nipoppy,
-   agent frameworks).
 
 ---
 
@@ -548,11 +532,11 @@ Enter as whole numbers, USD, no commas / no dollar signs. Track 2 max:
 $500,000 / year; $1,000,000 total. Numbers must match the Budget
 Description (uploaded as PDF and/or XLSX).
 
-Status: Will be matched on what near $1mil we have in official budget estimates spreadsheet submitted to Dartmouth.
+1000000
 
 ### Budget Description (uploaded as PDF / XLSX)
 
-**External file(s): [dartmouth/Budget_Narrative_v3.md](dartmouth/Budget_Narrative_v3.md)** (converted from/to .docx)
+**External file(s): [dartmouth/Budget_Narrative_v4.md](dartmouth/Budget_Narrative_v4.md)** (converted from/to .docx)
 
 Stage: submitted to Dartmouth OSP for review.
 
@@ -571,7 +555,7 @@ Co-PI Shirazi is PI of the Meta BIDS/open-science gift (2025–2026, $130,000) a
 Co-PI Poline is PI of Canadian Institute of Health, CIHR PJT-197805, CAD204,000/year to partly support the Nipoppy/BIDS-Study. 
 Co-PI Pestilli is PI/Co-I on the BRAIN CONNECTS APEX (2024–2029, NIH, $9,485,000), the Center for Mesoscale Connectomics (2023–2028, NIH, $16,684,090),  ezBIDS, NiiVue, and dcm2niix (2023–2026, NIH, $2,039,629), which relate to development and use of BIDS spec and tools.
 Co-PI Dichter leads CatalystNeuro's NWB work (NIH BRAIN Initiative).
-Key person Kiar leads development work on Styx and NiWrap, core to the BIDS Execution standard, BIDS2Table funded by NIH (1RF1MH130859-01, 2022–2026, 1,504,004; 1R01MH139565, 2025–2027, $889,582) alongside grants from Private Foundations (cumulative awards value of over $16,300,000 received from 2021–2027) which rely on BIDS.
+Key person Kiar leads development work on Styx and NiWrap, core to the BIDS Execution standard, BIDS2Table funded by NIH (1RF1MH130859-01, 2022–2026, $1,504,004; 1R01MH139565, 2025–2027, $889,582) alongside grants from Private Foundations (cumulative awards value of over $16,300,000 received from 2021–2027) which rely on BIDS.
 In-kind: Amazon Open Dataset program hosts over 1 PB of OpenNeuro and DANDI BIDS datasets (guestimate of 700k$/year cost for both store/egress).
 
 
@@ -588,49 +572,3 @@ Before submitting, applicant must confirm acceptance of:
 
 Submitting official (Dartmouth): (obtain from OSP; Signing Official
 above).
-
----
-
-## Working notes (NOT part of submission — strip before paste)
-
-- Strip this section, all Message-IDs, and any markdown emphasis /
-  backticks before pasting into the Fillout form.
-
-- **Length-cap overages** (must be fixed before final paste):
-  - **Landscape Analysis**: 1,628 / 1,500 (128 over). Candidate to drop:
-    "the overall BIDS project is an integration project which improves
-    reuse and interoperability while avoiding re-implementation. This
-    proposal will facilitate internal consistency of the standard and
-    improve interfaces to tools and AI." — restates the prior sentence.
-  - **Expected Value**: 1,514 / 1,500 (14 over). One-word tighten.
-
-- **Section 3 — impact metrics remaining**:
-  - Project 5 (OSA) — still all `TBD`. Session 3 (cue 305-314) permits
-    note-field justification: e.g., "Pre-release; usage tracked via
-    demo.osc.earth/bids web analytics; no PyPI/npm release yet."
-  - Project 4 (BIDS-Apps + exec spec) — has content ("50+ tools,
-    Gorgolewski 2017 cited 400+"), just needs the `(TODO)` tag stripped.
-  - Projects 1 (spec), 2 (validators), 3 (PyBIDS) — filled with verified
-    numbers ✓.
-
-- **Section 3 — potential project-to-org upgrade** (per Session 3 cue
-  107-117; Dario: "definitely encourages the GitHub organization as a
-  whole is involved in the proposal, especially for a track two
-  proposal"). The `bids-standard` org URL is currently referenced only
-  inside Project 1's description text. Consider whether one of the five
-  Project rows should be replaced by an org-level "project" (e.g.
-  `github.com/bids-standard` covers spec + validator + pybids + schema
-  + execution-spec + bids-2-devel + examples + website + more).
-  Trade-off: less concrete per-repo milestones vs stronger ecosystem
-  signal for a Track-2 review.
-
-- **Section 4 — ecosystem figure** for the Optional Upload PDF still
-  TODO. Session 3 (cue 68-75) confirms figures are welcome supporting
-  material.
-
-- **Section 5 — Amount Requested** — still pending final budget xlsx
-  numbers from Dartmouth OSP.
-
-- **Sign-off form** — Session 3 (cue 223-224) confirmed a blank PDF
-  placeholder is acceptable at upload time; the signed version can be
-  swapped in before final submission if OSP timing is tight.
