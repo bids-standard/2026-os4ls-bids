@@ -114,7 +114,7 @@ sponsored-projects offices.
 
 ### Title [pre-filled from LOI [x]] — max 60 characters
 
-BIDS 2.0+: AI-Ready Life Sciences Data Standard
+BIDS 2.0+ ecosystem: AI-Ready Life-Science Data Standard
 
 ### Proposal Purpose — max 200 characters
 
@@ -368,35 +368,7 @@ it as needed into the template to produce the PDF for submission.
 
 #### Work Plan (max 750 words) — narrative
 
-Word budget: 750 words.
-Count with `wc -w` before submit.
-
-TEXT (draft narrative):
-
-BIDS is a widely used open-source specification and tooling ecosystem for structured, machine- and human-legible organization of life-science data, maintained by an international and multi-institution community of contributors and a public Steering and Maintainenance Groups following established Governance procedures.
-This request supports a 24-month plan to integrate the BIDS ecosystem at the core of computational scientists' preferred harnesses, organized around the five coordinated goals below.
-
-Goal 1 delivers the BIDS 2.0 release (more consistent, modular, schema-first) with a scoped 3.0 roadmap and hardens the machine-readable schema as a Data Structure Standard, landing the active BEP backlog to broaden BIDS beyond neuroimaging. This work spans bids-specification, bids-examples, bids-website, pybids, etc., tracked at https://github.com/orgs/bids-standard/projects/10.
-Goal 2 continues the community-driven convergence of the Deno and Python validators on the shared schema, adds machine-consumable validation records, and integrates cross-standard checks (HED, NWB, Zarr) so that a "deep-valid" verdict means valid across formats and sibling standards which is critical for trustworthy AI results. This includes a BIDS-aligned Zarr profile exercised on the NEMAR conversion datasets.
-Goal 3 consolidates scattered helpers (across bids2table, bids2nda, cubids, datalad-neuroimaging, pybids) into a maintained pybids-adjacent bids-utils library, exposes both via MCP servers including HED-MCP and a shared tool-interface contract, and packages reusable agent skills (currently prototyped in K-Dense-AI/scientific-agent-skills) so LLM agents can read, write, and reason about BIDS datasets through a stable interface. It also connects NEMAR's Zarr-backed, BIDS/HED-annotated data to GPU training and agent workflows, exercised on the ongoing conversion test bed (>89% implemented: 760 datasets, 39,000 subjects, 57 TB).
-Goal 4 modernizes the BIDS-Apps execution contract (BEP027/BEP043) in coordination with the Boutiques / Niwrap / Styx descriptor stack and the BIDS-Apps registry — including GPU/accelerator containers — so AI agents can create scientific tool metadata, as well as consume it to compose and run pipelines reliably.
-Goal 5 makes the Open Science Assistant (OSA) a deeper BIDS project by bringing BIDS data, the BIDS specification, validation results, and selected ecosystem tools into OSA through its existing YAML-driven tool/plugin architecture. It adds user feedback and reviewable agent activity for BIDS workflows. Goal 5 formalizes a study-state observability schema that records agent actions, supporting evidence, provenance, derivatives, and outstanding QC, so a dashboard or human reviewer can inspect what an agent did and why.
-
-Overall organization of work for Goals 2-5 will be organized and prioritized within projects like https://github.com/orgs/bids-standard/projects/24.
-Beyond the requested funds, each institution contributes existing personnel time (uncompensated by this grant) where people already work on BIDS in related projects but not directly toward the goals established in this grant proposal.
-The BIDS Steering Group and the Maintainers organization contribute governance capacity in kind.
-DANDI (Dartmouth) and OpenNeuro (Stanford) contribute deposit-side validation feedback as new datasets will be flowing into those repositories.
-DANDI (via nwb2bids) will also contribute feedback on alignment to microscopy / extracellular electrophysiology with CatalystNeuro contributing NeuroConv and NWB Inspector integration.
-Community activities include two annual BIDS hackathons / sprints organized by the PI & Project Manager (Kimberly Ray, UT Austin) — targeting maintainers, downstream BIDS-App authors, and adjacent-standard maintainers (HED, NWB, Zarr).
-All code is developed in the open under OSI-Approved licenses (e.g. CC-BY-4.0 (specification text) / MIT / Apache-2.0 (tooling)), with releases published on GitHub and PyPI/conda-forge/npm as applicable.
-
-Scalability and modular composition:
-BIDS already operates at scale — OpenNeuro hosts 1,500+ public datasets brainlife.io stores dozens of PB multimodal datasets from NIH BRAIN CONNECTS and DANDI stores multi-TB BIDS microscopy datasets. Its standardized subject/session hierarchy provides a natural unit of parallelization, enabling human workflows, HPC pipelines, and AI agents to scale without custom sharding logic.
-Composition works within a dataset (nested `sourcedata/`, raw, `derivatives/`) and across datasets via BIDS-Study, OpenNeuroStudies, and the Nipoppy study network, so summarization bubbles up cleanly through subject → study → cross-study → dashboard layers (brainlife, Nipoppy), thus also fascilitating adherence to Self-containment and Modularity principles of https://stamped-principles.org (developed by the PIs group).
-Goal 2's schema-driven validator convergence keeps validation cheap enough to run inside agent loops; Goal 4's execution-spec + Boutiques / Niwrap / Styx path preserves this modularity when wrapping GPU / accelerator containers as BIDS Apps 2.0, so hardware-accelerated workloads inherit the same composition semantics as CPU pipelines.
-
-Sustainability:
-Post-grant maintenance continues through the PI's and Co-PIs' involvement via the existing BIDS governance and maintenance structure and adjacent federally-funded work (DANDI, OpenNeuro, EMBER, nipreps, brainlife.io, Nipoppy), all benefiting from the work done under this funding.
+Prepared within https://docs.google.com/document/d/1Yfax6kxSgtMMVne_p8aXKxJ2tDATY1Agv6YcF8c7Afk/edit?usp=sharing which gets synced as gdrive/BIDS2.0+_OS4LS_WorkPlan.docx (converted to .md)
 
 #### Goals, Outcomes, Milestones and Deliverables (up to 5 goals; NOT counted in the 750-word narrative limit)
 

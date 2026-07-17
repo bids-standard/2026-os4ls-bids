@@ -3,7 +3,8 @@
 # Absolute path to the directory of this Makefile. Lets rules reference
 # scripts/, subs/, BIDS.bib etc. by an absolute path so `make -f ../Makefile`
 # (or any other subdir invocation) still finds them.
-TOPDIR := $(dir $(realpath $(firstword $(MAKEFILE_LIST))))
+MAKEFILE := $(firstword $(MAKEFILE_LIST))
+TOPDIR := $(dir $(realpath $(MAKEFILE)))
 
 # Requires: pandoc + a TeX distribution providing xelatex
 #   (Debian/Ubuntu: apt install pandoc texlive-xetex texlive-fonts-recommended)
@@ -54,6 +55,9 @@ sync-docs:
 	for f in $(GDRIVE_LOCAL)/*.xlsx; do \
 		[ -e "$$f" ] || continue; \
 		$(DOCFLOW) convert xlsx-to-tsv "$$f" -o "$${f%.xlsx}.tsv"; \
+	done
+	for f in $(GDRIVE_LOCAL)/*.docx; do \
+		make -f $(MAKEFILE) "$${f%.docx}.md"; \
 	done
 
 # Convert .docx to Markdown via docflow (https://github.com/…/docflow).
