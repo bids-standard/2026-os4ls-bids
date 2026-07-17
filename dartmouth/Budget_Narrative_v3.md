@@ -129,7 +129,7 @@ Two consulting arrangements are budgeted through Dartmouth to engage Key Personn
 
 > **PERSONNEL**
 >
-> [Seyed Yahya Shirazi, Co-PI]{.underline}, will direct UCSD's agentic-integration work: deepening the Open Science Assistant (OSA), which UCSD initiated and leads, and connecting it to the BIDS/HED toolchain through the tool-interface contract, MCP servers (hed-mcp), and a user/agent feedback and observability loop.
+> [Seyed Yahya Shirazi, Co-PI]{.underline}, will direct UCSD's agentic-integration work: deepening the Open Science Assistant (OSA), which UCSD initiated and leads, so it uses BIDS data, the BIDS specification, validation results, and selected ecosystem tools through its existing architecture, with a user/agent feedback and observability loop.
 > His effort then extends outward to seamless HED integration and cross-standard (HED/NWB/Zarr) validation, landing the stimuli standard (BEP044, with BEP046/BEP047 maintenance), coordinating the NEMAR Zarr work and connecting the Zarr-backed data to the NEMAR 2.0 data-to-GPU path used by agents.
 > He maintains the HED AI-native layer (hed-lsp, hed-mcp, HEDit) and is the technical lead for NEMAR, the archive and compute gateway used as the project's training/analysis target.
 >
