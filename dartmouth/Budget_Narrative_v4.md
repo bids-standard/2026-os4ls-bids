@@ -1,74 +1,84 @@
 **High-Level Budget Summary**
 
-  -----------------------------------------------------------------------------------------------------------------
-  **Budget       **Description**        **Personnel (if    **Year 1 Estimated Costs**    **Year 2 Estimated Costs**
-  Category**                            known)**                                      
-  -------------- ---------------------- --------------- ----------------------------- -----------------------------
-  Personnel      Salaries and fringe    Yaroslav               \$[37,459]{.underline}        \$[31,618]{.underline}
-                 benefits for project   Halchenko, PI;                                
-                 staff                  Cody Baker                                    
+  --------------------------------------------------------------------------------------------------------------
+  **Budget       **Description**   **Personnel**        **Year 1 Estimated Costs**    **Year 2 Estimated Costs**
+  Category**                                                                       
+                                   **(if known)**                                  
+  -------------- ----------------- ----------------- ----------------------------- -----------------------------
+  Personnel      Salaries and      Yaroslav                               \$37,459                      \$31,618
+                 fringe benefits   Halchenko, PI;                                  
+                 for project staff Cody Baker                                      
 
-  Supplies       Software, cloud                               \$[10,000]{.underline}        \$[10,000]{.underline}
-                 services, consumables                                                
+  Supplies       Software, cloud                                          \$10,000                      \$10,000
+                 services,                                                         
+                 consumables                                                       
 
-  Travel         Hackathon participant  Project team           \$[72,446]{.underline}        \$[72,446]{.underline}
-                 travel, Project                                                      
-                 meetings, Conferences,                                               
-                 Partner Coordination                                                 
-                 Meetings                                                             
+  Travel         Hackathon         Project team                           \$72,446                      \$72,446
+                 participant                                                       
+                 travel, Project                                                   
+                 meetings,                                                         
+                 Conferences,                                                      
+                 Partner                                                           
+                 Coordination                                                      
+                 Meetings                                                          
 
-  Meetings /     Workshops, technical   Project team           \$[10,000]{.underline}        \$[10,000]{.underline}
-  Hackathons /   sprints, community                                                   
-  Sprints        engagement,                                                          
-                 collaboration events                                                 
+  Meetings /     Workshops,        Project team                           \$10,000                      \$10,000
+  Hackathons /   technical                                                         
+  Sprints        sprints,                                                          
+                 community                                                         
+                 engagement,                                                       
+                 collaboration                                                     
+                 events                                                            
 
-  Consultants    Child Mind Institute   Gregory Kiar +         \$[15,000]{.underline}        \$[15,000]{.underline}
-                 (BEP027, Niwrap/Styx,  team                                          
-                 bids2table)                                                          
+  Consultants    Child Mind        Gregory Kiar +                         \$15,000                      \$15,000
+                 Institute         team                                            
+                 (BEP027,                                                          
+                 Niwrap/Styx,                                                      
+                 bids2table)                                                       
 
-                 HES-SO Valais-Wallis   Oscar Esteban          \$[15,000]{.underline}        \$[15,000]{.underline}
-                 (Lausanne) (OSA/MCP,                                                 
-                 provenance, QA/QC,                                                   
-                 hackathon                                                            
-                 organization)                                                        
+                 HES-SO            Oscar Esteban                          \$15,000                      \$15,000
+                 Valais-Wallis                                                     
+                 (Lausanne)                                                        
+                 (OSA/MCP,                                                         
+                 provenance,                                                       
+                 QA/QC, hackathon                                                  
+                 organization)                                                     
 
-  Subcontracts   Stanford University    Russell                \$[88,752]{.underline}        \$[91,248]{.underline}
-                                        Poldrack,                                     
-                                        Co-PI; Chris                                  
-                                        Markiewicz;                                   
-                                        Nell                                          
-                                        Hardcastle;                                   
-                                        Ross Blair                                    
+  Subcontracts   Stanford          Russell Poldrack,                      \$88,752                      \$91,248
+                 University        Co-PI; Chris                                    
+                                   Markiewicz; Nell                                
+                                   Hardcastle; Ross                                
+                                   Blair                                           
 
-                 University of Texas at Franco                 \$[78,553]{.underline}        \$[78,812]{.underline}
-                 Austin                 Pestilli,                                     
-                                        Co-PI; Kimberly                               
-                                        Ray, Co-PI;                                   
-                                        Alejandro De La                               
-                                        Vega, Co-PI                                   
+                 University of     Franco Pestilli,                       \$78,553                      \$78,812
+                 Texas at Austin   Co-PI; Kimberly                                 
+                                   Ray, Co-PI;                                     
+                                   Alejandro De La                                 
+                                   Vega, Co-PI                                     
 
-                 McGill University      Jean-Baptiste          \$[60,000]{.underline}        \$[60,000]{.underline}
-                                        Poline, Co-PI                                 
+                 McGill University Jean-Baptiste                          \$60,000                      \$60,000
+                                   Poline, Co-PI                                   
 
-                 University of          Seyed Yahya            \$[60,000]{.underline}        \$[60,000]{.underline}
-                 California, San Diego  Shirazi, Co-PI                                
+                 University of     Seyed Yahya                            \$60,000                      \$60,000
+                 California, San   Shirazi, Co-PI                                  
+                 Diego                                                             
 
-                 Centre for Addiction   Ariel Rokem,            \$[6,800]{.underline}        \$[10,470]{.underline}
-                 and Mental Health      Co-PI                                         
-                 (CAMH)                                                               
+                 Centre for        Ariel Rokem,                            \$6,800                      \$10,470
+                 Addiction and     Co-PI                                           
+                 Mental Health                                                     
+                 (CAMH)                                                            
 
-                 CatalystNeuro, LLC     Benjamin               \$[30,000]{.underline}        \$[30,000]{.underline}
-                                        Dichter, Co-PI                                
+                 CatalystNeuro,    Benjamin Dichter,                      \$30,000                      \$30,000
+                 LLC               Co-PI                                           
 
-  Indirect Costs Excluding equipment    N/A                    \$[15,990]{.underline}        \$[15,406]{.underline}
-  (≤10%)         and subcontract costs                                                
+  Indirect Costs Excluding         N/A                                    \$15,990                      \$15,406
+  (≤10%)         equipment and                                                     
+                 subcontract costs                                                 
 
-  **Total                                                 **\$[500,000]{.underline}**   **\$[500,000]{.underline}**
-  Requested                                                                           
-  Funding**                                                                           
-  -----------------------------------------------------------------------------------------------------------------
-
-****
+  **Total                                              **\$[500,000]{.underline}**   **\$[500,000]{.underline}**
+  Requested                                                                        
+  Funding**                                                                        
+  --------------------------------------------------------------------------------------------------------------
 
 **Budget Narrative**
 
@@ -162,7 +172,7 @@ Two consulting arrangements are budgeted through Dartmouth to engage Key Personn
 >
 > **TRAVEL**
 >
-> Funds are requested for domestic travel for Dr. Kimberly Ray, Dr. Franco Pestilli, and Dr. Alejandro De La Vega to attend BIDS community meetings during each project year.
+> Funds are requested for domestic travel for Dr. Kimberly Ray, Dr. Franco Pestilli, and Dr. Alejandro De La Vega to attend BIDS community meetings during each project year.
 >
 > **INDIRECTS**
 >
@@ -246,4 +256,3 @@ Two consulting arrangements are budgeted through Dartmouth to engage Key Personn
 **INDIRECTS**
 
 Dartmouth has included indirect costs calculated on their total direct costs (excluding equipment and subcontracts) using the 10% rate approved for the Open Source for the Life Sciences program.
-
