@@ -130,7 +130,7 @@ BIDS 2.0 spanning spec, validators, PyBIDS, BIDS-Apps, Assistant: closing spec-c
 - [x] Track 2 — Foundational Libraries and Ecosystem Initiatives (up to $1,000,000 USD / 24 months)
 - [ ] Track 1
 
-### List of Software Projects to be Supported (up to 5)
+### List of Software Projects to be Supported (up to 5) {#software-projects}
 
 For each: Project Name (max 30 chars), Repository URL, Website URL
 (optional), Short description (max 500 chars), License, Main
