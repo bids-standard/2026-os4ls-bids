@@ -90,10 +90,10 @@ risk.
 - Organization Tax ID (EIN, XX-XXXXXXX; 10 chars): 02-0222111
 - Type of organization [pre-filled from LOI [x]]: academic institution
 - Organizational / Administrative Contact (from Dartmouth OSP):
-  - Name: Stephanie Morgan
+  - Name: Colleen Sullivan
   - Email: sponsored.projects@dartmouth.edu
 - Signing Official (SO / AOR): Colleen Sullivan, sponsored.projects@dartmouth.edu
-- Financial Contact: Shelagh Eastridge, sponsored.projects@dartmouth.edu
+- Financial Contact: Colleen Sullivan, sponsored.projects@dartmouth.edu
 - Organizational Approval and Sign-Off Form: single PDF, signed by an
   institutional Signing Official. Not encrypted or password-protected;
   digital signatures OK.
